@@ -6,9 +6,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Models\ViewModels\" />
+    <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\" />
+    <Content Remove="wwwroot\lib\" />
+  </ItemGroup>
 </Project>
