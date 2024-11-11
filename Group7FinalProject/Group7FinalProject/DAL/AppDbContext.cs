@@ -23,9 +23,10 @@ namespace Group7FinalProject.DAL
 
 
         //TODO: Add Dbsets here.  
-        public DbSet<Course> Courses { get; set; }
-        public DbSet<Department> Departments { get; set; }
-        public DbSet<Registration> Registrations { get; set; }
-        public DbSet<RegistrationDetail> RegistrationDetails { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Property> Properties { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<Review> Reviews { get; set; }
+        public DbSet<Unavailability> Unavailabilities { get; set; }
     }
 }
