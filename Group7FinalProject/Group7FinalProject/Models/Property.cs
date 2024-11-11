@@ -31,7 +31,6 @@
 
         // Navigation Properties
         public AppUser User { get; set; } // The host user
-
         public Category Category { get; set; } // The category of the property
 
         public ICollection<Reservation> Reservations { get; set; } // Reservations for this property
