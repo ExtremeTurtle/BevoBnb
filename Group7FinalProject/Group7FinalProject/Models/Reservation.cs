@@ -38,7 +38,7 @@
         public AppUser User { get; set; }
 
         //Many side of One-To-Many relationship with Property
-        public Property Property { get; set; }
+        public Property? Property { get; set; }
 
     }
 }
