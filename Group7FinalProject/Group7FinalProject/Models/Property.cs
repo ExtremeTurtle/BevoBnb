@@ -4,23 +4,21 @@
     {
         public Int32 PropertyID { get; set; } // Primary Key
 
-        public String PropertyNumber { get; set; } // Unique Identifier
-
-        public String Description { get; set; }
-
-        public String Location { get; set; }
+        public Int32 PropertyNumber { get; set; } // Unique Identifier
 
         public Int32 NumOfBedrooms { get; set; }
 
         public Int32 NumOfBathrooms { get; set; }
 
-        public Int32 NumOfGuests { get; set; }
+        public Int32 GuestsAllowed { get; set; }
 
         public Decimal WeekdayPrice { get; set; }
 
         public Decimal WeekendPrice { get; set; }
 
         public Decimal CleaningFee { get; set; }
+        public Decimal DiscountRate { get; set; }
+
 
         public Boolean PetFriendly { get; set; }
 
@@ -32,8 +30,7 @@
         public Int32 CategoryID { get; set; }
 
         // Navigation Properties
-        public AppUser Host { get; set; } // The host user
-
+        public AppUser User { get; set; } // The host user
         public Category Category { get; set; } // The category of the property
 
         public ICollection<Reservation> Reservations { get; set; } // Reservations for this property
