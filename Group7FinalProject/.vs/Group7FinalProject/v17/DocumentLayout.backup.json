@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,31 +78,30 @@
               "RelativeToolTip": "Group7FinalProject\\Models\\AppUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T20:17:36.385Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T20:17:36.385Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Models\\Category.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Models\\Category.cs",
               "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Models\\Category.cs",
               "RelativeToolTip": "Group7FinalProject\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-04T20:16:31.7Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Property.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Models\\Property.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Models\\Property.cs",
               "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Models\\Property.cs",
               "RelativeToolTip": "Group7FinalProject\\Models\\Property.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAUwCIAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAADwvwgAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-04T20:06:23.2Z",
               "EditorCaption": ""
@@ -117,8 +116,7 @@
               "RelativeToolTip": "Group7FinalProject\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T17:42:52.566Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T17:42:52.566Z"
             },
             {
               "$type": "Document",
@@ -142,8 +140,7 @@
               "RelativeToolTip": "Group7FinalProject\\DAL\\AppDbContext.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAYwBsAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T17:25:33.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T17:25:33.522Z"
             },
             {
               "$type": "Document",
