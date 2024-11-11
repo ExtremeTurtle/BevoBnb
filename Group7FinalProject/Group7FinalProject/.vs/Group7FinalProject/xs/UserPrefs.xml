@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{1007DA95-E90D-47FA-B41B-67AAECD34E1B}|http">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Group7FinalProject PreferredExecutionTarget="/Users/etaigeller/Downloads/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/AppUser.cs">
+    <Files>
+      <File FileName="Models/Category.cs" Line="1" Column="1" />
+      <File FileName="Models/AppUser.cs" Line="11" Column="25" />
+      <File FileName="Models/Property.cs" Line="1" Column="1" />
+      <File FileName="Models/Reservation.cs" Line="1" Column="1" />
+      <File FileName="Models/Review.cs" Line="1" Column="1" />
+      <File FileName="Models/Unavailability.cs" Line="1" Column="1" />
+      <File FileName="Views/Shared/_ValidationScriptsPartial.cshtml" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Group7FinalProject">
+            <Node name="Group7FinalProject">
+              <Node name="Models">
+                <Node name="AppUser.cs" selected="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
