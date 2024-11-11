@@ -32,7 +32,7 @@
         public Int32 CategoryID { get; set; }
 
         // Navigation Properties
-        public AppUser Host { get; set; } // The host user
+        public AppUser User { get; set; } // The host user
 
         public Category Category { get; set; } // The category of the property
 
