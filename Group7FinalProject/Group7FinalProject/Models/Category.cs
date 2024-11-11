@@ -10,5 +10,15 @@ namespace Group7FinalProject.Models
         [Display(Name = "Category Name")]
         public String CategoryName { get; set; }
 
+        public List<Property> Properties { get; set; }
+
+        public Category()
+        {
+            if (Properties == null)
+            {
+                Properties = new List<Property>();
+            }
+        }
+
     }
 }

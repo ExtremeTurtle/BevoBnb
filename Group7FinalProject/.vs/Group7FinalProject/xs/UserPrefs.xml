@@ -1,25 +1,22 @@
 ﻿<Properties StartupConfiguration="{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|http">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Group7FinalProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="Group7FinalProject/Models/Review.cs">
     <Files>
-      <File FileName="Group7FinalProject/Models/Reservation.cs" />
+      <File FileName="Group7FinalProject/Models/Reservation.cs" Line="1" Column="1" />
       <File FileName="Group7FinalProject/Models/AppUser.cs" />
-      <File FileName="Group7FinalProject/Models/Category.cs" />
-      <File FileName="Group7FinalProject/Models/Property.cs" />
-      <File FileName="Group7FinalProject/Models/Review.cs" Line="20" Column="1" />
+      <File FileName="Group7FinalProject/Models/Category.cs" Line="24" Column="2" />
+      <File FileName="Group7FinalProject/Models/Property.cs" Line="31" Column="1" />
+      <File FileName="Group7FinalProject/Models/Review.cs" Line="24" Column="6" />
+      <File FileName="Group7FinalProject/DAL/AppDbContext.cs" Line="1" Column="1" />
+      <File FileName="Group7FinalProject/DAL/GenerateNextConfirmationNumber.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Group7FinalProject" expanded="True">
+          <Node name="Group7FinalProject">
             <Node name="Group7FinalProject">
-              <Node name="Models" expanded="True">
-                <Node name="ViewModels" selected="True" />
+              <Node name="DAL" expanded="True" />
+              <Node name="Models">
+                <Node name="Review.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -27,5 +24,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Group7FinalProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>
