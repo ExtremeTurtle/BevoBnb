@@ -27,10 +27,6 @@ namespace Group7FinalProject.Models
         [Display(Name = "Street Address")]
         public string Address { get; set; }
 
-        [Required]
-        [Phone]
-        [Display(Name = "Phone Number")]
-        public string PhoneNumber { get; set; }
 
         // Role: Customer, Host, Admin
         [Required]
