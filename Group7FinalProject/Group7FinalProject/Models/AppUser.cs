@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Group7FinalProject.Models
 {
+    public enum HireStatus { Employed, Fired}
     public class AppUser
     {
         // Basic Information
@@ -27,11 +28,10 @@ namespace Group7FinalProject.Models
         [Display(Name = "Street Address")]
         public string Address { get; set; }
 
+        public HireStatus HireStatus { get; set; }
 
-        // Role: Customer, Host, Admin
-        [Required]
-        [Display(Name = "User Role")]
-        public string Role { get; set; }
+
+    
 
         // Navigation Properties
         public List<Reservation> Reservations { get; set; }  // Customers
