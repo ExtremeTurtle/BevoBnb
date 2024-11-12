@@ -34,9 +34,9 @@ namespace Group7FinalProject.Models
         public string Role { get; set; }
 
         // Navigation Properties
-        public List<Reservation> Reservations { get; set; } = new List<Reservation>(); // Customers
-        public List<Property> Properties { get; set; } = new List<Property>(); // Hosts
-        public List<Review> Reviews { get; set; } = new List<Review>(); // Customers
+        public List<Reservation> Reservations { get; set; }  // Customers
+        public List<Property> Properties { get; set; }  // Hosts
+        public List<Review> Reviews { get; set; }  // Customers
         public AppUser()
         {
             if (Reservations == null)
