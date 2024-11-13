@@ -58,6 +58,9 @@ namespace Group7FinalProject.Models
         [Display(Name = "Discount Rate:")]
         public Decimal DiscountRate { get; set; }
 
+        [Display(Name = "Minimum nights for discount:")]
+        public int MinNightsForDiscount {  get; set; }
+
         [Display(Name = "Pet Friendly:")]
         [Required]
         public Boolean PetFriendly { get; set; }
@@ -65,6 +68,10 @@ namespace Group7FinalProject.Models
         [Display(Name = "Parking Offered:")]
         [Required]
         public Boolean HasParking { get; set; }
+
+        [Display(Name = "Property Status:")]
+        [Required]
+        public Boolean PropertyStatus { get; set; }
 
 
         // Navigation Properties
