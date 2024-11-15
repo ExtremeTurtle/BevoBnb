@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 namespace Group7FinalProject.Models
 {
-    public enum DisputeStatus { InProgress, Completed, Resolved }
+    public enum DisputeStatus { InvalidDispute, NoDispute, Disputed }
 
     public class Review
     {
