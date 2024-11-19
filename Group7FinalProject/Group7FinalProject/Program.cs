@@ -7,8 +7,7 @@ using Microsoft.AspNetCore.Identity;
 //Be sure to remove the []
 using   Group7FinalProject.DAL;
 using Group7FinalProject.Models;
-using Group7FinalProject.DAL;
-using Group7FinalProject.Models;
+;
 
 //create a web application builder
 var builder = WebApplication.CreateBuilder(args);

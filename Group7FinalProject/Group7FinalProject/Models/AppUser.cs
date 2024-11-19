@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Group7FinalProject.Models
 {
     public enum HireStatus { Employed, Fired}
-    public class AppUser
+    public class AppUser : IdentityUser
     {
         // Basic Information
         [Key]
@@ -54,15 +54,7 @@ namespace Group7FinalProject.Models
                 Reviews = new List<Review>();
             }
         }
-        // Custom Validation for Age
-        public static ValidationResult ValidateAge(DateTime birthday, ValidationContext context)
-        {
-            var age = DateTime.Now.Year - birthday.Year;
-
-            if (birthday > DateTime.Now.AddYears(-age)) age--;
-
-            return age >= 18 ? ValidationResult.Success : new ValidationResult("User must be at least 18 years old.");
-        }
+        
     }
 }
 
