@@ -1,8 +1,12 @@
-﻿namespace Group7FinalProject.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Group7FinalProject.Models
 {
     public class Unavailability
     {
         public int UnavailabilityID { get; set; } // Primary Key
+
+        [Display(Name = "Unavailability Date")]
         public DateTime UnavailableDate { get; set; } // Specific date of unavailability
 
        

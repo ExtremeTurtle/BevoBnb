@@ -5,7 +5,6 @@ namespace Group7FinalProject.Models
 
     public class Review
     {
-        [Display(Name = "Review ID")]
         public Int32 ReviewID { get; set; }
 
         [Required]

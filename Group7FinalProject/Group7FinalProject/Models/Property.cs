@@ -14,8 +14,7 @@ namespace Group7FinalProject.Models
         [Required]
         public string Address { get; set; }
 
-        [Display(Name = "APT #:")]
-        public string AddressApt { get; set; }
+     
 
         [Display(Name = "City:")]
         [Required]

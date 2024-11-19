@@ -20,7 +20,6 @@ namespace Group7FinalProject.Models
         public string LastName { get; set; }
 
         [Required]
-        [DataType(DataType.Date)]
         [Display(Name = "Birthday")]
         public DateTime Birthday { get; set; }
 
