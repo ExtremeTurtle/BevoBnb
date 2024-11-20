@@ -24,7 +24,7 @@ namespace Group7FinalProject.Models
         [Display(Name = "Street Address")]
         public string Address { get; set; }
 
-        public HireStatus HireStatus { get; set; }
+        public HireStatus? HireStatus { get; set; }
 
 
     
