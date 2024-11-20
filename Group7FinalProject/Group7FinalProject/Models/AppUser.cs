@@ -8,9 +8,6 @@ namespace Group7FinalProject.Models
     public class AppUser : IdentityUser
     {
         // Basic Information
-        [Key]
-        public int UserID { get; set; }
-
         [Required]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
