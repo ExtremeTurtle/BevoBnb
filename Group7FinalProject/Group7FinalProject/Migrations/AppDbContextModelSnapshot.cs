@@ -17,7 +17,7 @@ namespace Group7FinalProject.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.10")
+                .HasAnnotation("ProductVersion", "9.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -54,7 +54,7 @@ namespace Group7FinalProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("HireStatus")
+                    b.Property<int?>("HireStatus")
                         .HasColumnType("int");
 
                     b.Property<string>("LastName")
@@ -89,9 +89,6 @@ namespace Group7FinalProject.Migrations
 
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("bit");
-
-                    b.Property<int>("UserID")
-                        .HasColumnType("int");
 
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
@@ -181,7 +178,6 @@ namespace Group7FinalProject.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<decimal>("WeekdayPrice")
@@ -236,7 +232,6 @@ namespace Group7FinalProject.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<decimal>("WeekdayPrice")
@@ -278,7 +273,6 @@ namespace Group7FinalProject.Migrations
                         .HasColumnType("nvarchar(280)");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("ReviewID");
@@ -458,9 +452,7 @@ namespace Group7FinalProject.Migrations
 
                     b.HasOne("Group7FinalProject.Models.AppUser", "User")
                         .WithMany("Properties")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Category");
 
@@ -475,9 +467,7 @@ namespace Group7FinalProject.Migrations
 
                     b.HasOne("Group7FinalProject.Models.AppUser", "User")
                         .WithMany("Reservations")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Property");
 
@@ -494,9 +484,7 @@ namespace Group7FinalProject.Migrations
 
                     b.HasOne("Group7FinalProject.Models.AppUser", "User")
                         .WithMany("Reviews")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Property");
 

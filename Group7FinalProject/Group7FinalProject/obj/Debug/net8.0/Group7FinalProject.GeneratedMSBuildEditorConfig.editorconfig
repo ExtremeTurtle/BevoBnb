@@ -26,6 +26,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\lukeh\OneDrive\Documents\GitHub\Group-7\Group7FinalProject\Group7FinalProject
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Categories/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Categories/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Categories/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Categories/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Categories/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,6 +64,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Unavailabilities/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5hdmFpbGFiaWxpdGllc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Unavailabilities/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5hdmFpbGFiaWxpdGllc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Unavailabilities/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5hdmFpbGFiaWxpdGllc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Unavailabilities/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5hdmFpbGFiaWxpdGllc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Unavailabilities/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5hdmFpbGFiaWxpdGllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/_ViewImports.cshtml]
