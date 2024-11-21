@@ -10,23 +10,22 @@ using Group7FinalProject.Models;
 
 namespace Group7FinalProject.Controllers
 {
-    public class CategoriesController : Controller
+    public class PropertiesController : Controller
     {
         private readonly AppDbContext _context;
 
-        public CategoriesController(AppDbContext context)
+        public PropertiesController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: Categories
+        // GET: Properties
         public async Task<IActionResult> Index()
         {
-            
-            return View(await _context.Categories.ToListAsync());
+            return View(await _context.Properties.ToListAsync());
         }
 
-        // GET: Categories/Details/5
+        // GET: Properties/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -34,39 +33,39 @@ namespace Group7FinalProject.Controllers
                 return NotFound();
             }
 
-            var category = await _context.Categories
-                .FirstOrDefaultAsync(m => m.CategoryID == id);
-            if (category == null)
+            var @property = await _context.Properties
+                .FirstOrDefaultAsync(m => m.PropertyID == id);
+            if (@property == null)
             {
                 return NotFound();
             }
 
-            return View(category);
+            return View(@property);
         }
 
-        // GET: Categories/Create
+        // GET: Properties/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Categories/Create
+        // POST: Properties/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CategoryID,CategoryName")] Category category)
+        public async Task<IActionResult> Create([Bind("PropertyID,PropertyNumber,Address,City,State,ZipCode,NumOfBedrooms,NumOfBathrooms,GuestsAllowed,WeekdayPrice,WeekendPrice,CleaningFee,DiscountRate,MinNightsForDiscount,PetFriendly,HasParking,PropertyStatus")] Property @property)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(category);
+                _context.Add(@property);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(category);
+            return View(@property);
         }
 
-        // GET: Categories/Edit/5
+        // GET: Properties/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -74,22 +73,22 @@ namespace Group7FinalProject.Controllers
                 return NotFound();
             }
 
-            var category = await _context.Categories.FindAsync(id);
-            if (category == null)
+            var @property = await _context.Properties.FindAsync(id);
+            if (@property == null)
             {
                 return NotFound();
             }
-            return View(category);
+            return View(@property);
         }
 
-        // POST: Categories/Edit/5
+        // POST: Properties/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("CategoryID,CategoryName")] Category category)
+        public async Task<IActionResult> Edit(int id, [Bind("PropertyID,PropertyNumber,Address,City,State,ZipCode,NumOfBedrooms,NumOfBathrooms,GuestsAllowed,WeekdayPrice,WeekendPrice,CleaningFee,DiscountRate,MinNightsForDiscount,PetFriendly,HasParking,PropertyStatus")] Property @property)
         {
-            if (id != category.CategoryID)
+            if (id != @property.PropertyID)
             {
                 return NotFound();
             }
@@ -98,12 +97,12 @@ namespace Group7FinalProject.Controllers
             {
                 try
                 {
-                    _context.Update(category);
+                    _context.Update(@property);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CategoryExists(category.CategoryID))
+                    if (!PropertyExists(@property.PropertyID))
                     {
                         return NotFound();
                     }
@@ -114,10 +113,10 @@ namespace Group7FinalProject.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(category);
+            return View(@property);
         }
 
-        // GET: Categories/Delete/5
+        // GET: Properties/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -125,34 +124,34 @@ namespace Group7FinalProject.Controllers
                 return NotFound();
             }
 
-            var category = await _context.Categories
-                .FirstOrDefaultAsync(m => m.CategoryID == id);
-            if (category == null)
+            var @property = await _context.Properties
+                .FirstOrDefaultAsync(m => m.PropertyID == id);
+            if (@property == null)
             {
                 return NotFound();
             }
 
-            return View(category);
+            return View(@property);
         }
 
-        // POST: Categories/Delete/5
+        // POST: Properties/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var category = await _context.Categories.FindAsync(id);
-            if (category != null)
+            var @property = await _context.Properties.FindAsync(id);
+            if (@property != null)
             {
-                _context.Categories.Remove(category);
+                _context.Properties.Remove(@property);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool CategoryExists(int id)
+        private bool PropertyExists(int id)
         {
-            return _context.Categories.Any(e => e.CategoryID == id);
+            return _context.Properties.Any(e => e.PropertyID == id);
         }
     }
 }

@@ -10,23 +10,22 @@ using Group7FinalProject.Models;
 
 namespace Group7FinalProject.Controllers
 {
-    public class CategoriesController : Controller
+    public class ReservationsController : Controller
     {
         private readonly AppDbContext _context;
 
-        public CategoriesController(AppDbContext context)
+        public ReservationsController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: Categories
+        // GET: Reservations
         public async Task<IActionResult> Index()
         {
-            
-            return View(await _context.Categories.ToListAsync());
+            return View(await _context.Reservations.ToListAsync());
         }
 
-        // GET: Categories/Details/5
+        // GET: Reservations/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -34,39 +33,39 @@ namespace Group7FinalProject.Controllers
                 return NotFound();
             }
 
-            var category = await _context.Categories
-                .FirstOrDefaultAsync(m => m.CategoryID == id);
-            if (category == null)
+            var reservation = await _context.Reservations
+                .FirstOrDefaultAsync(m => m.ReservationID == id);
+            if (reservation == null)
             {
                 return NotFound();
             }
 
-            return View(category);
+            return View(reservation);
         }
 
-        // GET: Categories/Create
+        // GET: Reservations/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Categories/Create
+        // POST: Reservations/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CategoryID,CategoryName")] Category category)
+        public async Task<IActionResult> Create([Bind("ReservationID,ConfirmationNumber,CheckIn,CheckOut,NumOfGuests,WeekdayPrice,WeekendPrice,CleaningFee,DiscountRate,ReservationStatus")] Reservation reservation)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(category);
+                _context.Add(reservation);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(category);
+            return View(reservation);
         }
 
-        // GET: Categories/Edit/5
+        // GET: Reservations/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -74,22 +73,22 @@ namespace Group7FinalProject.Controllers
                 return NotFound();
             }
 
-            var category = await _context.Categories.FindAsync(id);
-            if (category == null)
+            var reservation = await _context.Reservations.FindAsync(id);
+            if (reservation == null)
             {
                 return NotFound();
             }
-            return View(category);
+            return View(reservation);
         }
 
-        // POST: Categories/Edit/5
+        // POST: Reservations/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("CategoryID,CategoryName")] Category category)
+        public async Task<IActionResult> Edit(int id, [Bind("ReservationID,ConfirmationNumber,CheckIn,CheckOut,NumOfGuests,WeekdayPrice,WeekendPrice,CleaningFee,DiscountRate,ReservationStatus")] Reservation reservation)
         {
-            if (id != category.CategoryID)
+            if (id != reservation.ReservationID)
             {
                 return NotFound();
             }
@@ -98,12 +97,12 @@ namespace Group7FinalProject.Controllers
             {
                 try
                 {
-                    _context.Update(category);
+                    _context.Update(reservation);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CategoryExists(category.CategoryID))
+                    if (!ReservationExists(reservation.ReservationID))
                     {
                         return NotFound();
                     }
@@ -114,10 +113,10 @@ namespace Group7FinalProject.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(category);
+            return View(reservation);
         }
 
-        // GET: Categories/Delete/5
+        // GET: Reservations/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -125,34 +124,34 @@ namespace Group7FinalProject.Controllers
                 return NotFound();
             }
 
-            var category = await _context.Categories
-                .FirstOrDefaultAsync(m => m.CategoryID == id);
-            if (category == null)
+            var reservation = await _context.Reservations
+                .FirstOrDefaultAsync(m => m.ReservationID == id);
+            if (reservation == null)
             {
                 return NotFound();
             }
 
-            return View(category);
+            return View(reservation);
         }
 
-        // POST: Categories/Delete/5
+        // POST: Reservations/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var category = await _context.Categories.FindAsync(id);
-            if (category != null)
+            var reservation = await _context.Reservations.FindAsync(id);
+            if (reservation != null)
             {
-                _context.Categories.Remove(category);
+                _context.Reservations.Remove(reservation);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool CategoryExists(int id)
+        private bool ReservationExists(int id)
         {
-            return _context.Categories.Any(e => e.CategoryID == id);
+            return _context.Reservations.Any(e => e.ReservationID == id);
         }
     }
 }

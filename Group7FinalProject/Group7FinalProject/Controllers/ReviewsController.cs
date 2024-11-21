@@ -10,23 +10,22 @@ using Group7FinalProject.Models;
 
 namespace Group7FinalProject.Controllers
 {
-    public class CategoriesController : Controller
+    public class ReviewsController : Controller
     {
         private readonly AppDbContext _context;
 
-        public CategoriesController(AppDbContext context)
+        public ReviewsController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: Categories
+        // GET: Reviews
         public async Task<IActionResult> Index()
         {
-            
-            return View(await _context.Categories.ToListAsync());
+            return View(await _context.Reviews.ToListAsync());
         }
 
-        // GET: Categories/Details/5
+        // GET: Reviews/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -34,39 +33,39 @@ namespace Group7FinalProject.Controllers
                 return NotFound();
             }
 
-            var category = await _context.Categories
-                .FirstOrDefaultAsync(m => m.CategoryID == id);
-            if (category == null)
+            var review = await _context.Reviews
+                .FirstOrDefaultAsync(m => m.ReviewID == id);
+            if (review == null)
             {
                 return NotFound();
             }
 
-            return View(category);
+            return View(review);
         }
 
-        // GET: Categories/Create
+        // GET: Reviews/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Categories/Create
+        // POST: Reviews/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CategoryID,CategoryName")] Category category)
+        public async Task<IActionResult> Create([Bind("ReviewID,Rating,ReviewText,HostComments")] Review review)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(category);
+                _context.Add(review);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(category);
+            return View(review);
         }
 
-        // GET: Categories/Edit/5
+        // GET: Reviews/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -74,22 +73,22 @@ namespace Group7FinalProject.Controllers
                 return NotFound();
             }
 
-            var category = await _context.Categories.FindAsync(id);
-            if (category == null)
+            var review = await _context.Reviews.FindAsync(id);
+            if (review == null)
             {
                 return NotFound();
             }
-            return View(category);
+            return View(review);
         }
 
-        // POST: Categories/Edit/5
+        // POST: Reviews/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("CategoryID,CategoryName")] Category category)
+        public async Task<IActionResult> Edit(int id, [Bind("ReviewID,Rating,ReviewText,HostComments")] Review review)
         {
-            if (id != category.CategoryID)
+            if (id != review.ReviewID)
             {
                 return NotFound();
             }
@@ -98,12 +97,12 @@ namespace Group7FinalProject.Controllers
             {
                 try
                 {
-                    _context.Update(category);
+                    _context.Update(review);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CategoryExists(category.CategoryID))
+                    if (!ReviewExists(review.ReviewID))
                     {
                         return NotFound();
                     }
@@ -114,10 +113,10 @@ namespace Group7FinalProject.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(category);
+            return View(review);
         }
 
-        // GET: Categories/Delete/5
+        // GET: Reviews/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -125,34 +124,34 @@ namespace Group7FinalProject.Controllers
                 return NotFound();
             }
 
-            var category = await _context.Categories
-                .FirstOrDefaultAsync(m => m.CategoryID == id);
-            if (category == null)
+            var review = await _context.Reviews
+                .FirstOrDefaultAsync(m => m.ReviewID == id);
+            if (review == null)
             {
                 return NotFound();
             }
 
-            return View(category);
+            return View(review);
         }
 
-        // POST: Categories/Delete/5
+        // POST: Reviews/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var category = await _context.Categories.FindAsync(id);
-            if (category != null)
+            var review = await _context.Reviews.FindAsync(id);
+            if (review != null)
             {
-                _context.Categories.Remove(category);
+                _context.Reviews.Remove(review);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool CategoryExists(int id)
+        private bool ReviewExists(int id)
         {
-            return _context.Categories.Any(e => e.CategoryID == id);
+            return _context.Reviews.Any(e => e.ReviewID == id);
         }
     }
 }
