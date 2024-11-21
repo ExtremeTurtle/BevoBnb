@@ -8,21 +8,22 @@ namespace Group7FinalProject.Models
     public class AppUser : IdentityUser
     {
         // Basic Information
-        [Required]
+        [Required(ErrorMessage = "First name is required.")]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Last name is required.")]
         [Display(Name = "Last Name")]
-        public string LastName { get; set; }
+        public String LastName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Birthday is required.")]
         [Display(Name = "Birthday")]
         public DateTime Birthday { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Street Address is required.")]
         [Display(Name = "Street Address")]
         public string Address { get; set; }
+
 
         public HireStatus? HireStatus { get; set; }
 

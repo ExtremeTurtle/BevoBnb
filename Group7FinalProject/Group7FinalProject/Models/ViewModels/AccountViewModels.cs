@@ -52,6 +52,15 @@ namespace Group7FinalProject.Models
         [Display(Name = "Last Name")]
         public String LastName { get; set; }
 
+        [Required(ErrorMessage = "Birthday is required.")]
+        [Display(Name = "Birthday")]
+        public DateTime Birthday { get; set; }
+
+        [Required(ErrorMessage = "Street Address is required.")]
+        [Display(Name = "Street Address")]
+        public string Address { get; set; }
+
+
 
         //NOTE: Here is the logic for putting in a password
         [Required]
