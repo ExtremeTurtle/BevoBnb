@@ -7,9 +7,14 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Group7FinalProject.DAL;
 using Group7FinalProject.Models;
+using Microsoft.AspNetCore.Authorization;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using static NuGet.Packaging.PackagingConstants;
+using NuGet.Packaging.Signing;
 
 namespace Group7FinalProject.Controllers
 {
+    [AllowAnonymous]
     public class PropertiesController : Controller
     {
         private readonly AppDbContext _context;
@@ -22,49 +27,92 @@ namespace Group7FinalProject.Controllers
         // GET: Properties
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Properties.ToListAsync());
+            //Set up a list of Properties to display
+            List<Property> properties;
+
+            properties = _context.Properties
+                                .Include(r => r.Category).ToList();
+
+            return View(properties);
+
         }
 
         // GET: Properties/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            //the user did not specify a order to view
             if (id == null)
             {
-                return NotFound();
+                return View("Error", new String[] { "Please specify a Property to view!" });
             }
 
-            var @property = await _context.Properties
-                .FirstOrDefaultAsync(m => m.PropertyID == id);
-            if (@property == null)
+            //find the order in the database
+            Property property = await _context.Properties
+                                              .Include(r => r.Category)
+                                              .Include(r =>r.Reviews)
+                                              .Include(r => r. Unavailabilities)
+                                              .FirstOrDefaultAsync(m => m.PropertyID == id);
+
+            //order was not found in the database
+            if (property == null)
             {
-                return NotFound();
+                return View("Error", new String[] { "This property was not found!" });
             }
 
-            return View(@property);
+           
+
+            //Send the user to the details page
+            return View(property);
         }
 
+        [Authorize(Roles = "Host")]
         // GET: Properties/Create
         public IActionResult Create()
         {
+            ViewBag.AllCateogires = GetCategorySelectList();
             return View();
         }
 
+        [Authorize(Roles = "Host")]
         // POST: Properties/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PropertyID,PropertyNumber,Address,City,State,ZipCode,NumOfBedrooms,NumOfBathrooms,GuestsAllowed,WeekdayPrice,WeekendPrice,CleaningFee,DiscountRate,MinNightsForDiscount,PetFriendly,HasParking,PropertyStatus")] Property @property)
+        public async Task<IActionResult> Create(Property property, int categoryID) //Add code to bind user
         {
-            if (ModelState.IsValid)
+            //This code has been modified so that if the model state is not valid
+            //we immediately go to the "sad path" and give the user a chance to try again
+            if (ModelState.IsValid == false)
             {
-                _context.Add(@property);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                //re-populate the view bag with the categories
+                ViewBag.AllCategories = GetCategorySelectList();
+                //go back to the Create view to try again
+                return View(property);
             }
-            return View(@property);
+
+            //if code gets to this point, we know the model is valid and
+            //we can add the property to the database
+
+            //add the property to the database and save changes
+            _context.Add(property);
+            await _context.SaveChangesAsync();
+
+            //add the associated Category to the Property
+            
+            //find the Category associated with that id
+            Category dbCategory = _context.Categories.Find(categoryID);
+
+            //add the category to the Property's category and save changes
+            property.Category = dbCategory;
+            _context.SaveChanges();
+            
+
+            //Send the user to the page with all the properties
+            return RedirectToAction(nameof(Index));
         }
 
+        [Authorize(Roles = "Host")]
         // GET: Properties/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -81,6 +129,7 @@ namespace Group7FinalProject.Controllers
             return View(@property);
         }
 
+        [Authorize(Roles = "Host")]
         // POST: Properties/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -116,42 +165,24 @@ namespace Group7FinalProject.Controllers
             return View(@property);
         }
 
-        // GET: Properties/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var @property = await _context.Properties
-                .FirstOrDefaultAsync(m => m.PropertyID == id);
-            if (@property == null)
-            {
-                return NotFound();
-            }
-
-            return View(@property);
-        }
-
-        // POST: Properties/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var @property = await _context.Properties.FindAsync(id);
-            if (@property != null)
-            {
-                _context.Properties.Remove(@property);
-            }
-
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
+       
 
         private bool PropertyExists(int id)
         {
             return _context.Properties.Any(e => e.PropertyID == id);
+        }
+
+        private SelectList GetCategorySelectList()
+        {
+            //create a list for all the products
+            List<Category> allCategories = _context.Categories.ToList();
+
+            //the user MUST select a product, so you don't need a dummy option for no product
+
+            //use the constructor on select list to create a new select list with the options
+            SelectList slAllCategories = new SelectList(allCategories, nameof(Category.CategoryID), nameof(Category.CategoryName));
+
+            return slAllCategories;
         }
     }
 }
