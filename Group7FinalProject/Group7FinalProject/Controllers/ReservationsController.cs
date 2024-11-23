@@ -9,6 +9,7 @@ using Group7FinalProject.DAL;
 using Group7FinalProject.Models;
 
 namespace Group7FinalProject.Controllers
+    
 {
     public class ReservationsController : Controller
     {

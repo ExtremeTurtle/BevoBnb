@@ -31,7 +31,8 @@ namespace Group7FinalProject.Controllers
             List<Property> properties;
 
             properties = _context.Properties
-                                .Include(r => r.Category).ToList();
+                                .Include(r => r.Category).
+                                Where(p => p.PropertyStatus == PropertyStatus.Approved).ToList();
 
             return View(properties);
 
@@ -104,6 +105,7 @@ namespace Group7FinalProject.Controllers
             Category dbCategory = _context.Categories.Find(categoryID);
 
             //add the category to the Property's category and save changes
+            property.PropertyStatus = PropertyStatus.Unapproved;
             property.Category = dbCategory;
             _context.SaveChanges();
             
@@ -183,6 +185,38 @@ namespace Group7FinalProject.Controllers
             SelectList slAllCategories = new SelectList(allCategories, nameof(Category.CategoryID), nameof(Category.CategoryName));
 
             return slAllCategories;
+        }
+
+
+        //See Properties needing approval
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> ApproveProperties()
+        {
+            List<Property> pendingProperties;
+
+            pendingProperties = await _context.Properties
+                                                  .Where(p => p.PropertyStatus == PropertyStatus.Unapproved)
+                                                  .ToListAsync();
+            return View(pendingProperties);
+        }
+
+        //Approve Properties
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Approve(int propertyId)
+        {
+            Property property = await _context.Properties.FindAsync(propertyId);
+            if (property == null)
+            {
+                return NotFound();
+            }
+
+            property.PropertyStatus = PropertyStatus.Approved;
+            _context.Update(property);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(ApproveProperties));
         }
     }
 }

@@ -17,6 +17,7 @@ namespace Group7FinalProject.Models
         public String LastName { get; set; }
 
         [Required(ErrorMessage = "Birthday is required.")]
+        [DataType(DataType.Date)]
         [Display(Name = "Birthday")]
         public DateTime Birthday { get; set; }
 
