@@ -27,7 +27,8 @@ namespace Group7FinalProject.Seeding
                 DiscountRate = .014m,
                 PropertyStatus = PropertyStatus.Approved
 
-            }
+            };
+
             property.User = db.Users.FirstOrDefault(g => g.Email == "gonzalez@aol.com");
             property.Category = db.Categories.FirstOrDefault(g => g.CategoryName == "House");
         }
