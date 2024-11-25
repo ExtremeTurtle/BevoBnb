@@ -2,7 +2,7 @@
 
 namespace Group7FinalProject.Models
 {
-    public enum PropertyStatus { Unapproved, Approved }
+    public enum PropertyStatus { Unapproved, Approved, Inactive }
     public class Property
     {
         public Int32 PropertyID { get; set; } // Primary Key

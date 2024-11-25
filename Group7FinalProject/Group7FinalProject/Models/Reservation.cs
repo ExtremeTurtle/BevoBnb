@@ -3,7 +3,7 @@
 namespace Group7FinalProject.Models
 {
     //Enum for the status of a reservation
-    public enum ReservationStatus {Valid, Cancelled}
+    public enum ReservationStatus {Valid, Cancelled, Unconfirmed}
     public class Reservation
     {
         //Constant Tax Rate of 7%
