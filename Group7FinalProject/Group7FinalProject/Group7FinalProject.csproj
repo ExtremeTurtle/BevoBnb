@@ -7,9 +7,6 @@
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
-  <ItemGroup>
-    <Folder Include="Seeding\" />
-  </ItemGroup>
 
   <ItemGroup>
     <Content Remove="wwwroot\" />
