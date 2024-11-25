@@ -38,6 +38,22 @@ namespace Group7FinalProject.Controllers
 
         }
 
+        [Authorize(Roles = "Host")]
+
+        // GET: Properties
+        public async Task<IActionResult> MyProperties()
+        {
+            //Set up a list of Properties to display
+            List<Property> properties;
+
+
+            properties = _context.Properties
+                                .Include(r => r.Category).Include(r => r.User).Where(p => p.User.UserName != User.Identity.Name)
+                                .ToList();
+
+            return View(properties);
+
+        }
         // GET: Properties/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -118,17 +134,25 @@ namespace Group7FinalProject.Controllers
         // GET: Properties/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            //if the user didn't specify a property id, we can't show them 
+            //the data, so show an error instead
             if (id == null)
             {
-                return NotFound();
+                return View("Error", new string[] { "Please specify a property to edit!" });
             }
 
-            var @property = await _context.Properties.FindAsync(id);
-            if (@property == null)
+            //find the property in the database
+            //be sure to change the data type to course instead of 'var'
+            Property property = await _context.Properties.Include(c => c.User).FirstOrDefaultAsync(c => c.PropertyID == id);
+
+            //if the property does not exist in the database, then show the user
+            //an error message
+            if (property == null)
             {
-                return NotFound();
+                return View("Error", new string[] { "This property was not found!" });
             }
-            return View(@property);
+
+            return View(property);
         }
 
         [Authorize(Roles = "Host")]
@@ -137,34 +161,53 @@ namespace Group7FinalProject.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PropertyID,PropertyNumber,Address,City,State,ZipCode,NumOfBedrooms,NumOfBathrooms,GuestsAllowed,WeekdayPrice,WeekendPrice,CleaningFee,DiscountRate,MinNightsForDiscount,PetFriendly,HasParking,PropertyStatus")] Property @property)
+        public async Task<IActionResult> Edit(int id, Property property)
         {
-            if (id != @property.PropertyID)
+            //this is a security check to see if the user is trying to modify
+            //a different record.  Show an error message
+            if (id != property.PropertyID)
             {
-                return NotFound();
+                return View("Error", new string[] { "Please try again!" });
             }
 
-            if (ModelState.IsValid)
+            if (ModelState.IsValid == false) //there is something wrong
             {
-                try
-                {
-                    _context.Update(@property);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!PropertyExists(@property.PropertyID))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                return View(property);
             }
-            return View(@property);
+
+            //if code gets this far, attempt to edit the property
+            try
+            {
+                //Find the property to edit in the database and include relevant 
+                //navigational properties
+                Property dbProperty = _context.Properties
+                    .FirstOrDefault(c => c.PropertyID == property.PropertyID);
+
+               
+
+                //update the propertie's scalar properties
+                dbProperty.WeekdayPrice = property.WeekdayPrice;
+                dbProperty.WeekdayPrice = property.WeekdayPrice;
+                dbProperty.CleaningFee = property.CleaningFee;
+
+                //Update the Status
+                dbProperty.PropertyStatus = property.PropertyStatus;
+
+
+
+                //save the changes
+                _context.Properties.Update(dbProperty);
+                _context.SaveChanges();
+
+            }
+            catch (Exception ex)
+            {
+                return View("Error", new string[] { "There was an error editing this property.", ex.Message });
+            }
+
+            //if code gets this far, everything is okay
+            //send the user back to the page with all the courses
+            return RedirectToAction(nameof(Index));
         }
 
        
