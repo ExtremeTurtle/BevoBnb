@@ -148,7 +148,11 @@ namespace Group7FinalProject.Controllers
             //find the property to be associated with this order
             Property dbProperty = _context.Properties.Find(SelectedProperty);
 
-            
+            if (reservation.CheckIn <= DateTime.Today)
+            {
+                return View("Error", new string[] { "Check-in date must be in the future." });
+            }
+
 
             //set the reservations price equal to the property price
             //this will allow us to to store the price that the user paid

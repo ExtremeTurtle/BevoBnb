@@ -57,5 +57,8 @@ namespace Group7FinalProject.Models
         //Many side of One-To-Many relationship with Property
         public Property? Property { get; set; }
 
+        //Many side of One-To-Many relationship with Cart
+        public Cart? Cart { get; set; }
+
     }
 }
