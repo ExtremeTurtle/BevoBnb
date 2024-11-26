@@ -5,8 +5,6 @@ using System.Text;
 
 namespace Group7FinalProject.Seeding
 {
-
-
     public static class SeedReviews
     {
         public static void SeedAllReviews(AppDbContext db)
@@ -243,4 +241,3 @@ namespace Group7FinalProject.Seeding
         }
     }
 }
-
