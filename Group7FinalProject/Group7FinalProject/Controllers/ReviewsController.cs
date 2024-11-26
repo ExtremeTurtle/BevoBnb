@@ -7,16 +7,19 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Group7FinalProject.DAL;
 using Group7FinalProject.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace Group7FinalProject.Controllers
 {
     public class ReviewsController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly UserManager<AppUser> _userManager;
 
-        public ReviewsController(AppDbContext context)
+        public ReviewsController(AppDbContext context, UserManager<AppUser> userManger)
         {
             _context = context;
+            _userManager = userManger;
         }
 
         // GET: Reviews
@@ -44,8 +47,15 @@ namespace Group7FinalProject.Controllers
         }
 
         // GET: Reviews/Create
-        public IActionResult Create()
+        [HttpGet]
+        public async Task<IActionResult> Create()
         {
+            if (User.IsInRole("Customer"))
+            {
+                Review rev = new Review();
+                rev.User = await _userManager.FindByNameAsync(User.Identity.Name);
+                return View(rev);
+            }
             return View();
         }
 
