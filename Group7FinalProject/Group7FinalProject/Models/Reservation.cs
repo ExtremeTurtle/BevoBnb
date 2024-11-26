@@ -52,7 +52,7 @@ namespace Group7FinalProject.Models
 
 
         //Many side of One-To-Many relationship with Customer
-        public AppUser User { get; set; }
+        public AppUser? User { get; set; }
 
         //Many side of One-To-Many relationship with Property
         public Property? Property { get; set; }

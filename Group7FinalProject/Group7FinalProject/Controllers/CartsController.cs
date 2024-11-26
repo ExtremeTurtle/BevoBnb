@@ -22,12 +22,63 @@ namespace Group7FinalProject.Controllers
         // GET: Carts
         public async Task<IActionResult> Index()
         {
-            var appDbContext = _context.Carts.Include(c => c.User);
-            return View(await appDbContext.ToListAsync());
+
+            // Set up the cart to display
+            Cart cart = await _context.Carts
+                .Include(c => c.Reservations) // Include reservations in the cart
+                .ThenInclude(r => r.Property) // Include the related property for each reservation
+                .FirstOrDefaultAsync(c => c.User.UserName == User.Identity.Name);
+
+            if (cart == null || cart.Reservations.Count == 0)
+            {
+                return View("Error", new string[] { "Your cart is empty." });
+            }
+
+            return View(cart);
         }
 
-        // GET: Carts/Details/5
-        public async Task<IActionResult> Details(int? id)
+        // POST: Cart/Checkout
+        [HttpPost]
+        public async Task<IActionResult> Checkout()
+        {
+            var userCart = await _context.Carts
+                .Include(c => c.Reservations)
+                .FirstOrDefaultAsync(c => c.User.UserName == User.Identity.Name);
+
+            if (userCart == null || !userCart.Reservations.Any())
+            {
+                return View("Error", new string[] { "Your cart is empty." });
+            }
+
+            try
+            {
+                int confirmationNumber = Utilities.GenerateNextConfirmationNumber.GetNextConfirmationNumber(_context);
+
+                foreach (var reservation in userCart.Reservations)
+                {
+                    reservation.ReservationStatus = ReservationStatus.Valid;
+                    reservation.ConfirmationNumber = confirmationNumber;
+                }
+
+                _context.Carts.Remove(userCart);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction("ThankYou", new { confirmationNumber });
+            }
+            catch (Exception ex)
+            {
+                return View("Error", new string[] { "An error occurred during checkout.", ex.Message });
+            }
+        }
+            // GET: Cart/ThankYou
+            public IActionResult ThankYou(int confirmationNumber)
+        {
+            ViewBag.ConfirmationNumber = confirmationNumber;
+            return View();
+        }
+    
+    // GET: Carts/Details/5
+    public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {

@@ -32,8 +32,8 @@ namespace Group7FinalProject.Models
     
 
         // Navigation Properties
-        public Cart Cart { get; set; }
-        public List<Reservation> Reservations { get; set; }  // Customers
+        public Cart? Cart { get; set; }
+        public List<Reservation>? Reservations { get; set; }  // Customers
         public List<Property> Properties { get; set; }  // Hosts
         public List<Review> Reviews { get; set; }  // Customers
         public AppUser()
