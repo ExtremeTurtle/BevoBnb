@@ -80,7 +80,7 @@ namespace Group7FinalProject.Models
         [Required]
         public Category Category { get; set; } // The category of the property
 
-        public List<Reservation> Reservations { get; set; } // Reservations for this property
+        public List<Reservation>? Reservations { get; set; } // Reservations for this property
 
         public List<Review> Reviews { get; set; } // Reviews for this property
 

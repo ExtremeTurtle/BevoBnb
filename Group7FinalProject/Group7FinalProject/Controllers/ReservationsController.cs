@@ -127,9 +127,37 @@ namespace Group7FinalProject.Controllers
 
         [Authorize(Roles = "Customer,Admin")]
 
-        public IActionResult Create()
+        public async Task <IActionResult> Create(int? PropertyID)
         {
-            return View();
+            if (User.IsInRole("Customer"))
+            {
+                if (PropertyID == null)
+                {
+                    return View("Error", new string[] { "Please specify a property to add to the reservation" });
+                }
+
+                //find the property in the database
+                Property dbProperty = _context.Properties.Find(PropertyID);
+
+                //make sure the Property exists in the database
+                if (dbProperty == null)
+                {
+                    return View("Error", new string[] { "This Property was not in the database!" });
+                }
+
+
+                Reservation res = new Reservation();
+                res.Property = dbProperty;
+                res.CheckIn = DateTime.Today.AddDays(1); // Default check-in
+                res.CheckOut = DateTime.Today.AddDays(2); // Default check-out
+                res.User = await _userManager.FindByNameAsync(User.Identity.Name);
+                return View(res);
+            }
+            else
+            {
+                ViewBag.UserNames = await GetAllCustomerUserNamesSelectList();
+                return View("SelectCustomerForReservation");
+            }
         }
 
 
@@ -139,11 +167,30 @@ namespace Group7FinalProject.Controllers
         [HttpPost]
         [Authorize(Roles = "Customer,Admin")]
         [ValidateAntiForgeryToken]
-           public async Task<IActionResult> Create([Bind("Property")]Reservation reservation)
+           public async Task<IActionResult> Create(Reservation reservation, int propertyID)
         {
             if (!ModelState.IsValid)
             {
                 return View(reservation);
+            }
+
+            //find the property to be associated with this reservation
+            Property dbProperty = _context.Properties.Find(propertyID);
+
+            reservation.Property= dbProperty;
+
+            if (dbProperty == null)
+            {
+                return View("Error", new string[] { "The property could not be found." });
+            }
+
+
+
+            // Load the User
+            reservation.User = await _userManager.FindByNameAsync(User.Identity.Name);
+            if (reservation.User == null)
+            {
+                return View("Error", new string[] { "The user could not be found." });
             }
 
             // Validate CheckIn and CheckOut dates
@@ -157,9 +204,38 @@ namespace Group7FinalProject.Controllers
                 return View("Error", new string[] { "Check-out date must be after the check-in date." });
             }
 
-            
 
-            
+
+
+            reservation.WeekdayPrice = dbProperty.WeekdayPrice;
+            reservation.WeekendPrice = dbProperty.WeekendPrice;
+            reservation.CleaningFee = dbProperty.CleaningFee;
+            reservation.DiscountRate = dbProperty.DiscountRate;
+            reservation.ReservationStatus = ReservationStatus.Unconfirmed;
+
+            //if code gets this far, add the reservation to the database
+            _context.Add(reservation);
+            await _context.SaveChangesAsync();
+
+            // Add the reservation to the cart
+            Cart cart = await _context.Carts
+                .FirstOrDefaultAsync(c => c.User.Id == reservation.User.Id);
+
+            if (cart == null)
+            {
+                // Create a new cart if the user doesn't have an active one
+                cart = new Cart
+                {
+                    User = reservation.User,
+                };
+                _context.Carts.Add(cart);
+                await _context.SaveChangesAsync();
+            }
+            cart.Reservations.Add(reservation);
+            _context.Carts.Update(cart);
+            await _context.SaveChangesAsync();
+
+
 
             // Redirect to the cart page
             return RedirectToAction("Index", "Cart");
@@ -223,6 +299,28 @@ namespace Group7FinalProject.Controllers
         private bool ReservationExists(int id)
         {
             return _context.Reservations.Any(e => e.ReservationID == id);
+        }
+        public async Task<SelectList> GetAllCustomerUserNamesSelectList()
+        {
+            //create a list to hold the customers
+            List<AppUser> allCustomers = new List<AppUser>();
+
+            //See if the user is a customer
+            foreach (AppUser dbUser in _context.Users)
+            {
+                //if the user is a customer, add them to the list of customers
+                if (await _userManager.IsInRoleAsync(dbUser, "Customer") == true)//user is a customer
+                {
+                    allCustomers.Add(dbUser);
+                }
+            }
+
+            //create a new select list with the customer emails
+            SelectList sl = new SelectList(allCustomers.OrderBy(c => c.Email), nameof(AppUser.UserName), nameof(AppUser.Email));
+
+            //return the select list
+            return sl;
+
         }
     }
 }
