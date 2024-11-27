@@ -6,6 +6,8 @@ namespace Group7FinalProject.Models
     {
         public int UnavailabilityID { get; set; } // Primary Key
 
+        [DataType(DataType.Date)]
+
         [Display(Name = "Unavailability Date")]
         public DateTime UnavailableDate { get; set; } // Specific date of unavailability
 

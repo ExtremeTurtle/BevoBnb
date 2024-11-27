@@ -37,30 +37,14 @@
             <th>
                 @Html.DisplayNameFor(model => model.GuestsAllowed)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.WeekdayPrice)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.WeekendPrice)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CleaningFee)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DiscountRate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MinNightsForDiscount)
-            </th>
+           
             <th>
                 @Html.DisplayNameFor(model => model.PetFriendly)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.HasParking)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PropertyStatus)
-            </th>
+          
             <th></th>
         </tr>
     </thead>
@@ -91,30 +75,14 @@
             <td>
                 @Html.DisplayFor(modelItem => item.GuestsAllowed)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WeekdayPrice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WeekendPrice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CleaningFee)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DiscountRate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MinNightsForDiscount)
-            </td>
+           
             <td>
                 @Html.DisplayFor(modelItem => item.PetFriendly)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.HasParking)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PropertyStatus)
-            </td>
+            
             <td>
                 <a asp-action="Edit" asp-route-id="@item.PropertyID">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.PropertyID">Details</a> |

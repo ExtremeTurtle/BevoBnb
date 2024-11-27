@@ -6,7 +6,7 @@ namespace Group7FinalProject.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index", "Properties");
         }
     }
 }

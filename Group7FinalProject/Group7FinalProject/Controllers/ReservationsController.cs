@@ -127,11 +127,11 @@ namespace Group7FinalProject.Controllers
 
         [Authorize(Roles = "Customer,Admin")]
 
-        // GET: Reservations/Create
         public IActionResult Create()
         {
             return View();
         }
+
 
         // POST: Reservations/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -139,7 +139,7 @@ namespace Group7FinalProject.Controllers
         [HttpPost]
         [Authorize(Roles = "Customer,Admin")]
         [ValidateAntiForgeryToken]
-           public async Task<IActionResult> Create(Reservation reservation, int SelectedProperty)
+           public async Task<IActionResult> Create([Bind("Property")]Reservation reservation)
         {
             if (!ModelState.IsValid)
             {
@@ -157,61 +157,9 @@ namespace Group7FinalProject.Controllers
                 return View("Error", new string[] { "Check-out date must be after the check-in date." });
             }
 
-            // Find the selected property
-            var dbProperty = await _context.Properties.FindAsync(SelectedProperty);
-            if (dbProperty == null)
-            {
-                return View("Error", new string[] { "Selected property does not exist." });
-            }
+            
 
-            // Check for overlapping reservations
-            var overlappingReservations = _context.Reservations
-                .Where(r => r.Property.PropertyID == SelectedProperty &&
-                            r.CheckIn < reservation.CheckOut &&
-                            r.CheckOut > reservation.CheckIn)
-                .ToList();
-
-            if (overlappingReservations.Any())
-            {
-                return View("Error", new string[] { "This property is already reserved for the selected dates." });
-            }
-
-            // Fetch the current user
-            var currentUser = await _userManager.FindByNameAsync(User.Identity.Name);
-            if (currentUser == null)
-            {
-                return View("Error", new string[] { "User not found. Please log in and try again." });
-            }
-
-            // Find or create the user's cart
-            var userCart = await _context.Carts
-                .Include(c => c.Reservations)
-                .FirstOrDefaultAsync(c => c.User.UserName == currentUser.UserName);
-
-            if (userCart == null)
-            {
-                userCart = new Cart
-                {
-                    User = currentUser,
-                    Reservations = new List<Reservation>()
-                };
-                _context.Carts.Add(userCart);
-                await _context.SaveChangesAsync();
-            }
-
-            // Populate reservation details
-            reservation.Property = dbProperty;
-            reservation.User = currentUser;
-            reservation.WeekdayPrice = dbProperty.WeekdayPrice;
-            reservation.WeekendPrice = dbProperty.WeekendPrice;
-            reservation.CleaningFee = dbProperty.CleaningFee;
-            reservation.DiscountRate = dbProperty.DiscountRate;
-            reservation.ReservationStatus = ReservationStatus.Unconfirmed;
-
-            // Add the reservation to the cart
-            userCart.Reservations.Add(reservation);
-            _context.Reservations.Add(reservation);
-            await _context.SaveChangesAsync();
+            
 
             // Redirect to the cart page
             return RedirectToAction("Index", "Cart");
