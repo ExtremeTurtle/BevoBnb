@@ -30,7 +30,7 @@ namespace Group7FinalProject.Controllers
             // Set up the cart to display
             Cart cart = await _context.Carts
                 .Include(c => c.Reservations) // Include reservations in the cart
-                .ThenInclude(r => r.Property) // Include the related property for each reservation
+                .ThenInclude(r => r.Property)
                 .FirstOrDefaultAsync(c => c.User.UserName == User.Identity.Name);
 
             if (cart == null || cart.Reservations.Count == 0)
@@ -38,15 +38,71 @@ namespace Group7FinalProject.Controllers
                 return View("Error", new string[] { "Your cart is empty." });
             }
 
-            return View(cart);
+            return View(cart.Reservations);
         }
 
-        
-        
-      
-    
-    // GET: Carts/Details/5
-    public async Task<IActionResult> Details(int? id)
+        // GET: Carts/Checkout
+        public async Task<IActionResult> Checkout()
+        {
+            // Set up the cart to display
+            Cart cart = await _context.Carts
+                .Include(c => c.Reservations) // Include reservations in the cart
+                .ThenInclude(r => r.Property)
+                .FirstOrDefaultAsync(c => c.User.UserName == User.Identity.Name);
+
+            if (cart == null || cart.Reservations.Count == 0)
+            {
+                return View("Error", new string[] { "Your cart is empty." });
+            }
+
+            // Calculate totals for each reservation
+            foreach (var reservation in cart.Reservations)
+            {
+                reservation.CalcTotals();
+            }
+
+            decimal grandtotal = cart.Reservations.Sum(r => r.TotalPrice);
+
+            ViewBag.GrandTotal = grandtotal;
+
+
+            return View(cart.Reservations);
+        }
+        [HttpPost]
+        public async Task<IActionResult> ConfirmCheckout()
+        {
+            // Fetch the user's cart
+            Cart cart = await _context.Carts
+                .Include(c => c.Reservations)
+                .ThenInclude(r => r.Property)
+                .FirstOrDefaultAsync(c => c.User.UserName == User.Identity.Name);
+
+            if (cart == null || !cart.Reservations.Any())
+            {
+                return View("Error", new string[] { "Your cart is empty. Cannot confirm checkout." });
+            }
+
+            // Confirm each reservation in the cart
+            foreach (var reservation in cart.Reservations)
+            {
+                reservation.ReservationStatus = ReservationStatus.Valid;
+                reservation.ConfirmationNumber = new Random().Next(100000, 999999); // Generate a random confirmation number
+                reservation.Cart = null; // Detach the reservation from the cart
+            }
+
+            // Clear the cart
+            _context.Carts.Remove(cart);
+            await _context.SaveChangesAsync();
+
+            // Redirect to a confirmation page
+            return RedirectToAction("Confirmation");
+        }
+
+
+
+
+        // GET: Carts/Details/5
+        public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Group7FinalProject.Models
 {
@@ -64,5 +65,72 @@ namespace Group7FinalProject.Models
         //Many side of One-To-Many relationship with Cart
         public Cart? Cart { get; set; }
 
+
+        // Calculated values
+        [NotMapped] // Exclude from database mapping
+
+        [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name = "Base Price")]
+        public decimal BasePrice { get; private set; }
+
+        [NotMapped] // Exclude from database mapping
+
+        [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name = "Discount")]
+        public decimal Discount { get; private set; }
+
+        [NotMapped] // Exclude from database mapping
+
+
+        [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name = "Total Price")]
+        public decimal TotalPrice { get; private set; }
+
+        [NotMapped] // Exclude from database mapping
+
+
+        [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name = "Tax Price")]
+        public decimal Tax { get; private set; }
+
+        // Method to calculate totals
+        public void CalcTotals()
+        {
+            // Calculate number of days
+            int totalDays = (CheckOut - CheckIn).Days + 1;
+
+            // Calculate weekday and weekend counts
+            int weekdayCount = 0, weekendCount = 0;
+            for (DateTime date = CheckIn; date <= CheckOut; date = date.AddDays(1))
+            {
+                if (date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday)
+                {
+                    weekendCount++;
+                }
+                else
+                {
+                    weekdayCount++;
+                }
+            }
+
+            // Calculate base price
+            BasePrice = (weekdayCount * WeekdayPrice) + (weekendCount * WeekendPrice);
+
+            // Calculate discount
+            if (totalDays >= Property.MinNightsForDiscount)
+            {
+                Discount = BasePrice * (1-Property.DiscountRate / 100);
+            }
+            else
+            {
+                Discount = 0;
+            }
+
+            Tax = BasePrice - Discount * TAX_RATE / 100;
+            // Calculate total price (cleaning fee included, sales tax applied)
+            TotalPrice = (BasePrice - Discount + CleaningFee) + Tax;
+        }
     }
+
+        
 }

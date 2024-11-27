@@ -115,6 +115,7 @@ namespace Group7FinalProject.Controllers
                 discount = 0;
             }
 
+
             // Calculate the final price including the cleaning fee
             decimal totalPrice = basePrice - discount + reservation.CleaningFee; // Subtract the discount, then add the cleaning fee
 
@@ -204,6 +205,21 @@ namespace Group7FinalProject.Controllers
                 return View("Error", new string[] { "Check-out date must be after the check-in date." });
             }
 
+            // Retrieve reservations for the specified property
+            List<Reservation> reservations = await _context.Reservations
+                .Include(r => r.Property)
+                .Where(r => r.Property.PropertyID == propertyID)
+                .ToListAsync();
+
+            // Check for overlapping reservations
+            if (reservations.Count(r =>
+             (reservation.CheckIn >= r.CheckIn && reservation.CheckIn < r.CheckOut) || // Overlaps on check-in
+             (reservation.CheckOut > r.CheckIn && reservation.CheckOut <= r.CheckOut) || // Overlaps on check-out
+             (reservation.CheckIn <= r.CheckIn && reservation.CheckOut >= r.CheckOut)) > 0) // Completely overlaps
+            {
+                return View("Error", new string[] { "The reservation dates overlap with an existing reservation for this property." });
+            }
+
 
 
 
@@ -238,7 +254,7 @@ namespace Group7FinalProject.Controllers
 
 
             // Redirect to the cart page
-            return RedirectToAction("Index", "Cart");
+            return RedirectToAction("Index", "Carts");
         }
 
 
