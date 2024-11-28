@@ -76,6 +76,12 @@ namespace Group7FinalProject.Models
         [NotMapped] // Exclude from database mapping
 
         [DisplayFormat(DataFormatString = "{0:c}")]
+        [Display(Name = "Subtotal")]
+        public decimal SubTotal { get; private set; }
+
+        [NotMapped] // Exclude from database mapping
+
+        [DisplayFormat(DataFormatString = "{0:c}")]
         [Display(Name = "Discount")]
         public decimal Discount { get; private set; }
 
@@ -90,7 +96,7 @@ namespace Group7FinalProject.Models
 
 
         [DisplayFormat(DataFormatString = "{0:c}")]
-        [Display(Name = "Tax Price")]
+        [Display(Name = "Tax")]
         public decimal Tax { get; private set; }
 
         // Method to calculate totals
@@ -101,7 +107,7 @@ namespace Group7FinalProject.Models
 
             // Calculate weekday and weekend counts
             int weekdayCount = 0, weekendCount = 0;
-            for (DateTime date = CheckIn; date <= CheckOut; date = date.AddDays(1))
+            for (DateTime date = CheckIn; date < CheckOut; date = date.AddDays(1))
             {
                 if (date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday)
                 {
@@ -115,20 +121,22 @@ namespace Group7FinalProject.Models
 
             // Calculate base price
             BasePrice = (weekdayCount * WeekdayPrice) + (weekendCount * WeekendPrice);
+          
 
             // Calculate discount
             if (totalDays >= Property.MinNightsForDiscount)
             {
-                Discount = BasePrice * (1-Property.DiscountRate / 100);
+                Discount = BasePrice * (Property.DiscountRate / 100);
             }
             else
             {
                 Discount = 0;
             }
 
-            Tax = BasePrice - Discount * TAX_RATE / 100;
+            SubTotal = BasePrice - Discount + CleaningFee;
+            Tax = SubTotal * (TAX_RATE / 100);
             // Calculate total price (cleaning fee included, sales tax applied)
-            TotalPrice = (BasePrice - Discount + CleaningFee) + Tax;
+            TotalPrice = SubTotal + Tax;
         }
     }
 

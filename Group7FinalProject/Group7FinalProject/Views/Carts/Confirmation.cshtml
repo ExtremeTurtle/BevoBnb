@@ -1,0 +1,31 @@
+﻿
+<h2>Reservation Confirmation</h2>
+
+<p>Thank you for your purchase! Below is your confirmation number and the details of your reservations:</p>
+<p><strong>Confirmation Number:</strong> @ViewBag.ConfirmationNumber</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Check-In Date</th>
+            <th>Check-Out Date</th>
+            <th>Number of Guests</th>
+            <th>Total Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var reservation in Model)
+        {
+            <tr>
+                <td>@reservation.Property.PropertyNumber</td>
+                <td>@reservation.CheckIn.ToShortDateString()</td>
+                <td>@reservation.CheckOut.ToShortDateString()</td>
+                <td>@reservation.NumOfGuests</td>
+                <td>@reservation.TotalPrice.ToString("C")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-action="Index" asp-controller="Properties" class="btn btn-warning">Return to Home</a>
+

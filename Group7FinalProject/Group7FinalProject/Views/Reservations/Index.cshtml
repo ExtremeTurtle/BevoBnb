@@ -70,10 +70,14 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ReservationStatus)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ReservationID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ReservationID">Details</a> |
-            </td>
+          
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.ReservationID">Details</a>
+                    @if (item.ReservationStatus == ReservationStatus.Valid)
+                    {
+                         <a asp-action="CancelReservation" asp-route-id="@item.ReservationID">| Cancel</a>
+                    }
+                </td>
         </tr>
 }
     </tbody>

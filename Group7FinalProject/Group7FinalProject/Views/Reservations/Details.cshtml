@@ -1,72 +1,48 @@
 ﻿@model Group7FinalProject.Models.Reservation
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Reservation Details";
 }
 
-<h1>Details</h1>
+<h1>Reservation Details</h1>
+
+<!-- Table to display reservation details -->
+<table class="table">
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Check-In Date</th>
+            <th>Check-Out Date</th>
+            <th>Number of Guests</th>
+            <th>Base Price</th>
+            <th>Discount</th>
+            <th>Cleaning Fee</th>
+            <th>Subtotal</th>
+            <th>Tax</th>
+            <th>Total Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Property?.PropertyNumber</td>
+            <td>@Model.CheckIn.ToShortDateString()</td>
+            <td>@Model.CheckOut.ToShortDateString()</td>
+            <td>@Model.NumOfGuests</td>
+            <td>@Model.BasePrice.ToString("C")</td>
+            <td>@Model.Discount.ToString("C")</td>
+            <td>@Model.CleaningFee.ToString("C")</td>
+            <td>@Model.SubTotal.ToString("C")</td>
+            <td>@Model.Tax.ToString("C")</td>
+            <td>@Model.TotalPrice.ToString("C")</td>
+        </tr>
+    </tbody>
+</table>
 
 <div>
-    <h4>Reservation</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ConfirmationNumber)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ConfirmationNumber)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CheckIn)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CheckIn)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CheckOut)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CheckOut)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NumOfGuests)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NumOfGuests)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.WeekdayPrice)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.WeekdayPrice)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.WeekendPrice)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.WeekendPrice)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CleaningFee)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CleaningFee)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DiscountRate)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DiscountRate)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ReservationStatus)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ReservationStatus)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.ReservationID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <!-- Conditionally show the Cancel button if the reservation is valid -->
+    @if (Model.ReservationStatus == ReservationStatus.Valid)
+    {
+        <a asp-action="CancelReservation" asp-route-id="@Model.ReservationID" class="btn btn-danger">Cancel</a>
+    }
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
 </div>

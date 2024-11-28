@@ -40,6 +40,7 @@ namespace Group7FinalProject.Controllers
                 reservations = _context.Reservations
                                 .Include(r => r.Property)
                                 .Where(r => r.Property.User.UserName == User.Identity.Name)
+                                .Where(r => r.ReservationStatus == ReservationStatus.Valid || r.ReservationStatus == ReservationStatus.Cancelled)
                                 .ToList();
             }
             else //user is a customer, so only display their records
@@ -49,6 +50,7 @@ namespace Group7FinalProject.Controllers
                 reservations = _context.Reservations
                                 .Include(r => r.Property)
                                 .Where(r => r.User.UserName == User.Identity.Name)
+                                .Where(r => r.ReservationStatus == ReservationStatus.Valid || r.ReservationStatus == ReservationStatus.Cancelled)
                                 .ToList();
             }
 
@@ -83,44 +85,7 @@ namespace Group7FinalProject.Controllers
                 return View("Error", new String[] { "This is not your reservation!  Don't be such a snoop!" });
             }
 
-            // Calculate the total price dynamically
-            int totalDays = (reservation.CheckOut - reservation.CheckIn).Days + 1; // Include the start date
-            int weekdayCount = 0;
-            int weekendCount = 0;
-
-            // Determine the number of weekdays and weekends in the reservation
-            for (DateTime date = reservation.CheckIn; date <= reservation.CheckOut; date = date.AddDays(1))
-            {
-                if (date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday)
-                {
-                    weekendCount++;
-                }
-                else
-                {
-                    weekdayCount++;
-                }
-            }
-
-            // Calculate the base price
-            decimal basePrice = (weekdayCount * reservation.WeekdayPrice) + (weekendCount * reservation.WeekendPrice);
-
-            // Apply the discount if applicable
-            decimal discount;
-            if (totalDays >= reservation.Property.MinNightsForDiscount)
-            {
-                discount = basePrice * (reservation.Property.DiscountRate / 100); // Apply discount based on property rate
-            }
-            else
-            {
-                discount = 0;
-            }
-
-
-            // Calculate the final price including the cleaning fee
-            decimal totalPrice = basePrice - discount + reservation.CleaningFee; // Subtract the discount, then add the cleaning fee
-
-            // Pass the total price to the view using ViewBag
-            ViewBag.TotalPrice = totalPrice;
+            reservation.CalcTotals();
 
             //Send the user to the details page
             return View(reservation);
@@ -185,7 +150,11 @@ namespace Group7FinalProject.Controllers
                 return View("Error", new string[] { "The property could not be found." });
             }
 
-
+            // Validate the number of guests against the property's guest limit
+            if (reservation.NumOfGuests > dbProperty.GuestsAllowed)
+            {
+                return View("Error", new string[] { $"The number of guests exceeds the property's limit of {dbProperty.GuestsAllowed}." });
+            }
 
             // Load the User
             reservation.User = await _userManager.FindByNameAsync(User.Identity.Name);
@@ -218,6 +187,20 @@ namespace Group7FinalProject.Controllers
              (reservation.CheckIn <= r.CheckIn && reservation.CheckOut >= r.CheckOut)) > 0) // Completely overlaps
             {
                 return View("Error", new string[] { "The reservation dates overlap with an existing reservation for this property." });
+            }
+
+            // Fetch reservations for the same user
+            List<Reservation> userReservations = await _context.Reservations
+                .Where(r => r.User.UserName == User.Identity.Name) // Match the current user
+                .ToListAsync();
+
+            // Check for overlapping reservations for the same user
+            if (userReservations.Count(r =>
+                (reservation.CheckIn >= r.CheckIn && reservation.CheckIn < r.CheckOut) || // Overlaps on check-in
+                (reservation.CheckOut > r.CheckIn && reservation.CheckOut <= r.CheckOut) || // Overlaps on check-out
+                (reservation.CheckIn <= r.CheckIn && reservation.CheckOut >= r.CheckOut)) > 0) // Completely overlaps
+            {
+                return View("Error", new string[] { "You already have a reservation during these dates." });
             }
 
 
@@ -259,58 +242,47 @@ namespace Group7FinalProject.Controllers
 
 
 
-        // GET: Reservations/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        [Authorize(Roles = "Customer,Admin")]
+        public async Task<IActionResult> CancelReservation(int? id)
         {
             if (id == null)
             {
-                return NotFound();
+                return View("Error", new string[] { "Please specify a reservation to cancel!" });
             }
 
-            var reservation = await _context.Reservations.FindAsync(id);
+            // Find the reservation in the database
+            Reservation reservation = await _context.Reservations
+                .Include(r => r.Property)
+                .FirstOrDefaultAsync(r => r.ReservationID == id);
+
             if (reservation == null)
             {
-                return NotFound();
+                return View("Error", new string[] { "This reservation was not found!" });
             }
-            return View(reservation);
+
+            
+
+            // Update the reservation status
+            reservation.ReservationStatus = ReservationStatus.Cancelled;
+
+            // Remove associated dates from the Unavailabilities table
+            List<Unavailability> unavailabilities = await _context.Unavailabilities
+                .Where(u => u.Property.PropertyID == reservation.Property.PropertyID &&
+                            u.UnavailableDate >= reservation.CheckIn &&
+                            u.UnavailableDate < reservation.CheckOut)
+                .ToListAsync();
+
+            _context.Unavailabilities.RemoveRange(unavailabilities);
+
+            // Save the changes
+            await _context.SaveChangesAsync();
+
+            // Redirect to the reservations index
+            return RedirectToAction(nameof(Index));
         }
 
-        // POST: Reservations/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ReservationID,ConfirmationNumber,CheckIn,CheckOut,NumOfGuests,WeekdayPrice,WeekendPrice,CleaningFee,DiscountRate,ReservationStatus")] Reservation reservation)
-        {
-            if (id != reservation.ReservationID)
-            {
-                return NotFound();
-            }
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(reservation);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ReservationExists(reservation.ReservationID))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(reservation);
-        }
 
-       
 
         private bool ReservationExists(int id)
         {

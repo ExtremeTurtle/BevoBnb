@@ -9,6 +9,7 @@ using Group7FinalProject.DAL;
 using Group7FinalProject.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using Group7FinalProject.Utilities;
 
 namespace Group7FinalProject.Controllers
 {
@@ -61,8 +62,12 @@ namespace Group7FinalProject.Controllers
                 reservation.CalcTotals();
             }
 
+            decimal grandsubtotal = cart.Reservations.Sum(r => r.SubTotal);
+            decimal grandtax = cart.Reservations.Sum(r => r.Tax);
             decimal grandtotal = cart.Reservations.Sum(r => r.TotalPrice);
 
+            ViewBag.GrandSubTotal = grandsubtotal;
+            ViewBag.GrandTax = grandtax;
             ViewBag.GrandTotal = grandtotal;
 
 
@@ -82,21 +87,62 @@ namespace Group7FinalProject.Controllers
                 return View("Error", new string[] { "Your cart is empty. Cannot confirm checkout." });
             }
 
+            // Generate a single confirmation number for all reservations in the cart
+            int confirmationNumber = Utilities.GenerateNextConfirmationNumber.GetNextConfirmationNumber(_context);
+
             // Confirm each reservation in the cart
             foreach (var reservation in cart.Reservations)
             {
                 reservation.ReservationStatus = ReservationStatus.Valid;
-                reservation.ConfirmationNumber = new Random().Next(100000, 999999); // Generate a random confirmation number
+                reservation.ConfirmationNumber = confirmationNumber; // Use the same confirmation number for all
                 reservation.Cart = null; // Detach the reservation from the cart
+               
+                // Add dates to the Unavailabilities table
+                for (DateTime date = reservation.CheckIn; date < reservation.CheckOut; date = date.AddDays(1))
+                {
+                    // Instantiate a new Unavailability object for each date
+                    Unavailability unavailability = new Unavailability
+                    {
+                        UnavailableDate = date,
+                        Property = reservation.Property
+                    };
+
+                    _context.Unavailabilities.Add(unavailability);
+                }
             }
+        
 
             // Clear the cart
             _context.Carts.Remove(cart);
             await _context.SaveChangesAsync();
 
             // Redirect to a confirmation page
-            return RedirectToAction("Confirmation");
+            return RedirectToAction("Confirmation", new { confirmationNumber = confirmationNumber });
         }
+
+        public async Task<IActionResult> Confirmation(int confirmationNumber)
+        {
+            // Fetch all reservations with the given confirmation number
+            List<Reservation> reservations;
+            reservations = await _context.Reservations
+                .Include(r => r.Property)
+                .Where(r => r.ConfirmationNumber == confirmationNumber)
+                .ToListAsync();
+
+            // Calculate totals for each reservation
+            foreach (var reservation in reservations)
+            {
+                reservation.CalcTotals();
+            }
+            if (!reservations.Any())
+            {
+                return View("Error", new string[] { "No reservations found for this confirmation number." });
+            }
+
+            ViewBag.ConfirmationNumber = confirmationNumber;
+            return View(reservations);
+        }
+
 
 
 
