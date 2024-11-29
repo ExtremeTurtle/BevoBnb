@@ -16,7 +16,10 @@
                     <td>@reservation.Property.PropertyNumber</td>
                     <td>@reservation.CheckIn.ToShortDateString()</td>
                     <td>@reservation.CheckOut.ToShortDateString()</td>
-                </tr>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@reservation.ReservationID" class="btn btn-danger">Remove From Cart</a>
+                </td>
+            </tr>
             }
         </tbody>
     </table>

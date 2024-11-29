@@ -250,34 +250,30 @@ namespace Group7FinalProject.Controllers
             {
                 return NotFound();
             }
+            Reservation reservation = await _context.Reservations
+                .Include(r => r.Cart) // Include the cart to which the reservation belongs
+                .FirstOrDefaultAsync(r => r.ReservationID == id);
 
-            var cart = await _context.Carts
-                .Include(c => c.User)
-                .FirstOrDefaultAsync(m => m.CartID == id);
-            if (cart == null)
+            if (reservation == null)
             {
-                return NotFound();
+                return View("Error", new string[] { "This reservation was not found!" });
             }
 
-            return View(cart);
-        }
-
-        // POST: Carts/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var cart = await _context.Carts.FindAsync(id);
-            if (cart != null)
+            if (reservation.Cart != null)
             {
-                _context.Carts.Remove(cart);
+                reservation.Cart.Reservations.Remove(reservation);
             }
+
+            _context.Reservations.Remove(reservation);
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+
+            return RedirectToAction(nameof(Index)); 
+
         }
 
-        private bool CartExists(int id)
+
+            private bool CartExists(int id)
         {
             return _context.Carts.Any(e => e.CartID == id);
         }
