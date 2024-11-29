@@ -8,10 +8,26 @@
     <title>@ViewBag.Title - Longhorn Coding Academy</title>
     <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" /> <!-- Font Awesome -->
+    <style>
+        .container.body-content {
+            background-color: darkorange; /* Sets the content area to white */
+            padding: 20px; /* Adds spacing */
+            border-radius: 5px; /* Rounds edges */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow */
+        }
+        .navbar {
+            color: navajowhite !important; /* Sets text color for navbar */
+            background-color: lightgrey
+        }
+
+            .navbar .nav-link {
+                color: black !important; /* Ensures all links are white */
+            }
+    </style>    
 </head>
 <body>
     <div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-grey bg-grey">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
