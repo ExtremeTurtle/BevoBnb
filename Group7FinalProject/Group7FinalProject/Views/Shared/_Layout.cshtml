@@ -39,9 +39,16 @@
                                 <a asp-controller="RoleAdmin" asp-action="Index" class="nav-link">Manage Users</a>
                             </li>
                         }
-
                     }
                 </ul>
+                @if (User.Identity.IsAuthenticated && User.IsInRole("Customer"))
+                {
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a asp-controller="Carts" asp-action="Index" class="nav-link"> My Cart 🛒</a>
+                        </li>
+                    </ul>
+                }
             </div>
             @await Html.PartialAsync("_LoginPartial")
         </nav>
