@@ -120,7 +120,7 @@ namespace Group7FinalProject.Controllers
             if (User.IsInRole("Admin"))
             {
                 ViewBag.UserNames = await GetAllCustomerUserNamesSelectList();
-                return View("SelectCustomerForReservation");
+                return View("SelectCustomerForReservation",res);
             }
                 return View(res);
 
@@ -293,6 +293,10 @@ namespace Group7FinalProject.Controllers
         {
             return _context.Reservations.Any(e => e.ReservationID == id);
         }
+
+        
+
+
         public async Task<SelectList> GetAllCustomerUserNamesSelectList()
         {
             //create a list to hold the customers
