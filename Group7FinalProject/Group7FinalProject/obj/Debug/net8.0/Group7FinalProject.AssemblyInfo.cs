@@ -15,11 +15,15 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Group7FinalProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a14e701f62acd75bc675c63513e5c7cbea97e24b")]
 =======
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50ff7f6076e8024e3521a684b505c2e13d77eaf7")]
 >>>>>>> Stashed changes
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e33fab507c43cd1d5e850343303466836c10df5")]
+>>>>>>> parent of 50ff7f6 (register and login stuff fixed)
 [assembly: System.Reflection.AssemblyProductAttribute("Group7FinalProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Group7FinalProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
