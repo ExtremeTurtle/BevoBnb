@@ -48,10 +48,10 @@ namespace Group7FinalProject.Controllers
 
 
             properties = _context.Properties
-                                .Include(r => r.Category).Include(r => r.User).Where(p => p.User.UserName != User.Identity.Name)
-                                .ToList();
+                                .Include(r => r.Category).Include(r => r.User).Where(p => p.User.UserName == User.Identity.Name).ToList();
 
-            return View(properties);
+
+            return View("Index",properties);
 
         }
         // GET: Properties/Details/5
