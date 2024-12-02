@@ -36,7 +36,9 @@ namespace Group7FinalProject.Controllers
 
             if (cart == null || cart.Reservations.Count == 0)
             {
-                return View("Error", new string[] { "Your cart is empty." });
+                return View("Error", new string[] {  "Your cart is currently empty.",
+            "Please browse our properties and add a reservation to your cart.",
+            "Once you've added items to your cart, you can view them here." });
             }
 
             return View(cart.Reservations);

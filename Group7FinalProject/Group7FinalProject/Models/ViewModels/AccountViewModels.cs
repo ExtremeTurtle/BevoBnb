@@ -53,12 +53,18 @@ namespace Group7FinalProject.Models
         public String LastName { get; set; }
 
         [Required(ErrorMessage = "Birthday is required.")]
+        [DataType(DataType.Date)]
         [Display(Name = "Birthday")]
         public DateTime Birthday { get; set; }
 
         [Required(ErrorMessage = "Street Address is required.")]
         [Display(Name = "Street Address")]
         public string Address { get; set; }
+
+        [Required]
+        [Display(Name = "Are you a Customer or Host?")]
+        public string Role { get; set; } 
+
 
 
 

@@ -51,6 +51,13 @@ namespace Group7FinalProject.Controllers
                 return View(rvm);
             }
 
+            // Validate that the user is at least 18 years old
+            if (rvm.Birthday.AddYears(18) > DateTime.Today)
+            {
+                ModelState.AddModelError("Birthday", "You must be at least 18 years old to register.");
+                return View(rvm); // Return the view with the validation error
+            }
+
             //this code maps the RegisterViewModel to the AppUser domain model
             AppUser newUser = new AppUser
             {
@@ -75,7 +82,7 @@ namespace Group7FinalProject.Controllers
 
                 //TODO: You will need to change this value if you want to 
                 //add the user to a different role - just specify the role name.
-                RoleName = "Customer"
+                RoleName = rvm.Role
             };
 
             //This code uses the AddUser utility to create a new user with the specified password
