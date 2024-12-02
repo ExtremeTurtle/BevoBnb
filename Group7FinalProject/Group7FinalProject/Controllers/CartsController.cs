@@ -120,6 +120,7 @@ namespace Group7FinalProject.Controllers
             return RedirectToAction("Confirmation", new { confirmationNumber = confirmationNumber });
         }
 
+        [Authorize]
         public async Task<IActionResult> Confirmation(int confirmationNumber)
         {
             // Fetch all reservations with the given confirmation number
