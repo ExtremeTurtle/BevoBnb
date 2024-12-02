@@ -48,14 +48,22 @@ namespace Group7FinalProject.Controllers
 
         // GET: Reviews/Create
         [HttpGet]
-        public async Task<IActionResult> Create()
+        public IActionResult Create(int propertyId)
         {
-            if (User.IsInRole("Customer"))
+            // Fetch the property details based on PropertyID
+            var property = _context.Properties.FirstOrDefault(p => p.PropertyID == propertyId);
+
+            if (property == null)
             {
-                Review rev = new Review();
-                rev.User = await _userManager.FindByNameAsync(User.Identity.Name);
-                return View(rev);
+                // If the property does not exist, return a 404 or redirect to an error page
+                return NotFound();
             }
+
+            // Pass the property details to the view
+            ViewData["PropertyAddress"] = property.Address;
+            ViewData["PropertyID"] = property.PropertyID;
+
+            // Return the view
             return View();
         }
 
