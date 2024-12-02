@@ -36,9 +36,7 @@ namespace Group7FinalProject.Controllers
 
             if (cart == null || cart.Reservations.Count == 0)
             {
-                return View("Error", new string[] {  "Your cart is currently empty.",
-            "Please browse our properties and add a reservation to your cart.",
-            "Once you've added items to your cart, you can view them here." });
+                return View("Error", new string[] { "Your cart is empty." });
             }
 
             return View(cart.Reservations);
@@ -122,7 +120,6 @@ namespace Group7FinalProject.Controllers
             return RedirectToAction("Confirmation", new { confirmationNumber = confirmationNumber });
         }
 
-        [Authorize]
         public async Task<IActionResult> Confirmation(int confirmationNumber)
         {
             // Fetch all reservations with the given confirmation number

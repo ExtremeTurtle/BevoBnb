@@ -1,4 +1,4 @@
-﻿@model Group7FinalProject.Models.Reservation
+﻿@model String
 
 @{
     ViewData["Title"] = "Select a Customer";
@@ -9,8 +9,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="SelectCustomerForReservation" method="post">
-            <input type="hidden" name="propertyID" value="@Model.Property.PropertyID" />
+        <form asp-action="SelectCustomerForReservation">
 
 
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
