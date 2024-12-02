@@ -1,0 +1,33 @@
+﻿@model Group7FinalProject.Models.Reservation
+
+@{
+    ViewData["Title"] = "Reservation Confirmation";
+}
+
+<h2>Reservation Confirmation</h2>
+
+<p>Thank you for your reservation! Below is your confirmation number and the details of your reservation:</p>
+<p><strong>Confirmation Number:</strong> @ViewBag.ConfirmationNumber</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Check-In Date</th>
+            <th>Check-Out Date</th>
+            <th>Number of Guests</th>
+            <th>Total Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Property.PropertyNumber</td>
+            <td>@Model.CheckIn.ToShortDateString()</td>
+            <td>@Model.CheckOut.ToShortDateString()</td>
+            <td>@Model.NumOfGuests</td>
+            <td>@Model.TotalPrice.ToString("C")</td>
+        </tr>
+    </tbody>
+</table>
+
+<a asp-action="Index" class="btn btn-warning">Return to Home</a>

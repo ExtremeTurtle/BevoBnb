@@ -229,6 +229,7 @@ namespace Group7FinalProject.Controllers
             reservation.WeekendPrice = dbProperty.WeekendPrice;
             reservation.CleaningFee = dbProperty.CleaningFee;
             reservation.DiscountRate = dbProperty.DiscountRate;
+
             if (User.IsInRole("Customer"))
             {
                 reservation.ReservationStatus = ReservationStatus.Unconfirmed;
@@ -237,6 +238,7 @@ namespace Group7FinalProject.Controllers
             {
                 reservation.ReservationStatus = ReservationStatus.Valid;
                 reservation.ConfirmationNumber = Utilities.GenerateNextConfirmationNumber.GetNextConfirmationNumber(_context);
+     
             }
 
             //if code gets this far, add the reservation to the database
@@ -244,8 +246,8 @@ namespace Group7FinalProject.Controllers
             await _context.SaveChangesAsync();
 
 
-           // if (User.IsInRole("Customer"))
-           // {
+           if (User.IsInRole("Customer"))
+            {
                 // Add the reservation to the cart
                 Cart cart = await _context.Carts
                 .FirstOrDefaultAsync(c => c.User.Id == reservation.User.Id);
@@ -268,12 +270,51 @@ namespace Group7FinalProject.Controllers
 
                 // Redirect to the cart page
                 return RedirectToAction("Index", "Carts");
-            //}
+            }
+            if (User.IsInRole("Admin"))
+            {
+                // Add dates to the Unavailabilities table
+                for (DateTime date = reservation.CheckIn; date < reservation.CheckOut; date = date.AddDays(1))
+                {
+                    // Instantiate a new Unavailability object for each date
+                    Unavailability unavailability = new Unavailability
+                    {
+                        UnavailableDate = date,
+                        Property = reservation.Property
+                    };
+
+                    _context.Unavailabilities.Add(unavailability);
+                }
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction("Confirmation", new { confirmationNumber = reservation.ConfirmationNumber });
+            }
+            else
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+        }
+
+        public async Task<IActionResult> Confirmation(int confirmationNumber)
+        {
+            Reservation reservation = await _context.Reservations
+                .Include(r => r.Property)
+                .FirstOrDefaultAsync(r => r.ConfirmationNumber == confirmationNumber);
+
+            if (reservation == null)
+            {
+                return View("Error", new string[] { "No reservation found for this confirmation number." });
+            }
+
+            reservation.CalcTotals();
+
+            ViewBag.ConfirmationNumber = confirmationNumber;
+
+            return View(reservation);
         }
 
 
-
-        
 
         [Authorize(Roles = "Customer,Admin")]
         public async Task<IActionResult> CancelReservation(int? id)
