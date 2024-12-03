@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Group7FinalProject.DAL;
 using Group7FinalProject.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Group7FinalProject.Controllers
 {
@@ -23,9 +24,20 @@ namespace Group7FinalProject.Controllers
         }
 
         // GET: Reviews
-        public async Task<IActionResult> Index()
+        [Authorize]
+        public async Task<IActionResult> Index(string? customerID)
         {
-            return View(await _context.Reviews.ToListAsync());
+            if (string.IsNullOrEmpty(customerID))
+            {
+                return BadRequest("Customer ID cannot be null or empty.");
+            }
+
+            List<Review> reviews = await _context.Reviews
+                .Include(r => r.User)
+                .Where(p => p.User.Id == customerID)
+                .ToListAsync();
+
+            return View(reviews);
         }
 
         // GET: Reviews/Details/5
@@ -84,14 +96,14 @@ namespace Group7FinalProject.Controllers
         }
 
         // GET: Reviews/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int? reviewID)
         {
-            if (id == null)
+            if (reviewID == null)
             {
                 return NotFound();
             }
 
-            var review = await _context.Reviews.FindAsync(id);
+            var review = await _context.Reviews.FindAsync(reviewID);
             if (review == null)
             {
                 return NotFound();

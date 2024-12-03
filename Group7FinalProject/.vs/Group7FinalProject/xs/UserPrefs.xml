@@ -7,22 +7,23 @@
   <MonoDevelop.Ide.ItemProperties.Group7FinalProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Group7FinalProject/Controllers/ReviewsController.cs">
     <Files>
-      <File FileName="Group7FinalProject/Models/Reservation.cs" />
-      <File FileName="Group7FinalProject/Models/AppUser.cs" />
+      <File FileName="Group7FinalProject/Models/Reservation.cs" Line="1" Column="1" />
+      <File FileName="Group7FinalProject/Models/AppUser.cs" Line="1" Column="1" />
       <File FileName="Group7FinalProject/Models/Category.cs" />
       <File FileName="Group7FinalProject/Models/Property.cs" />
-      <File FileName="Group7FinalProject/Models/Review.cs" />
+      <File FileName="Group7FinalProject/Models/Review.cs" Line="1" Column="1" />
       <File FileName="Group7FinalProject/DAL/AppDbContext.cs" />
-      <File FileName="Group7FinalProject/Controllers/ReviewsController.cs" Line="77" Column="36" />
+      <File FileName="Group7FinalProject/Controllers/ReviewsController.cs" Line="31" Column="14" />
       <File FileName="Group7FinalProject/Controllers/ReservationsController.cs" />
-      <File FileName="Group7FinalProject/Controllers/AccountController.cs" Line="1" Column="1" />
+      <File FileName="Group7FinalProject/Controllers/AccountController.cs" Line="5" Column="42" />
+      <File FileName="Group7FinalProject/Controllers/PropertiesController.cs" Line="37" Column="37" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Group7FinalProject">
+          <Node name="Group7FinalProject" expanded="True">
             <Node name="Group7FinalProject">
-              <Node name="Controllers" expanded="True">
+              <Node name="Controllers">
                 <Node name="ReviewsController.cs" selected="True" />
               </Node>
               <Node name="Models" expanded="True" />
