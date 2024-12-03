@@ -25,17 +25,19 @@ namespace Group7FinalProject.Controllers
 
         // GET: Reviews
         [Authorize]
-        public async Task<IActionResult> Index(string? customerID)
+        public async Task<IActionResult> Index()
         {
-            if (string.IsNullOrEmpty(customerID))
-            {
-                return BadRequest("Customer ID cannot be null or empty.");
-            }
+            var userId = _userManager.GetUserId(User);
 
             List<Review> reviews = await _context.Reviews
                 .Include(r => r.User)
-                .Where(p => p.User.Id == customerID)
+                 .Where(r => r.User.Id == userId)
                 .ToListAsync();
+
+            if (reviews == null || !reviews.Any())
+            {
+                return View("NoReviews");
+            }
 
             return View(reviews);
         }
@@ -60,22 +62,8 @@ namespace Group7FinalProject.Controllers
 
         // GET: Reviews/Create
         [HttpGet]
-        public IActionResult Create(int propertyId)
+        public IActionResult Create()
         {
-            // Fetch the property details based on PropertyID
-            var property = _context.Properties.FirstOrDefault(p => p.PropertyID == propertyId);
-
-            if (property == null)
-            {
-                // If the property does not exist, return a 404 or redirect to an error page
-                return NotFound();
-            }
-
-            // Pass the property details to the view
-            ViewData["PropertyAddress"] = property.Address;
-            ViewData["PropertyID"] = property.PropertyID;
-
-            // Return the view
             return View();
         }
 
@@ -96,18 +84,32 @@ namespace Group7FinalProject.Controllers
         }
 
         // GET: Reviews/Edit/5
-        public async Task<IActionResult> Edit(int? reviewID)
+        public async Task<IActionResult> Edit(int? id)
         {
-            if (reviewID == null)
+            //if the user didn't specify a review id, we can't show them 
+            //the data, so show an error instead
+            if (id == null)
             {
-                return NotFound();
+                return View("Error", new string[] { "Please specify a review to edit!" });
             }
 
-            var review = await _context.Reviews.FindAsync(reviewID);
+            //find the review in the database
+            //be sure to change the data type to course instead of 'var'
+            Review review = await _context.Reviews.Include(c => c.User).FirstOrDefaultAsync(c => c.ReviewID == id);
+
+            //if the review does not exist in the database, then show the user
+            //an error message
             if (review == null)
             {
-                return NotFound();
+                return View("Error", new string[] { "This review was not found!" });
             }
+
+            //order does not belong to this user
+            if (User.IsInRole("Host") && review.User.UserName != User.Identity.Name)
+            {
+                return View("Error", new String[] { "You are not authorized to edit this review!" });
+            }
+
             return View(review);
         }
 
@@ -118,32 +120,52 @@ namespace Group7FinalProject.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ReviewID,Rating,ReviewText,HostComments")] Review review)
         {
+            //this is a security check to see if the user is trying to modify
+            //a different record.  Show an error message
             if (id != review.ReviewID)
             {
-                return NotFound();
+                return View("Error", new string[] { "Please try again!" });
             }
 
-            if (ModelState.IsValid)
+            if (ModelState.IsValid == false) //there is something wrong
             {
-                try
-                {
-                    _context.Update(review);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ReviewExists(review.ReviewID))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                return View(review);
             }
-            return View(review);
+
+            //if code gets this far, attempt to edit the review
+            try
+            {
+                //Find the review to edit in the database and include relevant 
+                //navigational properties
+                Review dbReview = _context.Reviews.Find(review.ReviewID);
+
+
+
+                //update the properties scalar properties
+                dbReview.Rating = review.Rating;
+                dbReview.ReviewText = review.ReviewText;
+
+                //TODO if user is a host
+                dbReview.HostComments = review.HostComments;
+
+                //todo if user is host
+                //Update the Status
+                dbReview.DisputeStatus = review.DisputeStatus;
+
+
+                //save the changes
+                _context.Reviews.Update(dbReview);
+                _context.SaveChanges();
+
+            }
+            catch (Exception ex)
+            {
+                return View("Error", new string[] { "There was an error editing this review.", ex.Message });
+            }
+
+            //if code gets this far, everything is okay
+            //send the user back to the page with all the courses
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Reviews/Delete/5

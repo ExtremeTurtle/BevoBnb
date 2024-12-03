@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "My Reviews";
+}
+
+<div class="container text-center mt-5">
+    <h2>You haven't left any reviews</h2>
+    <p class="text-muted">It looks like you haven't shared any feedback yet. Start reviewing your experiences today!</p>
+
+    <a href="@Url.Action("Index", "Reservations")" class="btn btn-primary mt-3">
+        Return to Your Reservations
+    </a>
+</div>
