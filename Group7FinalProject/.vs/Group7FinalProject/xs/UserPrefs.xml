@@ -5,22 +5,29 @@
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Group7FinalProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Group7FinalProject/Models/Review.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Group7FinalProject/Controllers/ReviewsController.cs">
     <Files>
       <File FileName="Group7FinalProject/Models/Reservation.cs" />
       <File FileName="Group7FinalProject/Models/AppUser.cs" />
       <File FileName="Group7FinalProject/Models/Category.cs" />
       <File FileName="Group7FinalProject/Models/Property.cs" />
-      <File FileName="Group7FinalProject/Models/Review.cs" Line="24" Column="1" />
+      <File FileName="Group7FinalProject/Models/Review.cs" />
       <File FileName="Group7FinalProject/DAL/AppDbContext.cs" />
+      <File FileName="Group7FinalProject/Controllers/ReviewsController.cs" Line="77" Column="36" />
+      <File FileName="Group7FinalProject/Controllers/ReservationsController.cs" />
+      <File FileName="Group7FinalProject/Controllers/AccountController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Group7FinalProject">
             <Node name="Group7FinalProject">
-              <Node name="Models" expanded="True">
-                <Node name="Review.cs" selected="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="ReviewsController.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Reviews" expanded="True" />
               </Node>
             </Node>
           </Node>
