@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 namespace Group7FinalProject.Models
 {
-    public enum DisputeStatus { InvalidDispute, NoDispute, Disputed }
+    public enum DisputeStatus { InvalidDispute, ValidDispute, NoDispute, Disputed }
 
     public class Review
     {
@@ -18,6 +18,11 @@ namespace Group7FinalProject.Models
 
         [Display(Name = "Host Comments")]
         public String HostComments { get; set; }
+
+        [Display(Name = "Dispute Status")]
+        //Stores enum for Status of Dispute
+        public DisputeStatus DisputeStatus { get; set; }
+
 
         public Property Property { get; set; }
         public AppUser User { get; set; }

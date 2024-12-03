@@ -76,7 +76,23 @@ namespace Group7FinalProject.Controllers
                 return View("Error", new String[] { "This property was not found!" });
             }
 
-           
+          
+
+            // Calculate the average rating
+            List<Review> reviews;
+            reviews = property.Reviews
+             .Where(r => r.DisputeStatus == DisputeStatus.NoDispute || r.DisputeStatus == DisputeStatus.InvalidDispute).ToList();
+
+            if (reviews.Any())
+            {
+                ViewBag.AverageRating = reviews.Average(r => r.Rating);
+            }
+            else
+            {
+                ViewBag.AverageRating = "N/A";
+            }
+
+            
 
             //Send the user to the details page
             return View(property);
@@ -152,6 +168,12 @@ namespace Group7FinalProject.Controllers
                 return View("Error", new string[] { "This property was not found!" });
             }
 
+            //order does not belong to this user
+            if (User.IsInRole("Host") && property.User.UserName != User.Identity.Name)
+            {
+                return View("Error", new String[] { "You are not authorized to edit this property!" });
+            }
+
             return View(property);
         }
 
@@ -180,19 +202,17 @@ namespace Group7FinalProject.Controllers
             {
                 //Find the property to edit in the database and include relevant 
                 //navigational properties
-                Property dbProperty = _context.Properties
-                    .FirstOrDefault(c => c.PropertyID == property.PropertyID);
+                Property dbProperty = _context.Properties.Find(property.PropertyID);
 
-               
 
-                //update the propertie's scalar properties
+
+                //update the properties scalar properties
                 dbProperty.WeekdayPrice = property.WeekdayPrice;
                 dbProperty.WeekdayPrice = property.WeekdayPrice;
                 dbProperty.CleaningFee = property.CleaningFee;
 
                 //Update the Status
                 dbProperty.PropertyStatus = property.PropertyStatus;
-
 
 
                 //save the changes

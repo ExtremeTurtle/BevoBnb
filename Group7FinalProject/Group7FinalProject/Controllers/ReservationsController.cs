@@ -247,7 +247,7 @@ namespace Group7FinalProject.Controllers
 
         
 
-        [Authorize(Roles = "Customer,Admin")]
+        [Authorize(Roles = "Customer,Host")]
         public async Task<IActionResult> CancelReservation(int? id)
         {
             if (id == null)
@@ -265,7 +265,11 @@ namespace Group7FinalProject.Controllers
                 return View("Error", new string[] { "This reservation was not found!" });
             }
 
-            
+            if (reservation.CheckIn <= DateTime.Now.AddHours(24))
+            {
+                return View("Error", new string[] { "Reservations can only be canceled if the check-in date is more than 24 hours away." });
+            }
+
 
             // Update the reservation status
             reservation.ReservationStatus = ReservationStatus.Cancelled;

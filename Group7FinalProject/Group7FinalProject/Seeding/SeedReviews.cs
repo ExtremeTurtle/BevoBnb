@@ -12,11 +12,13 @@ namespace Group7FinalProject.Seeding
             // Define all review records
             List<Review> AllReviews = new List<Review>();
 
+
             AllReviews.Add(new Review
             {
                 Rating = 4,
                 ReviewText = " ",
                 HostComments = "",
+                DisputeStatus = DisputeStatus.NoDispute,
                 Property = db.Properties.FirstOrDefault(p => p.PropertyNumber == 3127),
                 User = db.Users.FirstOrDefault(u => u.Email == "father.Ingram@aool.com")
             });
@@ -26,6 +28,7 @@ namespace Group7FinalProject.Seeding
                 Rating = 3,
                 ReviewText = "It was meh, ya know? It was really close to the coast, but the beaches were kinda trashed. The apartment was nice, but there wasn't an elevator.",
                 HostComments = "",
+                DisputeStatus = DisputeStatus.NoDispute,
                 Property = db.Properties.FirstOrDefault(p => p.PropertyNumber == 3085),
                 User = db.Users.FirstOrDefault(u => u.Email == "orielly@foxnets.com")
             });
@@ -33,8 +36,9 @@ namespace Group7FinalProject.Seeding
             AllReviews.Add(new Review
             {
                 Rating = 4,
-                ReviewText = "",
+                ReviewText = " ",
                 HostComments = "The customer did not provide a valid reason for this rating.",
+                DisputeStatus = DisputeStatus.Disputed,
                 Property = db.Properties.FirstOrDefault(p => p.PropertyNumber == 3161),
                 User = db.Users.FirstOrDefault(u => u.Email == "father.Ingram@aool.com")
             });
@@ -44,6 +48,7 @@ namespace Group7FinalProject.Seeding
                 Rating = 2,
                 ReviewText = " ",
                 HostComments = "",
+                DisputeStatus = DisputeStatus.NoDispute,
                 Property = db.Properties.FirstOrDefault(p => p.PropertyNumber == 3127),
                 User = db.Users.FirstOrDefault(u => u.Email == "tuck33@puppy.com")
             });
@@ -53,6 +58,7 @@ namespace Group7FinalProject.Seeding
                 Rating = 3,
                 ReviewText = "Nebraska was... interesting",
                 HostComments = "",
+                DisputeStatus = DisputeStatus.NoDispute,
                 Property = db.Properties.FirstOrDefault(p => p.PropertyNumber == 3107),
                 User = db.Users.FirstOrDefault(u => u.Email == "father.Ingram@aool.com")
             });
@@ -62,6 +68,7 @@ namespace Group7FinalProject.Seeding
                 Rating = 1,
                 ReviewText = "There was corn EVERYWHERE! I looked left and BAM, CORN. Looked right, BAM, CORN",
                 HostComments = "It is not my fault there was corn. It was not my corn!",
+                DisputeStatus = DisputeStatus.Disputed,
                 Property = db.Properties.FirstOrDefault(p => p.PropertyNumber == 3107),
                 User = db.Users.FirstOrDefault(u => u.Email == "tfreeley@puppy.com")
             });
@@ -71,6 +78,7 @@ namespace Group7FinalProject.Seeding
                 Rating = 1,
                 ReviewText = "Worst. Stay. Ever. Never using BevoBnB again",
                 HostComments = "BevoBnB is the best",
+                DisputeStatus = DisputeStatus.ValidDispute,
                 Property = db.Properties.FirstOrDefault(p => p.PropertyNumber == 3107),
                 User = db.Users.FirstOrDefault(u => u.Email == "ra@aoo.com")
             });
@@ -80,6 +88,7 @@ namespace Group7FinalProject.Seeding
                 Rating = 5,
                 ReviewText = " ",
                 HostComments = "",
+                DisputeStatus = DisputeStatus.NoDispute,
                 Property = db.Properties.FirstOrDefault(p => p.PropertyNumber == 3065),
                 User = db.Users.FirstOrDefault(u => u.Email == "orielly@foxnets.com")
             });
@@ -89,6 +98,7 @@ namespace Group7FinalProject.Seeding
                 Rating = 2,
                 ReviewText = " ",
                 HostComments = "",
+                DisputeStatus = DisputeStatus.NoDispute,
                 Property = db.Properties.FirstOrDefault(p => p.PropertyNumber == 3133),
                 User = db.Users.FirstOrDefault(u => u.Email == "orielly@foxnets.com")
             });
@@ -98,6 +108,7 @@ namespace Group7FinalProject.Seeding
                 Rating = 1,
                 ReviewText = "It was SO hard to book this place. Who coded this site anyway? ;)",
                 HostComments = "The website was coded by students so the owner should not be penalized!",
+                DisputeStatus = DisputeStatus.InvalidDispute,
                 Property = db.Properties.FirstOrDefault(p => p.PropertyNumber == 3065),
                 User = db.Users.FirstOrDefault(u => u.Email == "tfreeley@puppy.com")
             });
@@ -107,6 +118,7 @@ namespace Group7FinalProject.Seeding
                 Rating = 4,
                 ReviewText = " ",
                 HostComments = "",
+                DisputeStatus = DisputeStatus.NoDispute,
                 Property = db.Properties.FirstOrDefault(p => p.PropertyNumber == 3067),
                 User = db.Users.FirstOrDefault(u => u.Email == "tuck33@puppy.com")
             });
@@ -116,6 +128,7 @@ namespace Group7FinalProject.Seeding
                 Rating = 5,
                 ReviewText = "This place rocked!",
                 HostComments = "",
+                DisputeStatus = DisputeStatus.NoDispute,
                 Property = db.Properties.FirstOrDefault(p => p.PropertyNumber == 3065),
                 User = db.Users.FirstOrDefault(u => u.Email == "ra@aoo.com")
             });
@@ -125,6 +138,7 @@ namespace Group7FinalProject.Seeding
                 Rating = 4,
                 ReviewText = " ",
                 HostComments = "I do not understand this.",
+                DisputeStatus = DisputeStatus.ValidDispute,
                 Property = db.Properties.FirstOrDefault(p => p.PropertyNumber == 3065),
                 User = db.Users.FirstOrDefault(u => u.Email == "fd@puppy.com")
             });
@@ -134,6 +148,7 @@ namespace Group7FinalProject.Seeding
                 Rating = 4,
                 ReviewText = " ",
                 HostComments = "",
+                DisputeStatus = DisputeStatus.NoDispute,
                 Property = db.Properties.FirstOrDefault(p => p.PropertyNumber == 3133),
                 User = db.Users.FirstOrDefault(u => u.Email == "lamemartin.Martin@aool.com")
             });
@@ -143,6 +158,7 @@ namespace Group7FinalProject.Seeding
                 Rating = 1,
                 ReviewText = "There were 1...5...22 roaches? I lost count.",
                 HostComments = "",
+                DisputeStatus = DisputeStatus.NoDispute,
                 Property = db.Properties.FirstOrDefault(p => p.PropertyNumber == 3107),
                 User = db.Users.FirstOrDefault(u => u.Email == "fd@puppy.com")
             });
@@ -152,6 +168,7 @@ namespace Group7FinalProject.Seeding
                 Rating = 1,
                 ReviewText = " ",
                 HostComments = "",
+                DisputeStatus = DisputeStatus.NoDispute,
                 Property = db.Properties.FirstOrDefault(p => p.PropertyNumber == 3085),
                 User = db.Users.FirstOrDefault(u => u.Email == "sheff44@puppy.com")
             });
@@ -161,6 +178,7 @@ namespace Group7FinalProject.Seeding
                 Rating = 4,
                 ReviewText = "I LOVED the place! Had a nice view of the mountains",
                 HostComments = "",
+                DisputeStatus = DisputeStatus.NoDispute,
                 Property = db.Properties.FirstOrDefault(p => p.PropertyNumber == 3087),
                 User = db.Users.FirstOrDefault(u => u.Email == "fd@puppy.com")
             });
@@ -170,6 +188,7 @@ namespace Group7FinalProject.Seeding
                 Rating = 5,
                 ReviewText = " ",
                 HostComments = "",
+                DisputeStatus = DisputeStatus.NoDispute,
                 Property = db.Properties.FirstOrDefault(p => p.PropertyNumber == 3087),
                 User = db.Users.FirstOrDefault(u => u.Email == "tuck33@puppy.com")
             });
@@ -179,6 +198,7 @@ namespace Group7FinalProject.Seeding
                 Rating = 5,
                 ReviewText = "My stay was amazing! Saved my marriage",
                 HostComments = "",
+                DisputeStatus = DisputeStatus.NoDispute,
                 Property = db.Properties.FirstOrDefault(p => p.PropertyNumber == 3127),
                 User = db.Users.FirstOrDefault(u => u.Email == "orielly@foxnets.com")
             });
@@ -188,6 +208,7 @@ namespace Group7FinalProject.Seeding
                 Rating = 2,
                 ReviewText = " ",
                 HostComments = "Why??",
+                DisputeStatus = DisputeStatus.InvalidDispute,
                 Property = db.Properties.FirstOrDefault(p => p.PropertyNumber == 3133),
                 User = db.Users.FirstOrDefault(u => u.Email == "sheff44@puppy.com")
             });
@@ -197,9 +218,11 @@ namespace Group7FinalProject.Seeding
                 Rating = 2,
                 ReviewText = "My wife's attitude was the only thing rougher than the sand at the nearby beaches",
                 HostComments = "",
+                DisputeStatus = DisputeStatus.NoDispute,
                 Property = db.Properties.FirstOrDefault(p => p.PropertyNumber == 3161),
                 User = db.Users.FirstOrDefault(u => u.Email == "orielly@foxnets.com")
             });
+
 
             // Debugging variables
             int intReviewID = 0;
