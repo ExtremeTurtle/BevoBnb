@@ -103,7 +103,7 @@ namespace Group7FinalProject.Controllers
         // GET: Properties/Create
         public IActionResult Create()
         {
-            ViewBag.AllCateogires = GetCategorySelectList();
+            ViewBag.AllCategories = GetCategorySelectList();
             return View();
         }
 
@@ -140,6 +140,7 @@ namespace Group7FinalProject.Controllers
             //add the category to the Property's category and save changes
             property.PropertyStatus = PropertyStatus.Unapproved;
             property.Category = dbCategory;
+            property.PropertyNumber = Utilities.GenerateNextPropertyNumber.GetNextPropertyNumber(_context);
             _context.SaveChanges();
             
 

@@ -253,7 +253,6 @@ namespace Group7FinalProject.Controllers
 
 
 
-        
 
         [Authorize(Roles = "Customer,Host")]
         public async Task<IActionResult> CancelReservation(int? id)
