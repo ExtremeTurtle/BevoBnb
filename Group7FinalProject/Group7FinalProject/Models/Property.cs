@@ -75,10 +75,9 @@ namespace Group7FinalProject.Models
 
 
         // Navigation Properties
-        public AppUser User { get; set; } // The host user
+        public AppUser? User { get; set; } // The host user
 
-        [Required]
-        public Category Category { get; set; } // The category of the property
+        public Category? Category { get; set; } // The category of the property
 
         public List<Reservation>? Reservations { get; set; } // Reservations for this property
 

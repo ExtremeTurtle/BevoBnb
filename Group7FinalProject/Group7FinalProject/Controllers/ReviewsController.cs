@@ -27,14 +27,27 @@ namespace Group7FinalProject.Controllers
         [Authorize]
         public async Task<IActionResult> Index()
         {
-            
+            List<Review> reviews = new List<Review>(); 
 
-            List<Review> reviews = await _context.Reviews
+            if (User.IsInRole("Customer"))
+            {
+                reviews = await _context.Reviews
+                .Include(r => r.User)
+                 .Where(r => r.User.UserName == User.Identity.Name)
+                .ToListAsync();
+            }
+
+            if (User.IsInRole("Host"))
+            {
+                reviews = await _context.Reviews
                 .Include(r => r.User)
                  .Where(r => r.Property.User.UserName == User.Identity.Name)
                 .ToListAsync();
+            }
 
-            if (reviews == null || !reviews.Any())
+            
+
+            if (!reviews.Any())
             {
                 return View("NoReviews");
             }
@@ -95,7 +108,7 @@ namespace Group7FinalProject.Controllers
 
             //find the review in the database
             //be sure to change the data type to course instead of 'var'
-            Review review = await _context.Reviews.Include(c => c.User).FirstOrDefaultAsync(c => c.ReviewID == id);
+            Review review = await _context.Reviews.Include(c => c.User).Include(c => c.Property).FirstOrDefaultAsync(c => c.ReviewID == id);
 
             //if the review does not exist in the database, then show the user
             //an error message
@@ -119,27 +132,31 @@ namespace Group7FinalProject.Controllers
         [Authorize(Roles = "Customer,Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ReviewID,Rating,ReviewText,HostComments")] Review review)
+        public async Task<IActionResult> Edit(int id,  Review review)
         {
             //this is a security check to see if the user is trying to modify
             //a different record.  Show an error message
             if (id != review.ReviewID)
             {
-                return View("Error", new string[] { "Please try again!" });
+                return View("Error", new String[] { "There was a problem editing this record. Try again!" });
             }
 
-            if (ModelState.IsValid == false) //there is something wrong
-            {
-                return View(review);
-            }
+
+            Review dbReview;
+
+           
 
             //if code gets this far, attempt to edit the review
             try
             {
                 //Find the review to edit in the database and include relevant 
                 //navigational properties
-                Review dbReview = _context.Reviews.Find(review.ReviewID);
+                 dbReview = await _context.Reviews.Include(c => c.User).Include(c => c.Property).FirstOrDefaultAsync(c => c.ReviewID == id);
 
+                if (ModelState.IsValid == false) //there is something wrong
+                {
+                    return View(review);
+                }
                 //update the properties scalar properties
                 dbReview.Rating = review.Rating;
                 dbReview.ReviewText = review.ReviewText;
@@ -194,6 +211,76 @@ namespace Group7FinalProject.Controllers
             // Redirect to the reservations index
             return RedirectToAction(nameof(Index));
         }
+
+
+        [Authorize(Roles = "Host")]
+        public async Task<IActionResult> AcceptDisputeReview(int? id)
+        {
+            if (id == null)
+            {
+                return View("Error", new string[] { "Please specify a review with a dispute to accept!" });
+            }
+
+            // Find the reservation in the database
+            //TODO Need to check that UserID is equal to review property ID's host
+            Review review = await _context.Reviews
+                .Include(r => r.User)
+                .Where(r => r.Property.User.UserName == User.Identity.Name)
+                .FirstOrDefaultAsync(r => r.ReviewID == id);
+
+
+
+            if (review == null)
+            {
+                return View("Error", new string[] { "This review was not found!" });
+            }
+
+
+
+            // Update the reservation status
+            review.DisputeStatus = DisputeStatus.ValidDispute;
+
+            // Save the changes
+            await _context.SaveChangesAsync();
+
+            // Redirect to the reservations index
+            return RedirectToAction(nameof(Index));
+        }
+
+        [Authorize(Roles = "Host")]
+        public async Task<IActionResult> DeclineDisputeReview(int? id)
+        {
+            if (id == null)
+            {
+                return View("Error", new string[] { "Please specify a review with a dispute to decline!" });
+            }
+
+            // Find the reservation in the database
+            //TODO Need to check that UserID is equal to review property ID's host
+            Review review = await _context.Reviews
+                .Include(r => r.User)
+                .Where(r => r.Property.User.UserName == User.Identity.Name)
+                .FirstOrDefaultAsync(r => r.ReviewID == id);
+
+
+
+            if (review == null)
+            {
+                return View("Error", new string[] { "This review was not found!" });
+            }
+
+
+
+            // Update the reservation status
+            review.DisputeStatus = DisputeStatus.InvalidDispute;
+
+            // Save the changes
+            await _context.SaveChangesAsync();
+
+            // Redirect to the reservations index
+            return RedirectToAction(nameof(Index));
+        }
+
 
         [Authorize(Roles = "Host")]
         public async Task<IActionResult> MakeHostComment(int? id)

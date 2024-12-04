@@ -17,15 +17,15 @@ namespace Group7FinalProject.Models
         public String ReviewText { get; set; }
 
         [Display(Name = "Host Comments")]
-        public String HostComments { get; set; }
+        public String? HostComments { get; set; }
 
         [Display(Name = "Dispute Status")]
         //Stores enum for Status of Dispute
         public DisputeStatus DisputeStatus { get; set; }
 
 
-        public Property Property { get; set; }
-        public AppUser User { get; set; }
+        public Property? Property { get; set; }
+        public AppUser? User { get; set; }
 
 
     }
