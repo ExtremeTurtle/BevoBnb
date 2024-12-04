@@ -192,20 +192,22 @@ namespace Group7FinalProject.Controllers
                 return View("Error", new string[] { "Please try again!" });
             }
 
-            if (ModelState.IsValid == false) //there is something wrong
-            {
-                return View(property);
-            }
+            Property dbProperty;
+
+           
 
             //if code gets this far, attempt to edit the property
             try
             {
                 //Find the property to edit in the database and include relevant 
                 //navigational properties
-                Property dbProperty = _context.Properties.Find(property.PropertyID);
+                 dbProperty = _context.Properties.Include(c => c.User).Include(c => c.Category).FirstOrDefault(c => c.PropertyID == id);
 
 
-
+                if (ModelState.IsValid == false) //there is something wrong
+                {
+                    return View(property);
+                }
                 //update the properties scalar properties
                 dbProperty.WeekdayPrice = property.WeekdayPrice;
                 dbProperty.WeekdayPrice = property.WeekdayPrice;
