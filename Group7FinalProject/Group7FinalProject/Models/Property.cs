@@ -2,7 +2,8 @@
 
 namespace Group7FinalProject.Models
 {
-    public enum PropertyStatus { Unapproved, Approved, Inactive }
+    public enum PropertyStatus { Unapproved, Approved }
+    public enum Active { Inactive, Active }
     public class Property
     {
         public Int32 PropertyID { get; set; } // Primary Key
@@ -72,6 +73,10 @@ namespace Group7FinalProject.Models
         [Display(Name = "Property Status:")]
         [Required]
         public PropertyStatus PropertyStatus { get; set; }
+
+        [Display(Name = "Active Status:")]
+        [Required]
+        public Active ActiveStatus { get; set; }
 
 
         // Navigation Properties

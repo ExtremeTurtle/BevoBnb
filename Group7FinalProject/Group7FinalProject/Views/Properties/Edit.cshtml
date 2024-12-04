@@ -17,14 +17,12 @@
             <input type="hidden" asp-for="City" />
             <input type="hidden" asp-for="State" />
             <input type="hidden" asp-for="ZipCode" />
-      
 
             <div class="form-group">
                 <label asp-for="PropertyNumber" class="control-label"></label>
                 @Html.DisplayFor(Model => Model.PropertyNumber, new { @class = "form-control" })
-           
             </div>
-           
+
             <div class="form-group">
                 <label asp-for="WeekdayPrice" class="control-label"></label>
                 <input asp-for="WeekdayPrice" class="form-control" />
@@ -50,23 +48,18 @@
                 <input asp-for="MinNightsForDiscount" class="form-control" />
                 <span asp-validation-for="MinNightsForDiscount" class="text-danger"></span>
             </div>
-           
-            <div class="form-group">
-                <label asp-for="PropertyStatus" class="control-label"></label>
-                <select asp-for="PropertyStatus" class="form-control">
-                    <!-- Default Option: Current PropertyStatus -->
-                    <option value="@Model.PropertyStatus" selected>
-                        @Model.PropertyStatus
-                    </option>
 
-                    <!-- Show 'Invalid' Option if Current Status is not Inactive -->
-                    @if (Model.PropertyStatus != PropertyStatus.Inactive)
-                    {
-                        <option value="Inactive">Inactive</option>
-                    }
+            <div class="form-group">
+                <label asp-for="ActiveStatus" class="control-label"></label>
+                <select asp-for="ActiveStatus" class="form-control" asp-items="Html.GetEnumSelectList<Group7FinalProject.Models.Active>()">
                 </select>
-                <span asp-validation-for="PropertyStatus" class="text-danger"></span>
+                <span asp-validation-for="ActiveStatus" class="text-danger"></span>
             </div>
+
+
+
+
+
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
@@ -77,4 +70,3 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
-

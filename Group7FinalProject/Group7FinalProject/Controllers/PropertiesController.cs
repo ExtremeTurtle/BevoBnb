@@ -32,7 +32,7 @@ namespace Group7FinalProject.Controllers
 
             properties = _context.Properties
                                 .Include(r => r.Category).
-                                Where(p => p.PropertyStatus == PropertyStatus.Approved).ToList();
+                                Where(p => p.PropertyStatus == PropertyStatus.Approved  & p.ActiveStatus == Active.Active).ToList();
 
             return View(properties);
 
@@ -214,7 +214,7 @@ namespace Group7FinalProject.Controllers
                 dbProperty.CleaningFee = property.CleaningFee;
 
                 //Update the Status
-                dbProperty.PropertyStatus = property.PropertyStatus;
+                dbProperty.ActiveStatus = property.ActiveStatus;
 
 
                 //save the changes
