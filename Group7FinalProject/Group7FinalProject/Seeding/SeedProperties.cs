@@ -31,6 +31,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "gonzalez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -52,6 +53,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "gonzalez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -73,6 +75,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Unapproved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rankin@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Condo")
             });
@@ -94,6 +97,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rankin@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -115,6 +119,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "loter@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -136,6 +141,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rice@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -157,6 +163,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rice@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -178,6 +185,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "tanner@utexas.edu"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -199,6 +207,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rice@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -220,6 +229,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "ingram@gmail.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -241,6 +251,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "jacobs@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -262,6 +273,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "martinez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -283,6 +295,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "chung@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -304,6 +317,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Unapproved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "jacobs@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -325,6 +339,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "jacobs@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Condo")
             });
@@ -346,6 +361,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rankin@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -367,6 +383,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "gonzalez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -388,6 +405,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "martinez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -409,6 +427,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "loter@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -430,6 +449,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "chung@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -451,6 +471,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "loter@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Condo")
             });
@@ -472,6 +493,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "martinez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -493,6 +515,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "gonzalez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -514,6 +537,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "chung@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -535,6 +559,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "jacobs@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -556,6 +581,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "chung@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -577,6 +603,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "loter@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -598,6 +625,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "morales@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -619,6 +647,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "morales@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -640,6 +669,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "gonzalez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -661,6 +691,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "loter@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -682,6 +713,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "loter@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Condo")
             });
@@ -703,6 +735,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rice@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -724,6 +757,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "morales@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -745,6 +779,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "tanner@utexas.edu"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -766,6 +801,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "jacobs@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -787,6 +823,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "jacobs@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -808,6 +845,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rankin@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Condo")
             });
@@ -829,6 +867,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "chung@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -850,6 +889,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "tanner@utexas.edu"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -871,6 +911,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "ingram@gmail.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Condo")
             });
@@ -892,6 +933,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rankin@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -913,6 +955,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rice@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -934,6 +977,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "morales@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -955,6 +999,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rice@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -976,6 +1021,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rice@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -997,6 +1043,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "martinez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -1018,6 +1065,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "ingram@gmail.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -1039,6 +1087,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "gonzalez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -1060,6 +1109,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "chung@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -1081,6 +1131,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "chung@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Condo")
             });
@@ -1102,6 +1153,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "ingram@gmail.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -1123,6 +1175,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "jacobs@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Condo")
             });
@@ -1144,6 +1197,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "ingram@gmail.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -1165,6 +1219,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Unapproved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rankin@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -1186,6 +1241,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "loter@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -1207,6 +1263,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "gonzalez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -1228,6 +1285,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "ingram@gmail.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -1249,6 +1307,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "tanner@utexas.edu"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Condo")
             });
@@ -1270,6 +1329,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "ingram@gmail.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -1291,6 +1351,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "jacobs@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -1312,6 +1373,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "jacobs@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -1333,6 +1395,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "chung@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -1354,6 +1417,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "chung@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -1375,6 +1439,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "tanner@utexas.edu"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -1396,6 +1461,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "martinez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -1417,6 +1483,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rankin@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -1438,6 +1505,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "tanner@utexas.edu"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -1459,6 +1527,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "loter@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -1480,6 +1549,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "morales@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -1501,6 +1571,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "chung@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -1522,6 +1593,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "martinez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -1543,6 +1615,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "jacobs@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -1564,6 +1637,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "morales@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -1585,6 +1659,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "chung@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -1606,6 +1681,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "gonzalez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -1627,6 +1703,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "ingram@gmail.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -1648,6 +1725,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "loter@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -1669,6 +1747,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "chung@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -1690,6 +1769,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "jacobs@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -1711,6 +1791,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "ingram@gmail.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -1732,6 +1813,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "chung@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -1753,6 +1835,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "jacobs@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Condo")
             });
@@ -1774,6 +1857,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rankin@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Condo")
             });
@@ -1795,6 +1879,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "martinez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -1816,6 +1901,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "jacobs@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Condo")
             });
@@ -1837,6 +1923,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rice@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -1858,6 +1945,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rice@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -1879,6 +1967,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "ingram@gmail.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -1900,6 +1989,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rice@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -1921,6 +2011,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "gonzalez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -1942,6 +2033,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "morales@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -1963,6 +2055,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Unapproved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "morales@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -1984,6 +2077,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "morales@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -2005,6 +2099,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rice@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -2026,6 +2121,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "martinez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -2047,6 +2143,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "ingram@gmail.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -2068,6 +2165,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "chung@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -2089,6 +2187,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "morales@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -2110,6 +2209,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "ingram@gmail.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -2131,6 +2231,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "loter@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -2152,6 +2253,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "gonzalez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -2173,6 +2275,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "tanner@utexas.edu"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -2194,6 +2297,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "martinez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -2215,6 +2319,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "morales@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -2236,6 +2341,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "morales@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -2257,6 +2363,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rice@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Condo")
             });
@@ -2278,6 +2385,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "gonzalez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -2299,6 +2407,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "morales@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -2320,6 +2429,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "tanner@utexas.edu"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -2341,6 +2451,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "tanner@utexas.edu"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Condo")
             });
@@ -2362,6 +2473,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "martinez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -2383,6 +2495,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rankin@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -2404,6 +2517,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "chung@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -2425,6 +2539,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "gonzalez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -2446,6 +2561,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "martinez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -2467,6 +2583,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "gonzalez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -2488,6 +2605,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rankin@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -2509,6 +2627,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rice@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -2530,6 +2649,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "tanner@utexas.edu"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Condo")
             });
@@ -2551,6 +2671,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "morales@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Condo")
             });
@@ -2572,6 +2693,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rankin@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -2593,6 +2715,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "martinez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -2614,6 +2737,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "loter@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -2635,6 +2759,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "chung@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -2656,6 +2781,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "jacobs@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -2677,6 +2803,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "ingram@gmail.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -2698,6 +2825,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rice@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -2719,6 +2847,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "ingram@gmail.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -2740,6 +2869,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "morales@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Condo")
             });
@@ -2761,6 +2891,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "loter@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -2782,6 +2913,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "tanner@utexas.edu"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -2803,6 +2935,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "jacobs@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -2824,6 +2957,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "tanner@utexas.edu"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -2845,6 +2979,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "tanner@utexas.edu"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -2866,6 +3001,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "ingram@gmail.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -2887,6 +3023,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "chung@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -2908,6 +3045,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "jacobs@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -2929,6 +3067,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "tanner@utexas.edu"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -2950,6 +3089,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "ingram@gmail.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Hotel")
             });
@@ -2971,6 +3111,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "loter@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -2992,6 +3133,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "martinez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -3013,6 +3155,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "morales@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -3034,6 +3177,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "ingram@gmail.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -3055,6 +3199,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "martinez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Condo")
             });
@@ -3076,6 +3221,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "martinez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -3097,6 +3243,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "loter@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -3118,6 +3265,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "tanner@utexas.edu"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -3139,6 +3287,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "loter@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -3160,6 +3309,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "tanner@utexas.edu"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -3181,6 +3331,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "gonzalez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -3202,6 +3353,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rankin@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -3223,6 +3375,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "tanner@utexas.edu"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -3244,6 +3397,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "jacobs@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -3265,6 +3419,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rankin@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -3286,6 +3441,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rankin@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -3307,6 +3463,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "tanner@utexas.edu"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -3328,6 +3485,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "ingram@gmail.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -3349,6 +3507,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rice@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -3370,6 +3529,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "ingram@gmail.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -3391,6 +3551,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rice@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -3412,6 +3573,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "chung@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -3433,6 +3595,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rice@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -3454,6 +3617,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "martinez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -3475,6 +3639,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "gonzalez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -3496,6 +3661,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "tanner@utexas.edu"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -3517,6 +3683,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "loter@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Condo")
             });
@@ -3538,6 +3705,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "gonzalez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -3559,6 +3727,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "jacobs@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -3580,6 +3749,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "rice@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Condo")
             });
@@ -3601,6 +3771,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "tanner@utexas.edu"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -3622,6 +3793,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "ingram@gmail.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Apartment")
             });
@@ -3643,6 +3815,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "chung@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -3664,6 +3837,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "jacobs@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Condo")
             });
@@ -3685,6 +3859,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Unapproved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "gonzalez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -3706,6 +3881,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "loter@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -3727,6 +3903,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "loter@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -3748,6 +3925,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "martinez@aol.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -3769,6 +3947,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "chung@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -3790,6 +3969,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "loter@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -3811,6 +3991,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = true,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "chung@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "House")
             });
@@ -3832,6 +4013,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = true,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Unapproved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "chung@yahoo.com"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });
@@ -3853,6 +4035,7 @@ namespace Group7FinalProject.Seeding
                 PetFriendly = false,
                 HasParking = false,
                 PropertyStatus = PropertyStatus.Approved,
+                ActiveStatus = Active.Active,
                 User = db.Users.FirstOrDefault(u => u.Email == "tanner@utexas.edu"),
                 Category = db.Categories.FirstOrDefault(c => c.CategoryName == "Cabin")
             });

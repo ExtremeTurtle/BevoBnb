@@ -2,7 +2,8 @@
 
 namespace Group7FinalProject.Models
 {
-    public enum PropertyStatus { Unapproved, Approved, Inactive }
+    public enum PropertyStatus { Unapproved, Approved }
+    public enum Active { Inactive, Active }
     public class Property
     {
         public Int32 PropertyID { get; set; } // Primary Key
@@ -73,12 +74,15 @@ namespace Group7FinalProject.Models
         [Required]
         public PropertyStatus PropertyStatus { get; set; }
 
+        [Display(Name = "Active Status:")]
+        [Required]
+        public Active ActiveStatus { get; set; }
+
 
         // Navigation Properties
-        public AppUser User { get; set; } // The host user
+        public AppUser? User { get; set; } // The host user
 
-        [Required]
-        public Category Category { get; set; } // The category of the property
+        public Category? Category { get; set; } // The category of the property
 
         public List<Reservation>? Reservations { get; set; } // Reservations for this property
 

@@ -33,7 +33,7 @@ namespace Group7FinalProject.Controllers
 
             properties = _context.Properties
                                 .Include(r => r.Category).
-                                Where(p => p.PropertyStatus == PropertyStatus.Approved).ToList();
+                                Where(p => p.PropertyStatus == PropertyStatus.Approved  & p.ActiveStatus == Active.Active).ToList();
 
             return View(properties);
 
@@ -193,27 +193,29 @@ namespace Group7FinalProject.Controllers
                 return View("Error", new string[] { "Please try again!" });
             }
 
-            if (ModelState.IsValid == false) //there is something wrong
-            {
-                return View(property);
-            }
+            Property dbProperty;
+
+           
 
             //if code gets this far, attempt to edit the property
             try
             {
                 //Find the property to edit in the database and include relevant 
                 //navigational properties
-                Property dbProperty = _context.Properties.Find(property.PropertyID);
+                 dbProperty = _context.Properties.Include(c => c.User).Include(c => c.Category).FirstOrDefault(c => c.PropertyID == id);
 
 
-
+                if (ModelState.IsValid == false) //there is something wrong
+                {
+                    return View(property);
+                }
                 //update the properties scalar properties
                 dbProperty.WeekdayPrice = property.WeekdayPrice;
                 dbProperty.WeekdayPrice = property.WeekdayPrice;
                 dbProperty.CleaningFee = property.CleaningFee;
 
                 //Update the Status
-                dbProperty.PropertyStatus = property.PropertyStatus;
+                dbProperty.ActiveStatus = property.ActiveStatus;
 
 
                 //save the changes

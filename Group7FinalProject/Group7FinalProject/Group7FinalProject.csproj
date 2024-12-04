@@ -10,6 +10,10 @@
 
   <ItemGroup>
     <Content Remove="wwwroot\" />
+    <Content Remove="wwwroot\lib\twitter-bootstrap\" />
+    <Content Remove="wwwroot\fonts\" />
+    <Content Remove="wwwroot\css\" />
+    <Content Remove="wwwroot\images\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,5 +30,11 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\twitter-bootstrap\" />
+    <Folder Include="wwwroot\fonts\" />
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\images\" />
   </ItemGroup>
 </Project>

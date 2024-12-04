@@ -1,10 +1,11 @@
 ﻿@model IEnumerable<Group7FinalProject.Models.Property>
-
+    <link href="~/css/site.css" rel="stylesheet" />
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>BevoBnB</h1>
+
 <!-- Add Line to Show Category!! And also add line to show showing X out of Y properties-->
 @if (User.Identity.IsAuthenticated && User.IsInRole("Host"))
     {
@@ -15,12 +16,10 @@
 
 <p>Displaying @ViewBag.FilteredProperties out of @ViewBag.TotalProperties Properties</p>
     <table class="table">
+
         <thead>
             <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.PropertyNumber)
-                </th>
-                <th>
+                <th class="address-column">
                     @Html.DisplayNameFor(model => model.Address)
                 </th>
                 <th>
@@ -56,10 +55,7 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.PropertyNumber)
-                    </td>
-                    <td>
+                    <td class="address-column">
                         @Html.DisplayFor(modelItem => item.Address)
                     </td>
                     <td>
