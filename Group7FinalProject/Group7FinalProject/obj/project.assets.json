@@ -8183,19 +8183,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/CharlieREAL/.nuget/packages/": {}
+    "/Users/bradythedude/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/CharlieREAL/Library/Mobile Documents/com~apple~CloudDocs/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj",
+      "projectUniqueName": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj",
       "projectName": "Group7FinalProject",
-      "projectPath": "/Users/CharlieREAL/Library/Mobile Documents/com~apple~CloudDocs/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj",
-      "packagesPath": "/Users/CharlieREAL/.nuget/packages/",
-      "outputPath": "/Users/CharlieREAL/Library/Mobile Documents/com~apple~CloudDocs/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject/obj/",
+      "projectPath": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj",
+      "packagesPath": "/Users/bradythedude/.nuget/packages/",
+      "outputPath": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/CharlieREAL/.nuget/NuGet/NuGet.Config"
+        "/Users/bradythedude/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"

@@ -20,14 +20,17 @@ namespace Group7FinalProject.Models
         [Display(Name = "Guest Rating:")]
         [Range(minimum: 1, maximum: 5, ErrorMessage = "Rating must be between 0.0 and 5.0")]
         public Decimal? SearchGuestRating { get; set; }
-        [Display(Name = "Guest Rating:")]
         public Filter? FilterGuestRating { get; set; }
 
-        [Display(Name = "Daily Price:")]
+        [Display(Name = "Weekday Price:")]
         [Range(0, int.MaxValue, ErrorMessage = "The value must be non-negative.")]
-        public Decimal? SearchDailyPrice { get; set; }
-        [Display(Name = "Daily Price:")]
-        public Filter? FilterDailyPrice { get; set; }
+        public Decimal? SearchWeekdayPrice { get; set; }
+        public Filter? FilterWeekdayPrice { get; set; }
+
+        [Display(Name = "Weekend Price:")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value must be non-negative.")]
+        public Decimal? SearchWeekendPrice { get; set; }
+        public Filter? FilterWeekendPrice { get; set; }
 
         [Display(Name = "Category:")]
         public int? SelectedCategory { get; set; }
