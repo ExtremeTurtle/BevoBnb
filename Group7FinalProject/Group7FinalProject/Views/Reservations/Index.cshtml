@@ -13,6 +13,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.ConfirmationNumber)
             </th>
+            @if (User.Identity.IsAuthenticated && User.IsInRole("Host"))
+            {
+                <th>
+                    @Html.DisplayNameFor(model => model.Property.PropertyNumber)
+                </th>
+            }
             <th>
                 @Html.DisplayNameFor(model => model.CheckIn)
             </th>
@@ -46,6 +52,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ConfirmationNumber)
             </td>
+                @if (User.Identity.IsAuthenticated && User.IsInRole("Host"))
+                {
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Property.PropertyNumber)
+                    </td>
+                }
             <td>
                 @Html.DisplayFor(modelItem => item.CheckIn)
             </td>

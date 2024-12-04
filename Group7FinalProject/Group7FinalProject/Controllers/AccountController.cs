@@ -58,6 +58,13 @@ namespace Group7FinalProject.Controllers
                 return View(rvm); // Return the view with the validation error
             }
 
+            // Check if an account with the same email already exists
+            var existingUser = await _userManager.FindByEmailAsync(rvm.Email);
+            if (existingUser != null)
+            {
+                ModelState.AddModelError("Email", "An account with this email already exists.");
+                return View(rvm); // Return the view with the validation error
+            }
             //this code maps the RegisterViewModel to the AppUser domain model
             AppUser newUser = new AppUser
             {

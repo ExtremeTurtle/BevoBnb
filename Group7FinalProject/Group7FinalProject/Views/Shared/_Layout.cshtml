@@ -54,15 +54,16 @@
                              <i class="fa-solid fa-house"></i> | Home
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a asp-controller="Unavailabilities" asp-action="Index" class="nav-link">Unavailabilities</a>
-                    </li>
+                    
 
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <li class="nav-item">
-                            <a asp-controller="Reservations" asp-action="Index" class="nav-link">Reservations</a>
-                        </li>
+                        if (User.IsInRole("Customer"))
+                        {
+                            <li class="nav-item">
+                                <a asp-controller="Reservations" asp-action="Index" class="nav-link">My Reservations</a>
+                            </li>
+                        }
 
                         if (User.IsInRole("Admin"))
                         {
@@ -73,6 +74,19 @@
                             <li class="nav-item">
                                 <a asp-controller="RoleAdmin" asp-action="Index" class="nav-link">Manage Users</a>
                             </li>
+                        }
+
+                        if (User.IsInRole("Host"))
+                        {
+                            <li class="nav-item">
+                                <a asp-controller="Properties" asp-action="MyProperties" class="nav-link">My Properties</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a asp-controller="Reservations" asp-action="Index" class="nav-link">My Property Reservations</a>
+                            </li>
+
+                            
                         }
                     }
                 </ul>
