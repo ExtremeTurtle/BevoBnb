@@ -270,5 +270,16 @@ namespace Group7FinalProject.Controllers
             //send the user back to the home page
             return RedirectToAction("Index", "Home");
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult SwitchAccount()
+        {
+            //sign the user out of the application
+            _signInManager.SignOutAsync();
+
+            //send the user back to the home page
+            return RedirectToAction("Login", "Account");
+        }
     }
 }

@@ -2,66 +2,28 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <Debugger.DebugSourceFolders>
+    <String>/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject</String>
+  </Debugger.DebugSourceFolders>
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Group7FinalProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Group7FinalProject/Controllers/PropertiesController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Group7FinalProject/Views/Reservations/Details.cshtml">
     <Files>
+      <File FileName="Group7FinalProject/Views/Reservations/Details.cshtml" Line="50" Column="9" />
+      <File FileName="Group7FinalProject/Models/Property.cs" Line="1" Column="1" />
+      <File FileName="Group7FinalProject/Models/Review.cs" Line="1" Column="1" />
       <File FileName="Group7FinalProject/Models/Reservation.cs" Line="1" Column="1" />
-      <File FileName="Group7FinalProject/Models/AppUser.cs" />
-      <File FileName="Group7FinalProject/Models/Category.cs" Line="1" Column="1" />
-      <File FileName="Group7FinalProject/Models/Property.cs" Line="46" Column="50" />
-      <File FileName="Group7FinalProject/Models/Review.cs" />
-      <File FileName="Group7FinalProject/DAL/AppDbContext.cs" />
-      <File FileName="Group7FinalProject/Views/Properties/Index.cshtml" Line="16" Column="85" />
-      <File FileName="Group7FinalProject/Views/Properties/Create.cshtml" Line="93" Column="44" />
-      <File FileName="Group7FinalProject/Views/RoleAdmin/Create.cshtml" />
-      <File FileName="Group7FinalProject/Views/RoleAdmin/Edit.cshtml" />
-      <File FileName="Group7FinalProject/Program.cs" />
-      <File FileName="Group7FinalProject/Seeding/SeedUsers.cs" />
-      <File FileName="Group7FinalProject/Views/Properties/Details.cshtml" />
-      <File FileName="Group7FinalProject/Views/_ViewImports.cshtml" />
-      <File FileName="Group7FinalProject/Views/_ViewStart.cshtml" />
-      <File FileName="Group7FinalProject/wwwroot/lib/twitter-bootstrap/css/bootstrap.css" />
-      <File FileName="Group7FinalProject/wwwroot/lib/font-awesome/css/all.css" />
-      <File FileName="Group7FinalProject/wwwroot/lib/font-awesome/css/fontawesome.css" />
-      <File FileName="Group7FinalProject/wwwroot/lib/font-awesome/css/brands.css" />
-      <File FileName="Group7FinalProject/Controllers/HomeController.cs" />
-      <File FileName="Group7FinalProject/Views/Shared/_Layout.cshtml" Line="14" Column="10" />
-      <File FileName="Group7FinalProject/Controllers/RoleAdminController.cs" />
-      <File FileName="Group7FinalProject/Views/Shared/_LoginPartial.cshtml" />
-      <File FileName="Group7FinalProject/Controllers/AccountController.cs" />
-      <File FileName="Group7FinalProject/wwwroot/lib/font-awesome/css/solid.css" />
-      <File FileName="Group7FinalProject/wwwroot/lib/font-awesome/sprites/solid.svg" />
-      <File FileName="Group7FinalProject/wwwroot/lib/font-awesome/js/solid.js" />
-      <File FileName="Group7FinalProject/wwwroot/lib/font-awesome/js/regular.js" />
-      <File FileName="Group7FinalProject/wwwroot/lib/font-awesome/js/fontawesome.js" />
-      <File FileName="Group7FinalProject/wwwroot/lib/font-awesome/js/brands.js" />
-      <File FileName="Group7FinalProject/wwwroot/lib/twitter-bootstrap/css/bootstrap-grid.css" />
-      <File FileName="Group7FinalProject/wwwroot/lib/font-awesome/webfonts/fa-brands-400.eot" />
-      <File FileName="Group7FinalProject/wwwroot/lib/font-awesome/webfonts/fa-brands-400.svg" />
-      <File FileName="Group7FinalProject/wwwroot/lib/font-awesome/css/regular.css" />
-      <File FileName="Group7FinalProject/Seeding/SeedProperties.cs" />
-      <File FileName="Group7FinalProject/Migrations/20241126192145_CartSetup.cs" />
-      <File FileName="Group7FinalProject/wwwroot/lib/font-awesome/js/all.js" />
-      <File FileName="Group7FinalProject/wwwroot/lib/font-awesome/js/conflict-detection.js" />
-      <File FileName="Group7FinalProject/wwwroot/lib/twitter-bootstrap/scss/_badge.scss" />
-      <File FileName="Group7FinalProject/wwwroot/lib/twitter-bootstrap/scss/_button-group.scss" />
-      <File FileName="Group7FinalProject/wwwroot/lib/twitter-bootstrap/scss/_carousel.scss" />
-      <File FileName="Group7FinalProject/Models/ViewModels/AccountViewModels.cs" Line="1" Column="1" />
-      <File FileName="Group7FinalProject/Models/ViewModels/RoleViewModels.cs" Line="1" Column="1" />
-      <File FileName="Group7FinalProject/Models/ViewModels/SearchViewModel.cs" Line="51" Column="21" />
-      <File FileName="Group7FinalProject/Controllers/PropertiesController.cs" Line="405" Column="53" />
-      <File FileName="Group7FinalProject/Views/Properties/DetailedSearch.cshtml" Line="57" Column="19" />
-      <File FileName="Group7FinalProject/Models/Unavailability.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Group7FinalProject" expanded="True">
+          <Node name="Group7FinalProject">
             <Node name="Group7FinalProject">
-              <Node name="Controllers">
-                <Node name="PropertiesController.cs" selected="True" />
+              <Node name="Views">
+                <Node name="Reservations">
+                  <Node name="Details.cshtml" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>

@@ -15,8 +15,6 @@ namespace Group7FinalProject.Models
         [Required]
         public string Address { get; set; }
 
-     
-
         [Display(Name = "City:")]
         [Required]
         public string City { get; set; }
@@ -104,6 +102,7 @@ namespace Group7FinalProject.Models
             {
                 Unavailabilities = new List<Unavailability>();
             }
+
         }
     }
 }

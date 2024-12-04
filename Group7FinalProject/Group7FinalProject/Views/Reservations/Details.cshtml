@@ -38,11 +38,30 @@
     </tbody>
 </table>
 
-<div>
-    <!-- Conditionally show the Cancel button if the reservation is valid -->
-    @if (Model.ReservationStatus == ReservationStatus.Valid)
-    {
-        <a asp-action="CancelReservation" asp-route-id="@Model.ReservationID" class="btn btn-danger">Cancel</a>
+<table class="table table-primary">
+    <tr>
+        <th>Property Address</th>
+        <th>Beds</th>
+        <th>Bathrooms</th>
+        <th>Guests Allowed</th>
+        <th>Pet Friendly</th>
+        <th>Parking Available</th>
+    </tr>
+    <tr>
+        <td>@Html.DisplayFor(ModelItem => Model.Property.Address)</td>
+        <td>@Html.DisplayFor(ModelItem => Model.Property.NumOfBedrooms)</td>
+        <td>@Html.DisplayFor(ModelItem => Model.Property.NumOfBathrooms)</td>
+        <td>@Html.DisplayFor(ModelItem => Model.Property.GuestsAllowed)</td>
+        <td>@Html.DisplayFor(ModelItem => Model.Property.PetFriendly)</td>
+        <td>@Html.DisplayFor(ModelItem => Model.Property.HasParking)</td>
+    </tr>
     }
-    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
-</div>
+
+    <div>
+        <!-- Conditionally show the Cancel button if the reservation is valid -->
+        @if (Model.ReservationStatus == ReservationStatus.Valid)
+        {
+            <a asp-action="CancelReservation" asp-route-id="@Model.ReservationID" class="btn btn-danger">Cancel</a>
+        }
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>

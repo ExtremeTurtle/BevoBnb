@@ -99,7 +99,7 @@ namespace Group7FinalProject.Controllers
             return View(reservation);
         }
 
-        [Authorize(Roles = "Customer,Admin")]
+        [Authorize(Roles = "Customer, Admin")]
 
         public async Task <IActionResult> Create(int? PropertyID)
         {

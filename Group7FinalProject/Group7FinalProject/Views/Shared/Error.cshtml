@@ -2,7 +2,7 @@
 
 <h1>Error</h1>
 
-<p>Oops - something went wrong.</p>
+<p>Oops - something went wrong. Are you sure you are signed into the correct account?</p>
 
 @if (Model != null)
 {
@@ -13,3 +13,7 @@
 }
 
 <a asp-action="Index" asp-controller="Home" class="btn btn-success">Take me home!</a>
+<br />
+<form asp-action="SwitchAccount" asp-controller="Account" method="post">
+    <button type="submit" class="btn btn-success">Switch Account</button>
+</form>
