@@ -4076,6 +4076,7 @@ namespace Group7FinalProject.Seeding
                         dbProperty.HasParking = seedProperty.HasParking;
                         dbProperty.PropertyStatus = seedProperty.PropertyStatus;
                         dbProperty.Category = seedProperty.Category;
+                        dbProperty.ActiveStatus = seedProperty.ActiveStatus;
                         db.SaveChanges();
                     }
                 }

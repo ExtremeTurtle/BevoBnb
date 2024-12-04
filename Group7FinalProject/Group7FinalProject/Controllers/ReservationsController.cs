@@ -31,10 +31,10 @@ namespace Group7FinalProject.Controllers
         // GET: Reservations
         public async Task<IActionResult> Index()
         {
-            //Set up a list of reservations to display
+            // Set up a list of reservations to display
             List<Reservation> reservations;
 
-            //User.IsInRole -- they see ALL reservations and details for their property
+            // Check user role and filter reservations accordingly
             if (User.IsInRole("Host"))
             {
                 reservations = _context.Reservations
@@ -43,10 +43,9 @@ namespace Group7FinalProject.Controllers
                                 .Where(r => r.ReservationStatus == ReservationStatus.Valid || r.ReservationStatus == ReservationStatus.Cancelled)
                                 .ToList();
             }
-            else //user is a customer, so only display their records
-            //reservations is assocated with a particular user (look on the order model class)
-            //every logged in user is allowed to access index page, but their results will be different
+            else
             {
+                // User is a customer, so only display their records
                 reservations = _context.Reservations
                                 .Include(r => r.Property)
                                 .Where(r => r.User.UserName == User.Identity.Name)
@@ -54,9 +53,18 @@ namespace Group7FinalProject.Controllers
                                 .ToList();
             }
 
-            //
+            // Check if the reservations list is empty
+            if (reservations == null || !reservations.Any())
+            {
+                // Return a view with a message indicating no reservations
+                ViewBag.Message = "You have not made any reservations yet. Please browse our properties and make a reservation to see it here.";
+                return View("NoReservations");
+            }
+
+            // Return the list of reservations if there are any
             return View(reservations);
         }
+
 
         // GET: Reservations/Details/5
         public async Task<IActionResult> Details(int? id)

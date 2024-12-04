@@ -32,7 +32,7 @@ namespace Group7FinalProject.Controllers
 
             properties = _context.Properties
                                 .Include(r => r.Category).
-                                Where(p => p.PropertyStatus == PropertyStatus.Approved  & p.ActiveStatus == Active.Active).ToList();
+                                Where(p => p.PropertyStatus == PropertyStatus.Approved && p.ActiveStatus == Active.Active).ToList();
 
             return View(properties);
 
