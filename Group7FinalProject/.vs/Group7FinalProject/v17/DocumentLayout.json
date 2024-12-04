@@ -242,7 +242,7 @@
               "RelativeDocumentMoniker": "Group7FinalProject\\Controllers\\PropertiesController.cs",
               "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\PropertiesController.cs",
               "RelativeToolTip": "Group7FinalProject\\Controllers\\PropertiesController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAxwCIAAABXAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAuwCUAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T01:39:45.65Z",
               "EditorCaption": ""
@@ -257,8 +257,7 @@
               "RelativeToolTip": "Group7FinalProject\\Controllers\\CartsController.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwCQAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T19:20:16.513Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T19:20:16.513Z"
             },
             {
               "$type": "Document",
@@ -270,8 +269,7 @@
               "RelativeToolTip": "Group7FinalProject\\Views\\Reservations\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T19:58:10.966Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T19:58:10.966Z"
             },
             {
               "$type": "Document",
@@ -283,8 +281,7 @@
               "RelativeToolTip": "Group7FinalProject\\Views\\Reservations\\Details.cshtml",
               "ViewState": "AgIAABsAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-28T01:11:24.267Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T01:11:24.267Z"
             },
             {
               "$type": "Document",
@@ -296,8 +293,7 @@
               "RelativeToolTip": "Group7FinalProject\\Views\\Reservations\\Create.cshtml",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACoAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T19:54:07.108Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T19:54:07.108Z"
             },
             {
               "$type": "Document",
@@ -309,8 +305,7 @@
               "RelativeToolTip": "Group7FinalProject\\Models\\Property.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAF0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T20:06:23.2Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T20:06:23.2Z"
             },
             {
               "$type": "Document",
@@ -322,8 +317,7 @@
               "RelativeToolTip": "Group7FinalProject\\Seeding\\SeedProperties.cs",
               "ViewState": "AgIAAPwPAAAAAAAAAAAAwO4PAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T19:31:37.982Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T19:31:37.982Z"
             },
             {
               "$type": "Document",
@@ -335,8 +329,7 @@
               "RelativeToolTip": "Group7FinalProject\\Controllers\\SeedController.cs",
               "ViewState": "AgIAAP8AAAAAAAAAAAAAAC0AAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T01:35:22.332Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T01:35:22.332Z"
             },
             {
               "$type": "Document",
@@ -348,8 +341,7 @@
               "RelativeToolTip": "Group7FinalProject\\Views\\Properties\\Index.cshtml",
               "ViewState": "AgIAAE4AAAAAAAAAAAAAAF4AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-22T22:41:00.935Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T22:41:00.935Z"
             },
             {
               "$type": "Document",
@@ -361,8 +353,7 @@
               "RelativeToolTip": "Group7FinalProject\\Views\\Properties\\Edit.cshtml",
               "ViewState": "AgIAACcAAAAAAAAAAAAAwDkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-02T21:48:26.97Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T21:48:26.97Z"
             },
             {
               "$type": "Document",
@@ -374,8 +365,7 @@
               "RelativeToolTip": "Group7FinalProject\\Views\\Reservations\\NoReservations.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-04T17:15:55.363Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T17:15:55.363Z"
             },
             {
               "$type": "Document",
