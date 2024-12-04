@@ -101,40 +101,41 @@ namespace Group7FinalProject.Controllers
 
         [Authorize(Roles = "Customer,Admin")]
 
-        public async Task <IActionResult> Create(int? PropertyID)
+        public async Task<IActionResult> Create(int? PropertyID)
         {
-            
-                if (PropertyID == null)
-                {
-                    return View("Error", new string[] { "Please specify a property to add to the reservation" });
-                }
 
-                //find the property in the database
-                Property dbProperty = _context.Properties.Find(PropertyID);
+            if (PropertyID == null)
+            {
+                return View("Error", new string[] { "Please specify a property to add to the reservation" });
+            }
 
-                //make sure the Property exists in the database
-                if (dbProperty == null)
-                {
-                    return View("Error", new string[] { "This Property was not in the database!" });
-                }
+            //find the property in the database
+            Property dbProperty = _context.Properties.Find(PropertyID);
 
-
-                Reservation res = new Reservation();
-                res.Property = dbProperty;
-                res.CheckIn = DateTime.Today.AddDays(1); // Default check-in
-                res.CheckOut = DateTime.Today.AddDays(2); // Default check-out
-                res.User = await _userManager.FindByNameAsync(User.Identity.Name);
+            //make sure the Property exists in the database
+            if (dbProperty == null)
+            {
+                return View("Error", new string[] { "This Property was not in the database!" });
+            }
 
             if (User.IsInRole("Admin"))
             {
                 ViewBag.UserNames = await GetAllCustomerUserNamesSelectList();
-                return View("SelectCustomerForReservation",res);
-            }
-                return View(res);
-
+                return View("SelectCustomerForReservation", new Reservation { Property = dbProperty });
             }
 
-        
+            Reservation res = new Reservation();
+            res.Property = dbProperty;
+            res.CheckIn = DateTime.Today.AddDays(1); // Default check-in
+            res.CheckOut = DateTime.Today.AddDays(2); // Default check-out
+            res.User = await _userManager.FindByNameAsync(User.Identity.Name);
+
+
+            return View(res);
+
+        }
+
+
 
 
 
@@ -144,8 +145,10 @@ namespace Group7FinalProject.Controllers
         [HttpPost]
         [Authorize(Roles = "Customer,Admin")]
         [ValidateAntiForgeryToken]
-           public async Task<IActionResult> Create(Reservation reservation, int propertyID)
+        public async Task<IActionResult> Create(Reservation reservation, int propertyID, string? SelectedCustomer)
         {
+
+
             if (ModelState.IsValid == false)
             {
                 return View(reservation);
@@ -154,7 +157,7 @@ namespace Group7FinalProject.Controllers
             //find the property to be associated with this reservation
             Property dbProperty = _context.Properties.Find(propertyID);
 
-            reservation.Property= dbProperty;
+            reservation.Property = dbProperty;
 
             if (dbProperty == null)
             {
@@ -168,10 +171,23 @@ namespace Group7FinalProject.Controllers
             }
 
             // Load the User
-            reservation.User = await _userManager.FindByNameAsync(User.Identity.Name);
-            if (reservation.User == null)
+            if (User.IsInRole("Customer"))
             {
-                return View("Error", new string[] { "The user could not be found." });
+                reservation.User = await _userManager.FindByNameAsync(User.Identity.Name);
+                if (reservation.User == null)
+                {
+                    return View("Error", new string[] { "The user could not be found." });
+                }
+
+            }
+            //If user is an admin, make reservation user the parameter
+            if (User.IsInRole("Admin"))
+            {
+                reservation.User = await _userManager.FindByNameAsync(SelectedCustomer);
+                if (reservation.User == null)
+                {
+                    return View("Error", new string[] { "The user could not be found." });
+                }
             }
 
             // Validate CheckIn and CheckOut dates
@@ -221,37 +237,90 @@ namespace Group7FinalProject.Controllers
             reservation.WeekendPrice = dbProperty.WeekendPrice;
             reservation.CleaningFee = dbProperty.CleaningFee;
             reservation.DiscountRate = dbProperty.DiscountRate;
-            reservation.ReservationStatus = ReservationStatus.Unconfirmed;
+
+            if (User.IsInRole("Customer"))
+            {
+                reservation.ReservationStatus = ReservationStatus.Unconfirmed;
+            }
+            if (User.IsInRole("Admin"))
+            {
+                reservation.ReservationStatus = ReservationStatus.Valid;
+                reservation.ConfirmationNumber = Utilities.GenerateNextConfirmationNumber.GetNextConfirmationNumber(_context);
+
+            }
 
             //if code gets this far, add the reservation to the database
             _context.Add(reservation);
             await _context.SaveChangesAsync();
 
-            // Add the reservation to the cart
-            Cart cart = await _context.Carts
+
+            if (User.IsInRole("Customer"))
+            {
+                // Add the reservation to the cart
+                Cart cart = await _context.Carts
                 .FirstOrDefaultAsync(c => c.User.Id == reservation.User.Id);
 
-            if (cart == null)
-            {
-                // Create a new cart if the user doesn't have an active one
-                cart = new Cart
+                if (cart == null)
                 {
-                    User = reservation.User,
-                };
-                _context.Carts.Add(cart);
+                    // Create a new cart if the user doesn't have an active one
+                    cart = new Cart
+                    {
+                        User = reservation.User,
+                    };
+                    _context.Carts.Add(cart);
+                    await _context.SaveChangesAsync();
+                }
+                cart.Reservations.Add(reservation);
+                _context.Carts.Update(cart);
                 await _context.SaveChangesAsync();
+
+
+
+                // Redirect to the cart page
+                return RedirectToAction("Index", "Carts");
             }
-            cart.Reservations.Add(reservation);
-            _context.Carts.Update(cart);
-            await _context.SaveChangesAsync();
+            if (User.IsInRole("Admin"))
+            {
+                // Add dates to the Unavailabilities table
+                for (DateTime date = reservation.CheckIn; date < reservation.CheckOut; date = date.AddDays(1))
+                {
+                    // Instantiate a new Unavailability object for each date
+                    Unavailability unavailability = new Unavailability
+                    {
+                        UnavailableDate = date,
+                        Property = reservation.Property
+                    };
 
+                    _context.Unavailabilities.Add(unavailability);
+                }
+                await _context.SaveChangesAsync();
 
+                return RedirectToAction("Confirmation", new { confirmationNumber = reservation.ConfirmationNumber });
+            }
+            else
+            {
+                return RedirectToAction(nameof(Index));
+            }
 
-            // Redirect to the cart page
-            return RedirectToAction("Index", "Carts");
         }
 
+        public async Task<IActionResult> Confirmation(int confirmationNumber)
+        {
+            Reservation reservation = await _context.Reservations
+                .Include(r => r.Property)
+                .FirstOrDefaultAsync(r => r.ConfirmationNumber == confirmationNumber);
 
+            if (reservation == null)
+            {
+                return View("Error", new string[] { "No reservation found for this confirmation number." });
+            }
+
+            reservation.CalcTotals();
+
+            ViewBag.ConfirmationNumber = confirmationNumber;
+
+            return View(reservation);
+        }
 
 
         [Authorize(Roles = "Customer,Host")]
@@ -305,8 +374,45 @@ namespace Group7FinalProject.Controllers
             return _context.Reservations.Any(e => e.ReservationID == id);
         }
 
-        
 
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> SelectCustomerForReservation(String SelectedCustomer, int? propertyID)
+        {
+            if (String.IsNullOrEmpty(SelectedCustomer))
+            {
+                ViewBag.UserNames = await GetAllCustomerUserNamesSelectList();
+
+                return View("SelectCustomerForReservation");
+            }
+
+
+            if (propertyID == null)
+            {
+                return View("Error", new string[] { "Please specify a property to add to the reservation" });
+            }
+
+            //find the property in the database
+            Property dbProperty = _context.Properties.Find(propertyID);
+
+            //make sure the Property exists in the database
+            if (dbProperty == null)
+            {
+                return View("Error", new string[] { "This Property was not in the database!" });
+            }
+
+
+            Reservation res = new Reservation();
+            res.Property = dbProperty;
+            res.CheckIn = DateTime.Today.AddDays(1); // Default check-in
+            res.CheckOut = DateTime.Today.AddDays(2); // Default check-out
+            res.User = await _userManager.FindByNameAsync(SelectedCustomer);
+            if (res.User == null)
+            {
+                return View("Error", new string[] { "The selected customer could not be found." });
+            }
+            return View("Create", res);
+        }
 
         public async Task<SelectList> GetAllCustomerUserNamesSelectList()
         {
