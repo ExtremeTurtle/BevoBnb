@@ -1,38 +1,36 @@
 ﻿<Properties StartupConfiguration="{1007DA95-E90D-47FA-B41B-67AAECD34E1B}|http">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Group7FinalProject PreferredExecutionTarget="/Users/etaigeller/Downloads/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Models/ViewModels/SearchViewModel.cs">
     <Files>
       <File FileName="Models/Category.cs" />
-      <File FileName="Models/AppUser.cs" Line="11" Column="25" />
+      <File FileName="Models/AppUser.cs" />
       <File FileName="Models/Property.cs" />
       <File FileName="Models/Reservation.cs" />
       <File FileName="Models/Review.cs" />
       <File FileName="Models/Unavailability.cs" />
       <File FileName="Views/Shared/_ValidationScriptsPartial.cshtml" />
-      <File FileName="Views/Carts/Confirmation.cshtml" Line="1" Column="1" />
-      <File FileName="Views/Carts/Delete.cshtml" Line="1" Column="1" />
-      <File FileName="Views/Carts/Details.cshtml" Line="1" Column="1" />
-      <File FileName="Utilities/AddUser.cs" Line="1" Column="1" />
-      <File FileName="Utilities/GenerateNextConfirmationNumber.cs" Line="1" Column="1" />
-      <File FileName="Seeding/SeedCategories.cs" Line="1" Column="1" />
-      <File FileName="Seeding/SeedProperties.cs" Line="1" Column="1" />
-      <File FileName="Models/ViewModels/RoleViewModels.cs" Line="1" Column="1" />
-      <File FileName="Models/ViewModels/AccountViewModels.cs" Line="7" Column="1" />
-      <File FileName="Models/ViewModels/SearchViewModel.cs" Line="14" Column="27" />
+      <File FileName="Views/Carts/Confirmation.cshtml" />
+      <File FileName="Views/Carts/Delete.cshtml" />
+      <File FileName="Views/Carts/Details.cshtml" />
+      <File FileName="Utilities/AddUser.cs" />
+      <File FileName="Utilities/GenerateNextConfirmationNumber.cs" />
+      <File FileName="Seeding/SeedCategories.cs" />
+      <File FileName="Seeding/SeedProperties.cs" />
+      <File FileName="Models/ViewModels/RoleViewModels.cs" />
+      <File FileName="Models/ViewModels/AccountViewModels.cs" />
+      <File FileName="Models/ViewModels/SearchViewModel.cs" Line="30" Column="23" />
+      <File FileName="Views/Carts/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Properties/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Categories/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Reservations/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Models/Cart.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Group7FinalProject" expanded="True">
             <Node name="Group7FinalProject">
-              <Node name="Models" expanded="True">
-                <Node name="ViewModels" expanded="True">
+              <Node name="Models">
+                <Node name="ViewModels">
                   <Node name="SearchViewModel.cs" selected="True" />
                 </Node>
               </Node>
@@ -40,7 +38,9 @@
               <Node name="Seeding" expanded="True" />
               <Node name="Utilities" expanded="True" />
               <Node name="Views" expanded="True">
+                <Node name="Account" expanded="True" />
                 <Node name="Carts" expanded="True" />
+                <Node name="Categories" expanded="True" />
                 <Node name="Properties" expanded="True" />
                 <Node name="Reservations" expanded="True" />
                 <Node name="Shared" expanded="True" />
@@ -51,4 +51,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Group7FinalProject PreferredExecutionTarget="/Users/etaigeller/Downloads/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>
