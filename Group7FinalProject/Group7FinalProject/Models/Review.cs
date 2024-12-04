@@ -14,7 +14,7 @@ namespace Group7FinalProject.Models
 
         [StringLength(280, ErrorMessage = "Maximum length is 280 characters.")]
         [Display(Name = "Review Text")]
-        public String ReviewText { get; set; }
+        public String? ReviewText { get; set; }
 
         [Display(Name = "Host Comments")]
         public String? HostComments { get; set; }

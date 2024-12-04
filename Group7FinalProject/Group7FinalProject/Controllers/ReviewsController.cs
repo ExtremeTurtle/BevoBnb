@@ -33,6 +33,7 @@ namespace Group7FinalProject.Controllers
             {
                 reviews = await _context.Reviews
                 .Include(r => r.User)
+                .Include(r => r.Property)
                  .Where(r => r.User.UserName == User.Identity.Name)
                 .ToListAsync();
             }
@@ -41,11 +42,21 @@ namespace Group7FinalProject.Controllers
             {
                 reviews = await _context.Reviews
                 .Include(r => r.User)
+                .Include(r => r.Property)
                  .Where(r => r.Property.User.UserName == User.Identity.Name)
                 .ToListAsync();
             }
 
-            
+            if (User.IsInRole("Admin"))
+            {
+                reviews = await _context.Reviews
+                .Include(r => r.User)
+                .Include(r => r.Property)
+                 .Where(r => r.DisputeStatus == DisputeStatus.Disputed)
+                .ToListAsync();
+            }
+
+
 
             if (!reviews.Any())
             {
@@ -73,6 +84,8 @@ namespace Group7FinalProject.Controllers
             return View(review);
         }
 
+        [Authorize(Roles = "Customer")]
+
         // GET: Reviews/Create
         [HttpGet]
         public IActionResult Create()
@@ -83,6 +96,8 @@ namespace Group7FinalProject.Controllers
         // POST: Reviews/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Customer")]
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ReviewID,Rating,ReviewText,HostComments")] Review review)
@@ -95,6 +110,8 @@ namespace Group7FinalProject.Controllers
             }
             return View(review);
         }
+
+        [Authorize(Roles = "Customer")]
 
         // GET: Reviews/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -129,7 +146,7 @@ namespace Group7FinalProject.Controllers
         // POST: Reviews/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [Authorize(Roles = "Customer,Admin")]
+        [Authorize(Roles = "Customer")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id,  Review review)
@@ -153,13 +170,14 @@ namespace Group7FinalProject.Controllers
                 //navigational properties
                  dbReview = await _context.Reviews.Include(c => c.User).Include(c => c.Property).FirstOrDefaultAsync(c => c.ReviewID == id);
 
+                
                 if (ModelState.IsValid == false) //there is something wrong
                 {
                     return View(review);
                 }
                 //update the properties scalar properties
                 dbReview.Rating = review.Rating;
-                dbReview.ReviewText = review.ReviewText;
+                dbReview.ReviewText = string.IsNullOrEmpty(review.ReviewText) ? null : review.ReviewText;
 
 
                 //save the changes
@@ -213,7 +231,7 @@ namespace Group7FinalProject.Controllers
         }
 
 
-        [Authorize(Roles = "Host")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> AcceptDisputeReview(int? id)
         {
             if (id == null)
@@ -247,7 +265,7 @@ namespace Group7FinalProject.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        [Authorize(Roles = "Host")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeclineDisputeReview(int? id)
         {
             if (id == null)
@@ -312,7 +330,7 @@ namespace Group7FinalProject.Controllers
             return View(review);
         }
 
-        [Authorize(Roles = "Host,Admin")]
+        [Authorize(Roles = "Host")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> MakeHostComment(int id, [Bind("ReviewID,Rating,ReviewText,HostComments")] Review review)

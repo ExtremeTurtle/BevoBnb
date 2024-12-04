@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<Group7FinalProject.Models.Review>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Reviews";
 }
 
-<h1>Index</h1>
+<h1>Reviews</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -12,6 +12,7 @@
 <table class="table">
     <thead>
         <tr>
+            <th>@Html.DisplayNameFor(model => model.Property.PropertyNumber)</th>
             <th>
                 @Html.DisplayNameFor(model => model.Rating)
             </th>
@@ -21,12 +22,17 @@
             <th>
                 @Html.DisplayNameFor(model => model.HostComments)
             </th>
-            <th></th>
+            <th>@Html.DisplayNameFor(model => model.DisputeStatus)</th>
+
+
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
+                <td>@item.Property?.PropertyNumber</td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.Rating)
             </td>
@@ -36,10 +42,28 @@
             <td>
                 @Html.DisplayFor(modelItem => item.HostComments)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ReviewID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ReviewID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ReviewID">Delete</a>
+
+                <td>@item.DisputeStatus.ToString()</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.ReviewID">Details</a>
+
+                    @if (User.IsInRole("Host"))
+                    {
+                        <a asp-action="MakeHostComment" asp-route-id="@item.ReviewID">Modify Host Comment</a>
+
+                        if (item.DisputeStatus == DisputeStatus.NoDispute)
+                        {
+
+                            <a asp-action="DisputeReview" asp-route-id="@item.ReviewID">Dispute</a>
+                        }
+                    }
+
+                @if (User.IsInRole("Admin"))
+                {
+
+                        <a asp-action="AcceptDisputeReview" asp-route-id="@item.ReviewID">Accept</a>
+                        <a asp-action="DeclineDisputeReview" asp-route-id="@item.ReviewID">Decline</a>
+                } 
             </td>
         </tr>
 }
