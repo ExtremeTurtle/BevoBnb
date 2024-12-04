@@ -118,10 +118,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3cy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Reviews/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3cy9EZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Reviews/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3cy9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -132,6 +128,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Reviews/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3cy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Reviews/MakeHostComment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3cy9NYWtlSG9zdENvbW1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Reviews/NoReviews.cshtml]

@@ -11,28 +11,22 @@
       <File FileName="Group7FinalProject/Models/AppUser.cs" />
       <File FileName="Group7FinalProject/Models/Category.cs" />
       <File FileName="Group7FinalProject/Models/Property.cs" />
-      <File FileName="Group7FinalProject/Models/Review.cs" Line="1" Column="1" />
+      <File FileName="Group7FinalProject/Models/Review.cs" />
       <File FileName="Group7FinalProject/DAL/AppDbContext.cs" />
-      <File FileName="Group7FinalProject/Controllers/ReviewsController.cs" Line="231" Column="40" />
-      <File FileName="Group7FinalProject/Controllers/ReservationsController.cs" Line="94" Column="46" />
+      <File FileName="Group7FinalProject/Controllers/ReviewsController.cs" Line="34" Column="41" />
+      <File FileName="Group7FinalProject/Controllers/ReservationsController.cs" />
       <File FileName="Group7FinalProject/Controllers/AccountController.cs" />
       <File FileName="Group7FinalProject/Controllers/PropertiesController.cs" />
-      <File FileName="Group7FinalProject/Views/Reviews/NoReviews.cshtml" Line="12" Column="7" />
-      <File FileName="Group7FinalProject/Views/Reviews/Edit.cshtml" Line="25" Column="19" />
-      <File FileName="Group7FinalProject/Views/Reviews/MakeHostComment.cshtml" Line="25" Column="7" />
+      <File FileName="Group7FinalProject/Views/Reviews/NoReviews.cshtml" />
+      <File FileName="Group7FinalProject/Views/Reviews/Edit.cshtml" />
+      <File FileName="Group7FinalProject/Views/Reviews/MakeHostComment.cshtml" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Group7FinalProject" expanded="True">
-            <Node name="Group7FinalProject">
-              <Node name="Controllers">
-                <Node name="ReviewsController.cs" selected="True" />
-              </Node>
+            <Node name="Group7FinalProject" expanded="True">
               <Node name="Models" expanded="True" />
-              <Node name="Views">
-                <Node name="Reviews" expanded="True" />
-              </Node>
             </Node>
           </Node>
         </State>
