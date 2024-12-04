@@ -212,6 +212,76 @@ namespace Group7FinalProject.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+
+        [Authorize(Roles = "Host")]
+        public async Task<IActionResult> AcceptDisputeReview(int? id)
+        {
+            if (id == null)
+            {
+                return View("Error", new string[] { "Please specify a review with a dispute to accept!" });
+            }
+
+            // Find the reservation in the database
+            //TODO Need to check that UserID is equal to review property ID's host
+            Review review = await _context.Reviews
+                .Include(r => r.User)
+                .Where(r => r.Property.User.UserName == User.Identity.Name)
+                .FirstOrDefaultAsync(r => r.ReviewID == id);
+
+
+
+            if (review == null)
+            {
+                return View("Error", new string[] { "This review was not found!" });
+            }
+
+
+
+            // Update the reservation status
+            review.DisputeStatus = DisputeStatus.ValidDispute;
+
+            // Save the changes
+            await _context.SaveChangesAsync();
+
+            // Redirect to the reservations index
+            return RedirectToAction(nameof(Index));
+        }
+
+        [Authorize(Roles = "Host")]
+        public async Task<IActionResult> DeclineDisputeReview(int? id)
+        {
+            if (id == null)
+            {
+                return View("Error", new string[] { "Please specify a review with a dispute to decline!" });
+            }
+
+            // Find the reservation in the database
+            //TODO Need to check that UserID is equal to review property ID's host
+            Review review = await _context.Reviews
+                .Include(r => r.User)
+                .Where(r => r.Property.User.UserName == User.Identity.Name)
+                .FirstOrDefaultAsync(r => r.ReviewID == id);
+
+
+
+            if (review == null)
+            {
+                return View("Error", new string[] { "This review was not found!" });
+            }
+
+
+
+            // Update the reservation status
+            review.DisputeStatus = DisputeStatus.InvalidDispute;
+
+            // Save the changes
+            await _context.SaveChangesAsync();
+
+            // Redirect to the reservations index
+            return RedirectToAction(nameof(Index));
+        }
+
+
         [Authorize(Roles = "Host")]
         public async Task<IActionResult> MakeHostComment(int? id)
         {
