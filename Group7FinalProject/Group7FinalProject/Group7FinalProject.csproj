@@ -34,7 +34,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\lib\twitter-bootstrap\" />
     <Folder Include="wwwroot\fonts\" />
-    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\lib\css\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 </Project>

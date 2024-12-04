@@ -14,6 +14,7 @@
 
 body {
     font-family: "CustomFont", sans-serif; /* Use the custom font */
+    padding-top: 4rem; /* Adjust this based on the navbar height */
     margin: 0; /* Remove default margins */
     position: relative; /* Ensure the body remains the content container */
 }
@@ -33,6 +34,7 @@ body {
     }
 
 .container {
+    margin-top: 1rem; /* Optional: Adds a little breathing room */
     position: relative; /* Ensures the content stays above the background */
     z-index: 1; /* Content appears on top of the background */
     padding: 20px; /* Adds some padding for better readability */
@@ -78,3 +80,59 @@ body {
     width: 100%; /* Ensure the table spans the container width */
     border-collapse: collapse; /* Clean table borders */
 }
+/* Full-width burnt orange navbar */
+.bg-burnt-orange {
+    background-color: #BF5700; /* Burnt orange color */
+    color: #FFF; /* White text */
+    padding: 0.75rem 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Navbar links styling */
+.navbar-dark .navbar-brand, .navbar-dark .nav-link {
+    color: #FFF; /* White text for links */
+    font-weight: 500; /* Slightly bold for readability */
+    font-size: 1rem; /* Consistent font size */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+    .navbar-dark .navbar-brand:hover, .navbar-dark .nav-link:hover {
+        color: #FFD700; /* Gold hover effect */
+    }
+
+    /* Navbar active link */
+    .navbar-dark .nav-link.active {
+        border-bottom: 2px solid #FFD700; /* Gold underline for active link */
+    }
+
+/* Navbar toggler */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.3); /* Light white border for toggler */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Adjust container for navbar */
+.navbar .container-fluid {
+    max-width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Adjust dropdown styling for smoother integration */
+.navbar .dropdown-menu {
+    background-color: #BF5700; /* Burnt orange dropdown */
+    border: none;
+}
+
+.navbar .dropdown-item {
+    color: #FFF;
+    transition: background-color 0.3s ease;
+}
+
+    .navbar .dropdown-item:hover {
+        background-color: #FFD700; /* Gold hover for dropdown items */
+        color: #000; /* Black text for contrast */
+    }
