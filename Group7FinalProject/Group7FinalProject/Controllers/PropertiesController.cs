@@ -12,6 +12,7 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 using static NuGet.Packaging.PackagingConstants;
 using NuGet.Packaging.Signing;
 using Humanizer.Localisation;
+using Microsoft.AspNetCore.Identity;
 
 namespace Group7FinalProject.Controllers
 {
@@ -19,10 +20,13 @@ namespace Group7FinalProject.Controllers
     public class PropertiesController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly UserManager<AppUser> _userManager;
 
-        public PropertiesController(AppDbContext context)
+
+        public PropertiesController(AppDbContext context, UserManager<AppUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         // GET: Properties
@@ -103,7 +107,7 @@ namespace Group7FinalProject.Controllers
         // GET: Properties/Create
         public IActionResult Create()
         {
-            ViewBag.AllCateogires = GetCategorySelectList();
+            ViewBag.AllCategories = GetCategorySelectList();
             return View();
         }
 
@@ -138,8 +142,10 @@ namespace Group7FinalProject.Controllers
             Category dbCategory = _context.Categories.Find(categoryID);
 
             //add the category to the Property's category and save changes
+            property.User = await _userManager.FindByNameAsync(User.Identity.Name);
             property.PropertyStatus = PropertyStatus.Unapproved;
             property.Category = dbCategory;
+            property.PropertyNumber = Utilities.GenerateNextPropertyNumber.GetNextPropertyNumber(_context);
             _context.SaveChanges();
             
 

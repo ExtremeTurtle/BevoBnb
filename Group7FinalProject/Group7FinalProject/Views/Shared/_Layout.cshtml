@@ -5,7 +5,6 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Longhorn Coding Academy</title>
     <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="~/css/site.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" /> <!-- Font Awesome -->
@@ -63,6 +62,10 @@
                             <li class="nav-item">
                                 <a asp-controller="Reservations" asp-action="Index" class="nav-link">My Reservations</a>
                             </li>
+                            <li class="nav-item">
+                                <a asp-controller="Reviews" asp-action="Index" class="nav-link">My Reviews</a>
+                            </li>
+                            
                         }
 
                         if (User.IsInRole("Admin"))
@@ -74,6 +77,12 @@
                             <li class="nav-item">
                                 <a asp-controller="RoleAdmin" asp-action="Index" class="nav-link">Manage Users</a>
                             </li>
+                            <li class="nav-item">
+                                <a asp-controller="Properties" asp-action="ApproveProperties" class="nav-link">Approve Properties</a>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-controller="Reviews" asp-action="Index" class="nav-link">Disputed Reviews</a>
+                            </li>
                         }
 
                         if (User.IsInRole("Host"))
@@ -83,9 +92,12 @@
                             </li>
 
                             <li class="nav-item">
-                                <a asp-controller="Reservations" asp-action="Index" class="nav-link">My Property Reservations</a>
+                                <a asp-controller="Reservations" asp-action="Index" class="nav-link">Property Reservations</a>
                             </li>
-
+                            <li class="nav-item">
+                                <a asp-controller="Reviews" asp-action="Index" class="nav-link">Property Reviews</a>
+                            </li>
+                            
                             
                         }
                     }
@@ -101,7 +113,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - BevoSoft Consultants</p>
+            <p>&copy; @DateTime.Now.Year - BevoBnb</p>
         </footer>
     </div>
 
