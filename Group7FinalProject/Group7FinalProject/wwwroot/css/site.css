@@ -5,6 +5,13 @@
     font-style: normal; /* Optional: specify style */
 }
 
+@font-face {
+    font-family: "CustomFont2"; /* Name your font */
+    src: url("/fonts/AirbnbCereal_W_XBd.otf") format("opentype"); /* Path to the font file */
+    font-weight: normal; /* Optional: specify weight */
+    font-style: normal; /* Optional: specify style */
+}
+
 body {
     font-family: "CustomFont", sans-serif; /* Use the custom font */
     margin: 0; /* Remove default margins */
@@ -30,11 +37,14 @@ body {
     z-index: 1; /* Content appears on top of the background */
     padding: 20px; /* Adds some padding for better readability */
     margin: 20px auto; /* Centers the container horizontally */
-    max-width: 1200px; /* Limits the container width */
     border-radius: 10px; /* Adds rounded corners */
     color: #000; /* Ensures text is readable (black text as an example) */
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+    max-width: 90%; /* Restrict container width to 90% of the page width */
+    width: auto; /* Automatically adjust width to fit content */
+    min-width: 700px; /* Optional: Prevent the container from becoming too narrow */
 }
-
     .container::before {
         content: ""; /* Creates a pseudo-element for the semi-transparent effect */
         position: absolute; /* Positioned relative to the container */
@@ -42,7 +52,29 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent white background */
+        background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
         z-index: -1; /* Places the background behind the text */
         border-radius: 10px; /* Matches the container's rounded corners */
+
     }
+.address-column {
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: visible; /* Hides any overflow text */
+    text-overflow: ellipsis; /* Adds "..." if the text overflows */
+}
+
+.table th {
+    font-family: CustomFont2;
+    font-size: 17px; /* Test font size */
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+.table td {
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+
+.table {
+    width: 100%; /* Ensure the table spans the container width */
+    border-collapse: collapse; /* Clean table borders */
+}

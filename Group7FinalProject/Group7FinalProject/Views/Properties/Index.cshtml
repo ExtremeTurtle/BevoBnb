@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<Group7FinalProject.Models.Property>
-
+    <link href="~/css/site.css" rel="stylesheet" />
 @{
     ViewData["Title"] = "Index";
 }
@@ -14,9 +14,10 @@
     </p>
     }
     <table class="table">
+
         <thead>
             <tr>
-                <th>
+                <th class="address-column">
                     @Html.DisplayNameFor(model => model.Address)
                 </th>
                 <th>
@@ -52,7 +53,7 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <td>
+                    <td class="address-column">
                         @Html.DisplayFor(modelItem => item.Address)
                     </td>
                     <td>
