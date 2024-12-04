@@ -95,8 +95,7 @@ namespace Group7FinalProject.Controllers
 
         public async Task <IActionResult> Create(int? PropertyID)
         {
-            if (User.IsInRole("Customer"))
-            {
+            
                 if (PropertyID == null)
                 {
                     return View("Error", new string[] { "Please specify a property to add to the reservation" });
@@ -117,14 +116,18 @@ namespace Group7FinalProject.Controllers
                 res.CheckIn = DateTime.Today.AddDays(1); // Default check-in
                 res.CheckOut = DateTime.Today.AddDays(2); // Default check-out
                 res.User = await _userManager.FindByNameAsync(User.Identity.Name);
-                return View(res);
-            }
-            else
+
+            if (User.IsInRole("Admin"))
             {
                 ViewBag.UserNames = await GetAllCustomerUserNamesSelectList();
-                return View("SelectCustomerForReservation");
+                return View("SelectCustomerForReservation",res);
             }
-        }
+                return View(res);
+
+            }
+
+        
+
 
 
         // POST: Reservations/Create
@@ -135,7 +138,7 @@ namespace Group7FinalProject.Controllers
         [ValidateAntiForgeryToken]
            public async Task<IActionResult> Create(Reservation reservation, int propertyID)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid == false)
             {
                 return View(reservation);
             }
@@ -242,7 +245,9 @@ namespace Group7FinalProject.Controllers
 
 
 
-        [Authorize(Roles = "Customer,Admin")]
+        
+
+        [Authorize(Roles = "Customer,Host")]
         public async Task<IActionResult> CancelReservation(int? id)
         {
             if (id == null)
@@ -260,7 +265,11 @@ namespace Group7FinalProject.Controllers
                 return View("Error", new string[] { "This reservation was not found!" });
             }
 
-            
+            if (reservation.CheckIn <= DateTime.Now.AddHours(24))
+            {
+                return View("Error", new string[] { "Reservations can only be canceled if the check-in date is more than 24 hours away." });
+            }
+
 
             // Update the reservation status
             reservation.ReservationStatus = ReservationStatus.Cancelled;
@@ -288,6 +297,10 @@ namespace Group7FinalProject.Controllers
         {
             return _context.Reservations.Any(e => e.ReservationID == id);
         }
+
+        
+
+
         public async Task<SelectList> GetAllCustomerUserNamesSelectList()
         {
             //create a list to hold the customers

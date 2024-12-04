@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Group7FinalProject.DAL;
 using Group7FinalProject.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Group7FinalProject.Controllers
 {
@@ -23,9 +24,22 @@ namespace Group7FinalProject.Controllers
         }
 
         // GET: Reviews
+        [Authorize]
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Reviews.ToListAsync());
+            
+
+            List<Review> reviews = await _context.Reviews
+                .Include(r => r.User)
+                 .Where(r => r.Property.User.UserName == User.Identity.Name)
+                .ToListAsync();
+
+            if (reviews == null || !reviews.Any())
+            {
+                return View("NoReviews");
+            }
+
+            return View(reviews);
         }
 
         // GET: Reviews/Details/5
@@ -48,14 +62,8 @@ namespace Group7FinalProject.Controllers
 
         // GET: Reviews/Create
         [HttpGet]
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {
-            if (User.IsInRole("Customer"))
-            {
-                Review rev = new Review();
-                rev.User = await _userManager.FindByNameAsync(User.Identity.Name);
-                return View(rev);
-            }
             return View();
         }
 
@@ -78,86 +86,191 @@ namespace Group7FinalProject.Controllers
         // GET: Reviews/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            //if the user didn't specify a review id, we can't show them 
+            //the data, so show an error instead
             if (id == null)
             {
-                return NotFound();
+                return View("Error", new string[] { "Please specify a review to edit!" });
             }
 
-            var review = await _context.Reviews.FindAsync(id);
+            //find the review in the database
+            //be sure to change the data type to course instead of 'var'
+            Review review = await _context.Reviews.Include(c => c.User).FirstOrDefaultAsync(c => c.ReviewID == id);
+
+            //if the review does not exist in the database, then show the user
+            //an error message
             if (review == null)
             {
-                return NotFound();
+                return View("Error", new string[] { "This review was not found!" });
             }
+
+            //order does not belong to this user
+            if (User.IsInRole("Host") && review.User.UserName != User.Identity.Name)
+            {
+                return View("Error", new String[] { "You are not authorized to edit this review!" });
+            }
+
             return View(review);
         }
 
         // POST: Reviews/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Customer,Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ReviewID,Rating,ReviewText,HostComments")] Review review)
         {
+            //this is a security check to see if the user is trying to modify
+            //a different record.  Show an error message
             if (id != review.ReviewID)
             {
-                return NotFound();
+                return View("Error", new string[] { "Please try again!" });
             }
 
-            if (ModelState.IsValid)
+            if (ModelState.IsValid == false) //there is something wrong
             {
-                try
-                {
-                    _context.Update(review);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ReviewExists(review.ReviewID))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                return View(review);
             }
-            return View(review);
+
+            //if code gets this far, attempt to edit the review
+            try
+            {
+                //Find the review to edit in the database and include relevant 
+                //navigational properties
+                Review dbReview = _context.Reviews.Find(review.ReviewID);
+
+                //update the properties scalar properties
+                dbReview.Rating = review.Rating;
+                dbReview.ReviewText = review.ReviewText;
+
+
+                //save the changes
+                _context.Reviews.Update(dbReview);
+                _context.SaveChanges();
+
+            }
+            catch (Exception ex)
+            {
+                return View("Error", new string[] { "There was an error editing this review.", ex.Message });
+            }
+
+            //if code gets this far, everything is okay
+            //send the user back to the page with all the courses
+            return RedirectToAction(nameof(Index));
         }
 
-        // GET: Reviews/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        //Post Dispute Review
+        [Authorize(Roles = "Host")]
+        public async Task<IActionResult> DisputeReview(int? id)
         {
             if (id == null)
             {
-                return NotFound();
+                return View("Error", new string[] { "Please specify a review to cancel!" });
             }
 
-            var review = await _context.Reviews
-                .FirstOrDefaultAsync(m => m.ReviewID == id);
+            // Find the reservation in the database
+            //TODO Need to check that UserID is equal to review property ID's host
+            Review review = await _context.Reviews
+                .Include(r => r.User)
+                .Where(r => r.Property.User.UserName == User.Identity.Name)
+                .FirstOrDefaultAsync(r => r.ReviewID == id);
+
+
+
             if (review == null)
             {
-                return NotFound();
+                return View("Error", new string[] { "This review was not found!" });
+            }
+
+
+
+            // Update the reservation status
+            review.DisputeStatus = DisputeStatus.Disputed;
+
+            // Save the changes
+            await _context.SaveChangesAsync();
+
+            // Redirect to the reservations index
+            return RedirectToAction(nameof(Index));
+        }
+
+        [Authorize(Roles = "Host")]
+        public async Task<IActionResult> MakeHostComment(int? id)
+        {
+            //if the user didn't specify a review id, we can't show them 
+            //the data, so show an error instead
+            if (id == null)
+            {
+                return View("Error", new string[] { "Please specify a review to add a host comment!" });
+            }
+
+            //find the review in the database
+            //be sure to change the data type to course instead of 'var'
+            Review review = await _context.Reviews.Include(c => c.User).FirstOrDefaultAsync(c => c.ReviewID == id);
+
+            //if the review does not exist in the database, then show the user
+            //an error message
+            if (review == null)
+            {
+                return View("Error", new string[] { "This review was not found!" });
+            }
+
+            //order does not belong to this user
+            if (User.IsInRole("Customer") && review.User.UserName != User.Identity.Name)
+            {
+                return View("Error", new String[] { "You are not authorized to edit this review!" });
             }
 
             return View(review);
         }
 
-        // POST: Reviews/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [Authorize(Roles = "Host,Admin")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> MakeHostComment(int id, [Bind("ReviewID,Rating,ReviewText,HostComments")] Review review)
         {
-            var review = await _context.Reviews.FindAsync(id);
-            if (review != null)
+            //this is a security check to see if the user is trying to modify
+            //a different record.  Show an error message
+            if (id != review.ReviewID)
             {
-                _context.Reviews.Remove(review);
+                return View("Error", new string[] { "Please try again!" });
             }
 
-            await _context.SaveChangesAsync();
+            if (ModelState.IsValid == false) //there is something wrong
+            {
+                return View(review);
+            }
+
+            //if code gets this far, attempt to edit the review
+            try
+            {
+                //Find the review to edit in the database and include relevant 
+                //navigational properties
+                Review dbReview = _context.Reviews.Find(review.ReviewID);
+
+
+
+                //update the properties scalar properties
+                dbReview.HostComments = review.HostComments;
+           
+               
+
+                //save the changes
+                _context.Reviews.Update(dbReview);
+                _context.SaveChanges();
+
+            }
+            catch (Exception ex)
+            {
+                return View("Error", new string[] { "There was an error editing this review.", ex.Message });
+            }
+
+            //if code gets this far, everything is okay
+            //send the user back to the page with all the courses
             return RedirectToAction(nameof(Index));
         }
+
 
         private bool ReviewExists(int id)
         {

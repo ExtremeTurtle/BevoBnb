@@ -4,13 +4,21 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Create Review</h1>
 
 <h4>Review</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
+
+            <div class="form-group">
+                <label>Property Address:</label>
+                <p class="form-control-static">@ViewData["PropertyAddress"]</p>
+            </div>
+
+            <input type="hidden" name="PropertyID" value="@ViewData["PropertyID"]" />
+
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Rating" class="control-label"></label>

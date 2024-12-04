@@ -282,6 +282,9 @@ namespace Group7FinalProject.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReviewID"));
 
+                    b.Property<int>("DisputeStatus")
+                        .HasColumnType("int");
+
                     b.Property<string>("HostComments")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -597,8 +600,7 @@ namespace Group7FinalProject.Migrations
 
             modelBuilder.Entity("Group7FinalProject.Models.AppUser", b =>
                 {
-                    b.Navigation("Cart")
-                        .IsRequired();
+                    b.Navigation("Cart");
 
                     b.Navigation("Properties");
 

@@ -107,6 +107,8 @@
             @Html.DisplayFor(model => model.PropertyStatus)
         </dd>
     </dl>
+    <h3>Average Rating: @ViewBag.AverageRating</h3>
+
 </div>
 <div>
     <a asp-action="Create" asp-controller="Reservations" asp-route-propertyID="@Model.PropertyID" class="btn btn-warning">Make a Reservation</a>

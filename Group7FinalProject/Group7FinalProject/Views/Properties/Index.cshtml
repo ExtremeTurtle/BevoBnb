@@ -83,10 +83,20 @@
                 @Html.DisplayFor(modelItem => item.HasParking)
             </td>
             
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.PropertyID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.PropertyID">Details</a> |
-            </td>
+                @if (User.Identity.IsAuthenticated && User.IsInRole("Host"))
+                {
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.PropertyID">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.PropertyID">Details</a>
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.PropertyID">Details</a>
+                    </td>
+                }
+            
         </tr>
 }
     </tbody>
