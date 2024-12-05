@@ -55,13 +55,21 @@
         <td>@Html.DisplayFor(ModelItem => Model.Property.PetFriendly)</td>
         <td>@Html.DisplayFor(ModelItem => Model.Property.HasParking)</td>
     </tr>
-    }
+    
 
     <div>
         <!-- Conditionally show the Cancel button if the reservation is valid -->
         @if (Model.ReservationStatus == ReservationStatus.Valid)
         {
             <a asp-action="CancelReservation" asp-route-id="@Model.ReservationID" class="btn btn-danger">Cancel</a>
-        }
+        
+        @if (User.Identity.IsAuthenticated && User.IsInRole("Customer"))
+{
+        <a asp-controller="Reviews" asp-action="Create" asp-route-propertyId="@Model.Property.PropertyID" class="btn btn-primary">
+            Write Review
+
+        </a>
+}
+}
         <a asp-action="Index" class="btn btn-secondary">Back to List</a>
     </div>
