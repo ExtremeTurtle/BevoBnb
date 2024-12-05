@@ -14,21 +14,19 @@
       <File FileName="Group7FinalProject/Models/Property.cs" />
       <File FileName="Group7FinalProject/Models/Review.cs" />
       <File FileName="Group7FinalProject/Models/Reservation.cs" />
-      <File FileName="Group7FinalProject/wwwroot/lib/css/site.css" Line="1" Column="1" />
+      <File FileName="Group7FinalProject/wwwroot/lib/css/site.css" />
       <File FileName="Group7FinalProject/Views/Shared/_Layout.cshtml" />
-      <File FileName="Group7FinalProject/wwwroot/css/site.css" Line="1" Column="1" />
-      <File FileName="Group7FinalProject/Views/Properties/DetailedSearch.cshtml" Line="13" Column="62" />
+      <File FileName="Group7FinalProject/wwwroot/css/site.css" />
+      <File FileName="Group7FinalProject/Views/Properties/DetailedSearch.cshtml" />
       <File FileName="Group7FinalProject/Views/Properties/Index.cshtml" Line="19" Column="8" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Group7FinalProject">
+          <Node name="Group7FinalProject" expanded="True">
             <Node name="Group7FinalProject">
               <Node name="Views">
-                <Node name="Properties">
-                  <Node name="Index.cshtml" selected="True" />
-                </Node>
+                <Node name="Reservations" expanded="True" />
                 <Node name="Shared" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">

@@ -14,6 +14,10 @@
     </p>
 }
 
+<form asp-action="DetailedSearch" asp-controller="Properties" method="get">
+    <button type="submit" class="btn btn-success">Detailed Search</button>
+</form>
+
 <p>Displaying @ViewBag.FilteredProperties out of @ViewBag.TotalProperties Properties</p>
 
 <table class="table">
