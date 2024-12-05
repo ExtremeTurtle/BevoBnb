@@ -319,17 +319,17 @@ namespace Group7FinalProject.Controllers
                 query = query.Where(p => p.NumOfBathrooms >= svm.SearchBathrooms);
             }
 
-            // Filter by Pets Allowed
-            if (svm.SearchPetsAllowed.HasValue)
-            {
-                query = query.Where(p => p.PetFriendly == true);
-            }
+            //// Filter by Pets Allowed
+            //if (svm.SearchPetsAllowed.HasValue)
+            //{
+            //    query = query.Where(p => p.PetFriendly == true);
+            //}
 
-            // Filter by Free Parking
-            if (svm.SearchFreeParking.HasValue)
-            {
-                query = query.Where(p => p.HasParking == true);
-            }
+            //// Filter by Free Parking
+            //if (svm.SearchFreeParking.HasValue)
+            //{
+            //    query = query.Where(p => p.HasParking == true);
+            //}
 
             ////TODO Filter by Check-In and Check-Out Dates --> Figure out logic for searching by dates where property is available
             //if (svm.SearchCheckInDate.HasValue && svm.SearchCheckOutDate.HasValue)
