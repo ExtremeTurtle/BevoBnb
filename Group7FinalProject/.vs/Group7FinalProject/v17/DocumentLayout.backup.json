@@ -259,36 +259,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:1115141147:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ReviewsController.cs",
-              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\ReviewsController.cs",
-              "RelativeDocumentMoniker": "Group7FinalProject\\Controllers\\ReviewsController.cs",
-              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\ReviewsController.cs",
-              "RelativeToolTip": "Group7FinalProject\\Controllers\\ReviewsController.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAiwI8AAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T01:41:03.948Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reviews\\Details.cshtml",
-              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Reviews\\Details.cshtml",
-              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reviews\\Details.cshtml",
-              "RelativeToolTip": "Group7FinalProject\\Views\\Reviews\\Details.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAmwCQAAABcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-04T23:05:07.041Z"
             },
             {
               "$type": "Document",
@@ -312,8 +287,44 @@
               "RelativeToolTip": "Group7FinalProject\\Seeding\\SeedReservations.cs",
               "ViewState": "AgIAAB4DAAAAAAAAAAAmwDADAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T01:08:01.122Z",
+              "WhenOpened": "2024-11-26T01:08:01.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\css\\site.css",
+              "RelativeDocumentMoniker": "Group7FinalProject\\wwwroot\\lib\\css\\site.css",
+              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\css\\site.css",
+              "RelativeToolTip": "Group7FinalProject\\wwwroot\\lib\\css\\site.css",
+              "ViewState": "AgIAAGYAAAAAAAAAAADwv2YAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-04T23:32:21.586Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reviews\\Details.cshtml",
+              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Reviews\\Details.cshtml",
+              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reviews\\Details.cshtml",
+              "RelativeToolTip": "Group7FinalProject\\Views\\Reviews\\Details.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAmwCQAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-04T23:05:07.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ReviewsController.cs",
+              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\ReviewsController.cs",
+              "RelativeDocumentMoniker": "Group7FinalProject\\Controllers\\ReviewsController.cs",
+              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\ReviewsController.cs",
+              "RelativeToolTip": "Group7FinalProject\\Controllers\\ReviewsController.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAiwI8AAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T01:41:03.948Z"
             },
             {
               "$type": "Document",
@@ -362,19 +373,6 @@
               "ViewState": "AgIAAN8AAAAAAAAAAAAQwPsAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T01:00:52.292Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\css\\site.css",
-              "RelativeDocumentMoniker": "Group7FinalProject\\wwwroot\\lib\\css\\site.css",
-              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\css\\site.css",
-              "RelativeToolTip": "Group7FinalProject\\wwwroot\\lib\\css\\site.css",
-              "ViewState": "AgIAAGYAAAAAAAAAAADwv2YAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-04T23:32:21.586Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
