@@ -11,7 +11,6 @@
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
-
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             
             <div class="form-group">
@@ -84,15 +83,23 @@
                     <input class="form-check-input" asp-for="HasParking" /> @Html.DisplayNameFor(model => model.HasParking)
                 </label>
             </div>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Category" class="control-label"></label>
-                @Html.DropDownListFor(
-                         model => model.Category,
-                         (SelectList)ViewBag.AllCategories,
-                         new { @class = "form-control" }
+                <label class="control-label">Category</label>
+                @Html.DropDownList(
+                         "categoryID", // This must match the parameter name in the controller
+                         (SelectList)ViewBag.AllCategories, // Populate categories from ViewBag
+                         "Select a Category", // Placeholder option
+                         new { @class = "form-control" } // Add CSS classes if needed
                          )
-                <span asp-validation-for="Category" class="text-danger"></span>
             </div>
+
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Create Property" class="btn btn-primary" />
+            </div>
+
+
 
 
             <div class="form-group">
