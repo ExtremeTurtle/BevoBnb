@@ -109,6 +109,8 @@
 </div>
 <div class="details-buttons">
     <a asp-action="Create" asp-controller="Reservations" asp-route-propertyID="@Model.PropertyID" class="btn btn-warning">Make a Reservation</a>
+    <a asp-action="Create" asp-controller="Unavailabilities" asp-route-propertyID="@Model.PropertyID" class="btn btn-warning">Create Unavailabilities</a>
+
     <a asp-action="Edit" asp-route-id="@Model?.PropertyID" class="btn btn-primary">Edit</a>
     <a asp-action="Index" class="btn btn-secondary">Back to List</a>
 </div>
