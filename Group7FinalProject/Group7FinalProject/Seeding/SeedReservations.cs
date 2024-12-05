@@ -807,9 +807,13 @@ namespace Group7FinalProject.Seeding
                     // Update debugging variables
                     intReservationID = seedReservation.ConfirmationNumber;
 
-                    // Check if reservation exists
-                    Reservation dbReservation = db.Reservations
-                        .FirstOrDefault(r => r.ConfirmationNumber == seedReservation.ConfirmationNumber);
+                    // Check for an exact match using multiple criteria
+                    Reservation dbReservation = db.Reservations.FirstOrDefault(r =>
+                        r.ConfirmationNumber == seedReservation.ConfirmationNumber &&
+                        r.CheckIn == seedReservation.CheckIn &&
+                        r.CheckOut == seedReservation.CheckOut &&
+                        r.Property.PropertyID == seedReservation.Property.PropertyID &&
+                        r.User.Id == seedReservation.User.Id);
 
                     if (dbReservation == null) // Add if not in the database
                     {
