@@ -17,11 +17,14 @@
             <th>
                 @Html.DisplayNameFor(model => model.ReviewText)
             </th>
+            @if (User.IsInRole("Admin"))
+                {
             <th>
                 @Html.DisplayNameFor(model => model.HostComments)
             </th>
+                }
             <th>@Html.DisplayNameFor(model => model.DisputeStatus)</th>
-
+                
 
             <th>Actions</th>
         </tr>
@@ -37,9 +40,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ReviewText)
             </td>
+                @if (User.IsInRole("Admin"))
+                {
             <td>
                 @Html.DisplayFor(modelItem => item.HostComments)
             </td>
+                }
 
                 <td>@item.DisputeStatus.ToString()</td>
                 <td>
@@ -54,7 +60,7 @@
 
                     @if (User.IsInRole("Host"))
                     {
-                        <a asp-action="MakeHostComment" asp-route-id="@item.ReviewID">Modify Host Comment</a>
+                        
 
                         if (item.DisputeStatus == DisputeStatus.NoDispute)
                         {

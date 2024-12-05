@@ -1,20 +1,20 @@
 ﻿@model Group7FinalProject.Models.Review
 
 @{
-    ViewData["Title"] = "MakeHostComment";
+    ViewData["Title"] = "DisputeReview";
 }
 
-<h1>Make Host Comment</h1>
+<h1>Dispute Review</h1>
 
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="MakeHostComment">
+        <form asp-action="DisputeReview">
             <input type="hidden" asp-for="Rating" />
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ReviewID" />
             <div class="form-group">
-                <label asp-for="HostComments" class="control-label"></label>
+                <label asp-for="HostComments" class="control-label">Reason for Dispute</label>
                 <input asp-for="HostComments" class="form-control" />
                 <span asp-validation-for="HostComments" class="text-danger"></span>
             </div>
