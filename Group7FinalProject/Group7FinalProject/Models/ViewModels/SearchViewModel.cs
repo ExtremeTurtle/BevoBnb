@@ -7,14 +7,13 @@ namespace Group7FinalProject.Models
 
     public class SearchViewModel : IValidatableObject
     {
+        //Works
         [Display(Name = "City:")]
         public string? SearchCity { get; set; }
 
+        //Works
         [Display(Name = "State:")]
         public string? SearchState { get; set; }
-
-        [Display(Name = "Zip:")]
-        public string? SearchZip { get; set; }
 
         //fix
         [Display(Name = "Guest Rating:")]
@@ -45,10 +44,10 @@ namespace Group7FinalProject.Models
         public int? SearchBathrooms { get; set; }
 
         [Display(Name = "Pets Allowed:")]
-        public bool? SearchPetsAllowed { get; set; }
+        public bool SearchPetsAllowed { get; set; }
 
         [Display(Name = "Free Parking:")]
-        public bool? SearchFreeParking { get; set; }
+        public bool SearchFreeParking { get; set; }
 
         [Display(Name = "Check-In Date:")]
         [DataType(DataType.Date)]
