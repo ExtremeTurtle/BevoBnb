@@ -260,40 +260,7 @@ namespace Group7FinalProject.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        //Post Dispute Review
-        [Authorize(Roles = "Host")]
-        public async Task<IActionResult> DisputeReview(int? id)
-        {
-            if (id == null)
-            {
-                return View("Error", new string[] { "Please specify a review to cancel!" });
-            }
-
-            // Find the reservation in the database
-            //TODO Need to check that UserID is equal to review property ID's host
-            Review review = await _context.Reviews
-                .Include(r => r.User)
-                .Where(r => r.Property.User.UserName == User.Identity.Name)
-                .FirstOrDefaultAsync(r => r.ReviewID == id);
-
-
-
-            if (review == null)
-            {
-                return View("Error", new string[] { "This review was not found!" });
-            }
-
-
-
-            // Update the reservation status
-            review.DisputeStatus = DisputeStatus.Disputed;
-
-            // Save the changes
-            await _context.SaveChangesAsync();
-
-            // Redirect to the reservations index
-            return RedirectToAction(nameof(Index));
-        }
+       
 
 
         [Authorize(Roles = "Admin")]
@@ -364,30 +331,27 @@ namespace Group7FinalProject.Controllers
 
 
         [Authorize(Roles = "Host")]
-        public async Task<IActionResult> MakeHostComment(int? id)
+        public async Task<IActionResult> DisputeReview(int? id)
         {
-            //if the user didn't specify a review id, we can't show them 
-            //the data, so show an error instead
             if (id == null)
             {
-                return View("Error", new string[] { "Please specify a review to add a host comment!" });
+                return View("Error", new string[] { "Please specify a review to dispute!" });
             }
 
-            //find the review in the database
-            //be sure to change the data type to course instead of 'var'
-            Review review = await _context.Reviews.Include(c => c.User).FirstOrDefaultAsync(c => c.ReviewID == id);
+            // Find the review in the database
+            Review review = await _context.Reviews
+                .Include(r => r.Property)
+                .FirstOrDefaultAsync(r => r.ReviewID == id && r.Property.User.UserName == User.Identity.Name);
 
-            //if the review does not exist in the database, then show the user
-            //an error message
             if (review == null)
             {
-                return View("Error", new string[] { "This review was not found!" });
+                return View("Error", new string[] { "This review was not found or does not belong to one of your properties!" });
             }
 
-            //order does not belong to this user
-            if (User.IsInRole("Customer") && review.User.UserName != User.Identity.Name)
+            // Check if the review is already disputed
+            if (review.DisputeStatus == DisputeStatus.Disputed)
             {
-                return View("Error", new String[] { "You are not authorized to edit this review!" });
+                return View("Error", new string[] { "This review is already disputed!" });
             }
 
             return View(review);
@@ -396,48 +360,53 @@ namespace Group7FinalProject.Controllers
         [Authorize(Roles = "Host")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> MakeHostComment(int id, [Bind("ReviewID,Rating,ReviewText,HostComments")] Review review)
+        public async Task<IActionResult> DisputeReview(int id, [Bind("ReviewID,HostComments")] Review review)
         {
-            //this is a security check to see if the user is trying to modify
-            //a different record.  Show an error message
             if (id != review.ReviewID)
             {
-                return View("Error", new string[] { "Please try again!" });
+                return View("Error", new string[] { "Please specify a valid review to dispute!" });
             }
 
-            if (ModelState.IsValid == false) //there is something wrong
+            if (string.IsNullOrWhiteSpace(review.HostComments))
             {
+                ModelState.AddModelError("", "Please provide a comment explaining why this review should be disputed.");
                 return View(review);
             }
 
-            //if code gets this far, attempt to edit the review
             try
             {
-                //Find the review to edit in the database and include relevant 
-                //navigational properties
-                Review dbReview = _context.Reviews.Find(review.ReviewID);
+                // Find the review to dispute
+                Review dbReview = await _context.Reviews
+                    .Include(r => r.Property)
+                    .FirstOrDefaultAsync(r => r.ReviewID == id && r.Property.User.UserName == User.Identity.Name);
 
+                if (dbReview == null)
+                {
+                    return View("Error", new string[] { "This review was not found or does not belong to one of your properties!" });
+                }
 
+                // Check if the review is already disputed
+                if (dbReview.DisputeStatus == DisputeStatus.Disputed)
+                {
+                    return View("Error", new string[] { "This review is already disputed!" });
+                }
 
-                //update the properties scalar properties
+                // Update the review's dispute status and host comments
+                dbReview.DisputeStatus = DisputeStatus.Disputed;
                 dbReview.HostComments = review.HostComments;
-           
-               
 
-                //save the changes
+                // Save changes to the database
                 _context.Reviews.Update(dbReview);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
 
+                return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
             {
-                return View("Error", new string[] { "There was an error editing this review.", ex.Message });
+                return View("Error", new string[] { "There was an error disputing this review.", ex.Message });
             }
-
-            //if code gets this far, everything is okay
-            //send the user back to the page with all the courses
-            return RedirectToAction(nameof(Index));
         }
+
 
 
         private bool ReviewExists(int id)

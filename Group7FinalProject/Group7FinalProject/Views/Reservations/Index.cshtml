@@ -1,76 +1,55 @@
-﻿@model IEnumerable<Group7FinalProject.Models.Property>
-<link href="~/css/site.css" rel="stylesheet" />
+﻿@model IEnumerable<Group7FinalProject.Models.Reservation>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<div class="page-header">
-    <h1>BevoBnB</h1>
-</div>
+<h1>Reservations</h1>
 
-<div class="search-container">
-    <form asp-action="DetailedSearch" asp-controller="Properties" method="get">
-        <button type="submit" class="btn detailed-search-btn">Detailed Search</button>
-    </form>
-    <p>Displaying @ViewBag.FilteredProperties out of @ViewBag.TotalProperties Properties</p>
-</div>
-
-<div class="table-container">
-    <table class="table">
-        <thead>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.First().ConfirmationNumber)</th>
+            @if (User.Identity.IsAuthenticated && User.IsInRole("Host"))
+            {
+                <th>@Html.DisplayNameFor(model => model.First().Property.PropertyNumber)</th>
+            }
+            <th>@Html.DisplayNameFor(model => model.First().CheckIn)</th>
+            <th>@Html.DisplayNameFor(model => model.First().CheckOut)</th>
+            <th>@Html.DisplayNameFor(model => model.First().NumOfGuests)</th>
+            <th>@Html.DisplayNameFor(model => model.First().WeekdayPrice)</th>
+            <th>@Html.DisplayNameFor(model => model.First().WeekendPrice)</th>
+            <th>@Html.DisplayNameFor(model => model.First().CleaningFee)</th>
+            <th>@Html.DisplayNameFor(model => model.First().DiscountRate)</th>
+            <th>@Html.DisplayNameFor(model => model.First().ReservationStatus)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
             <tr>
-                <th>Property Address</th>
+                <td>@Html.DisplayFor(modelItem => item.ConfirmationNumber)</td>
                 @if (User.Identity.IsAuthenticated && User.IsInRole("Host"))
                 {
-                    <th>@Html.DisplayNameFor(model => model.PropertyNumber)</th>
+                    <td>@(item.Property != null ? Html.DisplayFor(modelItem => item.Property.PropertyNumber) : "N/A")</td>
                 }
-                <th>@Html.DisplayNameFor(model => model.NumOfBedrooms) <i class="fa-solid fa-bed"></i></th>
-                <th>@Html.DisplayNameFor(model => model.NumOfBathrooms) <i class="fa-solid fa-toilet"></i></th>
-                <th>@Html.DisplayNameFor(model => model.GuestsAllowed) <i class="fa-solid fa-users"></i></th>
-                <th>@Html.DisplayNameFor(model => model.PetFriendly) <i class="fa-solid fa-dog"></i></th>
-                <th>@Html.DisplayNameFor(model => model.HasParking) <i class="fa-solid fa-square-parking"></i></th>
-                <th>Category <i class="fa-solid fa-list"></i></th>
-                <th>Average Rating <i class="fa-solid fa-star"></i></th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @($"{item.Address}, {item.City}, {item.State} {item.ZipCode}")
-                    </td>
-                    @if (User.Identity.IsAuthenticated && User.IsInRole("Host"))
+                <td>@Html.DisplayFor(modelItem => item.CheckIn)</td>
+                <td>@Html.DisplayFor(modelItem => item.CheckOut)</td>
+                <td>@Html.DisplayFor(modelItem => item.NumOfGuests)</td>
+                <td>@Html.DisplayFor(modelItem => item.WeekdayPrice)</td>
+                <td>@Html.DisplayFor(modelItem => item.WeekendPrice)</td>
+                <td>@Html.DisplayFor(modelItem => item.CleaningFee)</td>
+                <td>@Html.DisplayFor(modelItem => item.DiscountRate)</td>
+                <td>@Html.DisplayFor(modelItem => item.ReservationStatus)</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.ReservationID">Details</a>
+                    @if (item.ReservationStatus == ReservationStatus.Valid)
                     {
-                        <td>@Html.DisplayFor(modelItem => item.PropertyNumber)</td>
+                        <a asp-action="CancelReservation" asp-route-id="@item.ReservationID">| Cancel</a>
                     }
-                    <td>@Html.DisplayFor(modelItem => item.NumOfBedrooms)</td>
-                    <td>@Html.DisplayFor(modelItem => item.NumOfBathrooms)</td>
-                    <td>@Html.DisplayFor(modelItem => item.GuestsAllowed)</td>
-                    <td>
-                        <input type="checkbox" class="custom-checkbox" disabled @(item.PetFriendly ? "checked" : "") />
-                    </td>
-                    <td>
-                        <input type="checkbox" class="custom-checkbox" disabled @(item.HasParking ? "checked" : "") />
-                    </td>
-                    <td>@item.Category?.CategoryName</td>
-                    <td>
-                        @if (item.Reviews.Any())
-                        {
-                            @(item.Reviews.Average(r => r.Rating).ToString("F2"))
-                        }
-                        else
-                        {
-                            <span>N/A</span>
-                        }
-                    </td>
-                    <td>
-                        <a asp-action="Details" asp-route-id="@item.PropertyID" class="details-link">Details</a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-</div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
