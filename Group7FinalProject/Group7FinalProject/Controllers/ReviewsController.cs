@@ -305,10 +305,9 @@ namespace Group7FinalProject.Controllers
             }
 
             // Find the reservation in the database
-            //TODO Need to check that UserID is equal to review property ID's host
+            
             Review review = await _context.Reviews
                 .Include(r => r.User)
-                .Where(r => r.Property.User.UserName == User.Identity.Name)
                 .FirstOrDefaultAsync(r => r.ReviewID == id);
 
 
@@ -339,10 +338,9 @@ namespace Group7FinalProject.Controllers
             }
 
             // Find the reservation in the database
-            //TODO Need to check that UserID is equal to review property ID's host
             Review review = await _context.Reviews
                 .Include(r => r.User)
-                .Where(r => r.Property.User.UserName == User.Identity.Name)
+                
                 .FirstOrDefaultAsync(r => r.ReviewID == id);
 
 

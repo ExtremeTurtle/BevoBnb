@@ -97,7 +97,7 @@ namespace Group7FinalProject.Controllers
         [Authorize(Roles = "Host")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Property property, int categoryID)
+        public async Task<IActionResult> Create(Property property, int? categoryID)
         {
             if (!ModelState.IsValid)
             {
@@ -105,15 +105,21 @@ namespace Group7FinalProject.Controllers
                 return View(property);
             }
 
-            _context.Add(property);
-            await _context.SaveChangesAsync();
+           
 
             Category dbCategory = _context.Categories.Find(categoryID);
+
+            if (dbCategory == null)
+            {
+                return View("Error", new string[] { "Category not found!" });
+            }
+
             property.User = await _userManager.FindByNameAsync(User.Identity.Name);
             property.PropertyStatus = PropertyStatus.Unapproved;
             property.Category = dbCategory;
             property.PropertyNumber = Utilities.GenerateNextPropertyNumber.GetNextPropertyNumber(_context);
-            _context.SaveChanges();
+            _context.Add(property);
+            await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
         }

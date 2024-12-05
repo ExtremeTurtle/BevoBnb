@@ -13,7 +13,9 @@
     <Content Remove="wwwroot\fonts\" />
     <Content Remove="wwwroot\css\" />
     <Content Remove="wwwroot\images\" />
-    <Content Remove="wwwroot\images\background.jpg" />
+    <Content Remove="wwwroot\images\backgrounds.jpg" />
+    <Content Remove="wwwroot\images\backgroundsjpg" />
+    <Content Remove="wwwroot\lib\css\site.css" />
   </ItemGroup>
 
   <ItemGroup>
