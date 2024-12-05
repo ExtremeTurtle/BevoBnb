@@ -21,6 +21,12 @@
 
 @if (User.IsInRole("Host"))
 {
+    if (ViewBag.HostReport == null)
+    {
+        <p>@ViewBag.Message</p>
+    }
+    else
+    {
     <!-- Host-Specific Report -->
     <h2>Host Report</h2>
 
@@ -47,7 +53,7 @@
             }
         </tbody>
     </table>
-}
+}}
 @if (User.IsInRole("Admin"))
 {
     <!-- Admin-Specific Report -->

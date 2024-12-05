@@ -450,7 +450,7 @@ namespace Group7FinalProject.Controllers
             // Filter reservations within the date range
             List<Reservation> reservations;
             reservations = _context.Reservations.Include(r => r.Property).ThenInclude(r => r.User)
-                .Where(r => r.CheckIn <= endDate && r.CheckOut >= startDate).ToList();
+                .Where(r => r.CheckIn <= endDate && r.CheckOut >= startDate && r.ReservationStatus == ReservationStatus.Valid).ToList();
 
             AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
 
@@ -464,25 +464,33 @@ namespace Group7FinalProject.Controllers
             {
                 // Filter reservations for the logged-in host's properties
                 reservations = reservations.Where(r => r.Property.User.UserName == user.UserName).ToList();
-                // Host-specific report
-                var hostReport = reservations.GroupBy(r => r.Property)
-                    .Select(group => new
-                    {
-                        PropertyName = group.Key.PropertyNumber,
-                        TotalStayRevenue = group.Sum(r => r.BasePrice * 0.9m), // Host earns 90% of stay revenue
-                        TotalCleaningFees = group.Sum(r => r.CleaningFee), // Host earns 100% of cleaning fees
-                        CombinedRevenue = group.Sum(r => (r.BasePrice * 0.9m) + r.CleaningFee),
-                        CompletedReservations = group.Count(r => r.ReservationStatus == ReservationStatus.Valid)
-                    }).ToList();
+                if (!reservations.Any())
+                {
+                    ViewBag.Message = "No reservations were found for your properties during the selected date range.";
+                    ViewBag.HostReport = null; // Clear any report data
+                }
+                else
+                {
+                    // Host-specific report
+                    var hostReport = reservations.GroupBy(r => r.Property)
+                        .Select(group => new
+                        {
+                            PropertyName = group.Key.PropertyNumber,
+                            TotalStayRevenue = group.Sum(r => r.BasePrice * 0.9m), // Host earns 90% of stay revenue
+                            TotalCleaningFees = group.Sum(r => r.CleaningFee), // Host earns 100% of cleaning fees
+                            CombinedRevenue = group.Sum(r => (r.BasePrice * 0.9m) + r.CleaningFee),
+                            CompletedReservations = group.Count(r => r.ReservationStatus == ReservationStatus.Valid)
+                        }).ToList();
 
-                ViewBag.HostReport = hostReport;
+                    ViewBag.HostReport = hostReport;
+                }
             }
 
             // Data for Admin Reports
             if (User.IsInRole("Admin"))
             {
                 // Admin-specific calculations
-                var totalCommission = reservations.Sum(r => (r.WeekdayPrice + r.WeekendPrice) * 0.1m); // 10% commission
+                var totalCommission = reservations.Sum(r => r.BasePrice * 0.1m); // 10% commission
                 var totalReservations = reservations.Count;
                 var averageCommission = totalReservations > 0 ? totalCommission / totalReservations : 0;
                 var totalProperties = _context.Properties.Count();
