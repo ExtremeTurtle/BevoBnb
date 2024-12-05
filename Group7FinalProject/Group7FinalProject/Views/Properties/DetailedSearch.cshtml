@@ -10,53 +10,58 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="DisplaySearchResults" method="get">
+        <form asp-action="DisplaySearchResults" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="SearchCity" class="control-label"></label>
                 <input asp-for="SearchCity" class="form-control" />
                 <span asp-validation-for="SearchCity" class="text-danger"></span>
             </div>
+
+            <br />
             <div class="form-group">
                 <label asp-for="SearchState" class="control-label"></label>
                 <input asp-for="SearchState" class="form-control" />
                 <span asp-validation-for="SearchState" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
+            <br />
+            @*<div class="form-group">
                 <label asp-for="SearchGuestRating" class="control-label"></label>
                 <input asp-for="SearchGuestRating" type="number" step="0.1" class="form-control" />
                 <span asp-validation-for="SearchGuestRating" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FilterGuestRating" class="control-label"></label><br />
+                <br />
                 <input type="radio" class="radio" asp-for="FilterGuestRating" value="@Filter.GreaterThan" checked="checked" />&nbsp; Greater Than<br />
                 <input type="radio" class="radio" asp-for="FilterGuestRating" value="@Filter.LessThan" />&nbsp; Less Than<br />
-            </div>
+            </div>*@
 
+            <br />
             <div class="form-group">
                 <label asp-for="SearchWeekdayPrice" class="control-label"></label>
                 <input asp-for="SearchWeekdayPrice" type="number" step="0.1" class="form-control" />
                 <span asp-validation-for="SearchWeekdayPrice" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FilterWeekdayPrice" class="control-label"></label><br />
+                <br />
                 <input type="radio" class="radio" asp-for="FilterWeekdayPrice" value="@Filter.GreaterThan" checked="checked" />&nbsp; Greater Than<br />
                 <input type="radio" class="radio" asp-for="FilterWeekdayPrice" value="@Filter.LessThan" />&nbsp; Less Than<br />
             </div>
 
+            <br />
             <div class="form-group">
                 <label asp-for="SearchWeekendPrice" class="control-label"></label>
                 <input asp-for="SearchWeekendPrice" type="number" step="0.1" class="form-control" />
                 <span asp-validation-for="SearchWeekendPrice" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FilterWeekendPrice" class="control-label"></label><br />
+                <br />
                 <input type="radio" class="radio" asp-for="FilterWeekendPrice" value="@Filter.GreaterThan" checked="checked" />&nbsp; Greater Than<br />
                 <input type="radio" class="radio" asp-for="FilterWeekendPrice" value="@Filter.LessThan" />&nbsp; Less Than<br />
             </div>
 
-
+            <br />
             <div class="form-group">
                 <label asp-for="SelectedCategory" class="control-label">Category</label>
                 <select asp-for="SelectedCategory" asp-items="ViewBag.AllCategories" class="form-control">
@@ -64,34 +69,41 @@
                 </select>
             </div>
 
+            <br />
             <div class="form-group">
                 <label asp-for="SearchGuests" class="control-label"></label>
                 <input asp-for="SearchGuests" type="number" step="1" class="form-control" />
                 <span asp-validation-for="SearchGuests" class="text-danger"></span>
             </div>
 
+            <br />
             <div class="form-group">
                 <label asp-for="SearchBedrooms" class="control-label"></label>
                 <input asp-for="SearchBedrooms" type="number" step="1" class="form-control" />
                 <span asp-validation-for="SearchBedrooms" class="text-danger"></span>
             </div>
 
+            <br />
             <div class="form-group">
                 <label asp-for="SearchBathrooms" class="control-label"></label>
                 <input asp-for="SearchBathrooms" type="number" step="1" class="form-control" />
                 <span asp-validation-for="SearchBathrooms" class="text-danger"></span>
             </div>
 
+            <br />
             <!-- Pets Allowed Checkbox -->
-            
+            <label class="form-check-label">
+                <input class="form-check-input" asp-for="SearchPetsAllowed" />
+                @Html.DisplayNameFor(model => model.SearchPetsAllowed)
+            </label>
 
             <br />
+            <label class="form-check-label">
+                <input class="form-check-input" asp-for="SearchFreeParking" />
+                @Html.DisplayNameFor(model => model.SearchFreeParking)
+            </label>
 
-            <label asp-for="SearchCheckInDate" class="control-label"></label>
-            <input asp-for="SearchCheckInDate" class="form-control" />
-
-            <label asp-for="SearchCheckOutDate" class="control-label"></label>
-            <input asp-for="SearchCheckOutDate" class="form-control" />
+            <br />
 
 
             <div class="form-group">

@@ -247,6 +247,7 @@ namespace Group7FinalProject.Controllers
         }
 
         //detailed search
+        [HttpGet]
         public IActionResult DetailedSearch()
         {
             // Populate the ViewBag with categories
@@ -264,12 +265,14 @@ namespace Group7FinalProject.Controllers
             return View(svm);
         }
 
+        [HttpPost]
         public IActionResult DisplaySearchResults(SearchViewModel svm)
         {
             // Start building the query to select all properties
             var query = from p in _context.Properties
                         .Include(p => p.Category)
                         .Include(p => p.Unavailabilities)// Include the Category navigation property
+                        .Include(p => p.Reviews)
                         select p;
 
             // Filter by City if provided
@@ -284,22 +287,47 @@ namespace Group7FinalProject.Controllers
                 query = query.Where(p => p.State.Contains(svm.SearchState));
             }
 
-            //TODO Filter by Guest Rating --> create an average method for reviews on property
 
+
+            //TODO Filter by Guest Rating --> create an average method for reviews on property
+            //if (svm.SearchGuestRating.HasValue)
+            //{
+
+            //    if (svm.FilterGuestRating == Filter.GreaterThan)
+            //    {
+            //        query = query.Where(p => p.Review.Rating >= svm.SearchGuestRating);
+            //    }
+            //    else if (svm.FilterGuestRating == Filter.LessThan)
+            //    {
+            //        query = query.Where(p => p.Review.Rating <= svm.SearchGuestRating);
+            //    }
+            //}
 
             // Filter by Daily Price
             //TODO Add logic so that price is different based on weekday vs weekend
-            //if (svm.SearchDailyPrice.HasValue)
-            //{
-            //    if (svm.FilterDailyPrice == Filter.GreaterThan)
-            //    {
-            //        query = query.Where(p => p.DailyPrice >= svm.SearchDailyPrice);
-            //    }
-            //    else if (svm.FilterDailyPrice == Filter.LessThan)
-            //    {
-            //        query = query.Where(p => p.DailyPrice <= svm.SearchDailyPrice);
-            //    }
-            //}
+            if (svm.SearchWeekdayPrice.HasValue)
+            {
+                if (svm.FilterWeekdayPrice == Filter.GreaterThan)
+                {
+                    query = query.Where(p => p.WeekdayPrice >= svm.SearchWeekdayPrice);
+                }
+                else if (svm.FilterWeekdayPrice == Filter.LessThan)
+                {
+                    query = query.Where(p => p.WeekdayPrice <= svm.SearchWeekdayPrice);
+                }
+            }
+
+            if (svm.SearchWeekendPrice.HasValue)
+            {
+                if (svm.FilterWeekendPrice == Filter.GreaterThan)
+                {
+                    query = query.Where(p => p.WeekendPrice >= svm.SearchWeekendPrice);
+                }
+                else if (svm.FilterWeekendPrice == Filter.LessThan)
+                {
+                    query = query.Where(p => p.WeekendPrice <= svm.SearchWeekendPrice);
+                }
+            }
 
             // Filter by Category if provided
             if (svm.SelectedCategory != 0) // Assuming 0 means "All Categories"
@@ -326,16 +354,16 @@ namespace Group7FinalProject.Controllers
             }
 
             //// Filter by Pets Allowed
-            //if (svm.SearchPetsAllowed.HasValue)
-            //{
-            //    query = query.Where(p => p.PetFriendly == true);
-            //}
+            if (svm.SearchPetsAllowed)
+            {
+                query = query.Where(p => p.PetFriendly == true);
+            }
 
             //// Filter by Free Parking
-            //if (svm.SearchFreeParking.HasValue)
-            //{
-            //    query = query.Where(p => p.HasParking == true);
-            //}
+            if (svm.SearchFreeParking)
+            {
+                query = query.Where(p => p.HasParking == true);
+            }
 
             ////TODO Filter by Check-In and Check-Out Dates --> Figure out logic for searching by dates where property is available
             //if (svm.SearchCheckInDate.HasValue && svm.SearchCheckOutDate.HasValue)
