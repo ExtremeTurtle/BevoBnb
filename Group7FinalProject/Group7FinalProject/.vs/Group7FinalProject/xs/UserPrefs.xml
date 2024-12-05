@@ -1,5 +1,6 @@
 ﻿<Properties StartupConfiguration="{1007DA95-E90D-47FA-B41B-67AAECD34E1B}|http">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Models/ViewModels/SearchViewModel.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="wwwroot/css/site.css">
     <Files>
       <File FileName="Models/Category.cs" />
       <File FileName="Models/AppUser.cs" />
@@ -17,33 +18,37 @@
       <File FileName="Seeding/SeedProperties.cs" />
       <File FileName="Models/ViewModels/RoleViewModels.cs" />
       <File FileName="Models/ViewModels/AccountViewModels.cs" />
-      <File FileName="Models/ViewModels/SearchViewModel.cs" Line="30" Column="23" />
-      <File FileName="Views/Carts/Index.cshtml" Line="1" Column="1" />
-      <File FileName="Views/Properties/Index.cshtml" Line="1" Column="1" />
-      <File FileName="Views/Categories/Index.cshtml" Line="1" Column="1" />
-      <File FileName="Views/Reservations/Index.cshtml" Line="1" Column="1" />
-      <File FileName="Models/Cart.cs" Line="1" Column="1" />
+      <File FileName="Models/ViewModels/SearchViewModel.cs" />
+      <File FileName="Views/Carts/Index.cshtml" />
+      <File FileName="Views/Properties/Index.cshtml" />
+      <File FileName="Views/Categories/Index.cshtml" />
+      <File FileName="Views/Reservations/Index.cshtml" />
+      <File FileName="Models/Cart.cs" />
+      <File FileName="wwwroot/lib/css/site.css" />
+      <File FileName="Views/Shared/_Layout.cshtml" />
+      <File FileName="Views/Reservations/Details.cshtml" />
+      <File FileName="Views/Reservations/Edit.cshtml" />
+      <File FileName="Views/Properties/Details.cshtml" />
+      <File FileName="Migrations/20241120180709_Setup.cs" />
+      <File FileName="Controllers/PropertiesController.cs" />
+      <File FileName="Controllers/HomeController.cs" />
+      <File FileName="../../../../../../../usr/local/share/dotnet/sdk/8.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" />
+      <File FileName="wwwroot/css/site.css" Line="28" Column="59" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Group7FinalProject" expanded="True">
+          <Node name="Group7FinalProject">
             <Node name="Group7FinalProject">
-              <Node name="Models">
-                <Node name="ViewModels">
-                  <Node name="SearchViewModel.cs" selected="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="wwwroot" expanded="True">
+                <Node name="images" expanded="True" />
+                <Node name="lib" expanded="True">
+                  <Node name="css" expanded="True" />
+                  <Node name="font-awesome" expanded="True" />
+                  <Node name="jquery-validate" expanded="True" />
+                  <Node name="jquery-validation-unobtrusive" expanded="True" />
                 </Node>
-              </Node>
-              <Node name="Properties" expanded="True" />
-              <Node name="Seeding" expanded="True" />
-              <Node name="Utilities" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Account" expanded="True" />
-                <Node name="Carts" expanded="True" />
-                <Node name="Categories" expanded="True" />
-                <Node name="Properties" expanded="True" />
-                <Node name="Reservations" expanded="True" />
-                <Node name="Shared" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -51,11 +56,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Group7FinalProject PreferredExecutionTarget="/Users/etaigeller/Downloads/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Group7FinalProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
 </Properties>

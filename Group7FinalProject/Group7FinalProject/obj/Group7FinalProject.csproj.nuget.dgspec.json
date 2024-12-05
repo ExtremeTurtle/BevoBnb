@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj": {}
+    "/Users/CharlieREAL/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj": {}
   },
   "projects": {
-    "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj": {
+    "/Users/CharlieREAL/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj",
+        "projectUniqueName": "/Users/CharlieREAL/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj",
         "projectName": "Group7FinalProject",
-        "projectPath": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj",
-        "packagesPath": "/Users/bradythedude/.nuget/packages/",
-        "outputPath": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/obj/",
+        "projectPath": "/Users/CharlieREAL/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj",
+        "packagesPath": "/Users/CharlieREAL/.nuget/packages/",
+        "outputPath": "/Users/CharlieREAL/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/bradythedude/.nuget/NuGet/NuGet.Config"
+          "/Users/CharlieREAL/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
