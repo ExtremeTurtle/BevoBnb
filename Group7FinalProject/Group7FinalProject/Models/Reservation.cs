@@ -18,12 +18,11 @@ namespace Group7FinalProject.Models
 
         [Required(ErrorMessage = "Check-in date is required")]
         [DataType(DataType.Date)]
-
         [Display(Name = "Check-in Date")]
         public DateTime CheckIn {  get; set; }
+
         [Required(ErrorMessage = "Check-out date is required")]
         [DataType(DataType.Date)]
-
         [Display(Name = "Check-out Date")]
         public DateTime CheckOut { get; set; }
 
