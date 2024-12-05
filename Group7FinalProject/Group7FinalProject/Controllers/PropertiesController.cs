@@ -38,6 +38,10 @@ namespace Group7FinalProject.Controllers
             ViewBag.TotalProperties = _context.Properties.Count();
             ViewBag.FilteredProperties = properties.Count;
 
+            ViewBag.TotalProperties = _context.Properties.Count();
+            // Populate the view bag with the count of movies that match the search criteria
+            ViewBag.FilteredProperties = properties.Count;
+
             return View(properties);
         }
 
