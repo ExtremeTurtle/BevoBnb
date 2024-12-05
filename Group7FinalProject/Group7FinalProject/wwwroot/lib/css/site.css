@@ -1,138 +1,114 @@
-﻿@font-face {
-    font-family: "CustomFont"; /* Name your font */
-    src: url("/fonts/AirbnbCereal_W_Md.otf") format("opentype"); /* Path to the font file */
-    font-weight: normal; /* Optional: specify weight */
-    font-style: normal; /* Optional: specify style */
+﻿/* Ensure custom fonts override Bootswatch */
+@font-face {
+    font-family: "CustomFont";
+    src: url("/fonts/AirbnbCereal_W_Md.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: "CustomFont2"; /* Name your font */
-    src: url("/fonts/AirbnbCereal_W_XBd.otf") format("opentype"); /* Path to the font file */
-    font-weight: normal; /* Optional: specify weight */
-    font-style: normal; /* Optional: specify style */
+    font-family: "CustomFont2";
+    src: url("/fonts/AirbnbCereal_W_XBd.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
 }
 
-body {
-    font-family: "CustomFont", sans-serif; /* Use the custom font */
-    padding-top: 4rem; /* Adjust this based on the navbar height */
-    margin: 0; /* Remove default margins */
-    position: relative; /* Ensure the body remains the content container */
+/* Background and Global Layout */
+body, html {
+    font-family: "CustomFont", sans-serif !important; /* Override global font */
+    margin: 0 !important; /* Remove extra margins */
+    padding: 0 !important; /* Remove extra padding */
+    background-image: url("/images/background.jpg") !important; /* Apply custom background */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Ensures the background stays fixed */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-    body::before {
-        content: ""; /* Creates the pseudo-element */
-        position: fixed; /* Fixes the background image in place */
-        top: 0;
-        left: 0;
-        width: 100%; /* Covers the full width of the viewport */
-        height: 100%; /* Covers the full height of the viewport */
-        background-image: url("/images/background.jpg"); /* Path to your image */
-        background-repeat: no-repeat; /* Prevents tiling */
-        background-position: center; /* Centers the image */
-        background-size: cover; /* Ensures the image covers the viewport */
-        z-index: -1; /* Places the image behind the content */
+/* Navbar Customization */
+.navbar {
+    background-color: #BF5700 !important; /* Burnt orange */
+    color: white !important;
+    margin: 0 !important;
+    padding: 0.5rem 1rem !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important; /* Subtle shadow */
+}
+
+    .navbar .navbar-brand, .navbar .nav-link {
+        font-family: "CustomFont2", sans-serif !important; /* Use header font */
+        color: #FFF !important; /* Force white text */
+        font-size: 1rem !important; /* Ensure consistent font size */
     }
 
+        .navbar .navbar-brand:hover, .navbar .nav-link:hover {
+            color: #FFD700 !important; /* Gold hover effect */
+        }
+
+/* Transparent body container */
 .container {
-    margin-top: 1rem; /* Optional: Adds a little breathing room */
-    position: relative; /* Ensures the content stays above the background */
-    z-index: 1; /* Content appears on top of the background */
-    padding: 20px; /* Adds some padding for better readability */
-    margin: 20px auto; /* Centers the container horizontally */
-    border-radius: 10px; /* Adds rounded corners */
-    color: #000; /* Ensures text is readable (black text as an example) */
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
-    max-width: 90%; /* Restrict container width to 90% of the page width */
-    width: auto; /* Automatically adjust width to fit content */
-    min-width: 700px; /* Optional: Prevent the container from becoming too narrow */
-}
-    .container::before {
-        content: ""; /* Creates a pseudo-element for the semi-transparent effect */
-        position: absolute; /* Positioned relative to the container */
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
-        z-index: -1; /* Places the background behind the text */
-        border-radius: 10px; /* Matches the container's rounded corners */
-
-    }
-.address-column {
-    white-space: nowrap; /* Prevents text from wrapping */
-    overflow: visible; /* Hides any overflow text */
-    text-overflow: ellipsis; /* Adds "..." if the text overflows */
+    position: relative !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+    max-width: 90% !important;
+    background-color: rgba(255, 255, 255, 0.5) !important; /* Semi-transparent background */
+    border-radius: 10px !important; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important; /* Subtle shadow */
+    overflow: hidden !important; /* Prevent overflow issues */
 }
 
-.table th {
-    font-family: CustomFont2;
-    font-size: 17px; /* Test font size */
-    white-space: nowrap; /* Prevent wrapping */
-}
-
-.table td {
-    white-space: nowrap; /* Prevent wrapping */
-}
-
-
+/* Table Customization */
 .table {
-    width: 100%; /* Ensure the table spans the container width */
-    border-collapse: collapse; /* Clean table borders */
-}
-/* Full-width burnt orange navbar */
-.bg-burnt-orange {
-    background-color: #BF5700; /* Burnt orange color */
-    color: #FFF; /* White text */
-    padding: 0.75rem 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    width: 100% !important;
+    border-collapse: collapse !important; /* Remove spacing between cells */
+    font-size: 0.9rem !important;
+    background-color: transparent !important; /* Remove any table background color */
+    margin: 0 auto !important; /* Center the table */
 }
 
-/* Navbar links styling */
-.navbar-dark .navbar-brand, .navbar-dark .nav-link {
-    color: #FFF; /* White text for links */
-    font-weight: 500; /* Slightly bold for readability */
-    font-size: 1rem; /* Consistent font size */
-    transition: color 0.3s ease; /* Smooth hover effect */
-}
-
-    .navbar-dark .navbar-brand:hover, .navbar-dark .nav-link:hover {
-        color: #FFD700; /* Gold hover effect */
+    .table th {
+        background-color: transparent !important; /* Ensure header has no background */
+        color: black !important; /* Set text color */
+        font-family: "CustomFont2", sans-serif;
+        font-size: 1rem !important;
+        font-weight: bold !important;
+        white-space: normal !important; /* Allow wrapping */
+        text-align: left !important; /* Ensure headers are left-aligned */
+        padding: 10px; /* Add padding */
     }
 
-    /* Navbar active link */
-    .navbar-dark .nav-link.active {
-        border-bottom: 2px solid #FFD700; /* Gold underline for active link */
+    .table td {
+        padding: 5px !important;
+        text-align: left !important;
+        border-bottom: 1px solid #ddd !important; /* Subtle border between rows */
+        background-color: transparent !important; /* Remove background for cells */
+        white-space: nowrap !important; /* Prevent text wrapping in data cells */
+        text-overflow: ellipsis; /* Adds ellipsis if text overflows */
+        overflow: hidden; /* Hides overflowing text */
     }
 
-/* Navbar toggler */
-.navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.3); /* Light white border for toggler */
+/* Footer */
+footer {
+    margin-top: 20px !important;
+    text-align: center !important;
+    font-size: 0.9rem !important;
+    color: #555 !important;
 }
 
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+/* Navbar and Body Padding Adjustment */
+body {
+    padding-top: 4rem !important; /* Prevent overlap with navbar */
 }
 
-/* Adjust container for navbar */
-.navbar .container-fluid {
-    max-width: 100%;
-    padding-left: 2rem;
-    padding-right: 2rem;
+/* Global font adjustment */
+.navbar .nav-link, .table td {
+    letter-spacing: -0.1px; /* Reduce spacing between letters */
+    font-family: "CustomFont", sans-serif;
 }
 
-/* Adjust dropdown styling for smoother integration */
-.navbar .dropdown-menu {
-    background-color: #BF5700; /* Burnt orange dropdown */
-    border: none;
+/* Specific adjustment for table headers */
+.table th, h1, h2, h3, h4, h5, h6 {
+    font-family: "CustomFont2", sans-serif;
+    letter-spacing: -0.1px; /* Slightly tighter for headers */
+    font-size: 1rem !important;
+    font-weight: bold !important;
 }
-
-.navbar .dropdown-item {
-    color: #FFF;
-    transition: background-color 0.3s ease;
-}
-
-    .navbar .dropdown-item:hover {
-        background-color: #FFD700; /* Gold hover for dropdown items */
-        color: #000; /* Black text for contrast */
-    }
