@@ -33,7 +33,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\fonts\" />
-    <Folder Include="wwwroot\lib\css\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 </Project>
