@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/etaigeller/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj": {}
+    "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj": {}
   },
   "projects": {
-    "/Users/etaigeller/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj": {
+    "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/etaigeller/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj",
+        "projectUniqueName": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj",
         "projectName": "Group7FinalProject",
-        "projectPath": "/Users/etaigeller/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj",
-        "packagesPath": "/Users/etaigeller/.nuget/packages/",
-        "outputPath": "/Users/etaigeller/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/obj/",
+        "projectPath": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj",
+        "packagesPath": "/Users/bradythedude/.nuget/packages/",
+        "outputPath": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/etaigeller/.nuget/NuGet/NuGet.Config"
+          "/Users/bradythedude/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -90,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "BevoBnB - Welcome";
+}
+
+<div class="container text-center mt-5">
+    <h1 class="display-4 mb-3">Welcome to BevoBnB</h1>
+    <p class="lead">Your destination for unique stays in Austin and beyond!</p>
+    <hr class="my-4" />
+
+    <!-- Buttons for Different User Actions -->
+    <div class="row mt-5">
+        <!-- Customer Section -->
+        <div class="col-md-4">
+            <h2>For Customers</h2>
+            <p>Search for properties, manage reservations, and leave reviews.</p>
+            <a class="btn btn-primary btn-lg" asp-action="Index" asp-controller="Properties">Search Properties</a>
+            <a class="btn btn-secondary btn-lg mt-2" asp-action="Index" asp-controller="Reservations">View Reservations</a>
+        </div>
+
+        <!-- Host Section -->
+        <div class="col-md-4">
+            <h2>For Hosts</h2>
+            <p>List your properties, manage bookings, and review reports.</p>
+            <a class="btn btn-primary btn-lg" asp-action="Create" asp-controller="Properties">List a Property</a>
+            <a class="btn btn-secondary btn-lg mt-2" asp-action="Report" asp-controller="Reservations">View Reports</a>
+        </div>
+
+        <!-- Administrator Section -->
+        <div class="col-md-4">
+            <h2>For Administrators</h2>
+            <p>Manage users, resolve disputes, and access system reports.</p>
+            <a class="btn btn-primary btn-lg" asp-action="Index" asp-controller="RoleAdmin">Manage Users</a>
+            <a class="btn btn-secondary btn-lg mt-2" asp-action="Report" asp-controller="Reservations">View Reports</a>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="mt-5">
+        <h2 class="mb-3">Not a Member Yet?</h2>
+        <p>Create an account to start your journey with BevoBnB!</p>
+        <a class="btn btn-success btn-lg" asp-action="Register" asp-controller="Account">Sign Up</a>
+    </div>
+</div>

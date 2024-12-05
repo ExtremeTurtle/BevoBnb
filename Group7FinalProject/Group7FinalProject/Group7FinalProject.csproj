@@ -36,5 +36,9 @@
   <ItemGroup>
     <Folder Include="wwwroot\fonts\" />
     <Folder Include="wwwroot\images\" />
+    <Folder Include="Views\Home\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Home\" />
   </ItemGroup>
 </Project>
