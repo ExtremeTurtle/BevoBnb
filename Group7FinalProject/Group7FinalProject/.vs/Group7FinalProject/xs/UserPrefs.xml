@@ -1,5 +1,4 @@
 ﻿<Properties StartupConfiguration="{1007DA95-E90D-47FA-B41B-67AAECD34E1B}|http">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="wwwroot/css/site.css">
     <Files>
       <File FileName="Models/Category.cs" />
@@ -33,7 +32,7 @@
       <File FileName="Controllers/PropertiesController.cs" />
       <File FileName="Controllers/HomeController.cs" />
       <File FileName="../../../../../../../usr/local/share/dotnet/sdk/8.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" />
-      <File FileName="wwwroot/css/site.css" Line="28" Column="59" />
+      <File FileName="wwwroot/css/site.css" Line="28" Column="58" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -42,13 +41,8 @@
             <Node name="Group7FinalProject">
               <Node name="Models" expanded="True" />
               <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
                 <Node name="images" expanded="True" />
-                <Node name="lib" expanded="True">
-                  <Node name="css" expanded="True" />
-                  <Node name="font-awesome" expanded="True" />
-                  <Node name="jquery-validate" expanded="True" />
-                  <Node name="jquery-validation-unobtrusive" expanded="True" />
-                </Node>
               </Node>
             </Node>
           </Node>
@@ -56,10 +50,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Group7FinalProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Group7FinalProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
