@@ -1,30 +1,40 @@
 ﻿<Properties StartupConfiguration="{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|http">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <Debugger.DebugSourceFolders>
     <String>/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject</String>
   </Debugger.DebugSourceFolders>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Group7FinalProject/wwwroot/lib/css/site.css">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Group7FinalProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Group7FinalProject/Views/Properties/Index.cshtml">
     <Files>
-      <File FileName="Group7FinalProject/Views/Reservations/Details.cshtml" Line="50" Column="9" />
+      <File FileName="Group7FinalProject/Views/Reservations/Details.cshtml" />
       <File FileName="Group7FinalProject/Models/Property.cs" />
       <File FileName="Group7FinalProject/Models/Review.cs" />
       <File FileName="Group7FinalProject/Models/Reservation.cs" />
-      <File FileName="Group7FinalProject/wwwroot/lib/twitter-bootstrap/bootstrap.css" Line="1" Column="1" />
-      <File FileName="Group7FinalProject/wwwroot/lib/css/site.css" Line="124" Column="1" />
-      <File FileName="Group7FinalProject/Views/Shared/_Layout.cshtml" Line="27" Column="30" />
+      <File FileName="Group7FinalProject/wwwroot/lib/css/site.css" Line="1" Column="1" />
+      <File FileName="Group7FinalProject/Views/Shared/_Layout.cshtml" />
+      <File FileName="Group7FinalProject/wwwroot/css/site.css" Line="1" Column="1" />
+      <File FileName="Group7FinalProject/Views/Properties/DetailedSearch.cshtml" Line="13" Column="62" />
+      <File FileName="Group7FinalProject/Views/Properties/Index.cshtml" Line="19" Column="8" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Group7FinalProject" expanded="True">
-            <Node name="Group7FinalProject" expanded="True">
-              <Node name="Views" expanded="True">
-                <Node name="Reservations" expanded="True" />
+          <Node name="Group7FinalProject">
+            <Node name="Group7FinalProject">
+              <Node name="Views">
+                <Node name="Properties">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
                 <Node name="Shared" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
                 <Node name="lib" expanded="True">
                   <Node name="css" expanded="True" />
-                  <Node name="twitter-bootstrap" expanded="True" />
                 </Node>
               </Node>
             </Node>
@@ -33,11 +43,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Group7FinalProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
