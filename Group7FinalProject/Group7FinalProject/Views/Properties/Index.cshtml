@@ -1,12 +1,12 @@
 ﻿@model IEnumerable<Group7FinalProject.Models.Property>
 <link href="~/css/site.css" rel="stylesheet" />
+
 @{
     ViewData["Title"] = "Index";
 }
 
 <h1>BevoBnB</h1>
 
-<!-- Add Line to Show Category!! And also add line to show showing X out of Y properties-->
 @if (User.Identity.IsAuthenticated && User.IsInRole("Host"))
 {
     <p>
@@ -19,33 +19,18 @@
 <table class="table">
     <thead>
         <tr>
-            <th class="address-column">
-                Property Address
-            </th>
+            <th class="address-column">Property Address</th>
             @if (User.Identity.IsAuthenticated && User.IsInRole("Host"))
             {
-                <th>
-                    @Html.DisplayNameFor(model => model.PropertyNumber)
-                </th>
+                <th>@Html.DisplayNameFor(model => model.PropertyNumber)</th>
             }
-            <th>
-                @Html.DisplayNameFor(model => model.NumOfBedrooms)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NumOfBathrooms)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.GuestsAllowed)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PetFriendly)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HasParking)
-            </th>
-            <th>
-                Category
-            </th>
+            <th>@Html.DisplayNameFor(model => model.NumOfBedrooms)</th>
+            <th>@Html.DisplayNameFor(model => model.NumOfBathrooms)</th>
+            <th>@Html.DisplayNameFor(model => model.GuestsAllowed)</th>
+            <th>@Html.DisplayNameFor(model => model.PetFriendly)</th>
+            <th>@Html.DisplayNameFor(model => model.HasParking)</th>
+            <th>Category</th>
+            <th>Average Rating</th>
             <th></th>
         </tr>
     </thead>
@@ -58,50 +43,28 @@
                 </td>
                 @if (User.Identity.IsAuthenticated && User.IsInRole("Host"))
                 {
-                    <td>
-                        @Html.DisplayFor(modelItem => item.PropertyNumber)
-                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.PropertyNumber)</td>
                 }
+                <td>@Html.DisplayFor(modelItem => item.NumOfBedrooms)</td>
+                <td>@Html.DisplayFor(modelItem => item.NumOfBathrooms)</td>
+                <td>@Html.DisplayFor(modelItem => item.GuestsAllowed)</td>
+                <td>@Html.DisplayFor(modelItem => item.PetFriendly)</td>
+                <td>@Html.DisplayFor(modelItem => item.HasParking)</td>
+                <td>@item.Category?.CategoryName</td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.NumOfBedrooms)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NumOfBathrooms)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.GuestsAllowed)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PetFriendly)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.HasParking)
-                </td>
-                <td>
-                    @item.Category?.CategoryName
-                </td>
-                @if (User.Identity.IsAuthenticated && User.IsInRole("Host"))
-                {
-                    if (item.User != null && item.User.UserName == User.Identity.Name)
+                    @if (item.Reviews.Any())
                     {
-                        <td>
-                            <a asp-action="Edit" asp-route-id="@item.PropertyID">Edit</a> |
-                            <a asp-action="Details" asp-route-id="@item.PropertyID">Details</a>
-                        </td>
+                        @(item.Reviews.Average(r => r.Rating).ToString("F2"))
                     }
                     else
                     {
-                        <td>
-                            <a asp-action="Details" asp-route-id="@item.PropertyID">Details</a>
-                        </td>
+                        <span>N/A</span>
                     }
-                }
-                else
-                {
-                    <td>
-                        <a asp-action="Details" asp-route-id="@item.PropertyID">Details</a>
-                    </td>
-                }
+                </td>
+
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.PropertyID">Details</a>
+                </td>
             </tr>
         }
     </tbody>

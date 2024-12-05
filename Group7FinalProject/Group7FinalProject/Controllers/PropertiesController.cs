@@ -8,10 +8,6 @@ using Microsoft.EntityFrameworkCore;
 using Group7FinalProject.DAL;
 using Group7FinalProject.Models;
 using Microsoft.AspNetCore.Authorization;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
-using static NuGet.Packaging.PackagingConstants;
-using NuGet.Packaging.Signing;
-using Humanizer.Localisation;
 using Microsoft.AspNetCore.Identity;
 
 namespace Group7FinalProject.Controllers
@@ -22,7 +18,6 @@ namespace Group7FinalProject.Controllers
         private readonly AppDbContext _context;
         private readonly UserManager<AppUser> _userManager;
 
-
         public PropertiesController(AppDbContext context, UserManager<AppUser> userManager)
         {
             _context = context;
@@ -32,79 +27,66 @@ namespace Group7FinalProject.Controllers
         // GET: Properties
         public async Task<IActionResult> Index()
         {
-            //Set up a list of Properties to display
-            List<Property> properties;
+            // Set up a list of Properties to display, including reviews for ratings
+            List<Property> properties = _context.Properties
+                                                .Include(p => p.Category)
+                                                .Include(p => p.Reviews) // Include reviews for average rating
+                                                .Where(p => p.PropertyStatus == PropertyStatus.Approved && p.ActiveStatus == Active.Active)
+                                                .ToList();
 
-            properties = _context.Properties
-                                .Include(r => r.Category).
-                                Where(p => p.PropertyStatus == PropertyStatus.Approved && p.ActiveStatus == Active.Active).ToList();
+            // Count total and filtered properties for display
+            ViewBag.TotalProperties = _context.Properties.Count();
+            ViewBag.FilteredProperties = properties.Count;
 
             return View(properties);
-
         }
 
         [Authorize(Roles = "Host")]
-
-        // GET: Properties
         public async Task<IActionResult> MyProperties()
         {
-            //Set up a list of Properties to display
-            List<Property> properties;
+            List<Property> properties = _context.Properties
+                                                .Include(p => p.Category)
+                                                .Include(p => p.User)
+                                                .Where(p => p.User.UserName == User.Identity.Name)
+                                                .ToList();
 
-
-            properties = _context.Properties
-                                .Include(r => r.Category).Include(r => r.User).Where(p => p.User.UserName == User.Identity.Name).ToList();
-
-
-            return View("Index",properties);
-
+            return View("Index", properties);
         }
-        // GET: Properties/Details/5
+
         public async Task<IActionResult> Details(int? id)
         {
-            //the user did not specify a order to view
             if (id == null)
             {
                 return View("Error", new String[] { "Please specify a Property to view!" });
             }
 
-            //find the order in the database
             Property property = await _context.Properties
-                                              .Include(r => r.Category)
-                                              .Include(r =>r.Reviews)
-                                              .Include(r => r. Unavailabilities)
+                                              .Include(p => p.Category)
+                                              .Include(p => p.Reviews) // Include reviews for ratings
                                               .FirstOrDefaultAsync(m => m.PropertyID == id);
 
-            //order was not found in the database
             if (property == null)
             {
                 return View("Error", new String[] { "This property was not found!" });
             }
 
-          
+            List<Review> reviews = property.Reviews
+                                           .Where(r => r.DisputeStatus == DisputeStatus.NoDispute || r.DisputeStatus == DisputeStatus.InvalidDispute)
+                                           .ToList();
 
-            // Calculate the average rating
-            List<Review> reviews;
-            reviews = property.Reviews
-             .Where(r => r.DisputeStatus == DisputeStatus.NoDispute || r.DisputeStatus == DisputeStatus.InvalidDispute).ToList();
-
-            if (reviews.Any())
-            {
-                ViewBag.AverageRating = reviews.Average(r => r.Rating);
-            }
-            else
+            if (reviews.Count == 0)
             {
                 ViewBag.AverageRating = "N/A";
             }
+            else
+            {
+                ViewBag.AverageRating = reviews.Average(r => r.Rating);
+            }
 
-            
-
-            //Send the user to the details page
             return View(property);
         }
 
         [Authorize(Roles = "Host")]
-        // GET: Properties/Create
         public IActionResult Create()
         {
             ViewBag.AllCategories = GetCategorySelectList();
@@ -112,70 +94,46 @@ namespace Group7FinalProject.Controllers
         }
 
         [Authorize(Roles = "Host")]
-        // POST: Properties/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Property property, int categoryID) //Add code to bind user
+        public async Task<IActionResult> Create(Property property, int categoryID)
         {
-            //This code has been modified so that if the model state is not valid
-            //we immediately go to the "sad path" and give the user a chance to try again
-            if (ModelState.IsValid == false)
+            if (!ModelState.IsValid)
             {
-                //re-populate the view bag with the categories
                 ViewBag.AllCategories = GetCategorySelectList();
-                //go back to the Create view to try again
                 return View(property);
             }
 
-            //if code gets to this point, we know the model is valid and
-            //we can add the property to the database
-
-            //add the property to the database and save changes
             _context.Add(property);
             await _context.SaveChangesAsync();
 
-            //add the associated Category to the Property
-            
-            //find the Category associated with that id
             Category dbCategory = _context.Categories.Find(categoryID);
-
-            //add the category to the Property's category and save changes
             property.User = await _userManager.FindByNameAsync(User.Identity.Name);
             property.PropertyStatus = PropertyStatus.Unapproved;
             property.Category = dbCategory;
             property.PropertyNumber = Utilities.GenerateNextPropertyNumber.GetNextPropertyNumber(_context);
             _context.SaveChanges();
-            
 
-            //Send the user to the page with all the properties
             return RedirectToAction(nameof(Index));
         }
 
         [Authorize(Roles = "Host")]
-        // GET: Properties/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            //if the user didn't specify a property id, we can't show them 
-            //the data, so show an error instead
             if (id == null)
             {
                 return View("Error", new string[] { "Please specify a property to edit!" });
             }
 
-            //find the property in the database
-            //be sure to change the data type to course instead of 'var'
-            Property property = await _context.Properties.Include(c => c.User).FirstOrDefaultAsync(c => c.PropertyID == id);
+            Property property = await _context.Properties
+                                              .Include(c => c.User)
+                                              .FirstOrDefaultAsync(c => c.PropertyID == id);
 
-            //if the property does not exist in the database, then show the user
-            //an error message
             if (property == null)
             {
                 return View("Error", new string[] { "This property was not found!" });
             }
 
-            //order does not belong to this user
             if (User.IsInRole("Host") && property.User.UserName != User.Identity.Name)
             {
                 return View("Error", new String[] { "You are not authorized to edit this property!" });
@@ -185,15 +143,10 @@ namespace Group7FinalProject.Controllers
         }
 
         [Authorize(Roles = "Host")]
-        // POST: Properties/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Property property)
         {
-            //this is a security check to see if the user is trying to modify
-            //a different record.  Show an error message
             if (id != property.PropertyID)
             {
                 return View("Error", new string[] { "Please try again!" });
@@ -201,224 +154,41 @@ namespace Group7FinalProject.Controllers
 
             Property dbProperty;
 
-           
-
-            //if code gets this far, attempt to edit the property
             try
             {
-                //Find the property to edit in the database and include relevant 
-                //navigational properties
-                 dbProperty = _context.Properties.Include(c => c.User).Include(c => c.Category).FirstOrDefault(c => c.PropertyID == id);
+                dbProperty = _context.Properties.Include(c => c.User).Include(c => c.Category).FirstOrDefault(c => c.PropertyID == id);
 
-
-                if (ModelState.IsValid == false) //there is something wrong
+                if (!ModelState.IsValid)
                 {
                     return View(property);
                 }
-                //update the properties scalar properties
-                dbProperty.WeekdayPrice = property.WeekdayPrice;
-                dbProperty.WeekdayPrice = property.WeekdayPrice;
-                dbProperty.CleaningFee = property.CleaningFee;
 
-                //Update the Status
+                dbProperty.WeekdayPrice = property.WeekdayPrice;
+                dbProperty.WeekendPrice = property.WeekendPrice;
+                dbProperty.CleaningFee = property.CleaningFee;
                 dbProperty.ActiveStatus = property.ActiveStatus;
 
-
-                //save the changes
                 _context.Properties.Update(dbProperty);
                 _context.SaveChanges();
-
             }
             catch (Exception ex)
             {
                 return View("Error", new string[] { "There was an error editing this property.", ex.Message });
             }
 
-            //if code gets this far, everything is okay
-            //send the user back to the page with all the courses
             return RedirectToAction(nameof(Index));
         }
 
-       
+        private SelectList GetCategorySelectList()
+        {
+            List<Category> allCategories = _context.Categories.ToList();
+            SelectList slAllCategories = new SelectList(allCategories, nameof(Category.CategoryID), nameof(Category.CategoryName));
+            return slAllCategories;
+        }
 
         private bool PropertyExists(int id)
         {
             return _context.Properties.Any(e => e.PropertyID == id);
         }
-
-        private SelectList GetCategorySelectList()
-        {
-            //create a list for all the products
-            List<Category> allCategories = _context.Categories.ToList();
-
-            //the user MUST select a product, so you don't need a dummy option for no product
-
-            //use the constructor on select list to create a new select list with the options
-            SelectList slAllCategories = new SelectList(allCategories, nameof(Category.CategoryID), nameof(Category.CategoryName));
-
-            return slAllCategories;
-        }
-
-
-        //See Properties needing approval
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> ApproveProperties()
-        {
-            List<Property> pendingProperties;
-
-            pendingProperties = await _context.Properties
-                                                  .Where(p => p.PropertyStatus == PropertyStatus.Unapproved)
-                                                  .ToListAsync();
-            return View(pendingProperties);
-        }
-
-        //Approve Properties
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Approve(int propertyId)
-        {
-            Property property = await _context.Properties.FindAsync(propertyId);
-            if (property == null)
-            {
-                return NotFound();
-            }
-
-            property.PropertyStatus = PropertyStatus.Approved;
-            _context.Update(property);
-            await _context.SaveChangesAsync();
-
-            return RedirectToAction(nameof(ApproveProperties));
-        }
-
-
-
-        private SelectList GetAllCategoriesSelectList()
-        {
-            // Fetch categories from the database
-            List<Category> categoryList = _context.Categories.ToList();
-
-            // Add a default "All Categories" option
-            categoryList.Insert(0, new Category
-            {
-                CategoryID = 0,
-                CategoryName = "All Categories"
-            });
-
-            // Return a SelectList for dropdown binding
-            return new SelectList(categoryList, "CategoryID", "CategoryName");
-        }
-
-        //detailed search
-        public IActionResult DetailedSearch()
-        {
-            // Populate the ViewBag with categories
-            ViewBag.AllCategories = GetAllCategoriesSelectList();
-
-            // Initialize SearchViewModel with default values
-            SearchViewModel svm = new SearchViewModel
-            {
-                SelectedCategory = 0,             // Default to "All Categories"
-                SearchPetsAllowed = false,        // Default to no pets allowed
-                SearchCheckInDate = DateTime.Now, // Default to today
-                SearchCheckOutDate = DateTime.Now.AddDays(1) // Default to tomorrow
-            };
-
-            return View(svm);
-        }
-
-        public IActionResult DisplaySearchResults(SearchViewModel svm)
-        {
-            // Start building the query to select all properties
-            var query = from p in _context.Properties
-                        .Include(p => p.Category)
-                        .Include(p => p.Unavailabilities)// Include the Category navigation property
-                        select p;
-
-            // Filter by City if provided
-            if (!string.IsNullOrEmpty(svm.SearchCity))
-            {
-                query = query.Where(p => p.City.Contains(svm.SearchCity));
-            }
-
-            // Filter by State if provided
-            if (!string.IsNullOrEmpty(svm.SearchState))
-            {
-                query = query.Where(p => p.State.Contains(svm.SearchState));
-            }
-
-            //TODO Filter by Guest Rating --> create an average method for reviews on property
-            
-
-            // Filter by Daily Price
-            //TODO Add logic so that price is different based on weekday vs weekend
-            //if (svm.SearchDailyPrice.HasValue)
-            //{
-            //    if (svm.FilterDailyPrice == Filter.GreaterThan)
-            //    {
-            //        query = query.Where(p => p.DailyPrice >= svm.SearchDailyPrice);
-            //    }
-            //    else if (svm.FilterDailyPrice == Filter.LessThan)
-            //    {
-            //        query = query.Where(p => p.DailyPrice <= svm.SearchDailyPrice);
-            //    }
-            //}
-
-            // Filter by Category if provided
-            if (svm.SelectedCategory != 0) // Assuming 0 means "All Categories"
-            {
-                query = query.Where(p => p.Category.CategoryID == svm.SelectedCategory);
-            }
-
-            // Filter by number of Guests
-            if (svm.SearchGuests.HasValue)
-            {
-                query = query.Where(p => p.GuestsAllowed >= svm.SearchGuests);
-            }
-
-            // Filter by number of Bedrooms
-            if (svm.SearchBedrooms.HasValue)
-            {
-                query = query.Where(p => p.NumOfBedrooms >= svm.SearchBedrooms);
-            }
-
-            // Filter by number of Bathrooms
-            if (svm.SearchBathrooms.HasValue)
-            {
-                query = query.Where(p => p.NumOfBathrooms >= svm.SearchBathrooms);
-            }
-
-            // Filter by Pets Allowed
-            if (svm.SearchPetsAllowed.HasValue)
-            {
-                query = query.Where(p => p.PetFriendly == true);
-            }
-
-            // Filter by Free Parking
-            if (svm.SearchFreeParking.HasValue)
-            {
-                query = query.Where(p => p.HasParking == true);
-            }
-
-            ////TODO Filter by Check-In and Check-Out Dates --> Figure out logic for searching by dates where property is available
-            //if (svm.SearchCheckInDate.HasValue && svm.SearchCheckOutDate.HasValue)
-            //{
-            //    query = query.Where(p => p.Unavailabilities. <= svm.SearchCheckInDate &&
-            //                             p.AvailableTo >= svm.SearchCheckOutDate);
-            //}
-
-            // Execute the query
-            var selectedProperties = query.ToList();
-
-            // Populate the ViewBag with the results
-            ViewBag.TotalProperties = _context.Properties.Count();
-            ViewBag.FilteredProperties = selectedProperties.Count;
-
-            // Return the view with the filtered properties
-            return View("Index", selectedProperties);
-        }
-
-
-
     }
 }
