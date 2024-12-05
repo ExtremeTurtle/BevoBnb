@@ -45,6 +45,12 @@ namespace Group7FinalProject.Controllers
                 return View("Error", new string[] { "This Property was not in the database!" });
             }
 
+            // Check that the property belongs to the logged-in host
+            if (dbProperty.User.UserName != User.Identity.Name)
+            {
+                return View("Error", new string[] { "You cannot add unavailable dates to a property that isn't yours." });
+            }
+
             // Prepopulate default dates for convenience
             var model = new Unavailability
             {
