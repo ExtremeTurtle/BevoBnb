@@ -39,6 +39,10 @@ namespace Group7FinalProject.Controllers
                                 .Include(r => r.Category).
                                 Where(p => p.PropertyStatus == PropertyStatus.Approved && p.ActiveStatus == Active.Active).ToList();
 
+            ViewBag.TotalProperties = _context.Properties.Count();
+            // Populate the view bag with the count of movies that match the search criteria
+            ViewBag.FilteredProperties = properties.Count;
+
             return View(properties);
 
         }

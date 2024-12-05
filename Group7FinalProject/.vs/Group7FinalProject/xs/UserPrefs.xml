@@ -8,21 +8,38 @@
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Group7FinalProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Group7FinalProject/Views/Reservations/Details.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Group7FinalProject/wwwroot/lib/twitter-bootstrap/bootstrap.css">
     <Files>
-      <File FileName="Group7FinalProject/Views/Reservations/Details.cshtml" Line="50" Column="9" />
+      <File FileName="Group7FinalProject/Views/Reservations/Details.cshtml" Line="54" Column="77" />
       <File FileName="Group7FinalProject/Models/Property.cs" Line="1" Column="1" />
-      <File FileName="Group7FinalProject/Models/Review.cs" Line="1" Column="1" />
-      <File FileName="Group7FinalProject/Models/Reservation.cs" Line="1" Column="1" />
+      <File FileName="Group7FinalProject/Models/Review.cs" />
+      <File FileName="Group7FinalProject/Models/Reservation.cs" />
+      <File FileName="Group7FinalProject/Controllers/PropertiesController.cs" Line="45" Column="1" />
+      <File FileName="Group7FinalProject/Views/Properties/Index.cshtml" Line="18" Column="66" />
+      <File FileName="Group7FinalProject/wwwroot/css/site.css" Line="86" Column="1" />
+      <File FileName="Group7FinalProject/Views/Shared/Error.cshtml" Line="19" Column="8" />
+      <File FileName="Group7FinalProject/Models/ViewModels/SearchViewModel.cs" Line="6" Column="49" />
+      <File FileName="Group7FinalProject/Views/Properties/DetailedSearch.cshtml" Line="90" Column="1" />
+      <File FileName="Group7FinalProject/wwwroot/lib/twitter-bootstrap/bootstrap.css" Line="2445" Column="1" />
+      <File FileName="Group7FinalProject/Views/_ViewStart.cshtml" Line="1" Column="1" />
+      <File FileName="Group7FinalProject/Views/_ViewImports.cshtml" Line="1" Column="1" />
+      <File FileName="Group7FinalProject/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Group7FinalProject">
+          <Node name="Group7FinalProject" expanded="True">
             <Node name="Group7FinalProject">
               <Node name="Views">
-                <Node name="Reservations">
-                  <Node name="Details.cshtml" selected="True" />
+                <Node name="Properties" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="lib" expanded="True">
+                  <Node name="twitter-bootstrap" expanded="True">
+                    <Node name="bootstrap.css" selected="True" />
+                  </Node>
                 </Node>
               </Node>
             </Node>

@@ -48,7 +48,7 @@
         <th>Parking Available</th>
     </tr>
     <tr>
-        <td>@Html.DisplayFor(ModelItem => Model.Property.Address)</td>
+        <td>@($"{Model.Property.Address}, {Model.Property.City}, {Model.Property.State} {Model.Property.ZipCode}")</td>
         <td>@Html.DisplayFor(ModelItem => Model.Property.NumOfBedrooms)</td>
         <td>@Html.DisplayFor(ModelItem => Model.Property.NumOfBathrooms)</td>
         <td>@Html.DisplayFor(ModelItem => Model.Property.GuestsAllowed)</td>

@@ -67,14 +67,39 @@ body {
     font-family: CustomFont2;
     font-size: 17px; /* Test font size */
     white-space: nowrap; /* Prevent wrapping */
+    text-align: center !important; /* Center horizontally */
+    vertical-align: middle !important; /* Center vertically */
 }
 
 .table td {
     white-space: nowrap; /* Prevent wrapping */
+    text-align: center !important; /* Center horizontally */
+    vertical-align: middle !important; /* Center vertically */
 }
 
 
 .table {
     width: 100%; /* Ensure the table spans the container width */
     border-collapse: collapse; /* Clean table borders */
+}
+
+.form-check-group {
+    margin: 20px 0; /* Adds space around the group */
+    padding: 10px;
+    border: 1px solid #ccc; /* Optional border for grouping */
+    border-radius: 5px; /* Rounds the corners */
+    background-color: #f9f9f9; /* Light background */
+}
+
+.form-check {
+    margin-bottom: 10px; /* Space between checkboxes */
+}
+
+.form-check-input {
+    margin-right: 10px; /* Space between checkbox and label */
+}
+
+.form-check-label {
+    font-size: 1rem; /* Adjust label font size if needed */
+    color: #333; /* Label text color */
 }
