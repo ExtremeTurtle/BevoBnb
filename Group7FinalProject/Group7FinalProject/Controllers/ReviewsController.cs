@@ -88,9 +88,50 @@ namespace Group7FinalProject.Controllers
 
         // GET: Reviews/Create
         [HttpGet]
-        public IActionResult Create()
+        public async Task<IActionResult> Create(int? PropertyID)
         {
-            return View();
+            if (PropertyID == null)
+            {
+                return View("Error", new string[] { "Please specify a property to add to the reservation" });
+            }
+
+            //find the property in the database
+            Property dbProperty = _context.Properties.Find(PropertyID);
+
+            //make sure the Property exists in the database
+            if (dbProperty == null)
+            {
+                return View("Error", new string[] { "This Property was not in the database!" });
+            }
+
+            
+            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            // Validation 1: Check if the user has already reviewed this property
+            bool hasReviewed = _context.Reviews.Any(r => r.Property.PropertyID == PropertyID && r.User.UserName == user.UserName);
+            if (hasReviewed)
+            {
+                return View("Error", new string[] { "You have already reviewed this property." });
+            }
+
+            // Validation 2: Check if the user has a valid reservation for this property
+            var now = DateTime.Now;
+            bool hasValidReservation = _context.Reservations.Any(res =>
+                res.Property.PropertyID == PropertyID &&
+                res.User.UserName == user.UserName &&
+                res.CheckOut<= now // Ensure the reservation is in the past or ongoing
+            );
+
+            if (!hasValidReservation)
+            {
+                return View("Error", new string[] { "You can only review properties where you have a valid past or ongoing reservation." });
+            }
+
+            Review review = new Review();
+            review.Property = dbProperty;
+            review.User = user;
+
+            return View(review);
         }
 
         // POST: Reviews/Create
@@ -100,15 +141,39 @@ namespace Group7FinalProject.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ReviewID,Rating,ReviewText,HostComments")] Review review)
+        public async Task<IActionResult> Create(Review review, int PropertyID)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid == false)
             {
-                _context.Add(review);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return View(review);
             }
-            return View(review);
+
+            
+
+            review.User = await _userManager.FindByNameAsync(User.Identity.Name);
+            if (review.User == null)
+            {
+                return View("Error", new string[] { "The user could not be found." });
+            }
+
+            // Find the property
+            Property dbProperty = _context.Properties.Find(PropertyID);
+            if (dbProperty == null)
+            {
+                return View("Error", new string[] { "This property could not be found." });
+            }
+
+            // Associate the property with the review
+            review.Property = dbProperty;
+            //add the review to the database and save changes
+            _context.Add(review);
+            await _context.SaveChangesAsync();
+
+
+            //Send the user to the page with all the properties
+            return RedirectToAction(nameof(Index));
+
+
         }
 
         [Authorize(Roles = "Customer")]

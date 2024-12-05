@@ -249,6 +249,7 @@ namespace Group7FinalProject.Seeding
                         dbReview.Rating = seedReview.Rating;
                         dbReview.ReviewText = seedReview.ReviewText;
                         dbReview.HostComments = seedReview.HostComments;
+                        dbReview.DisputeStatus = seedReview.DisputeStatus;
                         db.SaveChanges();
                     }
                 }
