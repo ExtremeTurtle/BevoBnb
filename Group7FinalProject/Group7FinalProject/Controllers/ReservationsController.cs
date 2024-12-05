@@ -436,5 +436,79 @@ namespace Group7FinalProject.Controllers
             return sl;
 
         }
+
+        [HttpGet]
+        [Authorize(Roles = "Admin,Host")]
+        public async Task<IActionResult> Report(DateTime? startDate, DateTime? endDate)
+        {
+            // Default date range: Last 365 days
+            startDate ??= DateTime.Today.AddDays(-365);
+            endDate ??= DateTime.Today;
+
+            
+
+            // Filter reservations within the date range
+            List<Reservation> reservations;
+            reservations = _context.Reservations.Include(r => r.Property).ThenInclude(r => r.User)
+                .Where(r => r.CheckIn <= endDate && r.CheckOut >= startDate).ToList();
+
+            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            // Calculate totals for each reservation
+            foreach (var reservation in reservations)
+            {
+                reservation.CalcTotals();
+            }
+
+            if (User.IsInRole("Host"))
+            {
+                // Filter reservations for the logged-in host's properties
+                reservations = reservations.Where(r => r.Property.User.UserName == user.UserName).ToList();
+                // Host-specific report
+                var hostReport = reservations.GroupBy(r => r.Property)
+                    .Select(group => new
+                    {
+                        PropertyName = group.Key.PropertyNumber,
+                        TotalStayRevenue = group.Sum(r => r.BasePrice * 0.9m), // Host earns 90% of stay revenue
+                        TotalCleaningFees = group.Sum(r => r.CleaningFee), // Host earns 100% of cleaning fees
+                        CombinedRevenue = group.Sum(r => (r.BasePrice * 0.9m) + r.CleaningFee),
+                        CompletedReservations = group.Count(r => r.ReservationStatus == ReservationStatus.Valid)
+                    }).ToList();
+
+                ViewBag.HostReport = hostReport;
+            }
+
+            // Data for Admin Reports
+            if (User.IsInRole("Admin"))
+            {
+                // Admin-specific calculations
+                var totalCommission = reservations.Sum(r => (r.WeekdayPrice + r.WeekendPrice) * 0.1m); // 10% commission
+                var totalReservations = reservations.Count;
+                var averageCommission = totalReservations > 0 ? totalCommission / totalReservations : 0;
+                var totalProperties = _context.Properties.Count();
+
+                ViewBag.TotalCommission = totalCommission;
+                ViewBag.TotalReservations = totalReservations;
+                ViewBag.AverageCommission = averageCommission;
+                ViewBag.TotalProperties = totalProperties;
+            }
+
+            // Calculate total revenue (uses CalcTotals' TotalPrice for consistency)
+            var totalRevenue = reservations.Sum(r => r.TotalPrice);
+
+            // Pass data to the view
+            ViewBag.Reservations = reservations; // Assign the reservations list to ViewBag
+            ViewBag.TotalRevenue = totalRevenue;
+            ViewBag.StartDate = startDate.Value.ToString("yyyy-MM-dd");
+            ViewBag.EndDate = endDate.Value.ToString("yyyy-MM-dd");
+            
+
+            return View();
+        }
+
+
+            
+        }
+
     }
-}
+

@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "Report";
+}
+
+<h1>Report</h1>
+
+<!-- Date Range Filter Form -->
+<form method="get" asp-action="Report">
+    <div class="form-group">
+        <label for="startDate">Start Date:</label>
+        <input type="date" name="startDate" class="form-control" value="@ViewBag.StartDate" />
+    </div>
+    <div class="form-group">
+        <label for="endDate">End Date:</label>
+        <input type="date" name="endDate" class="form-control" value="@ViewBag.EndDate" />
+    </div>
+    <button type="submit" class="btn btn-primary">Filter</button>
+</form>
+
+<hr />
+
+@if (User.IsInRole("Host"))
+{
+    <!-- Host-Specific Report -->
+    <h2>Host Report</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Total Stay Revenue (90%)</th>
+                <th>Total Cleaning Fees</th>
+                <th>Combined Revenue</th>
+                <th>Completed Reservations</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var report in (IEnumerable<dynamic>)ViewBag.HostReport)
+            {
+                <tr>
+                    <td>@report.PropertyName</td>
+                    <td>@report.TotalStayRevenue.ToString("C")</td>
+                    <td>@report.TotalCleaningFees.ToString("C")</td>
+                    <td>@report.CombinedRevenue.ToString("C")</td>
+                    <td>@report.CompletedReservations</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@if (User.IsInRole("Admin"))
+{
+    <!-- Admin-Specific Report -->
+    <h2>Admin Report</h2>
+    <p><strong>Total Commission:</strong> @ViewBag.TotalCommission.ToString("C")</p>
+    <p><strong>Total Reservations:</strong> @ViewBag.TotalReservations</p>
+    <p><strong>Average Commission per Reservation:</strong> @ViewBag.AverageCommission.ToString("C")</p>
+    <p><strong>Total Properties:</strong> @ViewBag.TotalProperties</p>
+}
+
+<hr />
+
+<!-- Reservations Table -->
+<h2>Reservations</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Check-In</th>
+            <th>Check-Out</th>
+            <th>Guests</th>
+            <th>Total Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var reservation in (IEnumerable<Group7FinalProject.Models.Reservation>)ViewBag.Reservations)
+        {
+            <tr>
+                <td>@reservation.Property.Address</td>
+                <td>@reservation.CheckIn.ToShortDateString()</td>
+                <td>@reservation.CheckOut.ToShortDateString()</td>
+                <td>@reservation.NumOfGuests</td>
+                <td>@reservation.TotalPrice.ToString("C")</td>
+            </tr>
+        }
+    </tbody>
+</table>
