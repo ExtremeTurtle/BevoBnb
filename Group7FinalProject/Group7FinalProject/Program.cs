@@ -67,6 +67,7 @@ app.UseStaticFiles();
 
 //This marks the position in the middleware pipeline where a routing decision
 //is made for a URL.
+
 app.UseRouting();
 
 //TODO: (HW4 & Beyond) Once you have added Identity into your project, you will 
