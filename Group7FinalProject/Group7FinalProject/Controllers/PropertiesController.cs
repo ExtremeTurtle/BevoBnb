@@ -63,6 +63,7 @@ namespace Group7FinalProject.Controllers
             Property property = await _context.Properties
                                               .Include(p => p.Category)
                                               .Include(p => p.Reviews) // Include reviews for ratings
+                                              .Include(p => p.Reservations)
                                               .Include(p => p.Unavailabilities)
                                               .FirstOrDefaultAsync(m => m.PropertyID == id);
 
@@ -81,7 +82,7 @@ namespace Group7FinalProject.Controllers
             }
             else
             {
-                ViewBag.AverageRating = "N/A";
+                ViewBag.AverageRating = 0;
             }
 
             return View(property);

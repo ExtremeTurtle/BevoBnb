@@ -105,10 +105,73 @@
             @Html.DisplayFor(model => model.PropertyStatus)
         </dd>
     </dl>
-    <h3 class="details-average-rating">Average Rating: @ViewBag.AverageRating</h3>
+
+    <table class="table table-primary">
+        <tr>
+            <th>Rating</th>
+            <th>Review</th>
+        </tr>
+
+        @if (Model.Reviews.Any() && ViewBag.AverageRating != 0)
+        {
+            @foreach (var rd in Model.Reviews.Where(rd => rd.DisputeStatus != DisputeStatus.ValidDispute && rd.DisputeStatus != DisputeStatus.Disputed))
+            {
+                <tr>
+                    <td>@Html.DisplayFor(ModelItem => rd.Rating)</td>
+                    <td>@Html.DisplayFor(ModelItem => rd.ReviewText)</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="2" class="text-center">No reviews available.</td>
+            </tr>
+        }
+
+    </table>
+
+
+    @if (ViewBag.AverageRating != null && (decimal)ViewBag.AverageRating != 0)
+    {
+        <h3 class="details-average-rating">Average Rating: @Math.Round((decimal)ViewBag.AverageRating, 1)</h3>
+    }
+    else
+    {
+        <h3 class="details-average-rating">Average Rating: No Rating Available</h3>
+    }
+
+
+    <table class="table table-primary">
+        <tr>
+            <th>Confirmation Number</th>
+            <th>Check In</th>
+            <th>Check Out</th>
+            <th>Guests</th>
+            <th>Total Price</th>
+            <th>Status</th>
+        </tr>
+        @foreach (Reservation res in Model.Reservations)
+        {
+            <tr>
+                <td>@Html.DisplayFor(ModelItem => res.ConfirmationNumber)</td>
+                <td>@Html.DisplayFor(ModelItem => res.CheckIn)</td>
+                <td>@Html.DisplayFor(ModelItem => res.CheckOut)</td>
+                <td>@Html.DisplayFor(ModelItem => res.NumOfGuests)</td>
+                <td>@Html.DisplayFor(ModelItem => res.TotalPrice)</td>
+                <td>@Html.DisplayFor(ModelItem => res.ReservationStatus)</td>
+
+            </tr>
+        }
+    </table>
+
 </div>
-<div class="details-buttons">
-    <a asp-action="Create" asp-controller="Reservations" asp-route-propertyID="@Model.PropertyID" class="btn btn-warning">Make a Reservation</a>
-    <a asp-action="Edit" asp-route-id="@Model?.PropertyID" class="btn btn-primary">Edit</a>
-    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
-</div>
+
+
+
+
+    <div class="details-buttons">
+        <a asp-action="Create" asp-controller="Reservations" asp-route-propertyID="@Model.PropertyID" class="btn btn-warning">Make a Reservation</a>
+        <a asp-action="Edit" asp-route-id="@Model?.PropertyID" class="btn btn-primary">Edit</a>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>

@@ -60,13 +60,16 @@
                 </td>
                 <td>@item.Category?.CategoryName</td>
                 <td>
-                    @if (item.Reviews.Any())
+                    @if (item.Reviews.Any(r => r.DisputeStatus != DisputeStatus.ValidDispute && r.DisputeStatus != DisputeStatus.Disputed))
                     {
-                        @(item.Reviews.Average(r => r.Rating).ToString("F2"))
+                        @(item.Reviews
+        .Where(r => r.DisputeStatus != DisputeStatus.ValidDispute && r.DisputeStatus != DisputeStatus.Disputed)
+        .Average(r => r.Rating)
+        .ToString("F1"))
                     }
                     else
                     {
-                        <span>N/A</span>
+                        <span>  </span>
                     }
                 </td>
 
