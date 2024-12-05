@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0aQIEMh/w7YlHtyR8Ct4g8piEKWvornw9fRXOce0R7c=",
+  "Hash": "T7rE3mVfH4ln6101p/xlEeWRsbaXlvDM5i7tZjXaoc4=",
   "Source": "Group7FinalProject",
   "BasePath": "_content/Group7FinalProject",
   "Mode": "Default",
@@ -1290,12 +1290,12 @@
       "OriginalItemSpec": "wwwroot/fonts/AirbnbCereal_W_XBd.otf"
     },
     {
-      "Identity": "/Users/CharlieREAL/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/images/backgrounds.jpg",
+      "Identity": "/Users/CharlieREAL/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/images/background.jpg",
       "SourceId": "Group7FinalProject",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/CharlieREAL/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/",
       "BasePath": "_content/Group7FinalProject",
-      "RelativePath": "images/backgrounds.jpg",
+      "RelativePath": "images/background.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1306,7 +1306,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/backgrounds.jpg"
+      "OriginalItemSpec": "wwwroot/images/background.jpg"
+    },
+    {
+      "Identity": "/Users/CharlieREAL/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/images/backgroundsjpg",
+      "SourceId": "Group7FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/CharlieREAL/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/",
+      "BasePath": "_content/Group7FinalProject",
+      "RelativePath": "images/backgroundsjpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/backgroundsjpg"
     },
     {
       "Identity": "/Users/CharlieREAL/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/css/bootstrap.css",

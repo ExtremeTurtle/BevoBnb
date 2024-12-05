@@ -29,8 +29,12 @@
       "PackagePath": "staticwebassets/fonts/AirbnbCereal_W_XBd.otf"
     },
     {
-      "Id": "/Users/CharlieREAL/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/images/backgrounds.jpg",
-      "PackagePath": "staticwebassets/images/backgrounds.jpg"
+      "Id": "/Users/CharlieREAL/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/images/background.jpg",
+      "PackagePath": "staticwebassets/images/background.jpg"
+    },
+    {
+      "Id": "/Users/CharlieREAL/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/images/backgroundsjpg",
+      "PackagePath": "staticwebassets/images"
     },
     {
       "Id": "/Users/CharlieREAL/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/css/bootstrap.css",
