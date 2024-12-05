@@ -38,10 +38,6 @@ namespace Group7FinalProject.Controllers
             ViewBag.TotalProperties = _context.Properties.Count();
             ViewBag.FilteredProperties = properties.Count;
 
-            ViewBag.TotalProperties = _context.Properties.Count();
-            // Populate the view bag with the count of movies that match the search criteria
-            ViewBag.FilteredProperties = properties.Count;
-
             return View(properties);
         }
 
@@ -67,6 +63,7 @@ namespace Group7FinalProject.Controllers
             Property property = await _context.Properties
                                               .Include(p => p.Category)
                                               .Include(p => p.Reviews) // Include reviews for ratings
+                                              .Include(p => p.Unavailabilities)
                                               .FirstOrDefaultAsync(m => m.PropertyID == id);
 
             if (property == null)
@@ -74,17 +71,17 @@ namespace Group7FinalProject.Controllers
                 return View("Error", new String[] { "This property was not found!" });
             }
 
-            List<Review> reviews = property.Reviews
-                                           .Where(r => r.DisputeStatus == DisputeStatus.NoDispute || r.DisputeStatus == DisputeStatus.InvalidDispute)
-                                           .ToList();
+            List<Review> reviews;
+            reviews = property.Reviews
+             .Where(r => r.DisputeStatus == DisputeStatus.NoDispute || r.DisputeStatus == DisputeStatus.InvalidDispute).ToList();
 
-            if (reviews.Count == 0)
+            if (reviews.Any())
             {
-                ViewBag.AverageRating = "N/A";
+                ViewBag.AverageRating = reviews.Average(r => r.Rating);
             }
             else
             {
-                ViewBag.AverageRating = reviews.Average(r => r.Rating);
+                ViewBag.AverageRating = "N/A";
             }
 
             return View(property);
@@ -194,5 +191,167 @@ namespace Group7FinalProject.Controllers
         {
             return _context.Properties.Any(e => e.PropertyID == id);
         }
+
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> ApproveProperties()
+        {
+            List<Property> pendingProperties;
+
+            pendingProperties = await _context.Properties
+                                                  .Where(p => p.PropertyStatus == PropertyStatus.Unapproved)
+                                                  .ToListAsync();
+            return View(pendingProperties);
+        }
+
+        //Approve Properties
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Approve(int propertyId)
+        {
+            Property property = await _context.Properties.FindAsync(propertyId);
+            if (property == null)
+            {
+                return NotFound();
+            }
+
+            property.PropertyStatus = PropertyStatus.Approved;
+            _context.Update(property);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(ApproveProperties));
+        }
+
+
+
+        private SelectList GetAllCategoriesSelectList()
+        {
+            // Fetch categories from the database
+            List<Category> categoryList = _context.Categories.ToList();
+
+            // Add a default "All Categories" option
+            categoryList.Insert(0, new Category
+            {
+                CategoryID = 0,
+                CategoryName = "All Categories"
+            });
+
+            // Return a SelectList for dropdown binding
+            return new SelectList(categoryList, "CategoryID", "CategoryName");
+        }
+
+        //detailed search
+        public IActionResult DetailedSearch()
+        {
+            // Populate the ViewBag with categories
+            ViewBag.AllCategories = GetAllCategoriesSelectList();
+
+            // Initialize SearchViewModel with default values
+            SearchViewModel svm = new SearchViewModel
+            {
+                SelectedCategory = 0,             // Default to "All Categories"
+                SearchPetsAllowed = false,        // Default to no pets allowed
+                SearchCheckInDate = DateTime.Now, // Default to today
+                SearchCheckOutDate = DateTime.Now.AddDays(1) // Default to tomorrow
+            };
+
+            return View(svm);
+        }
+
+        public IActionResult DisplaySearchResults(SearchViewModel svm)
+        {
+            // Start building the query to select all properties
+            var query = from p in _context.Properties
+                        .Include(p => p.Category)
+                        .Include(p => p.Unavailabilities)// Include the Category navigation property
+                        select p;
+
+            // Filter by City if provided
+            if (!string.IsNullOrEmpty(svm.SearchCity))
+            {
+                query = query.Where(p => p.City.Contains(svm.SearchCity));
+            }
+
+            // Filter by State if provided
+            if (!string.IsNullOrEmpty(svm.SearchState))
+            {
+                query = query.Where(p => p.State.Contains(svm.SearchState));
+            }
+
+            //TODO Filter by Guest Rating --> create an average method for reviews on property
+
+
+            // Filter by Daily Price
+            //TODO Add logic so that price is different based on weekday vs weekend
+            //if (svm.SearchDailyPrice.HasValue)
+            //{
+            //    if (svm.FilterDailyPrice == Filter.GreaterThan)
+            //    {
+            //        query = query.Where(p => p.DailyPrice >= svm.SearchDailyPrice);
+            //    }
+            //    else if (svm.FilterDailyPrice == Filter.LessThan)
+            //    {
+            //        query = query.Where(p => p.DailyPrice <= svm.SearchDailyPrice);
+            //    }
+            //}
+
+            // Filter by Category if provided
+            if (svm.SelectedCategory != 0) // Assuming 0 means "All Categories"
+            {
+                query = query.Where(p => p.Category.CategoryID == svm.SelectedCategory);
+            }
+
+            // Filter by number of Guests
+            if (svm.SearchGuests.HasValue)
+            {
+                query = query.Where(p => p.GuestsAllowed >= svm.SearchGuests);
+            }
+
+            // Filter by number of Bedrooms
+            if (svm.SearchBedrooms.HasValue)
+            {
+                query = query.Where(p => p.NumOfBedrooms >= svm.SearchBedrooms);
+            }
+
+            // Filter by number of Bathrooms
+            if (svm.SearchBathrooms.HasValue)
+            {
+                query = query.Where(p => p.NumOfBathrooms >= svm.SearchBathrooms);
+            }
+
+            // Filter by Pets Allowed
+            if (svm.SearchPetsAllowed.HasValue)
+            {
+                query = query.Where(p => p.PetFriendly == true);
+            }
+
+            // Filter by Free Parking
+            if (svm.SearchFreeParking.HasValue)
+            {
+                query = query.Where(p => p.HasParking == true);
+            }
+
+            ////TODO Filter by Check-In and Check-Out Dates --> Figure out logic for searching by dates where property is available
+            //if (svm.SearchCheckInDate.HasValue && svm.SearchCheckOutDate.HasValue)
+            //{
+            //    query = query.Where(p => p.Unavailabilities. <= svm.SearchCheckInDate &&
+            //                             p.AvailableTo >= svm.SearchCheckOutDate);
+            //}
+
+            // Execute the query
+            var selectedProperties = query.ToList();
+
+            // Populate the ViewBag with the results
+            ViewBag.TotalProperties = _context.Properties.Count();
+            ViewBag.FilteredProperties = selectedProperties.Count;
+
+            // Return the view with the filtered properties
+            return View("Index", selectedProperties);
+        }
+
+
+
     }
 }
+    
+
