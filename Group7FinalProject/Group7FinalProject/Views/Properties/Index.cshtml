@@ -30,7 +30,7 @@
             }
             <th>@Html.DisplayNameFor(model => model.NumOfBedrooms) <i class="fa-solid fa-bed"></i></th>
             <th>@Html.DisplayNameFor(model => model.NumOfBathrooms) <i class="fa-solid fa-toilet"></i></th>
-            <th>@Html.DisplayNameFor(model => model.GuestsAllowed) <i class="fa-solid fa-users"></i></th> 
+            <th>@Html.DisplayNameFor(model => model.GuestsAllowed) <i class="fa-solid fa-users"></i></th>
             <th>@Html.DisplayNameFor(model => model.PetFriendly) <i class="fa-solid fa-dog"></i></th>
             <th>@Html.DisplayNameFor(model => model.HasParking) <i class="fa-solid fa-square-parking"></i></th>
             <th>Category: <i class="fa-solid fa-list"></i></th>
@@ -52,8 +52,12 @@
                 <td>@Html.DisplayFor(modelItem => item.NumOfBedrooms)</td>
                 <td>@Html.DisplayFor(modelItem => item.NumOfBathrooms)</td>
                 <td>@Html.DisplayFor(modelItem => item.GuestsAllowed)</td>
-                <td>@Html.DisplayFor(modelItem => item.PetFriendly)</td>
-                <td>@Html.DisplayFor(modelItem => item.HasParking)</td>
+                <td>
+                    <input type="checkbox" class="custom-checkbox" disabled @(item.PetFriendly ? "checked" : "") />
+                </td>
+                <td>
+                    <input type="checkbox" class="custom-checkbox" disabled @(item.HasParking ? "checked" : "") />
+                </td>
                 <td>@item.Category?.CategoryName</td>
                 <td>
                     @if (item.Reviews.Any())

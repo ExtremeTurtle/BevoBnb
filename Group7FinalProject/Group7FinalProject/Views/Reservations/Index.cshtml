@@ -1,96 +1,76 @@
-﻿@model IEnumerable<Group7FinalProject.Models.Reservation>
+﻿@model IEnumerable<Group7FinalProject.Models.Property>
+<link href="~/css/site.css" rel="stylesheet" />
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<div class="page-header">
+    <h1>BevoBnB</h1>
+</div>
 
+<div class="search-container">
+    <form asp-action="DetailedSearch" asp-controller="Properties" method="get">
+        <button type="submit" class="btn detailed-search-btn">Detailed Search</button>
+    </form>
+    <p>Displaying @ViewBag.FilteredProperties out of @ViewBag.TotalProperties Properties</p>
+</div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ConfirmationNumber)
-            </th>
-            @if (User.Identity.IsAuthenticated && User.IsInRole("Host"))
-            {
-                <th>
-                    @Html.DisplayNameFor(model => model.Property.PropertyNumber)
-                </th>
-            }
-            <th>
-                @Html.DisplayNameFor(model => model.CheckIn)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CheckOut)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NumOfGuests)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.WeekdayPrice)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.WeekendPrice)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CleaningFee)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DiscountRate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ReservationStatus)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ConfirmationNumber)
-            </td>
+<div class="table-container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Property Address</th>
                 @if (User.Identity.IsAuthenticated && User.IsInRole("Host"))
                 {
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Property.PropertyNumber)
-                    </td>
+                    <th>@Html.DisplayNameFor(model => model.PropertyNumber)</th>
                 }
-            <td>
-                @Html.DisplayFor(modelItem => item.CheckIn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CheckOut)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NumOfGuests)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WeekdayPrice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WeekendPrice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CleaningFee)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DiscountRate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReservationStatus)
-            </td>
-          
-                <td>
-                    <a asp-action="Details" asp-route-id="@item.ReservationID">Details</a>
-                    @if (item.ReservationStatus == ReservationStatus.Valid)
+                <th>@Html.DisplayNameFor(model => model.NumOfBedrooms) <i class="fa-solid fa-bed"></i></th>
+                <th>@Html.DisplayNameFor(model => model.NumOfBathrooms) <i class="fa-solid fa-toilet"></i></th>
+                <th>@Html.DisplayNameFor(model => model.GuestsAllowed) <i class="fa-solid fa-users"></i></th>
+                <th>@Html.DisplayNameFor(model => model.PetFriendly) <i class="fa-solid fa-dog"></i></th>
+                <th>@Html.DisplayNameFor(model => model.HasParking) <i class="fa-solid fa-square-parking"></i></th>
+                <th>Category <i class="fa-solid fa-list"></i></th>
+                <th>Average Rating <i class="fa-solid fa-star"></i></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @($"{item.Address}, {item.City}, {item.State} {item.ZipCode}")
+                    </td>
+                    @if (User.Identity.IsAuthenticated && User.IsInRole("Host"))
                     {
-                         <a asp-action="CancelReservation" asp-route-id="@item.ReservationID">| Cancel</a>
+                        <td>@Html.DisplayFor(modelItem => item.PropertyNumber)</td>
                     }
-                </td>
-        </tr>
-}
-    </tbody>
-</table>
+                    <td>@Html.DisplayFor(modelItem => item.NumOfBedrooms)</td>
+                    <td>@Html.DisplayFor(modelItem => item.NumOfBathrooms)</td>
+                    <td>@Html.DisplayFor(modelItem => item.GuestsAllowed)</td>
+                    <td>
+                        <input type="checkbox" class="custom-checkbox" disabled @(item.PetFriendly ? "checked" : "") />
+                    </td>
+                    <td>
+                        <input type="checkbox" class="custom-checkbox" disabled @(item.HasParking ? "checked" : "") />
+                    </td>
+                    <td>@item.Category?.CategoryName</td>
+                    <td>
+                        @if (item.Reviews.Any())
+                        {
+                            @(item.Reviews.Average(r => r.Rating).ToString("F2"))
+                        }
+                        else
+                        {
+                            <span>N/A</span>
+                        }
+                    </td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.PropertyID" class="details-link">Details</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
