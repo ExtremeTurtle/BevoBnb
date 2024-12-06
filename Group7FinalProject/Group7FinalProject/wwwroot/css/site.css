@@ -82,7 +82,7 @@ body {
     }
 
 .detailed-search-btn {
-    background-color: #28a745;
+    background-color: #c96e0c;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -211,14 +211,14 @@ body {
     height: 24px;
     transform: scale(1.3);
     border-radius: 5px;
-    border: 2px solid #28a745;
+    border: 2px solid #c96e0c;
     background-color: #e9f5ec;
     cursor: not-allowed;
 }
 
     .custom-checkbox:checked {
-        background-color: #28a745;
-        border-color: #28a745;
+        background-color: #c96e0c;
+        border-color: #c96e0c;
     }
 
     .custom-checkbox:disabled {
