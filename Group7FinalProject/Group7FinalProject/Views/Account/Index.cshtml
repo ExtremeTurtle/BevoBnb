@@ -1,4 +1,5 @@
 @model IndexViewModel
+
 @{
     ViewBag.Title = "Change Password";
 }
@@ -15,14 +16,22 @@
         <dt>Email:</dt>
         <dd>@Model.Email</dd>
 
+        <dt>Address:</dt>
+        <dd>@Model.Address</dd>
+
+        <dt>Phone Number:</dt>
+        <dd>@Model.PhoneNumber</dd>
+
+        <dt>Birthday:</dt>
+        <dd>@Model.Birthday.ToShortDateString()</dd>
+
         <dt>Password:</dt>
         <dd>
             [@Html.ActionLink("Change your password", "ChangePassword")]
         </dd>
 
+        <a asp-action="Report" asp-controller="Reservations">Report</a>
 
-        <a asp-action="Report" asp-controller = "Reservations"> Report</a>
-        
-
+        <a asp-action="EditProfile" >Edit Profile</a>
     </dl>
 </div>

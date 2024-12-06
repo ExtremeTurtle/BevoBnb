@@ -1,811 +1,811 @@
 {
   "Files": [
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/css/bootstrap.css",
-      "PackagePath": "staticwebassets/css/bootstrap.css"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/css/site.css",
-      "PackagePath": "staticwebassets/css/site.css"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/fonts/AirbnbCereal_W_Bd.otf",
-      "PackagePath": "staticwebassets/fonts/AirbnbCereal_W_Bd.otf"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\fonts\\AirbnbCereal_W_Bd.otf",
+      "PackagePath": "staticwebassets\\fonts\\AirbnbCereal_W_Bd.otf"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/fonts/AirbnbCereal_W_Bk.otf",
-      "PackagePath": "staticwebassets/fonts/AirbnbCereal_W_Bk.otf"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\fonts\\AirbnbCereal_W_Bk.otf",
+      "PackagePath": "staticwebassets\\fonts\\AirbnbCereal_W_Bk.otf"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/fonts/AirbnbCereal_W_Blk.otf",
-      "PackagePath": "staticwebassets/fonts/AirbnbCereal_W_Blk.otf"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\fonts\\AirbnbCereal_W_Blk.otf",
+      "PackagePath": "staticwebassets\\fonts\\AirbnbCereal_W_Blk.otf"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/fonts/AirbnbCereal_W_Lt.otf",
-      "PackagePath": "staticwebassets/fonts/AirbnbCereal_W_Lt.otf"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\fonts\\AirbnbCereal_W_Lt.otf",
+      "PackagePath": "staticwebassets\\fonts\\AirbnbCereal_W_Lt.otf"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/fonts/AirbnbCereal_W_Md.otf",
-      "PackagePath": "staticwebassets/fonts/AirbnbCereal_W_Md.otf"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\fonts\\AirbnbCereal_W_Md.otf",
+      "PackagePath": "staticwebassets\\fonts\\AirbnbCereal_W_Md.otf"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/fonts/AirbnbCereal_W_XBd.otf",
-      "PackagePath": "staticwebassets/fonts/AirbnbCereal_W_XBd.otf"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\fonts\\AirbnbCereal_W_XBd.otf",
+      "PackagePath": "staticwebassets\\fonts\\AirbnbCereal_W_XBd.otf"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/images/background.jpg",
-      "PackagePath": "staticwebassets/images/background.jpg"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\images\\background.jpg",
+      "PackagePath": "staticwebassets\\images\\background.jpg"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/css/all.css",
-      "PackagePath": "staticwebassets/lib/font-awesome/css/all.css"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\css\\all.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\all.css"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/css/all.min.css",
-      "PackagePath": "staticwebassets/lib/font-awesome/css/all.min.css"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\all.min.css"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/css/brands.css",
-      "PackagePath": "staticwebassets/lib/font-awesome/css/brands.css"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\css\\brands.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\brands.css"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/css/brands.min.css",
-      "PackagePath": "staticwebassets/lib/font-awesome/css/brands.min.css"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\css\\brands.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\brands.min.css"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/css/fontawesome.css",
-      "PackagePath": "staticwebassets/lib/font-awesome/css/fontawesome.css"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\fontawesome.css"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/css/fontawesome.min.css",
-      "PackagePath": "staticwebassets/lib/font-awesome/css/fontawesome.min.css"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\fontawesome.min.css"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/css/regular.css",
-      "PackagePath": "staticwebassets/lib/font-awesome/css/regular.css"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\css\\regular.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\regular.css"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/css/regular.min.css",
-      "PackagePath": "staticwebassets/lib/font-awesome/css/regular.min.css"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\css\\regular.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\regular.min.css"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/css/solid.css",
-      "PackagePath": "staticwebassets/lib/font-awesome/css/solid.css"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\css\\solid.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\solid.css"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/css/solid.min.css",
-      "PackagePath": "staticwebassets/lib/font-awesome/css/solid.min.css"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\css\\solid.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\solid.min.css"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/css/svg-with-js.css",
-      "PackagePath": "staticwebassets/lib/font-awesome/css/svg-with-js.css"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\css\\svg-with-js.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\svg-with-js.css"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/css/svg-with-js.min.css",
-      "PackagePath": "staticwebassets/lib/font-awesome/css/svg-with-js.min.css"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\css\\svg-with-js.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\svg-with-js.min.css"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/css/v4-font-face.css",
-      "PackagePath": "staticwebassets/lib/font-awesome/css/v4-font-face.css"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\css\\v4-font-face.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\v4-font-face.css"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/css/v4-font-face.min.css",
-      "PackagePath": "staticwebassets/lib/font-awesome/css/v4-font-face.min.css"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\css\\v4-font-face.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\v4-font-face.min.css"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/css/v4-shims.css",
-      "PackagePath": "staticwebassets/lib/font-awesome/css/v4-shims.css"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\css\\v4-shims.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\v4-shims.css"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/css/v4-shims.min.css",
-      "PackagePath": "staticwebassets/lib/font-awesome/css/v4-shims.min.css"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\css\\v4-shims.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\v4-shims.min.css"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/css/v5-font-face.css",
-      "PackagePath": "staticwebassets/lib/font-awesome/css/v5-font-face.css"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\css\\v5-font-face.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\v5-font-face.css"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/css/v5-font-face.min.css",
-      "PackagePath": "staticwebassets/lib/font-awesome/css/v5-font-face.min.css"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\css\\v5-font-face.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\v5-font-face.min.css"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/js/all.js",
-      "PackagePath": "staticwebassets/lib/font-awesome/js/all.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\js\\all.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\all.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/js/all.min.js",
-      "PackagePath": "staticwebassets/lib/font-awesome/js/all.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\js\\all.min.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\all.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/js/brands.js",
-      "PackagePath": "staticwebassets/lib/font-awesome/js/brands.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\js\\brands.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\brands.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/js/brands.min.js",
-      "PackagePath": "staticwebassets/lib/font-awesome/js/brands.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\js\\brands.min.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\brands.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/js/conflict-detection.js",
-      "PackagePath": "staticwebassets/lib/font-awesome/js/conflict-detection.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\js\\conflict-detection.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\conflict-detection.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/js/conflict-detection.min.js",
-      "PackagePath": "staticwebassets/lib/font-awesome/js/conflict-detection.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\js\\conflict-detection.min.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\conflict-detection.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/js/fontawesome.js",
-      "PackagePath": "staticwebassets/lib/font-awesome/js/fontawesome.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\js\\fontawesome.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\fontawesome.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/js/fontawesome.min.js",
-      "PackagePath": "staticwebassets/lib/font-awesome/js/fontawesome.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\js\\fontawesome.min.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\fontawesome.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/js/regular.js",
-      "PackagePath": "staticwebassets/lib/font-awesome/js/regular.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\js\\regular.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\regular.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/js/regular.min.js",
-      "PackagePath": "staticwebassets/lib/font-awesome/js/regular.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\js\\regular.min.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\regular.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/js/solid.js",
-      "PackagePath": "staticwebassets/lib/font-awesome/js/solid.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\js\\solid.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\solid.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/js/solid.min.js",
-      "PackagePath": "staticwebassets/lib/font-awesome/js/solid.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\js\\solid.min.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\solid.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/js/v4-shims.js",
-      "PackagePath": "staticwebassets/lib/font-awesome/js/v4-shims.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\js\\v4-shims.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\v4-shims.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/js/v4-shims.min.js",
-      "PackagePath": "staticwebassets/lib/font-awesome/js/v4-shims.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\js\\v4-shims.min.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\v4-shims.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/sprites/brands.svg",
-      "PackagePath": "staticwebassets/lib/font-awesome/sprites/brands.svg"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\sprites\\brands.svg",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\sprites\\brands.svg"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/sprites/regular.svg",
-      "PackagePath": "staticwebassets/lib/font-awesome/sprites/regular.svg"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\sprites\\regular.svg",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\sprites\\regular.svg"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/sprites/solid.svg",
-      "PackagePath": "staticwebassets/lib/font-awesome/sprites/solid.svg"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\sprites\\solid.svg",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\sprites\\solid.svg"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/webfonts/fa-brands-400.eot",
-      "PackagePath": "staticwebassets/lib/font-awesome/webfonts/fa-brands-400.eot"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\webfonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-brands-400.eot"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/webfonts/fa-brands-400.svg",
-      "PackagePath": "staticwebassets/lib/font-awesome/webfonts/fa-brands-400.svg"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\webfonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-brands-400.svg"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/webfonts/fa-brands-400.ttf",
-      "PackagePath": "staticwebassets/lib/font-awesome/webfonts/fa-brands-400.ttf"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-brands-400.ttf"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/webfonts/fa-brands-400.woff",
-      "PackagePath": "staticwebassets/lib/font-awesome/webfonts/fa-brands-400.woff"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\webfonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-brands-400.woff"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/webfonts/fa-brands-400.woff2",
-      "PackagePath": "staticwebassets/lib/font-awesome/webfonts/fa-brands-400.woff2"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-brands-400.woff2"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/webfonts/fa-regular-400.eot",
-      "PackagePath": "staticwebassets/lib/font-awesome/webfonts/fa-regular-400.eot"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\webfonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-regular-400.eot"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/webfonts/fa-regular-400.svg",
-      "PackagePath": "staticwebassets/lib/font-awesome/webfonts/fa-regular-400.svg"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\webfonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-regular-400.svg"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/webfonts/fa-regular-400.ttf",
-      "PackagePath": "staticwebassets/lib/font-awesome/webfonts/fa-regular-400.ttf"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-regular-400.ttf"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/webfonts/fa-regular-400.woff",
-      "PackagePath": "staticwebassets/lib/font-awesome/webfonts/fa-regular-400.woff"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\webfonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-regular-400.woff"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/webfonts/fa-regular-400.woff2",
-      "PackagePath": "staticwebassets/lib/font-awesome/webfonts/fa-regular-400.woff2"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-regular-400.woff2"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/webfonts/fa-solid-900.eot",
-      "PackagePath": "staticwebassets/lib/font-awesome/webfonts/fa-solid-900.eot"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\webfonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-solid-900.eot"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/webfonts/fa-solid-900.svg",
-      "PackagePath": "staticwebassets/lib/font-awesome/webfonts/fa-solid-900.svg"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\webfonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-solid-900.svg"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/webfonts/fa-solid-900.ttf",
-      "PackagePath": "staticwebassets/lib/font-awesome/webfonts/fa-solid-900.ttf"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-solid-900.ttf"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/webfonts/fa-solid-900.woff",
-      "PackagePath": "staticwebassets/lib/font-awesome/webfonts/fa-solid-900.woff"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\webfonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-solid-900.woff"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/webfonts/fa-solid-900.woff2",
-      "PackagePath": "staticwebassets/lib/font-awesome/webfonts/fa-solid-900.woff2"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-solid-900.woff2"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/webfonts/fa-v4compatibility.ttf",
-      "PackagePath": "staticwebassets/lib/font-awesome/webfonts/fa-v4compatibility.ttf"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\webfonts\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-v4compatibility.ttf"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/font-awesome/webfonts/fa-v4compatibility.woff2",
-      "PackagePath": "staticwebassets/lib/font-awesome/webfonts/fa-v4compatibility.woff2"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\font-awesome\\webfonts\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-v4compatibility.woff2"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/additional-methods.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/additional-methods.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\additional-methods.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/additional-methods.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/additional-methods.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\additional-methods.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/jquery-validation-sri.json",
-      "PackagePath": "staticwebassets/lib/jquery-validate/jquery-validation-sri.json"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\jquery-validation-sri.json",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\jquery-validation-sri.json"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/jquery.validate.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/jquery.validate.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\jquery.validate.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/jquery.validate.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/jquery.validate.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\jquery.validate.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_ar.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_ar.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_ar.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_ar.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_ar.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_ar.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_ar.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_ar.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_az.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_az.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_az.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_az.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_az.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_az.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_az.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_az.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_bg.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_bg.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_bg.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_bg.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_bg.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_bg.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_bg.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_bg.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_bn_bd.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_bn_bd.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_bn_bd.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_bn_bd.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_bn_bd.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_bn_bd.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_bn_bd.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_bn_bd.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_ca.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_ca.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_ca.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_ca.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_ca.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_ca.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_ca.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_ca.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_cs.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_cs.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_cs.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_cs.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_cs.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_cs.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_cs.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_cs.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_da.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_da.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_da.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_da.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_da.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_da.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_da.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_da.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_de.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_de.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_de.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_de.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_de.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_de.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_de.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_de.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_el.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_el.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_el.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_el.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_el.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_el.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_el.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_el.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_es.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_es.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_es.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_es.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_es.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_es.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_es.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_es.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_es_ar.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_es_ar.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_es_ar.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_es_ar.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_es_ar.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_es_ar.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_es_ar.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_es_ar.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_es_pe.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_es_pe.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_es_pe.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_es_pe.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_es_pe.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_es_pe.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_es_pe.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_es_pe.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_et.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_et.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_et.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_et.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_et.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_et.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_et.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_et.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_eu.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_eu.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_eu.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_eu.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_eu.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_eu.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_eu.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_eu.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_fa.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_fa.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_fa.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_fa.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_fa.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_fa.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_fa.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_fa.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_fi.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_fi.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_fi.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_fi.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_fi.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_fi.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_fi.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_fi.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_fr.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_fr.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_fr.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_fr.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_fr.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_fr.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_fr.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_fr.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_ge.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_ge.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_ge.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_ge.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_ge.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_ge.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_ge.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_ge.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_gl.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_gl.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_gl.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_gl.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_gl.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_gl.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_gl.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_gl.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_he.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_he.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_he.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_he.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_he.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_he.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_he.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_he.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_hr.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_hr.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_hr.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_hr.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_hr.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_hr.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_hr.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_hr.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_hu.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_hu.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_hu.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_hu.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_hu.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_hu.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_hu.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_hu.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_hy_am.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_hy_am.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_hy_am.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_hy_am.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_hy_am.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_hy_am.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_hy_am.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_hy_am.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_id.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_id.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_id.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_id.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_id.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_id.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_id.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_id.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_is.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_is.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_is.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_is.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_is.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_is.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_is.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_is.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_it.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_it.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_it.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_it.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_it.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_it.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_it.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_it.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_ja.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_ja.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_ja.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_ja.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_ja.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_ja.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_ja.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_ja.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_ka.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_ka.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_ka.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_ka.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_ka.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_ka.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_ka.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_ka.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_kk.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_kk.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_kk.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_kk.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_kk.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_kk.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_kk.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_kk.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_ko.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_ko.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_ko.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_ko.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_ko.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_ko.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_ko.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_ko.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_lt.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_lt.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_lt.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_lt.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_lt.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_lt.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_lt.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_lt.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_lv.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_lv.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_lv.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_lv.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_lv.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_lv.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_lv.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_lv.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_mk.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_mk.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_mk.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_mk.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_mk.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_mk.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_mk.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_mk.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_my.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_my.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_my.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_my.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_my.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_my.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_my.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_my.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_nl.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_nl.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_nl.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_nl.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_nl.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_nl.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_nl.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_nl.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_no.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_no.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_no.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_no.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_no.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_no.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_no.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_no.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_pl.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_pl.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_pl.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_pl.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_pl.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_pl.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_pl.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_pl.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_pt_br.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_pt_br.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_pt_br.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_pt_br.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_pt_br.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_pt_br.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_pt_br.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_pt_br.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_pt_pt.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_pt_pt.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_pt_pt.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_pt_pt.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_pt_pt.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_pt_pt.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_pt_pt.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_pt_pt.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_ro.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_ro.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_ro.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_ro.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_ro.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_ro.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_ro.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_ro.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_ru.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_ru.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_ru.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_ru.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_ru.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_ru.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_ru.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_ru.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_sd.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_sd.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_sd.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_sd.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_sd.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_sd.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_sd.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_sd.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_si.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_si.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_si.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_si.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_si.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_si.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_si.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_si.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_sk.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_sk.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_sk.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_sk.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_sk.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_sk.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_sk.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_sk.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_sl.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_sl.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_sl.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_sl.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_sl.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_sl.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_sl.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_sl.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_sr.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_sr.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_sr.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_sr.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_sr.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_sr.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_sr.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_sr.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_sr_lat.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_sr_lat.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_sr_lat.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_sr_lat.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_sr_lat.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_sr_lat.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_sr_lat.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_sr_lat.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_sv.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_sv.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_sv.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_sv.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_sv.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_sv.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_sv.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_sv.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_th.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_th.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_th.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_th.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_th.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_th.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_th.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_th.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_tj.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_tj.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_tj.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_tj.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_tj.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_tj.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_tj.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_tj.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_tr.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_tr.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_tr.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_tr.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_tr.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_tr.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_tr.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_tr.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_uk.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_uk.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_uk.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_uk.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_uk.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_uk.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_uk.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_uk.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_ur.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_ur.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_ur.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_ur.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_ur.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_ur.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_ur.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_ur.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_vi.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_vi.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_vi.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_vi.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_vi.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_vi.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_vi.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_vi.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_zh.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_zh.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_zh.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_zh.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_zh.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_zh.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_zh.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_zh.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_zh_tw.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_zh_tw.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_zh_tw.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_zh_tw.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/messages_zh_tw.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/messages_zh_tw.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\messages_zh_tw.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\messages_zh_tw.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/methods_de.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/methods_de.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\methods_de.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\methods_de.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/methods_de.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/methods_de.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\methods_de.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\methods_de.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/methods_es_cl.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/methods_es_cl.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\methods_es_cl.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\methods_es_cl.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/methods_es_cl.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/methods_es_cl.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\methods_es_cl.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\methods_es_cl.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/methods_fi.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/methods_fi.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\methods_fi.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\methods_fi.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/methods_fi.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/methods_fi.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\methods_fi.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\methods_fi.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/methods_it.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/methods_it.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\methods_it.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\methods_it.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/methods_it.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/methods_it.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\methods_it.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\methods_it.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/methods_nl.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/methods_nl.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\methods_nl.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\methods_nl.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/methods_nl.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/methods_nl.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\methods_nl.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\methods_nl.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/methods_pt.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/methods_pt.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\methods_pt.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\methods_pt.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validate/localization/methods_pt.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validate/localization/methods_pt.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validate\\localization\\methods_pt.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validate\\localization\\methods_pt.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
-      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
-      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery/jquery.js",
-      "PackagePath": "staticwebassets/lib/jquery/jquery.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery/jquery.min.js",
-      "PackagePath": "staticwebassets/lib/jquery/jquery.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery/jquery.min.map",
-      "PackagePath": "staticwebassets/lib/jquery/jquery.min.map"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.min.map"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery/jquery.slim.js",
-      "PackagePath": "staticwebassets/lib/jquery/jquery.slim.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery\\jquery.slim.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.slim.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery/jquery.slim.min.js",
-      "PackagePath": "staticwebassets/lib/jquery/jquery.slim.min.js"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery\\jquery.slim.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.slim.min.js"
     },
     {
-      "Id": "/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/wwwroot/lib/jquery/jquery.slim.min.map",
-      "PackagePath": "staticwebassets/lib/jquery/jquery.slim.min.map"
+      "Id": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\lib\\jquery\\jquery.slim.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.slim.min.map"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.Group7FinalProject.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Group7FinalProject.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.Group7FinalProject.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Group7FinalProject.props",
       "PackagePath": "build\\Group7FinalProject.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.Group7FinalProject.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Group7FinalProject.props",
       "PackagePath": "buildMultiTargeting\\Group7FinalProject.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.Group7FinalProject.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Group7FinalProject.props",
       "PackagePath": "buildTransitive\\Group7FinalProject.props"
     }
   ],

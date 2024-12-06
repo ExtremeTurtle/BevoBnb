@@ -184,6 +184,9 @@ namespace Group7FinalProject.Controllers
             ivm.HasPassword = true;
             ivm.UserID = user.Id;
             ivm.UserName = user.UserName;
+            ivm.Address = user.Address;
+            ivm.PhoneNumber = user.PhoneNumber;
+            ivm.Birthday = user.Birthday;
 
             //send data to the view
             return View(ivm);
@@ -281,5 +284,69 @@ namespace Group7FinalProject.Controllers
             //send the user back to the home page
             return RedirectToAction("Login", "Account");
         }
+
+        public async Task<IActionResult> EditProfile()
+        {
+            // Get the currently logged-in user
+            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            if (user == null)
+            {
+                return View("Error", new string[] { "User not found." });
+            }
+
+            // Populate the EditProfileViewModel
+            EditProfileViewModel model = new EditProfileViewModel
+            {
+                PhoneNumber = user.PhoneNumber,
+                Address = user.Address,
+                Birthday = user.Birthday
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditProfile(EditProfileViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            // Get the logged-in user
+            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            if (user == null)
+            {
+                return View("Error", new string[] { "User not found." });
+            }
+
+            // Update user properties
+            user.PhoneNumber = model.PhoneNumber;
+            user.Address = model.Address;
+            user.Birthday = model.Birthday;
+
+            // Save changes to the database
+            var result = await _userManager.UpdateAsync(user);
+
+            if (result.Succeeded)
+            {
+                ViewBag.Message = "Profile updated successfully!";
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+
+                return View(model);
+            }
+        }
+
+
     }
 }

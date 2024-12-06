@@ -112,5 +112,22 @@ namespace Group7FinalProject.Models
         public String UserName { get; set; }
         public String Email { get; set; }
         public String UserID { get; set; }
+
+        public String Address { get; set; }
+        public String PhoneNumber { get; set; }
+        public DateTime Birthday { get; set; }
+    }
+
+    public class EditProfileViewModel
+    {
+        [Display(Name = "Phone Number")]
+        public string? PhoneNumber { get; set; }
+
+        [Display(Name = "Street Address")]
+        public string? Address { get; set; }
+
+        [DataType(DataType.Date)]
+        [Display(Name = "Birthday")]
+        public DateTime Birthday { get; set; }
     }
 }
