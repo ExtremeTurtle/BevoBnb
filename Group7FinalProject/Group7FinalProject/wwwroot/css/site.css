@@ -224,3 +224,11 @@ body {
     .custom-checkbox:disabled {
         opacity: 0.8;
     }
+.panel-primary .table {
+    width: 100%;
+}
+
+.panel-primary {
+    overflow-x: auto;
+    max-height: 400px; /* Adjust height as needed */
+}
