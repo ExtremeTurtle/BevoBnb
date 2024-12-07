@@ -366,12 +366,25 @@ namespace Group7FinalProject.Controllers
                 query = query.Where(p => p.HasParking == true);
             }
 
-            ////TODO Filter by Check-In and Check-Out Dates --> Figure out logic for searching by dates where property is available
-            //if (svm.SearchCheckInDate.HasValue && svm.SearchCheckOutDate.HasValue)
-            //{
-            //    query = query.Where(p => p.Unavailabilities. <= svm.SearchCheckInDate &&
-            //                             p.AvailableTo >= svm.SearchCheckOutDate);
-            //}
+            if (svm.SearchCheckInDate.HasValue && svm.SearchCheckOutDate.HasValue)
+            {
+                // Validate that the check-in date is earlier than the check-out date
+                if (svm.SearchCheckInDate >= svm.SearchCheckOutDate)
+                {
+                    ModelState.AddModelError("", "Check-In Date must be earlier than Check-Out Date.");
+                    return View("DetailedSearch", svm); // Return to the search form with the validation error
+                }
+
+                // Create a list of all dates in the desired range
+                var searchDateRange = Enumerable.Range(0, 1 + svm.SearchCheckOutDate.Value.Subtract(svm.SearchCheckInDate.Value).Days)
+                                                .Select(offset => svm.SearchCheckInDate.Value.AddDays(offset))
+                                                .ToList();
+
+                // Filter properties based on availability
+                query = query.Where(p => !p.Unavailabilities.Any(u => searchDateRange.Contains(u.UnavailableDate)));
+            }
+
+
 
             // Execute the query
             var selectedProperties = query.ToList();

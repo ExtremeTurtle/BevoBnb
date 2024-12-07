@@ -1,37 +1,46 @@
 @model IndexViewModel
 
 @{
-    ViewBag.Title = "Change Password";
+    ViewBag.Title = "Account Settings";
 }
 
-<h2>@ViewBag.Title.</h2>
+<div class="container mt-5">
+    <h2 class="mb-4">@ViewBag.Title</h2>
 
-<div>
-    <h4>Change your account settings</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>User Name:</dt>
-        <dd>@Model.UserName</dd>
+    <div class="card">
+        <div class="card-header">
+            <h4>Manage Your Account</h4>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-4">User Name:</dt>
+                <dd class="col-sm-8">@Model.UserName</dd>
 
-        <dt>Email:</dt>
-        <dd>@Model.Email</dd>
+                <dt class="col-sm-4">Email:</dt>
+                <dd class="col-sm-8">@Model.Email</dd>
 
-        <dt>Address:</dt>
-        <dd>@Model.Address</dd>
+                <dt class="col-sm-4">Address:</dt>
+                <dd class="col-sm-8">@Model.Address</dd>
 
-        <dt>Phone Number:</dt>
-        <dd>@Model.PhoneNumber</dd>
+                <dt class="col-sm-4">Phone Number:</dt>
+                <dd class="col-sm-8">@Model.PhoneNumber</dd>
 
-        <dt>Birthday:</dt>
-        <dd>@Model.Birthday.ToShortDateString()</dd>
+                <dt class="col-sm-4">Birthday:</dt>
+                <dd class="col-sm-8">@Model.Birthday.ToShortDateString()</dd>
 
-        <dt>Password:</dt>
-        <dd>
-            [@Html.ActionLink("Change your password", "ChangePassword")]
-        </dd>
+                <dt class="col-sm-4">Password:</dt>
+                <dd class="col-sm-8">
+                    <a asp-action="ChangePassword" class="btn btn-link">Change your password</a>
+                </dd>
+            </dl>
 
-        <a asp-action="Report" asp-controller="Reservations">Report</a>
-
-        <a asp-action="EditProfile" >Edit Profile</a>
-    </dl>
+            <div class="mt-4">
+                @if (User.IsInRole("Admin") || User.IsInRole("Host"))
+                {
+                    <a asp-action="Report" asp-controller="Reservations" class="btn btn-primary me-2">View Report</a>
+                }
+                <a asp-action="EditProfile" class="btn btn-secondary">Edit Profile</a>
+            </div>
+        </div>
+    </div>
 </div>
