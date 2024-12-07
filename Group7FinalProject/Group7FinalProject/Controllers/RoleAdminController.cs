@@ -1,11 +1,13 @@
 ﻿//TODO: Change these using statements to match your project
 using Group7FinalProject.DAL;
 using Group7FinalProject.Models;
+using Group7FinalProject.Utilities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Intrinsics.Arm;
 using System.Threading.Tasks;
 
 //TODO: Change this namespace to match your project
@@ -16,18 +18,20 @@ namespace Group7FinalProject.Controllers
     public class RoleAdminController : Controller
     {
         //create private variables for the services needed in this controller
+        private SignInManager<AppUser> _signInManager;
         private AppDbContext _context;
         private UserManager<AppUser> _userManager;
         private RoleManager<IdentityRole> _roleManager;
 
 
         //RoleAdminController constructor
-        public RoleAdminController(AppDbContext appDbContext, UserManager<AppUser> userManager, RoleManager<IdentityRole> roleManager)
+        public RoleAdminController(AppDbContext appDbContext, UserManager<AppUser> userManager, SignInManager<AppUser> signIn, RoleManager<IdentityRole> roleManager)
         {
             //populate the values of the variables passed into the controller
             _context = appDbContext;
             _userManager = userManager;
             _roleManager = roleManager;
+            _signInManager = signIn;
         }
 
         // GET: /RoleAdmin/
@@ -343,7 +347,99 @@ namespace Group7FinalProject.Controllers
 
 
 
+        [HttpGet]
+        [Authorize(Roles = "Admin")]
+        public IActionResult CreateAdmin()
+        {
+            return View(new RegisterViewModel
+            {
+                Role = "Admin" // Pre-fill the role field for admins
+            });
+        }
 
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateAdmin(RegisterViewModel rvm)
+        {
+            //if registration data is valid, create a new user on the database
+            if (ModelState.IsValid == false)
+            {
+                //this is the sad path - something went wrong, 
+                //return the user to the register page to try again
+                return View(rvm);
+            }
+
+            // Validate that the user is at least 18 years old
+            if (rvm.Birthday.AddYears(18) > DateTime.Today)
+            {
+                ModelState.AddModelError("Birthday", "You must be at least 18 years old to register.");
+                return View(rvm); // Return the view with the validation error
+            }
+
+            // Check if an account with the same email already exists
+            var existingUser = await _userManager.FindByEmailAsync(rvm.Email);
+            if (existingUser != null)
+            {
+                ModelState.AddModelError("Email", "An account with this email already exists.");
+                return View(rvm); // Return the view with the validation error
+            }
+            //this code maps the RegisterViewModel to the AppUser domain model
+            AppUser newUser = new AppUser
+            {
+                UserName = rvm.Email,
+                Email = rvm.Email,
+                PhoneNumber = rvm.PhoneNumber,
+
+                //TODO: Add the rest of the custom user fields here
+                //FirstName is included as an example
+                FirstName = rvm.FirstName,
+                LastName = rvm.LastName,
+                Birthday = rvm.Birthday,
+                Address = rvm.Address,
+                HireStatus = HireStatus.Employed
+
+
+
+            };
+
+            //create AddUserModel
+            AddUserModel aum = new AddUserModel()
+            {
+                User = newUser,
+                Password = rvm.Password,
+
+
+
+                //TODO: You will need to change this value if you want to 
+                //add the user to a different role - just specify the role name.
+                RoleName = rvm.Role
+            };
+
+            //This code uses the AddUser utility to create a new user with the specified password
+            IdentityResult result = await Utilities.AddUser.AddUserWithRoleAsync(aum, _userManager, _context);
+
+            if (result.Succeeded) //everything is okay
+            {
+                //NOTE: This code logs the user into the account that they just created
+                //You may or may not want to log a user in directly after they register - check
+                //the business rules!
+                Microsoft.AspNetCore.Identity.SignInResult result2 = await _signInManager.PasswordSignInAsync(rvm.Email, rvm.Password, false, lockoutOnFailure: false);
+
+                //Send the user to the home page
+                return RedirectToAction("Index", "RoleAdmin");
+            }
+            else  //the add user operation didn't work, and we need to show an error message
+            {
+                foreach (IdentityError error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+
+                //send user back to page with errors
+                return View(rvm);
+            }
+        }
 
 
     }

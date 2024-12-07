@@ -68,4 +68,9 @@
     </table>
 </div>
 
+@if (Model.Role.Name == "Admin")
+{
+    <a asp-action="CreateAdmin" class="btn btn-success">Create Admin</a>
+}
+
 <a asp-action="Index" class="btn btn-success">Cancel</a>
