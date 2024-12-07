@@ -148,63 +148,203 @@ namespace Group7FinalProject.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Edit(RoleModificationModel rmm)
+        public async Task<IActionResult> Edit(RoleModificationModel rmm)
         {
-            //create a result to refer to later
+            if (rmm.RoleName == "Admin")
+            {
+                // Restrict modifications to role membership for Admin
+                return Unauthorized("Modifying Admin role membership is not allowed.");
+            }
+
+            // Continue normal role editing for non-admin roles
             IdentityResult result;
 
-            //if RoleModificationModel is valid, add new users
             if (ModelState.IsValid)
             {
-                //if there are users to add, then add them
                 if (rmm.IdsToAdd != null)
                 {
                     foreach (string userId in rmm.IdsToAdd)
                     {
-                        //find the user in the database using their id
                         AppUser user = await _userManager.FindByIdAsync(userId);
-
-                        //attempt to add the user to the role using the UserManager
                         result = await _userManager.AddToRoleAsync(user, rmm.RoleName);
 
-                        //if attempt to add user to role didn't work, show user the error page
-                        if (result.Succeeded == false)
+                        if (!result.Succeeded)
                         {
-                            //send user to error page
                             return View("Error", result.Errors);
                         }
                     }
                 }
 
-                //if there are users to remove from the role, remove them
                 if (rmm.IdsToDelete != null)
                 {
-                    //loop through all the ids to remove from role
                     foreach (string userId in rmm.IdsToDelete)
                     {
-                        //find the user in the database using their id
                         AppUser user = await _userManager.FindByIdAsync(userId);
-
-                        //attempt to remove the user from the role using the UserManager
                         result = await _userManager.RemoveFromRoleAsync(user, rmm.RoleName);
 
-                        //if attempt to remove the user from role didn't work, show the error page
-                        if (result.Succeeded == false)
+                        if (!result.Succeeded)
                         {
-                            //show user the error page
                             return View("Error", result.Errors);
                         }
                     }
                 }
 
-                //this is the happy path - all edits worked
-                //take the user back to the RoleAdmin Index page
                 return RedirectToAction("Index");
             }
 
-            //this is a sad path - the role was not found
-            //show the user the error page
-            return View("Error", new string[] { "Role Not Found" });
+            return View("Error", new string[] { "Role not found" });
         }
+
+
+        [HttpPost]
+        public async Task<IActionResult> FireAdmin(string userId)
+        {
+            // Find the user by ID
+            AppUser admin = await _userManager.FindByIdAsync(userId);
+
+            if (admin == null)
+            {
+                return NotFound();
+            }
+
+            // Update the HireStatus to Fired
+            admin.HireStatus = HireStatus.Fired;
+
+            // Save the changes
+            var result = await _userManager.UpdateAsync(admin);
+
+            if (!result.Succeeded)
+            {
+                // If there were errors, display them
+                return View("Error", result.Errors);
+            }
+
+            return RedirectToAction("Index", "RoleAdmin");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RehireAdmin(string userId)
+        {
+            // Find the user by ID
+            AppUser admin = await _userManager.FindByIdAsync(userId);
+
+            if (admin == null)
+            {
+                return NotFound();
+            }
+
+            // Update the HireStatus to Employed
+            admin.HireStatus = HireStatus.Employed;
+
+            // Save the changes
+            var result = await _userManager.UpdateAsync(admin);
+
+            if (!result.Succeeded)
+            {
+                // If there were errors, display them
+                return View("Error", result.Errors);
+            }
+
+            return RedirectToAction("Index", "RoleAdmin");
+        }
+
+        [HttpGet]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> EditUserProfile(string email)
+        {
+            // Find the user by email
+            AppUser user = await _userManager.FindByEmailAsync(email);
+
+            if (user == null)
+            {
+                return View("Error", new string[] { "User not found." });
+            }
+
+            // Populate the EditUserProfileViewModel
+            EditUserProfileViewModel model = new EditUserProfileViewModel
+            {
+                Email = user.Email,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                PhoneNumber = user.PhoneNumber,
+                Address = user.Address,
+                Birthday = user.Birthday
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditUserProfile(EditUserProfileViewModel model, string? newPassword)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            // Validate that the user is at least 18 years old
+            if (model.Birthday.AddYears(18) > DateTime.Today)
+            {
+                ModelState.AddModelError("Birthday", "The user must be at least 18 years old.");
+                return View(model); // Return the view with the validation error
+            }
+
+            // Find the user by email
+            AppUser user = await _userManager.FindByEmailAsync(model.Email);
+
+            if (user == null)
+            {
+                return View("Error", new string[] { "User not found." });
+            }
+
+            // Update user properties
+            user.FirstName = model.FirstName;
+            user.LastName = model.LastName;
+            user.PhoneNumber = model.PhoneNumber;
+            user.Address = model.Address;
+            user.Birthday = model.Birthday;
+
+            // Save profile changes
+            var updateResult = await _userManager.UpdateAsync(user);
+
+            if (!updateResult.Succeeded)
+            {
+                foreach (var error in updateResult.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+                return View(model);
+            }
+
+            // Update password if provided
+            if (!string.IsNullOrEmpty(newPassword))
+            {
+                // Generate password reset token
+                var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+                // Reset the password
+                var passwordResult = await _userManager.ResetPasswordAsync(user, token, newPassword);
+
+                if (!passwordResult.Succeeded)
+                {
+                    foreach (var error in passwordResult.Errors)
+                    {
+                        ModelState.AddModelError("", error.Description);
+                    }
+                    return View(model);
+                }
+            }
+
+            ViewBag.Message = "User profile updated successfully!";
+            return RedirectToAction("Index", "RoleAdmin");
+        }
+
+
+
+
+
+
     }
 }
