@@ -154,8 +154,20 @@ namespace Group7FinalProject.Controllers
         {
 
 
-            if (ModelState.IsValid == false)
+            
+            if (!ModelState.IsValid)
             {
+                // Fetch the property details to repopulate the reservation model
+                Property testProperty = await _context.Properties.Include(p => p.User).FirstOrDefaultAsync(p => p.PropertyID == propertyID);
+                if (testProperty == null)
+                {
+                    return View("Error", new string[] { "The property could not be found." });
+                }
+
+                // Repopulate the property in the reservation model
+                reservation.Property = testProperty;
+
+                // Return the view with the current reservation model
                 return View(reservation);
             }
 

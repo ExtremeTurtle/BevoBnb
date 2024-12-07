@@ -27,21 +27,29 @@ namespace Group7FinalProject.Models
         public DateTime CheckOut { get; set; }
 
         [Required(ErrorMessage = "Number of guests is required")]
+        [Range(1, int.MaxValue, ErrorMessage = "The value must be greater than 0.")]
+
         [Display(Name = "Number of guests")]
         //The number of guests staying
         public Int32 NumOfGuests { get; set; }
 
         [Display(Name = "Weekday price")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value must be non-negative.")]
+
         [DisplayFormat(DataFormatString = "{0:C}")]
         //Stores weekday price of reservation
         public Decimal WeekdayPrice { get; set; }
 
         [Display(Name = "Weekend price")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value must be non-negative.")]
+
         [DisplayFormat(DataFormatString = "{0:C}")]
         //Stores weekend price of reservation
         public Decimal WeekendPrice { get; set; }
 
         [Display(Name = "Cleaning Fee")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value must be non-negative.")]
+
         [DisplayFormat(DataFormatString = "{0:C}")]
         //Stores cleaning fee for reservation
         public Decimal CleaningFee {  get; set; }

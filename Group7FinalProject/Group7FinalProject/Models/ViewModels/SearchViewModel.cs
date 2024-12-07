@@ -13,6 +13,8 @@ namespace Group7FinalProject.Models
 
         //Works
         [Display(Name = "State:")]
+        [RegularExpression(@"^[A-Z]{2}$", ErrorMessage = "State must be a valid two-letter abbreviation (e.g., TX, CA, NY).")]
+
         public string? SearchState { get; set; }
 
         //fix
