@@ -3,12 +3,17 @@
 }
 
 <div class="container text-center mt-5">
-    <h1 class="display-4 mb-3">Welcome to BevoBnB</h1>
+    <h1 class="display-4 mb-3" style="font-size: 6rem !important;">Welcome to BevoBnB</h1>
     <p class="lead">Your destination for unique stays in Austin and beyond!</p>
     <hr class="my-4" />
 
+    <div class="mt-4">
+        <img src="/images/Downtown2.jpg" alt="Downtown Austin" class="img-fluid" style="width: 70%; height: auto;">
+    </div>
+
+
     <!-- Buttons for Different User Actions -->
-    <div class="row mt-5">
+    <div class="row justify-content-center mt-5">
         <!-- Customer Section -->
         <div class="col-md-4">
             <h2>For Customers</h2>
@@ -25,13 +30,7 @@
             <a class="btn btn-secondary btn-lg mt-2" asp-action="Report" asp-controller="Reservations">View Reports</a>
         </div>
 
-        <!-- Administrator Section -->
-        <div class="col-md-4">
-            <h2>For Administrators</h2>
-            <p>Manage users, resolve disputes, and access system reports.</p>
-            <a class="btn btn-primary btn-lg" asp-action="Index" asp-controller="RoleAdmin">Manage Users</a>
-            <a class="btn btn-secondary btn-lg mt-2" asp-action="Report" asp-controller="Reservations">View Reports</a>
-        </div>
+
     </div>
 
     <!-- Call to Action -->

@@ -15,28 +15,16 @@
             @Html.DisplayFor(model => model.PropertyNumber)
         </dd>
         <dt class="col-sm-4 detail-header">
-            @Html.DisplayNameFor(model => model.Address)
+            Address
         </dt>
         <dd class="col-sm-8 detail-value">
-            @Html.DisplayFor(model => model.Address)
+            @($"{Model.Address}, {Model.City}, {Model.State} {Model.ZipCode}")
         </dd>
         <dt class="col-sm-4 detail-header">
-            @Html.DisplayNameFor(model => model.City)
+            @Html.DisplayNameFor(model => model.Category.CategoryName)
         </dt>
         <dd class="col-sm-8 detail-value">
-            @Html.DisplayFor(model => model.City)
-        </dd>
-        <dt class="col-sm-4 detail-header">
-            @Html.DisplayNameFor(model => model.State)
-        </dt>
-        <dd class="col-sm-8 detail-value">
-            @Html.DisplayFor(model => model.State)
-        </dd>
-        <dt class="col-sm-4 detail-header">
-            @Html.DisplayNameFor(model => model.ZipCode)
-        </dt>
-        <dd class="col-sm-8 detail-value">
-            @Html.DisplayFor(model => model.ZipCode)
+            @Html.DisplayFor(model => model.Category.CategoryName)
         </dd>
         <dt class="col-sm-4 detail-header">
             @Html.DisplayNameFor(model => model.NumOfBedrooms)
@@ -106,6 +94,7 @@
         </dd>
     </dl>
 
+    
     <table class="table table-primary">
         <tr>
             <th>Rating</th>
@@ -117,8 +106,8 @@
             @foreach (var rd in Model.Reviews.Where(rd => rd.DisputeStatus != DisputeStatus.ValidDispute && rd.DisputeStatus != DisputeStatus.Disputed))
             {
                 <tr>
-                    <td>@Html.DisplayFor(ModelItem => rd.Rating)</td>
-                    <td>@Html.DisplayFor(ModelItem => rd.ReviewText)</td>
+                    <td>@Html.DisplayFor(modelItem => rd.Rating)</td>
+                    <td>@Html.DisplayFor(modelItem => rd.ReviewText)</td>
                 </tr>
             }
         }
@@ -128,8 +117,8 @@
                 <td colspan="2" class="text-center">No reviews available.</td>
             </tr>
         }
-
     </table>
+    
 
 
     @if (ViewBag.AverageRating != null && (decimal)ViewBag.AverageRating != 0)
@@ -166,17 +155,8 @@
     </table>
 
 </div>
-<<<<<<< HEAD
 
 
-
-
-    <div class="details-buttons">
-        <a asp-action="Create" asp-controller="Reservations" asp-route-propertyID="@Model.PropertyID" class="btn btn-warning">Make a Reservation</a>
-        <a asp-action="Edit" asp-route-id="@Model?.PropertyID" class="btn btn-primary">Edit</a>
-        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
-    </div>
-=======
 <div class="details-buttons">
     <a asp-action="Create" asp-controller="Reservations" asp-route-propertyID="@Model.PropertyID" class="btn btn-warning">Make a Reservation</a>
     @if (User.Identity.IsAuthenticated && User.IsInRole("Host"))
@@ -187,4 +167,3 @@
     <a asp-action="Edit" asp-route-id="@Model?.PropertyID" class="btn btn-primary">Edit</a>
     <a asp-action="Index" class="btn btn-secondary">Back to List</a>
 </div>
->>>>>>> a1b433abbbf90e1cf73d543bfc21526662ad59af
