@@ -44,7 +44,7 @@
                 <td>@Html.DisplayFor(modelItem => item.ReservationStatus)</td>
                 <td>
                     <a asp-action="Details" asp-route-id="@item.ReservationID">Details</a>
-                    @if (item.ReservationStatus == ReservationStatus.Valid)
+                    @if (item.ReservationStatus == ReservationStatus.Valid && item.CheckIn > DateTime.Now)
                     {
                         <a asp-action="CancelReservation" asp-route-id="@item.ReservationID">| Cancel</a>
                     }

@@ -59,7 +59,7 @@
 
     <div>
         <!-- Conditionally show the Cancel button if the reservation is valid -->
-        @if (Model.ReservationStatus == ReservationStatus.Valid)
+        @if (Model.ReservationStatus == ReservationStatus.Valid && Model.CheckIn > DateTime.Now)
         {
             <a asp-action="CancelReservation" asp-route-id="@Model.ReservationID" class="btn btn-danger">Cancel</a>
         

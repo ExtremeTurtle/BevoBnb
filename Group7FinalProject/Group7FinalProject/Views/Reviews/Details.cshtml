@@ -1,52 +1,62 @@
 ﻿@model Group7FinalProject.Models.Review
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Review Details";
 }
 
-<h1>Details</h1>
-
-<div>
-    <h4>Review</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Rating)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Rating)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ReviewText)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ReviewText)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.HostComments)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.HostComments)
-        </dd>
-    </dl>
-</div>
-@if (User.IsInRole("Customer"))
-{
-    <div>
-
-        <a asp-action="Edit" asp-route-id="@Model.ReviewID" class="btn btn-primary">Edit</a>
-        
-        <a asp-action="Index">Back to List</a>
+<div class="container mt-4">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h3 class="card-title">Review Details</h3>
+        </div>
+        <div class="card-body">
+            <h4 class="mb-3">Review Information</h4>
+            <dl class="row">
+                <dt class="col-sm-3 font-weight-bold">
+                    @Html.DisplayNameFor(model => model.Rating)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Rating)
+                </dd>
+                <dt class="col-sm-3 font-weight-bold">
+                    @Html.DisplayNameFor(model => model.ReviewText)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.ReviewText)
+                </dd>
+                <dt class="col-sm-3 font-weight-bold">
+                    @Html.DisplayNameFor(model => model.HostComments)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.HostComments)
+                </dd>
+            </dl>
+        </div>
+        <div class="card-footer text-right">
+            @if (User.IsInRole("Customer"))
+            {
+                <a asp-action="Edit" asp-route-id="@Model.ReviewID" class="btn btn-warning mr-2">
+                    <i class="fa fa-edit"></i> Edit
+                </a>
+                <a asp-action="Index" class="btn btn-secondary">
+                    <i class="fa fa-list"></i> Back to List
+                </a>
+            }
+            @if (User.IsInRole("Host"))
+            {
+                <a asp-action="MakeHostComment" class="btn btn-success mr-2">
+                    <i class="fa fa-comment"></i> Add Host Comment
+                </a>
+                <a asp-action="Index" class="btn btn-secondary">
+                    <i class="fa fa-list"></i> Back to List
+                </a>
+            }
+            @if (!User.IsInRole("Customer") && !User.IsInRole("Host"))
+            {
+                <a asp-action="Index" class="btn btn-secondary">
+                    <i class="fa fa-list"></i> Back to List
+                </a>
+            }
+        </div>
     </div>
-}
-@if (User.IsInRole("Host"))
-{
-    <div>
-        <a asp-action="MakeHostComment">Add Host Comment</a>
-        <a asp-action="Index">Back to List</a>
-    </div>
-}
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>

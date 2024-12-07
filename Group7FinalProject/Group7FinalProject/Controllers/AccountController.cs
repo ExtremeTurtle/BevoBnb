@@ -324,6 +324,13 @@ namespace Group7FinalProject.Controllers
                 return View(model);
             }
 
+            // Validate the user's age
+            if (model.Birthday.AddYears(18) > DateTime.Today)
+            {
+                ModelState.AddModelError("Birthday", "You must be at least 18 years old.");
+                return View(model); // Return the form with the error message
+            }
+
             // Get the logged-in user
             AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
 

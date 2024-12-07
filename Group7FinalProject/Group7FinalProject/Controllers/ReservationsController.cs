@@ -42,6 +42,8 @@ namespace Group7FinalProject.Controllers
                                 .Include(r => r.Property)
                                 .Where(r => r.Property.User.UserName == User.Identity.Name)
                                 .Where(r => r.ReservationStatus == ReservationStatus.Valid || r.ReservationStatus == ReservationStatus.Cancelled)
+                                                        .OrderBy(r => r.CheckIn) // Sort by Check-In date
+
                                 .ToList();
             }
             else
@@ -51,6 +53,8 @@ namespace Group7FinalProject.Controllers
                                 .Include(r => r.Property)
                                 .Where(r => r.User.UserName == User.Identity.Name)
                                 .Where(r => r.ReservationStatus == ReservationStatus.Valid || r.ReservationStatus == ReservationStatus.Cancelled)
+                                                        .OrderBy(r => r.CheckIn) // Sort by Check-In date
+
                                 .ToList();
             }
 
