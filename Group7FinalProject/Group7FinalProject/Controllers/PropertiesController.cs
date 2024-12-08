@@ -36,9 +36,7 @@ namespace Group7FinalProject.Controllers
                                                 .ToList();
 
             // Count total and filtered properties for display
-            ViewBag.TotalProperties = _context.Properties
-    .Where(p => p.PropertyStatus == PropertyStatus.Approved && p.ActiveStatus == Active.Active)
-    .Count();
+            ViewBag.TotalProperties = _context.Properties.Count();
             ViewBag.FilteredProperties = properties.Count;
 
             return View(properties);
@@ -52,9 +50,6 @@ namespace Group7FinalProject.Controllers
                                                 .Include(p => p.User)
                                                 .Where(p => p.User.UserName == User.Identity.Name)
                                                 .ToList();
-
-            ViewBag.TotalProperties = _context.Properties.Count();
-            ViewBag.FilteredProperties = properties.Count;
 
             return View("Index", properties);
         }
@@ -71,7 +66,6 @@ namespace Group7FinalProject.Controllers
                                               .Include(p => p.Reviews) // Include reviews for ratings
                                               .Include(p => p.Reservations)
                                               .Include(p => p.Unavailabilities)
-                                              .Include(p => p.User)
                                               .FirstOrDefaultAsync(m => m.PropertyID == id);
 
             if (property == null)
