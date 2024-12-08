@@ -74,45 +74,48 @@ namespace Group7FinalProject.Models
 
 
         // Calculated values
-        [NotMapped] // Exclude from database mapping
+        [NotMapped]
+        [DisplayFormat(DataFormatString = "{0:C}")]
+        [Display(Name = "Weekday Total")]
+        public decimal WeekdayTotal { get; private set; }
 
-        [DisplayFormat(DataFormatString = "{0:c}")]
-        [Display(Name = "Base Price")]
-        public decimal BasePrice { get; private set; }
+        [NotMapped]
+        [DisplayFormat(DataFormatString = "{0:C}")]
+        [Display(Name = "Weekend Total")]
+        public decimal WeekendTotal { get; private set; }
 
-        [NotMapped] // Exclude from database mapping
+        [NotMapped]
+        [DisplayFormat(DataFormatString = "{0:C}")]
+        [Display(Name = "Discount Amount")]
+        public decimal DiscountAmount { get; private set; }
 
-        [DisplayFormat(DataFormatString = "{0:c}")]
+        [NotMapped]
+        [DisplayFormat(DataFormatString = "{0:C}")]
+        [Display(Name = "Stay Price")]
+        public decimal StayPrice { get; private set; }
+
+        [NotMapped]
+        [DisplayFormat(DataFormatString = "{0:C}")]
         [Display(Name = "Subtotal")]
         public decimal SubTotal { get; private set; }
 
-        [NotMapped] // Exclude from database mapping
-
-        [DisplayFormat(DataFormatString = "{0:c}")]
-        [Display(Name = "Discount")]
-        public decimal Discount { get; private set; }
-
-        [NotMapped] // Exclude from database mapping
-
-
-        [DisplayFormat(DataFormatString = "{0:c}")]
-        [Display(Name = "Total Price")]
-        public decimal TotalPrice { get; private set; }
-
-        [NotMapped] // Exclude from database mapping
-
-
-        [DisplayFormat(DataFormatString = "{0:c}")]
+        [NotMapped]
+        [DisplayFormat(DataFormatString = "{0:C}")]
         [Display(Name = "Tax")]
         public decimal Tax { get; private set; }
+
+        [NotMapped]
+        [DisplayFormat(DataFormatString = "{0:C}")]
+        [Display(Name = "Total Price")]
+        public decimal TotalPrice { get; private set; }
 
         // Method to calculate totals
         public void CalcTotals()
         {
-            // Calculate number of days
-            int totalDays = (CheckOut - CheckIn).Days + 1;
+            // Calculate the number of days
+            int totalDays = (CheckOut - CheckIn).Days;
 
-            // Calculate weekday and weekend counts
+            // Count weekdays and weekends
             int weekdayCount = 0, weekendCount = 0;
             for (DateTime date = CheckIn; date < CheckOut; date = date.AddDays(1))
             {
@@ -126,26 +129,34 @@ namespace Group7FinalProject.Models
                 }
             }
 
-            // Calculate base price
-            BasePrice = (weekdayCount * WeekdayPrice) + (weekendCount * WeekendPrice);
-          
+            // Calculate weekday and weekend totals
+            WeekdayTotal = weekdayCount * WeekdayPrice;
+            WeekendTotal = weekendCount * WeekendPrice;
 
             // Calculate discount
-            if (totalDays >= Property.MinNightsForDiscount)
+            if (totalDays >= Property?.MinNightsForDiscount)
             {
-                Discount = BasePrice * (Property.DiscountRate / 100);
+                DiscountAmount = (WeekdayTotal + WeekendTotal) * DiscountRate;
             }
             else
             {
-                Discount = 0;
+                DiscountAmount = 0;
             }
 
-            SubTotal = BasePrice - Discount + CleaningFee;
-            Tax = SubTotal * (TAX_RATE / 100);
-            // Calculate total price (cleaning fee included, sales tax applied)
+            // Calculate stay price
+            StayPrice = (WeekdayTotal + WeekendTotal) - DiscountAmount;
+
+            // Calculate subtotal
+            SubTotal = StayPrice + CleaningFee;
+
+            // Calculate tax
+            Tax = SubTotal * (TAX_RATE/100);
+
+            // Calculate total price (reservation total)
             TotalPrice = SubTotal + Tax;
         }
+
     }
 
-        
+
 }

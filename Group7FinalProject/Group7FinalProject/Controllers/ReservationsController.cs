@@ -58,6 +58,11 @@ namespace Group7FinalProject.Controllers
                                 .ToList();
             }
 
+            foreach (var reservation in reservations)
+            {
+                reservation.CalcTotals();
+            }
+
             // Check if the reservations list is empty
             if (reservations == null || !reservations.Any())
             {
@@ -453,6 +458,7 @@ namespace Group7FinalProject.Controllers
             return sl;
 
         }
+
         [HttpGet]
         [Authorize(Roles = "Admin,Host")]
         public async Task<IActionResult> Report(DateTime? startDate, DateTime? endDate)
@@ -497,9 +503,9 @@ namespace Group7FinalProject.Controllers
                         .Select(group => new
                         {
                             PropertyName = group.Key.PropertyNumber,
-                            TotalStayRevenue = group.Sum(r => ((r.BasePrice - r.Discount) * 0.9m)), // Host earns 90% of stay revenue after discount
+                            TotalStayRevenue = group.Sum(r => r.StayPrice * 0.9m), // Host earns 90% of stay revenue
                             TotalCleaningFees = group.Sum(r => r.CleaningFee), // Host earns 100% of cleaning fees
-                            CombinedRevenue = group.Sum(r => ((r.BasePrice - r.Discount) * 0.9m) + r.CleaningFee),
+                            CombinedRevenue = group.Sum(r => (r.StayPrice * 0.9m) + r.CleaningFee),
                             CompletedReservations = group.Count()
                         }).ToList();
 
@@ -510,7 +516,7 @@ namespace Group7FinalProject.Controllers
             if (User.IsInRole("Admin"))
             {
                 // Admin-specific calculations
-                var totalCommission = validReservations.Sum(r => ((r.BasePrice - r.Discount) * 0.1m));
+                var totalCommission = validReservations.Sum(r => r.StayPrice * 0.1m); // 10% commission on stay price
                 var totalReservations = validReservations.Count;
                 var averageCommission = totalReservations > 0 ? totalCommission / totalReservations : 0;
                 var totalProperties = _context.Properties.Count();
@@ -522,7 +528,7 @@ namespace Group7FinalProject.Controllers
             }
 
             // Calculate total revenue for valid reservations
-            var totalRevenue = validReservations.Sum(r => (r.BasePrice - r.Discount) + r.CleaningFee);
+            var totalRevenue = validReservations.Sum(r => r.TotalPrice);
 
             // Pass data to the view
             ViewBag.AllReservations = allReservations; // All reservations, regardless of status
@@ -532,6 +538,7 @@ namespace Group7FinalProject.Controllers
 
             return View();
         }
+
 
 
 

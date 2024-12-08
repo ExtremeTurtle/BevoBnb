@@ -2,50 +2,77 @@
 
 <h2>Checkout Summary</h2>
 
-<!-- Table to display reservations -->
-<table class="table">
-    <thead>
-        <tr>
-            <th>Property</th>
-            <th>Check-In Date</th>
-            <th>Check-Out Date</th>
-            <th>Number of Guests</th>
-            <th>Base Price</th>
-            <th>Discount</th>
-            <th>Cleaning Fee</th>
-            <th>Subtotal</th>
-            <th>Tax</th>
-            <th>Total Price</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var reservation in Model)
-        {
+@if (!Model.Any())
+{
+    <div class="alert alert-warning" role="alert">
+        Your cart is empty. Please add reservations before proceeding to checkout.
+    </div>
+}
+else
+{
+    <!-- Table to display reservations -->
+    <table class="table table-bordered">
+        <thead>
             <tr>
-                <td>@reservation.Property.PropertyNumber</td>
-                <td>@reservation.CheckIn.ToShortDateString()</td>
-                <td>@reservation.CheckOut.ToShortDateString()</td>
-                <td>@reservation.NumOfGuests</td>
-                <td>@reservation.BasePrice.ToString("C")</td>
-                <td>@reservation.Discount.ToString("C")</td>
-                <td>@reservation.CleaningFee.ToString("C")</td>
-                <td>@reservation.SubTotal.ToString("C")</td>
-                <td>@reservation.Tax.ToString("C")</td>
-                <td>@reservation.TotalPrice.ToString("C")</td>
+                <th>Property</th>
+                <th>Check-In Date</th>
+                <th>Check-Out Date</th>
+                <th>Number of Guests</th>
+                <th>Weekday Total</th>
+                <th>Weekend Total</th>
+                <th>Discount</th>
+                <th>Stay Price</th>
+                <th>Cleaning Fee</th>
+                <th>Subtotal</th>
+                <th>Tax</th>
+                <th>Total Price</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var reservation in Model)
+            {
+                <tr>
+                    <td>
+                        @if (reservation.Property != null)
+                        {
+                            @reservation.Property.PropertyNumber
+                        }
+                        else
+                        {
+                            <span class="text-danger">N/A</span>
+                        }
+                    </td>
+                    <td>@reservation.CheckIn.ToShortDateString()</td>
+                    <td>@reservation.CheckOut.ToShortDateString()</td>
+                    <td>@reservation.NumOfGuests</td>
+                    <td>@reservation.WeekdayTotal.ToString("C")</td>
+                    <td>@reservation.WeekendTotal.ToString("C")</td>
+                    <td>@reservation.DiscountAmount.ToString("C")</td>
+                    <td>@reservation.StayPrice.ToString("C")</td>
+                    <td>@reservation.CleaningFee.ToString("C")</td>
+                    <td>@reservation.SubTotal.ToString("C")</td>
+                    <td>@reservation.Tax.ToString("C")</td>
+                    <td>@reservation.TotalPrice.ToString("C")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 
-<!-- Summary of totals -->
-<h3>Order Summary</h3>
-<p><strong>Grand Subtotal:</strong> @ViewBag.GrandSubTotal.ToString("C")</p>
-<p><strong>Grand Tax:</strong> @ViewBag.GrandTax.ToString("C")</p>
-<p><strong>Grand Total:</strong> @ViewBag.GrandTotal.ToString("C")</p>
+    <!-- Summary of totals -->
+    <div class="mt-4">
+        <h3>Order Summary</h3>
+        <div class="border p-3 rounded bg-light">
+            <p><strong>Grand Subtotal:</strong> @ViewBag.GrandSubTotal?.ToString("C")</p>
+            <p><strong>Grand Tax:</strong> @ViewBag.GrandTax?.ToString("C")</p>
+            <p><strong>Grand Total:</strong> @ViewBag.GrandTotal?.ToString("C")</p>
+        </div>
+    </div>
 
-<!-- Checkout actions -->
-<form asp-action="ConfirmCheckout" method="post">
-    <button type="submit" class="btn btn-success">Confirm Purchase</button>
-</form>
-
-<a asp-action="Index" class="btn btn-secondary">Back to Cart</a>
+    <!-- Checkout actions -->
+    <div class="mt-4">
+        <form asp-action="ConfirmCheckout" method="post" class="d-inline">
+            <button type="submit" class="btn btn-success">Confirm Purchase</button>
+        </form>
+        <a asp-action="Index" class="btn btn-secondary">Back to Cart</a>
+    </div>
+}

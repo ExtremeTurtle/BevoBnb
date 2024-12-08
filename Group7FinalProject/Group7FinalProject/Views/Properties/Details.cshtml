@@ -131,28 +131,30 @@
     }
 
 
-    <table class="table table-primary">
-        <tr>
-            <th>Confirmation Number</th>
-            <th>Check In</th>
-            <th>Check Out</th>
-            <th>Guests</th>
-            <th>Total Price</th>
-            <th>Status</th>
-        </tr>
-        @foreach (Reservation res in Model.Reservations)
-        {
+    @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin") || User.IsInRole("Host")))
+    {
+        <table class="table table-primary">
             <tr>
-                <td>@Html.DisplayFor(ModelItem => res.ConfirmationNumber)</td>
-                <td>@Html.DisplayFor(ModelItem => res.CheckIn)</td>
-                <td>@Html.DisplayFor(ModelItem => res.CheckOut)</td>
-                <td>@Html.DisplayFor(ModelItem => res.NumOfGuests)</td>
-                <td>@Html.DisplayFor(ModelItem => res.TotalPrice)</td>
-                <td>@Html.DisplayFor(ModelItem => res.ReservationStatus)</td>
-
+                <th>Confirmation Number</th>
+                <th>Check In</th>
+                <th>Check Out</th>
+                <th>Guests</th>
+                <th>Total Price</th>
+                <th>Status</th>
             </tr>
-        }
-    </table>
+            @foreach (Reservation res in Model.Reservations)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(ModelItem => res.ConfirmationNumber)</td>
+                    <td>@Html.DisplayFor(ModelItem => res.CheckIn)</td>
+                    <td>@Html.DisplayFor(ModelItem => res.CheckOut)</td>
+                    <td>@Html.DisplayFor(ModelItem => res.NumOfGuests)</td>
+                    <td>@Html.DisplayFor(ModelItem => res.TotalPrice)</td>
+                    <td>@Html.DisplayFor(ModelItem => res.ReservationStatus)</td>
+                </tr>
+            }
+        </table>
+    }
 
 </div>
 
