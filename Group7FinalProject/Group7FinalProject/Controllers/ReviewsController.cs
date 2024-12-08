@@ -243,6 +243,8 @@ namespace Group7FinalProject.Controllers
                 //update the properties scalar properties
                 dbReview.Rating = review.Rating;
                 dbReview.ReviewText = string.IsNullOrEmpty(review.ReviewText) ? null : review.ReviewText;
+                dbReview.DisputeStatus = DisputeStatus.NoDispute;
+
 
 
                 //save the changes

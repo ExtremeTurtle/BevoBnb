@@ -259,8 +259,8 @@ namespace Group7FinalProject.Controllers
             {
                 SelectedCategory = 0,             // Default to "All Categories"
                 SearchPetsAllowed = false,        // Default to no pets allowed
-                SearchCheckInDate = DateTime.Now, // Default to today
-                SearchCheckOutDate = DateTime.Now.AddDays(1) // Default to tomorrow
+                SearchCheckInDate = null,  // No default check-in date
+                SearchCheckOutDate = null  // No default check-out date
             };
 
             return View(svm);
@@ -269,12 +269,15 @@ namespace Group7FinalProject.Controllers
         [HttpPost]
         public IActionResult DisplaySearchResults(SearchViewModel svm)
         {
+
             // Start building the query to select all properties
             var query = from p in _context.Properties
                         .Include(p => p.Category)
-                        .Include(p => p.Unavailabilities)// Include the Category navigation property
+                        .Include(p => p.Unavailabilities)
                         .Include(p => p.Reviews)
+                        where p.PropertyStatus == PropertyStatus.Approved && p.ActiveStatus == Active.Active // Filter approved and active properties
                         select p;
+
 
             // Filter by City if provided
             if (!string.IsNullOrEmpty(svm.SearchCity))
@@ -366,12 +369,36 @@ namespace Group7FinalProject.Controllers
                 query = query.Where(p => p.HasParking == true);
             }
 
-            ////TODO Filter by Check-In and Check-Out Dates --> Figure out logic for searching by dates where property is available
-            //if (svm.SearchCheckInDate.HasValue && svm.SearchCheckOutDate.HasValue)
-            //{
-            //    query = query.Where(p => p.Unavailabilities. <= svm.SearchCheckInDate &&
-            //                             p.AvailableTo >= svm.SearchCheckOutDate);
-            //}
+            if (svm.SearchCheckInDate.HasValue && svm.SearchCheckOutDate.HasValue)
+            {
+                // Ensure the check-in date is not in the past
+                if (svm.SearchCheckInDate.HasValue && svm.SearchCheckInDate < DateTime.Now.Date)
+                {
+                    ModelState.AddModelError("", "Check-In Date cannot be in the past.");
+                    ViewBag.AllCategories = GetAllCategoriesSelectList(); // Re-populate categories dropdown
+                    return View("DetailedSearch", svm); // Return to the search form with the validation error
+                }
+
+                // Ensure the check-in date is earlier than the check-out date
+                if (svm.SearchCheckInDate.HasValue && svm.SearchCheckOutDate.HasValue &&
+                    svm.SearchCheckInDate >= svm.SearchCheckOutDate)
+                {
+                    ModelState.AddModelError("", "Check-In Date must be earlier than Check-Out Date.");
+                    ViewBag.AllCategories = GetAllCategoriesSelectList(); // Re-populate categories dropdown
+                    return View("DetailedSearch", svm); // Return to the search form with the validation error
+                }
+               
+
+                // Create a list of all dates in the desired range
+                var searchDateRange = Enumerable.Range(0, 1 + svm.SearchCheckOutDate.Value.Subtract(svm.SearchCheckInDate.Value).Days)
+                                                .Select(offset => svm.SearchCheckInDate.Value.AddDays(offset))
+                                                .ToList();
+
+                // Filter properties based on availability
+                query = query.Where(p => !p.Unavailabilities.Any(u => searchDateRange.Contains(u.UnavailableDate)));
+            }
+
+
 
             // Execute the query
             var selectedProperties = query.ToList();

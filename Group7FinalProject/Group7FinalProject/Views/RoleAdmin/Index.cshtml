@@ -3,7 +3,6 @@
     <div style="overflow-x: auto; max-height: 400px;">
         <table class="table table-striped">
             <tr>
-                <th>ID</th>
                 <th>Name</th>
                 <th>Users</th>
                 <th></th>
@@ -19,7 +18,6 @@
                 foreach (RoleEditModel role in Model)
                 {
                     <tr>
-                        <td>@role.Role.Id</td>
                         <td>@role.Role.Name</td>
                         <td>
                             @if (role.RoleMembers == null || role.RoleMembers.Count() == 0)
@@ -28,7 +26,14 @@
                             }
                             else
                             {
-                                <p>@string.Join(", ", role.RoleMembers.Select(x => x.Email))</p>
+                                @if (role.Role.Name == "Admin") 
+                                {
+                                    <p>@string.Join(", ", role.RoleMembers.Select(x => $"{x.Email} ({x.HireStatus})"))</p>
+                                }
+                                else 
+                                {
+                                    <p>@string.Join(", ", role.RoleMembers.Select(x => x.Email))</p>
+                                }
                             }
                         </td>
                         <td>
@@ -40,4 +45,4 @@
         </table>
     </div>
 </div>
-@Html.ActionLink("Create", "Create", null, new { @class = "btn btn-primary" })
+

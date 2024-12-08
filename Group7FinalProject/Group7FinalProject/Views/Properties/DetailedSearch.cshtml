@@ -102,6 +102,17 @@
                 <input class="form-check-input" asp-for="SearchFreeParking" />
                 @Html.DisplayNameFor(model => model.SearchFreeParking)
             </label>
+            <div class="form-group">
+                <label asp-for="SearchCheckInDate"></label>
+                <input asp-for="SearchCheckInDate" class="form-control" type="date" />
+                <span asp-validation-for="SearchCheckInDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SearchCheckOutDate"></label>
+                <input asp-for="SearchCheckOutDate" class="form-control" type="date" />
+                <span asp-validation-for="SearchCheckOutDate" class="text-danger"></span>
+            </div>
 
             <br />
 

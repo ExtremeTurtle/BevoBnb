@@ -14,8 +14,10 @@
             <th>Check-In Date</th>
             <th>Check-Out Date</th>
             <th>Number of Guests</th>
-            <th>Base Price</th>
-            <th>Discount</th>
+            <th>Weekday Total</th>
+            <th>Weekend Total</th>
+            <th>Discount Amount</th>
+            <th>Stay Price</th>
             <th>Cleaning Fee</th>
             <th>Subtotal</th>
             <th>Tax</th>
@@ -28,8 +30,10 @@
             <td>@Model.CheckIn.ToShortDateString()</td>
             <td>@Model.CheckOut.ToShortDateString()</td>
             <td>@Model.NumOfGuests</td>
-            <td>@Model.BasePrice.ToString("C")</td>
-            <td>@Model.Discount.ToString("C")</td>
+            <td>@Model.WeekdayTotal.ToString("C")</td>
+            <td>@Model.WeekendTotal.ToString("C")</td>
+            <td>@Model.DiscountAmount.ToString("C")</td>
+            <td>@Model.StayPrice.ToString("C")</td>
             <td>@Model.CleaningFee.ToString("C")</td>
             <td>@Model.SubTotal.ToString("C")</td>
             <td>@Model.Tax.ToString("C")</td>
@@ -55,21 +59,21 @@
         <td>@Html.DisplayFor(ModelItem => Model.Property.PetFriendly)</td>
         <td>@Html.DisplayFor(ModelItem => Model.Property.HasParking)</td>
     </tr>
-    
+</table>
 
-    <div>
-        <!-- Conditionally show the Cancel button if the reservation is valid -->
-        @if (Model.ReservationStatus == ReservationStatus.Valid)
-        {
-            <a asp-action="CancelReservation" asp-route-id="@Model.ReservationID" class="btn btn-danger">Cancel</a>
-        
-        @if (User.Identity.IsAuthenticated && User.IsInRole("Customer"))
-{
+<div>
+    <!-- Conditionally show the Cancel button if the reservation is valid -->
+    @if (Model.ReservationStatus == ReservationStatus.Valid && Model.CheckIn > DateTime.Now)
+    {
+        <a asp-action="CancelReservation" asp-route-id="@Model.ReservationID" class="btn btn-danger">Cancel</a>
+    }
+
+    @if (User.Identity.IsAuthenticated && User.IsInRole("Customer"))
+    {
         <a asp-controller="Reviews" asp-action="Create" asp-route-propertyId="@Model.Property.PropertyID" class="btn btn-primary">
             Write Review
-
         </a>
-}
-}
-        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
-    </div>
+    }
+
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>

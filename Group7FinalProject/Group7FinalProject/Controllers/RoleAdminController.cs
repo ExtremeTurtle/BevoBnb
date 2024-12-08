@@ -1,11 +1,13 @@
 ﻿//TODO: Change these using statements to match your project
 using Group7FinalProject.DAL;
 using Group7FinalProject.Models;
+using Group7FinalProject.Utilities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Intrinsics.Arm;
 using System.Threading.Tasks;
 
 //TODO: Change this namespace to match your project
@@ -16,18 +18,20 @@ namespace Group7FinalProject.Controllers
     public class RoleAdminController : Controller
     {
         //create private variables for the services needed in this controller
+        private SignInManager<AppUser> _signInManager;
         private AppDbContext _context;
         private UserManager<AppUser> _userManager;
         private RoleManager<IdentityRole> _roleManager;
 
 
         //RoleAdminController constructor
-        public RoleAdminController(AppDbContext appDbContext, UserManager<AppUser> userManager, RoleManager<IdentityRole> roleManager)
+        public RoleAdminController(AppDbContext appDbContext, UserManager<AppUser> userManager, SignInManager<AppUser> signIn, RoleManager<IdentityRole> roleManager)
         {
             //populate the values of the variables passed into the controller
             _context = appDbContext;
             _userManager = userManager;
             _roleManager = roleManager;
+            _signInManager = signIn;
         }
 
         // GET: /RoleAdmin/
@@ -148,63 +152,295 @@ namespace Group7FinalProject.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Edit(RoleModificationModel rmm)
+        public async Task<IActionResult> Edit(RoleModificationModel rmm)
         {
-            //create a result to refer to later
+            if (rmm.RoleName == "Admin")
+            {
+                // Restrict modifications to role membership for Admin
+                return Unauthorized("Modifying Admin role membership is not allowed.");
+            }
+
+            // Continue normal role editing for non-admin roles
             IdentityResult result;
 
-            //if RoleModificationModel is valid, add new users
             if (ModelState.IsValid)
             {
-                //if there are users to add, then add them
                 if (rmm.IdsToAdd != null)
                 {
                     foreach (string userId in rmm.IdsToAdd)
                     {
-                        //find the user in the database using their id
                         AppUser user = await _userManager.FindByIdAsync(userId);
-
-                        //attempt to add the user to the role using the UserManager
                         result = await _userManager.AddToRoleAsync(user, rmm.RoleName);
 
-                        //if attempt to add user to role didn't work, show user the error page
-                        if (result.Succeeded == false)
+                        if (!result.Succeeded)
                         {
-                            //send user to error page
                             return View("Error", result.Errors);
                         }
                     }
                 }
 
-                //if there are users to remove from the role, remove them
                 if (rmm.IdsToDelete != null)
                 {
-                    //loop through all the ids to remove from role
                     foreach (string userId in rmm.IdsToDelete)
                     {
-                        //find the user in the database using their id
                         AppUser user = await _userManager.FindByIdAsync(userId);
-
-                        //attempt to remove the user from the role using the UserManager
                         result = await _userManager.RemoveFromRoleAsync(user, rmm.RoleName);
 
-                        //if attempt to remove the user from role didn't work, show the error page
-                        if (result.Succeeded == false)
+                        if (!result.Succeeded)
                         {
-                            //show user the error page
                             return View("Error", result.Errors);
                         }
                     }
                 }
 
-                //this is the happy path - all edits worked
-                //take the user back to the RoleAdmin Index page
                 return RedirectToAction("Index");
             }
 
-            //this is a sad path - the role was not found
-            //show the user the error page
-            return View("Error", new string[] { "Role Not Found" });
+            return View("Error", new string[] { "Role not found" });
         }
+
+
+        [HttpPost]
+        public async Task<IActionResult> FireAdmin(string userId)
+        {
+            // Find the user by ID
+            AppUser admin = await _userManager.FindByIdAsync(userId);
+
+            if (admin == null)
+            {
+                return NotFound();
+            }
+
+            // Update the HireStatus to Fired
+            admin.HireStatus = HireStatus.Fired;
+
+            // Save the changes
+            var result = await _userManager.UpdateAsync(admin);
+
+            if (!result.Succeeded)
+            {
+                // If there were errors, display them
+                return View("Error", result.Errors);
+            }
+
+            return RedirectToAction("Index", "RoleAdmin");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RehireAdmin(string userId)
+        {
+            // Find the user by ID
+            AppUser admin = await _userManager.FindByIdAsync(userId);
+
+            if (admin == null)
+            {
+                return NotFound();
+            }
+
+            // Update the HireStatus to Employed
+            admin.HireStatus = HireStatus.Employed;
+
+            // Save the changes
+            var result = await _userManager.UpdateAsync(admin);
+
+            if (!result.Succeeded)
+            {
+                // If there were errors, display them
+                return View("Error", result.Errors);
+            }
+
+            return RedirectToAction("Index", "RoleAdmin");
+        }
+
+        [HttpGet]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> EditUserProfile(string email)
+        {
+            // Find the user by email
+            AppUser user = await _userManager.FindByEmailAsync(email);
+
+            if (user == null)
+            {
+                return View("Error", new string[] { "User not found." });
+            }
+
+            // Populate the EditUserProfileViewModel
+            EditUserProfileViewModel model = new EditUserProfileViewModel
+            {
+                Email = user.Email,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                PhoneNumber = user.PhoneNumber,
+                Address = user.Address,
+                Birthday = user.Birthday
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditUserProfile(EditUserProfileViewModel model, string? newPassword)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            // Validate that the user is at least 18 years old
+            if (model.Birthday.AddYears(18) > DateTime.Today)
+            {
+                ModelState.AddModelError("Birthday", "The user must be at least 18 years old.");
+                return View(model); // Return the view with the validation error
+            }
+
+            // Find the user by email
+            AppUser user = await _userManager.FindByEmailAsync(model.Email);
+
+            if (user == null)
+            {
+                return View("Error", new string[] { "User not found." });
+            }
+
+            // Update user properties
+            user.FirstName = model.FirstName;
+            user.LastName = model.LastName;
+            user.PhoneNumber = model.PhoneNumber;
+            user.Address = model.Address;
+            user.Birthday = model.Birthday;
+
+            // Save profile changes
+            var updateResult = await _userManager.UpdateAsync(user);
+
+            if (!updateResult.Succeeded)
+            {
+                foreach (var error in updateResult.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+                return View(model);
+            }
+
+            // Update password if provided
+            if (!string.IsNullOrEmpty(newPassword))
+            {
+                // Generate password reset token
+                var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+                // Reset the password
+                var passwordResult = await _userManager.ResetPasswordAsync(user, token, newPassword);
+
+                if (!passwordResult.Succeeded)
+                {
+                    foreach (var error in passwordResult.Errors)
+                    {
+                        ModelState.AddModelError("", error.Description);
+                    }
+                    return View(model);
+                }
+            }
+
+            ViewBag.Message = "User profile updated successfully!";
+            return RedirectToAction("Index", "RoleAdmin");
+        }
+
+
+
+        [HttpGet]
+        [Authorize(Roles = "Admin")]
+        public IActionResult CreateAdmin()
+        {
+            return View(new RegisterViewModel
+            {
+                Role = "Admin" // Pre-fill the role field for admins
+            });
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateAdmin(RegisterViewModel rvm)
+        {
+            //if registration data is valid, create a new user on the database
+            if (ModelState.IsValid == false)
+            {
+                //this is the sad path - something went wrong, 
+                //return the user to the register page to try again
+                return View(rvm);
+            }
+
+            // Validate that the user is at least 18 years old
+            if (rvm.Birthday.AddYears(18) > DateTime.Today)
+            {
+                ModelState.AddModelError("Birthday", "You must be at least 18 years old to register.");
+                return View(rvm); // Return the view with the validation error
+            }
+
+            // Check if an account with the same email already exists
+            var existingUser = await _userManager.FindByEmailAsync(rvm.Email);
+            if (existingUser != null)
+            {
+                ModelState.AddModelError("Email", "An account with this email already exists.");
+                return View(rvm); // Return the view with the validation error
+            }
+            //this code maps the RegisterViewModel to the AppUser domain model
+            AppUser newUser = new AppUser
+            {
+                UserName = rvm.Email,
+                Email = rvm.Email,
+                PhoneNumber = rvm.PhoneNumber,
+
+                //TODO: Add the rest of the custom user fields here
+                //FirstName is included as an example
+                FirstName = rvm.FirstName,
+                LastName = rvm.LastName,
+                Birthday = rvm.Birthday,
+                Address = rvm.Address,
+                HireStatus = HireStatus.Employed
+
+
+
+            };
+
+            //create AddUserModel
+            AddUserModel aum = new AddUserModel()
+            {
+                User = newUser,
+                Password = rvm.Password,
+
+
+
+                //TODO: You will need to change this value if you want to 
+                //add the user to a different role - just specify the role name.
+                RoleName = rvm.Role
+            };
+
+            //This code uses the AddUser utility to create a new user with the specified password
+            IdentityResult result = await Utilities.AddUser.AddUserWithRoleAsync(aum, _userManager, _context);
+
+            if (result.Succeeded) //everything is okay
+            {
+                //NOTE: This code logs the user into the account that they just created
+                //You may or may not want to log a user in directly after they register - check
+                //the business rules!
+                Microsoft.AspNetCore.Identity.SignInResult result2 = await _signInManager.PasswordSignInAsync(rvm.Email, rvm.Password, false, lockoutOnFailure: false);
+
+                //Send the user to the home page
+                return RedirectToAction("Index", "RoleAdmin");
+            }
+            else  //the add user operation didn't work, and we need to show an error message
+            {
+                foreach (IdentityError error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+
+                //send user back to page with errors
+                return View(rvm);
+            }
+        }
+
+
     }
 }

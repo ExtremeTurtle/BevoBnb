@@ -1,16 +1,19 @@
-﻿
-<h2>Reservation Confirmation</h2>
+﻿<h2>Reservation Confirmation</h2>
 
 <p>Thank you for your purchase! Below is your confirmation number and the details of your reservations:</p>
 <p><strong>Confirmation Number:</strong> @ViewBag.ConfirmationNumber</p>
 
+<!-- Reservations Table -->
 <table class="table">
     <thead>
         <tr>
             <th>Property</th>
+            <th>Address</th>
             <th>Check-In Date</th>
             <th>Check-Out Date</th>
             <th>Number of Guests</th>
+            <th>Subtotal</th>
+            <th>Tax</th>
             <th>Total Price</th>
         </tr>
     </thead>
@@ -19,13 +22,22 @@
         {
             <tr>
                 <td>@reservation.Property.PropertyNumber</td>
+                <td>@($"{reservation.Property.Address}, {reservation.Property.City}, {reservation.Property.State} {reservation.Property.ZipCode}")</td>
                 <td>@reservation.CheckIn.ToShortDateString()</td>
                 <td>@reservation.CheckOut.ToShortDateString()</td>
                 <td>@reservation.NumOfGuests</td>
+                <td>@reservation.SubTotal.ToString("C")</td>
+                <td>@reservation.Tax.ToString("C")</td>
                 <td>@reservation.TotalPrice.ToString("C")</td>
             </tr>
         }
     </tbody>
 </table>
-<a asp-action="Index" asp-controller="Properties" class="btn btn-warning">Return to Home</a>
 
+
+
+<!-- Action Buttons -->
+<div class="action-buttons mt-4">
+    <a asp-action="Index" asp-controller="Properties" class="btn btn-warning">Return to Home</a>
+    <a asp-action="Index" asp-controller="Reservations" class="btn btn-primary">View Reservations</a>
+</div>

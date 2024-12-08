@@ -17,207 +17,215 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Group7FinalProject
 build_property.RootNamespace = Group7FinalProject
-build_property.ProjectDir = /Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/
+build_property.ProjectDir = C:\Users\lukeh\OneDrive\Documents\GitHub\Group-7\Group7FinalProject\Group7FinalProject\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject
+build_property.MSBuildProjectDirectory = C:\Users\lukeh\OneDrive\Documents\GitHub\Group-7\Group7FinalProject\Group7FinalProject
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Account/ChangePassword.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9DaGFuZ2VQYXNzd29yZC5jc2h0bWw=
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Account/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Account/EditProfile.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9FZGl0UHJvZmlsZS5jc2h0bWw=
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Account/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFZGl0UHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Account/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9JbmRleC5jc2h0bWw=
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Account/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Account/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Account/Register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Carts/Checkout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FydHMvQ2hlY2tvdXQuY3NodG1s
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Carts/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydHNcQ2hlY2tvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Carts/Confirmation.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FydHMvQ29uZmlybWF0aW9uLmNzaHRtbA==
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Carts/Confirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydHNcQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Carts/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FydHMvQ3JlYXRlLmNzaHRtbA==
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Carts/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Carts/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FydHMvRGVsZXRlLmNzaHRtbA==
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Carts/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Carts/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FydHMvRGV0YWlscy5jc2h0bWw=
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Carts/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Carts/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FydHMvRWRpdC5jc2h0bWw=
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Carts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Carts/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FydHMvSW5kZXguY3NodG1s
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Carts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Categories/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmllcy9DcmVhdGUuY3NodG1s
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Categories/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Categories/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmllcy9JbmRleC5jc2h0bWw=
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Categories/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Properties/ApproveProperties.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvcGVydGllcy9BcHByb3ZlUHJvcGVydGllcy5jc2h0bWw=
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Properties/ApproveProperties.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcGVydGllc1xBcHByb3ZlUHJvcGVydGllcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Properties/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvcGVydGllcy9DcmVhdGUuY3NodG1s
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Properties/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcGVydGllc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Properties/DetailedSearch.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvcGVydGllcy9EZXRhaWxlZFNlYXJjaC5jc2h0bWw=
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Properties/DetailedSearch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcGVydGllc1xEZXRhaWxlZFNlYXJjaC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Properties/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvcGVydGllcy9EZXRhaWxzLmNzaHRtbA==
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Properties/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcGVydGllc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Properties/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvcGVydGllcy9FZGl0LmNzaHRtbA==
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Properties/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcGVydGllc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Properties/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvcGVydGllcy9JbmRleC5jc2h0bWw=
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Properties/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvcGVydGllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Reservations/Confirmation.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzZXJ2YXRpb25zL0NvbmZpcm1hdGlvbi5jc2h0bWw=
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Reservations/Confirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25zXENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Reservations/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzZXJ2YXRpb25zL0NyZWF0ZS5jc2h0bWw=
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Reservations/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Reservations/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzZXJ2YXRpb25zL0RldGFpbHMuY3NodG1s
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Reservations/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Reservations/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzZXJ2YXRpb25zL0VkaXQuY3NodG1s
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Reservations/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Reservations/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzZXJ2YXRpb25zL0luZGV4LmNzaHRtbA==
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Reservations/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Reservations/NoReservations.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzZXJ2YXRpb25zL05vUmVzZXJ2YXRpb25zLmNzaHRtbA==
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Reservations/NoReservations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25zXE5vUmVzZXJ2YXRpb25zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Reservations/Report.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzZXJ2YXRpb25zL1JlcG9ydC5jc2h0bWw=
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Reservations/Report.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25zXFJlcG9ydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Reservations/SelectCustomerForReservation.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzZXJ2YXRpb25zL1NlbGVjdEN1c3RvbWVyRm9yUmVzZXJ2YXRpb24uY3NodG1s
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Reservations/SelectCustomerForReservation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25zXFNlbGVjdEN1c3RvbWVyRm9yUmVzZXJ2YXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Reviews/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3cy9DcmVhdGUuY3NodG1s
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Reviews/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Reviews/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3cy9EZXRhaWxzLmNzaHRtbA==
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Reviews/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Reviews/DisputeReview.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3cy9EaXNwdXRlUmV2aWV3LmNzaHRtbA==
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Reviews/DisputeReview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xEaXNwdXRlUmV2aWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Reviews/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3cy9FZGl0LmNzaHRtbA==
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Reviews/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Reviews/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3cy9JbmRleC5jc2h0bWw=
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Reviews/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Reviews/NoReviews.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3cy9Ob1Jldmlld3MuY3NodG1s
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Reviews/NoReviews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xOb1Jldmlld3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/RoleAdmin/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUm9sZUFkbWluL0NyZWF0ZS5jc2h0bWw=
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/RoleAdmin/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZUFkbWluXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/RoleAdmin/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUm9sZUFkbWluL0VkaXQuY3NodG1s
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/RoleAdmin/CreateAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZUFkbWluXENyZWF0ZUFkbWluLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/RoleAdmin/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUm9sZUFkbWluL0luZGV4LmNzaHRtbA==
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/RoleAdmin/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZUFkbWluXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Seed/Confirm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VlZC9Db25maXJtLmNzaHRtbA==
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/RoleAdmin/EditUserProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZUFkbWluXEVkaXRVc2VyUHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Seed/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VlZC9JbmRleC5jc2h0bWw=
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/RoleAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZUFkbWluXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Seed/Confirm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VlZFxDb25maXJtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Seed/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VlZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Shared/_LoginPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Unavailabilities/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVW5hdmFpbGFiaWxpdGllcy9DcmVhdGUuY3NodG1s
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Unavailabilities/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVW5hdmFpbGFiaWxpdGllcy9EZXRhaWxzLmNzaHRtbA==
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/Unavailabilities/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVW5hdmFpbGFiaWxpdGllcy9JbmRleC5jc2h0bWw=
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Unavailabilities/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5hdmFpbGFiaWxpdGllc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Unavailabilities/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5hdmFpbGFiaWxpdGllc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/bradythedude/Documents/UT/Junior/333k/Github/Group-7/Group7FinalProject/Group7FinalProject/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/Unavailabilities/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5hdmFpbGFiaWxpdGllc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lukeh/OneDrive/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

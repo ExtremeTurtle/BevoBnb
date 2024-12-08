@@ -130,4 +130,34 @@ namespace Group7FinalProject.Models
         [Display(Name = "Birthday")]
         public DateTime Birthday { get; set; }
     }
+    public class EditUserProfileViewModel
+    {
+        [Required]
+        [EmailAddress]
+        [Display(Name = "Email")]
+        public string Email { get; set; }
+
+        [Required]
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        [Required]
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+
+        [Display(Name = "Phone Number")]
+        public string? PhoneNumber { get; set; }
+
+        [Display(Name = "Street Address")]
+        public string? Address { get; set; }
+
+        [DataType(DataType.Date)]
+        [Display(Name = "Birthday")]
+        public DateTime Birthday { get; set; }
+
+        [Display(Name = "New Password")]
+        [DataType(DataType.Password)]
+        public string? NewPassword { get; set; }
+    }
+
 }

@@ -42,6 +42,8 @@ namespace Group7FinalProject.Controllers
                                 .Include(r => r.Property)
                                 .Where(r => r.Property.User.UserName == User.Identity.Name)
                                 .Where(r => r.ReservationStatus == ReservationStatus.Valid || r.ReservationStatus == ReservationStatus.Cancelled)
+                                                        .OrderBy(r => r.CheckIn) // Sort by Check-In date
+
                                 .ToList();
             }
             else
@@ -51,7 +53,14 @@ namespace Group7FinalProject.Controllers
                                 .Include(r => r.Property)
                                 .Where(r => r.User.UserName == User.Identity.Name)
                                 .Where(r => r.ReservationStatus == ReservationStatus.Valid || r.ReservationStatus == ReservationStatus.Cancelled)
+                                                        .OrderBy(r => r.CheckIn) // Sort by Check-In date
+
                                 .ToList();
+            }
+
+            foreach (var reservation in reservations)
+            {
+                reservation.CalcTotals();
             }
 
             // Check if the reservations list is empty
@@ -150,8 +159,20 @@ namespace Group7FinalProject.Controllers
         {
 
 
-            if (ModelState.IsValid == false)
+            
+            if (!ModelState.IsValid)
             {
+                // Fetch the property details to repopulate the reservation model
+                Property testProperty = await _context.Properties.Include(p => p.User).FirstOrDefaultAsync(p => p.PropertyID == propertyID);
+                if (testProperty == null)
+                {
+                    return View("Error", new string[] { "The property could not be found." });
+                }
+
+                // Repopulate the property in the reservation model
+                reservation.Property = testProperty;
+
+                // Return the view with the current reservation model
                 return View(reservation);
             }
 
@@ -446,53 +467,57 @@ namespace Group7FinalProject.Controllers
             startDate ??= DateTime.Today.AddDays(-365);
             endDate ??= DateTime.Today;
 
-            
+            // Retrieve all reservations within the date range
+            List<Reservation> allReservations = _context.Reservations
+                .Include(r => r.Property)
+                .ThenInclude(p => p.User)
+                .Where(r => r.CheckIn <= endDate && r.CheckOut >= startDate)
+                .ToList();
 
-            // Filter reservations within the date range
-            List<Reservation> reservations;
-            reservations = _context.Reservations.Include(r => r.Property).ThenInclude(r => r.User)
-                .Where(r => r.CheckIn <= endDate && r.CheckOut >= startDate && r.ReservationStatus == ReservationStatus.Valid).ToList();
-
-            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
-
-            // Calculate totals for each reservation
-            foreach (var reservation in reservations)
+            // Calculate totals for all reservations
+            foreach (var reservation in allReservations)
             {
                 reservation.CalcTotals();
             }
 
+            // Filter reservations with status "Valid" for financial calculations
+            var validReservations = allReservations.Where(r => r.ReservationStatus == ReservationStatus.Valid).ToList();
+
+            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+
             if (User.IsInRole("Host"))
             {
-                // Filter reservations for the logged-in host's properties
-                reservations = reservations.Where(r => r.Property.User.UserName == user.UserName).ToList();
-                if (!reservations.Any())
+                // Filter reservations for the logged-in host
+                allReservations = allReservations.Where(r => r.Property.User.UserName == user.UserName).ToList();
+                validReservations = validReservations.Where(r => r.Property.User.UserName == user.UserName).ToList();
+
+                if (!allReservations.Any())
                 {
                     ViewBag.Message = "No reservations were found for your properties during the selected date range.";
-                    ViewBag.HostReport = null; // Clear any report data
+                    ViewBag.HostReport = null;
                 }
                 else
                 {
-                    // Host-specific report
-                    var hostReport = reservations.GroupBy(r => r.Property)
+                    // Generate host-specific report
+                    var hostReport = validReservations.GroupBy(r => r.Property)
                         .Select(group => new
                         {
                             PropertyName = group.Key.PropertyNumber,
-                            TotalStayRevenue = group.Sum(r => r.BasePrice * 0.9m), // Host earns 90% of stay revenue
+                            TotalStayRevenue = group.Sum(r => r.StayPrice * 0.9m), // Host earns 90% of stay revenue
                             TotalCleaningFees = group.Sum(r => r.CleaningFee), // Host earns 100% of cleaning fees
-                            CombinedRevenue = group.Sum(r => (r.BasePrice * 0.9m) + r.CleaningFee),
-                            CompletedReservations = group.Count(r => r.ReservationStatus == ReservationStatus.Valid)
+                            CombinedRevenue = group.Sum(r => (r.StayPrice * 0.9m) + r.CleaningFee),
+                            CompletedReservations = group.Count()
                         }).ToList();
 
                     ViewBag.HostReport = hostReport;
                 }
             }
 
-            // Data for Admin Reports
             if (User.IsInRole("Admin"))
             {
                 // Admin-specific calculations
-                var totalCommission = reservations.Sum(r => r.BasePrice * 0.1m); // 10% commission
-                var totalReservations = reservations.Count;
+                var totalCommission = validReservations.Sum(r => r.StayPrice * 0.1m); // 10% commission on stay price
+                var totalReservations = validReservations.Count;
                 var averageCommission = totalReservations > 0 ? totalCommission / totalReservations : 0;
                 var totalProperties = _context.Properties.Count();
 
@@ -502,22 +527,25 @@ namespace Group7FinalProject.Controllers
                 ViewBag.TotalProperties = totalProperties;
             }
 
-            // Calculate total revenue (uses CalcTotals' TotalPrice for consistency)
-            var totalRevenue = reservations.Sum(r => r.TotalPrice);
+            // Calculate total revenue for valid reservations
+            var totalRevenue = validReservations.Sum(r => r.TotalPrice);
 
             // Pass data to the view
-            ViewBag.Reservations = reservations; // Assign the reservations list to ViewBag
+            ViewBag.AllReservations = allReservations; // All reservations, regardless of status
             ViewBag.TotalRevenue = totalRevenue;
             ViewBag.StartDate = startDate.Value.ToString("yyyy-MM-dd");
             ViewBag.EndDate = endDate.Value.ToString("yyyy-MM-dd");
-            
 
             return View();
         }
 
 
-            
-        }
+
+
+
+
 
     }
+
+}
 

@@ -27,21 +27,29 @@ namespace Group7FinalProject.Models
         public DateTime CheckOut { get; set; }
 
         [Required(ErrorMessage = "Number of guests is required")]
+        [Range(1, int.MaxValue, ErrorMessage = "The value must be greater than 0.")]
+
         [Display(Name = "Number of guests")]
         //The number of guests staying
         public Int32 NumOfGuests { get; set; }
 
         [Display(Name = "Weekday price")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value must be non-negative.")]
+
         [DisplayFormat(DataFormatString = "{0:C}")]
         //Stores weekday price of reservation
         public Decimal WeekdayPrice { get; set; }
 
         [Display(Name = "Weekend price")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value must be non-negative.")]
+
         [DisplayFormat(DataFormatString = "{0:C}")]
         //Stores weekend price of reservation
         public Decimal WeekendPrice { get; set; }
 
         [Display(Name = "Cleaning Fee")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value must be non-negative.")]
+
         [DisplayFormat(DataFormatString = "{0:C}")]
         //Stores cleaning fee for reservation
         public Decimal CleaningFee {  get; set; }
@@ -66,45 +74,48 @@ namespace Group7FinalProject.Models
 
 
         // Calculated values
-        [NotMapped] // Exclude from database mapping
+        [NotMapped]
+        [DisplayFormat(DataFormatString = "{0:C}")]
+        [Display(Name = "Weekday Total")]
+        public decimal WeekdayTotal { get; private set; }
 
-        [DisplayFormat(DataFormatString = "{0:c}")]
-        [Display(Name = "Base Price")]
-        public decimal BasePrice { get; private set; }
+        [NotMapped]
+        [DisplayFormat(DataFormatString = "{0:C}")]
+        [Display(Name = "Weekend Total")]
+        public decimal WeekendTotal { get; private set; }
 
-        [NotMapped] // Exclude from database mapping
+        [NotMapped]
+        [DisplayFormat(DataFormatString = "{0:C}")]
+        [Display(Name = "Discount Amount")]
+        public decimal DiscountAmount { get; private set; }
 
-        [DisplayFormat(DataFormatString = "{0:c}")]
+        [NotMapped]
+        [DisplayFormat(DataFormatString = "{0:C}")]
+        [Display(Name = "Stay Price")]
+        public decimal StayPrice { get; private set; }
+
+        [NotMapped]
+        [DisplayFormat(DataFormatString = "{0:C}")]
         [Display(Name = "Subtotal")]
         public decimal SubTotal { get; private set; }
 
-        [NotMapped] // Exclude from database mapping
-
-        [DisplayFormat(DataFormatString = "{0:c}")]
-        [Display(Name = "Discount")]
-        public decimal Discount { get; private set; }
-
-        [NotMapped] // Exclude from database mapping
-
-
-        [DisplayFormat(DataFormatString = "{0:c}")]
-        [Display(Name = "Total Price")]
-        public decimal TotalPrice { get; private set; }
-
-        [NotMapped] // Exclude from database mapping
-
-
-        [DisplayFormat(DataFormatString = "{0:c}")]
+        [NotMapped]
+        [DisplayFormat(DataFormatString = "{0:C}")]
         [Display(Name = "Tax")]
         public decimal Tax { get; private set; }
+
+        [NotMapped]
+        [DisplayFormat(DataFormatString = "{0:C}")]
+        [Display(Name = "Total Price")]
+        public decimal TotalPrice { get; private set; }
 
         // Method to calculate totals
         public void CalcTotals()
         {
-            // Calculate number of days
-            int totalDays = (CheckOut - CheckIn).Days + 1;
+            // Calculate the number of days
+            int totalDays = (CheckOut - CheckIn).Days;
 
-            // Calculate weekday and weekend counts
+            // Count weekdays and weekends
             int weekdayCount = 0, weekendCount = 0;
             for (DateTime date = CheckIn; date < CheckOut; date = date.AddDays(1))
             {
@@ -118,26 +129,34 @@ namespace Group7FinalProject.Models
                 }
             }
 
-            // Calculate base price
-            BasePrice = (weekdayCount * WeekdayPrice) + (weekendCount * WeekendPrice);
-          
+            // Calculate weekday and weekend totals
+            WeekdayTotal = weekdayCount * WeekdayPrice;
+            WeekendTotal = weekendCount * WeekendPrice;
 
             // Calculate discount
-            if (totalDays >= Property.MinNightsForDiscount)
+            if (totalDays >= Property?.MinNightsForDiscount)
             {
-                Discount = BasePrice * (Property.DiscountRate / 100);
+                DiscountAmount = (WeekdayTotal + WeekendTotal) * DiscountRate;
             }
             else
             {
-                Discount = 0;
+                DiscountAmount = 0;
             }
 
-            SubTotal = BasePrice - Discount + CleaningFee;
-            Tax = SubTotal * (TAX_RATE / 100);
-            // Calculate total price (cleaning fee included, sales tax applied)
+            // Calculate stay price
+            StayPrice = (WeekdayTotal + WeekendTotal) - DiscountAmount;
+
+            // Calculate subtotal
+            SubTotal = StayPrice + CleaningFee;
+
+            // Calculate tax
+            Tax = SubTotal * (TAX_RATE/100);
+
+            // Calculate total price (reservation total)
             TotalPrice = SubTotal + Tax;
         }
+
     }
 
-        
+
 }

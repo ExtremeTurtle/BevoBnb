@@ -150,6 +150,15 @@ namespace Group7FinalProject.Controllers
                 return View(lvm);
             }
 
+            // Find the user by email
+            AppUser user = await _userManager.FindByEmailAsync(lvm.Email);
+
+            if (user != null && user.HireStatus == HireStatus.Fired)
+            {
+                ModelState.AddModelError("", "You have been fired and cannot login. Contact an administrator for assistance.");
+                return View(lvm);
+            }
+
             //attempt to sign the user in using the SignInManager
             Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(lvm.Email, lvm.Password, lvm.RememberMe, lockoutOnFailure: false);
 
@@ -313,6 +322,13 @@ namespace Group7FinalProject.Controllers
             if (!ModelState.IsValid)
             {
                 return View(model);
+            }
+
+            // Validate the user's age
+            if (model.Birthday.AddYears(18) > DateTime.Today)
+            {
+                ModelState.AddModelError("Birthday", "You must be at least 18 years old.");
+                return View(model); // Return the form with the error message
             }
 
             // Get the logged-in user
