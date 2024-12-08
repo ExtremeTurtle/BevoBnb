@@ -31,10 +31,10 @@
                             <tr>
                                 <td>@item.Property?.PropertyNumber</td>
                                 <td>@Html.DisplayFor(modelItem => item.Rating)</td>
-                                <td class="text-truncate" style="max-width: 300px;">@Html.DisplayFor(modelItem => item.ReviewText)</td>
+                                <td style="white-space: pre-wrap;">@Html.DisplayFor(modelItem => item.ReviewText)</td>
                                 @if (User.IsInRole("Admin"))
                                 {
-                                    <td class="text-truncate" style="max-width: 300px;">@Html.DisplayFor(modelItem => item.HostComments)</td>
+                                    <td style="white-space: pre-wrap;">@Html.DisplayFor(modelItem => item.HostComments)</td>
                                 }
                                 <td>@item.DisputeStatus.ToString()</td>
                                 <td>
