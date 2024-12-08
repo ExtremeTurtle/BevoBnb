@@ -3,7 +3,7 @@
 }
 
 <div class="container text-center mt-5">
-    <h1 class="display-4 mb-3" style="font-size: 6rem !important;">Welcome to BevoBnB</h1>
+    <h1 class="display-4 mb-3" style="font-size: 5.5rem !important;">Welcome to BevoBnB</h1>
     <p class="lead">Your destination for unique stays in Austin and beyond!</p>
     <hr class="my-4" />
 
@@ -18,20 +18,27 @@
         <div class="col-md-4">
             <h2>For Customers</h2>
             <p>Search for properties, manage reservations, and leave reviews.</p>
-            <a class="btn btn-primary btn-lg" asp-action="Index" asp-controller="Properties">Search Properties</a>
-            <a class="btn btn-secondary btn-lg mt-2" asp-action="Index" asp-controller="Reservations">View Reservations</a>
+            <div class="d-flex justify-content-around gap-3">
+
+
+                <a class="btn btn-outline-primary w-50" asp-action="Index" asp-controller="Properties" style="height: 60px; border-color: #CC5500; display: flex; align-items: center; justify-content: center; ">Search Properties</a>
+                <a class="btn btn-outline-primary w-50" asp-action="Index" asp-controller="Reservations" style="height: 60px; border-color: #CC5500; display: flex; align-items: center; justify-content: center; ">View Reservations</a>
+            </div>
         </div>
 
         <!-- Host Section -->
         <div class="col-md-4">
             <h2>For Hosts</h2>
             <p>List your properties, manage bookings, and review reports.</p>
-            <a class="btn btn-primary btn-lg" asp-action="Create" asp-controller="Properties">List a Property</a>
-            <a class="btn btn-secondary btn-lg mt-2" asp-action="Report" asp-controller="Reservations">View Reports</a>
+            <div class="d-flex justify-content-around gap-3">
+
+                <a class="btn btn-outline-primary w-50" asp-action="Create" asp-controller="Properties" style="height: 60px; border-color: #CC5500; display: flex; align-items: center; justify-content: center; " >List a Property</a>
+                <a class="btn btn-outline-primary w-50" asp-action="Report" asp-controller="Reservations" style="height: 60px; border-color: #CC5500; display: flex; align-items: center; justify-content: center; ">View Reports</a>
+            </div>
+        </div>
         </div>
 
 
-    </div>
 
     @if (!User.Identity.IsAuthenticated)
     { 
@@ -39,7 +46,7 @@
         <div class="mt-5">
             <h2 class="mb-3">Not a Member Yet?</h2>
             <p>Create an account to start your journey with BevoBnB!</p>
-            <a class="btn btn-success btn-lg" asp-action="Register" asp-controller="Account">Sign Up</a>
+            <a class="btn .btn-info btn-link" asp-action="Register" asp-controller="Account" style="color:#000000  ">Sign Up</a>
         </div>
     }
 </div>
