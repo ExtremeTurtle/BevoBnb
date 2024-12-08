@@ -21,7 +21,6 @@ namespace Group7FinalProject.Models
         public string City { get; set; }
 
         [Display(Name = "State:")]
-        [RegularExpression(@"^[A-Z]{2}$", ErrorMessage = "State must be a valid two-letter abbreviation (e.g., TX, CA, NY).")]
 
         [Required]
         public string State { get; set; }

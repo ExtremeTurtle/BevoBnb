@@ -9,6 +9,7 @@ using Group7FinalProject.DAL;
 using Group7FinalProject.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using Group7FinalProject.Utilities;
 
 namespace Group7FinalProject.Controllers
 {
@@ -92,6 +93,8 @@ namespace Group7FinalProject.Controllers
         public IActionResult Create()
         {
             ViewBag.AllCategories = GetCategorySelectList();
+            ViewBag.AllCategories = GetCategorySelectList();
+            ViewBag.StateList = new SelectList(StateList.GetStates());
             return View();
         }
 
@@ -103,6 +106,8 @@ namespace Group7FinalProject.Controllers
             if (!ModelState.IsValid)
             {
                 ViewBag.AllCategories = GetCategorySelectList();
+                ViewBag.StateList = new SelectList(StateList.GetStates());
+
                 return View(property);
             }
 
@@ -147,6 +152,7 @@ namespace Group7FinalProject.Controllers
                 return View("Error", new String[] { "You are not authorized to edit this property!" });
             }
 
+            ViewBag.StateList = new SelectList(StateList.GetStates());
             return View(property);
         }
 
@@ -168,6 +174,8 @@ namespace Group7FinalProject.Controllers
 
                 if (!ModelState.IsValid)
                 {
+                    ViewBag.StateList = new SelectList(StateList.GetStates());
+
                     return View(property);
                 }
 
@@ -253,6 +261,8 @@ namespace Group7FinalProject.Controllers
         {
             // Populate the ViewBag with categories
             ViewBag.AllCategories = GetAllCategoriesSelectList();
+            ViewBag.StateList = new SelectList(StateList.GetStates());
+
 
             // Initialize SearchViewModel with default values
             SearchViewModel svm = new SearchViewModel

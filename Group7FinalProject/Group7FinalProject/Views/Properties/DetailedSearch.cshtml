@@ -20,22 +20,24 @@
 
             <br />
             <div class="form-group">
-                <label asp-for="SearchState" class="control-label"></label>
-                <input asp-for="SearchState" class="form-control" />
+                <label asp-for="SearchState" class="control-label">State:</label>
+                <select asp-for="SearchState" asp-items="ViewBag.StateList" class="form-control">
+                    <option value="">-- Select a State --</option>
+                </select>
                 <span asp-validation-for="SearchState" class="text-danger"></span>
             </div>
 
             <br />
             @*<div class="form-group">
-                <label asp-for="SearchGuestRating" class="control-label"></label>
-                <input asp-for="SearchGuestRating" type="number" step="0.1" class="form-control" />
-                <span asp-validation-for="SearchGuestRating" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <br />
-                <input type="radio" class="radio" asp-for="FilterGuestRating" value="@Filter.GreaterThan" checked="checked" />&nbsp; Greater Than<br />
-                <input type="radio" class="radio" asp-for="FilterGuestRating" value="@Filter.LessThan" />&nbsp; Less Than<br />
-            </div>*@
+            <label asp-for="SearchGuestRating" class="control-label"></label>
+            <input asp-for="SearchGuestRating" type="number" step="0.1" class="form-control" />
+            <span asp-validation-for="SearchGuestRating" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <br />
+            <input type="radio" class="radio" asp-for="FilterGuestRating" value="@Filter.GreaterThan" checked="checked" />&nbsp; Greater Than<br />
+            <input type="radio" class="radio" asp-for="FilterGuestRating" value="@Filter.LessThan" />&nbsp; Less Than<br />
+        </div>*@
 
             <br />
             <div class="form-group">
