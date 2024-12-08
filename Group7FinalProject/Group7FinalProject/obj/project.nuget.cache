@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1x7rC9UKQoCm6Zwwg+YoLRYOX9juKSnyuD7G4SsgaKIuXxUETWZLgCBofWkTuRn+K0N4AXlkYyjlSvWoHdcExw==",
+  "dgSpecHash": "jdU063K6uxDQePh6d5BfA0vdEojBWFfYRRC5ek+PaLbwMaslcIeiIPPlaQl4jXfB0BAdPsGrD5rsiyWW6AdKmA==",
   "success": true,
-  "projectFilePath": "/Users/CharlieREAL/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj",
+  "projectFilePath": "/Users/CharlieREAL/Documents/GitHub/Group-7/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj",
   "expectedPackageFiles": [
     "/Users/CharlieREAL/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
     "/Users/CharlieREAL/.nuget/packages/azure.identity/1.11.4/azure.identity.1.11.4.nupkg.sha512",

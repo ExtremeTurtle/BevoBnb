@@ -8188,11 +8188,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/CharlieREAL/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj",
+      "projectUniqueName": "/Users/CharlieREAL/Documents/GitHub/Group-7/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj",
       "projectName": "Group7FinalProject",
-      "projectPath": "/Users/CharlieREAL/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj",
+      "projectPath": "/Users/CharlieREAL/Documents/GitHub/Group-7/Group-7/Group7FinalProject/Group7FinalProject/Group7FinalProject.csproj",
       "packagesPath": "/Users/CharlieREAL/.nuget/packages/",
-      "outputPath": "/Users/CharlieREAL/Documents/GitHub/Group-7/Group7FinalProject/Group7FinalProject/obj/",
+      "outputPath": "/Users/CharlieREAL/Documents/GitHub/Group-7/Group-7/Group7FinalProject/Group7FinalProject/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/CharlieREAL/.nuget/NuGet/NuGet.Config"
