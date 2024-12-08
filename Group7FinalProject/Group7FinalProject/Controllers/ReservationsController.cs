@@ -29,7 +29,7 @@ namespace Group7FinalProject.Controllers
         }
 
         // GET: Reservations
-        [Authorize(Roles = "Customer, Admin")]
+        [Authorize(Roles = "Customer, Host, Admin")]
         public async Task<IActionResult> Index()
         {
             // Set up a list of reservations to display
