@@ -86,12 +86,15 @@
         <dd class="col-sm-8 detail-value">
             <input type="checkbox" class="custom-checkbox" disabled @(Model.HasParking ? "checked" : "") />
         </dd>
+        @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin") || (User.IsInRole("Host") && Model.User?.UserName == User.Identity.Name)))
+{
         <dt class="col-sm-4 detail-header">
             @Html.DisplayNameFor(model => model.PropertyStatus)
         </dt>
         <dd class="col-sm-8 detail-value">
             @Html.DisplayFor(model => model.PropertyStatus)
         </dd>
+}
     </dl>
 
     
@@ -131,7 +134,7 @@
     }
 
 
-    @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin") || User.IsInRole("Host")))
+    @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin") || (User.IsInRole("Host") && Model.User?.UserName == User.Identity.Name)))
     {
         <table class="table table-primary">
             <tr>
@@ -160,7 +163,10 @@
 
 
 <div class="details-buttons">
-    <a asp-action="Create" asp-controller="Reservations" asp-route-propertyID="@Model.PropertyID" class="btn btn-warning">Make a Reservation</a>
+    @if (!User.IsInRole("Host"))
+    {
+        <a asp-action="Create" asp-controller="Reservations" asp-route-propertyID="@Model.PropertyID" class="btn btn-warning">Make a Reservation</a>
+    }
     @if (User.Identity.IsAuthenticated && User.IsInRole("Host"))
     {
         <a asp-action="Edit" asp-route-id="@Model?.PropertyID" class="btn btn-primary">Edit</a>
