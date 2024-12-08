@@ -33,10 +33,13 @@
 
     </div>
 
+    @if (!User.Identity.IsAuthenticated)
+    { 
     <!-- Call to Action -->
-    <div class="mt-5">
-        <h2 class="mb-3">Not a Member Yet?</h2>
-        <p>Create an account to start your journey with BevoBnB!</p>
-        <a class="btn btn-success btn-lg" asp-action="Register" asp-controller="Account">Sign Up</a>
-    </div>
+        <div class="mt-5">
+            <h2 class="mb-3">Not a Member Yet?</h2>
+            <p>Create an account to start your journey with BevoBnB!</p>
+            <a class="btn btn-success btn-lg" asp-action="Register" asp-controller="Account">Sign Up</a>
+        </div>
+    }
 </div>
