@@ -30,6 +30,8 @@
             }
             <th>@Html.DisplayNameFor(model => model.NumOfBedrooms) <i class="fa-solid fa-bed"></i></th>
             <th>@Html.DisplayNameFor(model => model.NumOfBathrooms) <i class="fa-solid fa-toilet"></i></th>
+            <th>@Html.DisplayNameFor(model => model.WeekdayPrice) </th>
+            <th>@Html.DisplayNameFor(model => model.WeekendPrice) </th>
             <th>@Html.DisplayNameFor(model => model.GuestsAllowed) <i class="fa-solid fa-users"></i></th>
             <th>@Html.DisplayNameFor(model => model.PetFriendly) <i class="fa-solid fa-dog"></i></th>
             <th>@Html.DisplayNameFor(model => model.HasParking) <i class="fa-solid fa-square-parking"></i></th>
@@ -51,6 +53,8 @@
                 }
                 <td>@Html.DisplayFor(modelItem => item.NumOfBedrooms)</td>
                 <td>@Html.DisplayFor(modelItem => item.NumOfBathrooms)</td>
+                <td>@Html.DisplayFor(modelItem => item.WeekdayPrice)</td>
+                <td>@Html.DisplayFor(modelItem => item.WeekendPrice)</td>
                 <td>@Html.DisplayFor(modelItem => item.GuestsAllowed)</td>
                 <td>
                     <input type="checkbox" class="custom-checkbox" disabled @(item.PetFriendly ? "checked" : "") />

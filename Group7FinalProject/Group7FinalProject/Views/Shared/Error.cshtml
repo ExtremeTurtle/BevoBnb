@@ -11,10 +11,12 @@
         <p><span class="text-danger">@message</span></p>
     }
 }
+
 <br />
-<br />
-<a asp-action="Index" asp-controller="Home" class="btn btn-success">Take me home!</a>
-<br />
+<form asp-action="Index" asp-controller="Home" method="post">
+    <button type="submit" class="btn btn-success">Take me home!</button>
+</form>
+
 <br />
 <form asp-action="Index" asp-controller="Properties" method="post">
     <button type="submit" class="btn btn-success">All Properties</button>
