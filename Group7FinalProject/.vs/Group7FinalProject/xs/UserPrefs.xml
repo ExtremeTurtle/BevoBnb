@@ -1,22 +1,22 @@
 ﻿<Properties StartupConfiguration="{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|http">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Group7FinalProject/wwwroot/css/site.css">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Group7FinalProject/Views/Shared/Error.cshtml">
     <Files>
       <File FileName="Group7FinalProject/Views/Reservations/Details.cshtml" />
-      <File FileName="Group7FinalProject/Models/Property.cs" />
-      <File FileName="Group7FinalProject/Models/Review.cs" />
+      <File FileName="Group7FinalProject/Models/Property.cs" Line="1" Column="1" />
+      <File FileName="Group7FinalProject/Models/Review.cs" Line="1" Column="1" />
       <File FileName="Group7FinalProject/Models/Reservation.cs" />
       <File FileName="Group7FinalProject/wwwroot/lib/css/site.css" />
-      <File FileName="Group7FinalProject/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
+      <File FileName="Group7FinalProject/Views/Shared/_Layout.cshtml" />
       <File FileName="Group7FinalProject/wwwroot/css/site.css" Line="1" Column="1" />
-      <File FileName="Group7FinalProject/Views/Properties/DetailedSearch.cshtml" />
-      <File FileName="Group7FinalProject/Views/Properties/Index.cshtml" />
+      <File FileName="Group7FinalProject/Views/Properties/DetailedSearch.cshtml" Line="44" Column="19" />
+      <File FileName="Group7FinalProject/Views/Properties/Index.cshtml" Line="33" Column="72" />
       <File FileName="Group7FinalProject/Views/Reservations/Report.cshtml" />
       <File FileName="Group7FinalProject/Views/Home/Index.cshtml" />
       <File FileName="Group7FinalProject/Controllers/HomeController.cs" />
       <File FileName="Group7FinalProject/Views/Categories/Index.cshtml" />
       <File FileName="../../../../../../../../../usr/local/share/dotnet/sdk/8.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" />
       <File FileName="Group7FinalProject/Controllers/ReservationsController.cs" />
-      <File FileName="Group7FinalProject/Controllers/PropertiesController.cs" />
+      <File FileName="Group7FinalProject/Controllers/PropertiesController.cs" Line="421" Column="1" />
       <File FileName="Group7FinalProject/Controllers/AccountController.cs" />
       <File FileName="Group7FinalProject/Controllers/RoleAdminController.cs" />
       <File FileName="Group7FinalProject/Views/Properties/Create.cshtml" />
@@ -25,21 +25,21 @@
       <File FileName="Group7FinalProject/wwwroot/lib/jquery/jquery.slim.js" />
       <File FileName="Group7FinalProject/Views/Properties/Details.cshtml" />
       <File FileName="Group7FinalProject/Views/Shared/_LoginPartial.cshtml" />
-      <File FileName="Group7FinalProject/Seeding/SeedCategories.cs" Line="1" Column="1" />
+      <File FileName="Group7FinalProject/Seeding/SeedCategories.cs" />
+      <File FileName="Group7FinalProject/Models/ViewModels/SearchViewModel.cs" Line="35" Column="1" />
+      <File FileName="Group7FinalProject/Views/Shared/Error.cshtml" Line="30" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Group7FinalProject" expanded="True">
-            <Node name="Group7FinalProject">
-              <Node name="Seeding" expanded="True" />
+            <Node name="Group7FinalProject" expanded="True">
+              <Node name="Controllers" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Reservations" expanded="True" />
+                <Node name="Shared" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True">
-                  <Node name="site.css" selected="True" />
-                </Node>
+                <Node name="css" expanded="True" />
               </Node>
             </Node>
           </Node>
