@@ -3,24 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\controllers\\unavailabilitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\controllers\\unavailabilitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\controllers\\seedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\controllers\\seedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\views\\reservations\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\reservations\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\views\\seed\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\seed\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\controllers\\propertiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\controllers\\propertiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\views\\reviews\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\reviews\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\views\\properties\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\properties\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\controllers\\reservationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\controllers\\reservationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\views\\reservations\\report.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\reservations\\report.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\views\\properties\\approveproperties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\properties\\approveproperties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\views\\properties\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\properties\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\controllers\\unavailabilitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\controllers\\unavailabilitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\views\\unavailabilities\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\unavailabilities\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\views\\reservations\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\reservations\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\views\\reservations\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\reservations\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\views\\reviews\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\reviews\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\views\\reviews\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -35,20 +75,12 @@
       "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\properties\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\controllers\\reservationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\controllers\\reservationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\views\\reservations\\report.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\reservations\\report.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,14 +107,6 @@
       "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\reservations\\confirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\views\\reservations\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\reservations\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\views\\reservations\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\reservations\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -101,10 +125,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\views\\unavailabilities\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\unavailabilities\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -163,10 +183,6 @@
       "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\utilities\\adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\views\\properties\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\properties\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\views\\reservations\\selectcustomerforreservation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\reservations\\selectcustomerforreservation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -177,10 +193,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\views\\reviews\\noreviews.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\reviews\\noreviews.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\controllers\\seedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\controllers\\seedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\seeding\\seedreservations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -206,20 +218,12 @@
       "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\reservations\\noreservations.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\utilities\\generatenextpropertynumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\utilities\\generatenextpropertynumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\utilities\\generatenextconfirmationnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\utilities\\generatenextconfirmationnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\views\\properties\\approveproperties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\properties\\approveproperties.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\seeding\\seedproperties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -272,10 +276,6 @@
       "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\seeding\\seedunavailabilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|c:\\users\\lukeh\\onedrive\\documents\\github\\group-7\\group7finalproject\\group7finalproject\\views\\seed\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3297E910-C134-4B70-ABBE-74B5A68D4BAD}|Group7FinalProject\\Group7FinalProject.csproj|solutionrelative:group7finalproject\\views\\seed\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\obj\\Debug\\net8.0\\Group7FinalProject.AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Group7FinalProject\\obj\\Debug\\net8.0\\Group7FinalProject.AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -311,45 +311,188 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Group7FinalProject\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAA4AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-21T01:14:10.158Z"
+              "DocumentIndex": 6,
+              "Title": "ReservationsController.cs",
+              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\ReservationsController.cs",
+              "RelativeDocumentMoniker": "Group7FinalProject\\Controllers\\ReservationsController.cs",
+              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\ReservationsController.cs",
+              "RelativeToolTip": "Group7FinalProject\\Controllers\\ReservationsController.cs",
+              "ViewState": "AgIAAJUAAAAAAAAAAADwv6IAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T01:40:29.322Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reservations\\Index.cshtml",
-              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Reservations\\Index.cshtml",
-              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reservations\\Index.cshtml",
-              "RelativeToolTip": "Group7FinalProject\\Views\\Reservations\\Index.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "Report.cshtml",
+              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reservations\\Report.cshtml",
+              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Reservations\\Report.cshtml",
+              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reservations\\Report.cshtml",
+              "RelativeToolTip": "Group7FinalProject\\Views\\Reservations\\Report.cshtml",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAAGYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T19:58:10.966Z",
+              "WhenOpened": "2024-12-05T22:08:06.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PropertiesController.cs",
+              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\PropertiesController.cs",
+              "RelativeDocumentMoniker": "Group7FinalProject\\Controllers\\PropertiesController.cs",
+              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\PropertiesController.cs",
+              "RelativeToolTip": "Group7FinalProject\\Controllers\\PropertiesController.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAqwHcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T01:39:45.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Group7FinalProject\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Group7FinalProject\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T17:42:52.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Property.cs",
+              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Models\\Property.cs",
+              "RelativeDocumentMoniker": "Group7FinalProject\\Models\\Property.cs",
+              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Models\\Property.cs",
+              "RelativeToolTip": "Group7FinalProject\\Models\\Property.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAxwGUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T20:06:23.2Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reviews\\Index.cshtml",
-              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Reviews\\Index.cshtml",
-              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reviews\\Index.cshtml",
-              "RelativeToolTip": "Group7FinalProject\\Views\\Reviews\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAAAAAAAAAAAA==",
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Properties\\Create.cshtml",
+              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Properties\\Create.cshtml",
+              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Properties\\Create.cshtml",
+              "RelativeToolTip": "Group7FinalProject\\Views\\Properties\\Create.cshtml",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAuwFsAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-04T22:19:47.662Z",
+              "WhenOpened": "2024-11-26T19:59:16.364Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Seed\\Index.cshtml",
+              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Seed\\Index.cshtml",
+              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Seed\\Index.cshtml",
+              "RelativeToolTip": "Group7FinalProject\\Views\\Seed\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T23:30:13.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SeedController.cs",
+              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\SeedController.cs",
+              "RelativeDocumentMoniker": "Group7FinalProject\\Controllers\\SeedController.cs",
+              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\SeedController.cs",
+              "RelativeToolTip": "Group7FinalProject\\Controllers\\SeedController.cs",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAqwMEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T01:35:22.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApproveProperties.cshtml",
+              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Properties\\ApproveProperties.cshtml",
+              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Properties\\ApproveProperties.cshtml",
+              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Properties\\ApproveProperties.cshtml",
+              "RelativeToolTip": "Group7FinalProject\\Views\\Properties\\ApproveProperties.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAuwC4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-04T20:56:49.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Unavailabilities\\Index.cshtml",
+              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Unavailabilities\\Index.cshtml",
+              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Unavailabilities\\Index.cshtml",
+              "RelativeToolTip": "Group7FinalProject\\Views\\Unavailabilities\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T19:23:21.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reservations\\Details.cshtml",
+              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Reservations\\Details.cshtml",
+              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reservations\\Details.cshtml",
+              "RelativeToolTip": "Group7FinalProject\\Views\\Reservations\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-28T01:11:24.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UnavailabilitiesController.cs",
+              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\UnavailabilitiesController.cs",
+              "RelativeDocumentMoniker": "Group7FinalProject\\Controllers\\UnavailabilitiesController.cs",
+              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\UnavailabilitiesController.cs",
+              "RelativeToolTip": "Group7FinalProject\\Controllers\\UnavailabilitiesController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAmwBoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T17:58:33.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Properties\\Details.cshtml",
+              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Properties\\Details.cshtml",
+              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Properties\\Details.cshtml",
+              "RelativeToolTip": "Group7FinalProject\\Views\\Properties\\Details.cshtml",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAuwKMAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T19:58:44.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reviews\\Details.cshtml",
+              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Reviews\\Details.cshtml",
+              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reviews\\Details.cshtml",
+              "RelativeToolTip": "Group7FinalProject\\Views\\Reviews\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-04T23:05:07.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "ReviewsController.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\ReviewsController.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Controllers\\ReviewsController.cs",
@@ -362,72 +505,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reviews\\Details.cshtml",
-              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Reviews\\Details.cshtml",
-              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reviews\\Details.cshtml",
-              "RelativeToolTip": "Group7FinalProject\\Views\\Reviews\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAgAAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reviews\\Index.cshtml",
+              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Reviews\\Index.cshtml",
+              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reviews\\Index.cshtml",
+              "RelativeToolTip": "Group7FinalProject\\Views\\Reviews\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-04T23:05:07.041Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T22:19:47.662Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PropertiesController.cs",
-              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\PropertiesController.cs",
-              "RelativeDocumentMoniker": "Group7FinalProject\\Controllers\\PropertiesController.cs",
-              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\PropertiesController.cs",
-              "RelativeToolTip": "Group7FinalProject\\Controllers\\PropertiesController.cs",
-              "ViewState": "AgIAAJUBAAAAAAAAAAAAAKgBAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T01:39:45.65Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Properties\\Details.cshtml",
-              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Properties\\Details.cshtml",
-              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Properties\\Details.cshtml",
-              "RelativeToolTip": "Group7FinalProject\\Views\\Properties\\Details.cshtml",
-              "ViewState": "AgIAAJYAAAAAAAAAAAAAAKoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reservations\\Index.cshtml",
+              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Reservations\\Index.cshtml",
+              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reservations\\Index.cshtml",
+              "RelativeToolTip": "Group7FinalProject\\Views\\Reservations\\Index.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T19:58:44.64Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T19:58:10.966Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UnavailabilitiesController.cs",
-              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\UnavailabilitiesController.cs",
-              "RelativeDocumentMoniker": "Group7FinalProject\\Controllers\\UnavailabilitiesController.cs",
-              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\UnavailabilitiesController.cs",
-              "RelativeToolTip": "Group7FinalProject\\Controllers\\UnavailabilitiesController.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAIwDAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T17:58:33.458Z",
-              "EditorCaption": ""
+              "DocumentIndex": 18,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Group7FinalProject\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAA4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T01:14:10.158Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ReservationsController.cs",
-              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\ReservationsController.cs",
-              "RelativeDocumentMoniker": "Group7FinalProject\\Controllers\\ReservationsController.cs",
-              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\ReservationsController.cs",
-              "RelativeToolTip": "Group7FinalProject\\Controllers\\ReservationsController.cs",
-              "ViewState": "AgIAABcCAAAAAAAAAAAcwB8AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T01:40:29.322Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 17,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Properties\\Index.cshtml",
               "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Properties\\Index.cshtml",
@@ -439,7 +553,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 19,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Program.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Program.cs",
@@ -451,7 +565,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 20,
               "Title": "Reservation.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Models\\Reservation.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Models\\Reservation.cs",
@@ -463,7 +577,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 25,
               "Title": "Confirmation.cshtml",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reservations\\Confirmation.cshtml",
               "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Reservations\\Confirmation.cshtml",
@@ -475,19 +589,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Report.cshtml",
-              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reservations\\Report.cshtml",
-              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Reservations\\Report.cshtml",
-              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reservations\\Report.cshtml",
-              "RelativeToolTip": "Group7FinalProject\\Views\\Reservations\\Report.cshtml",
-              "ViewState": "AgIAAI8AAAAAAAAAAAAAAI8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-05T22:08:06.124Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 24,
               "Title": "Cart.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Models\\Cart.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Models\\Cart.cs",
@@ -499,7 +601,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 23,
               "Title": "Checkout.cshtml",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Carts\\Checkout.cshtml",
               "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Carts\\Checkout.cshtml",
@@ -511,7 +613,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 21,
               "Title": "Confirmation.cshtml",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Carts\\Confirmation.cshtml",
               "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Carts\\Confirmation.cshtml",
@@ -523,7 +625,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 22,
               "Title": "CartsController.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\CartsController.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Controllers\\CartsController.cs",
@@ -535,31 +637,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reservations\\Details.cshtml",
-              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Reservations\\Details.cshtml",
-              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reservations\\Details.cshtml",
-              "RelativeToolTip": "Group7FinalProject\\Views\\Reservations\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-28T01:11:24.267Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Property.cs",
-              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Models\\Property.cs",
-              "RelativeDocumentMoniker": "Group7FinalProject\\Models\\Property.cs",
-              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Models\\Property.cs",
-              "RelativeToolTip": "Group7FinalProject\\Models\\Property.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T20:06:23.2Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 30,
               "Title": "Review.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Models\\Review.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Models\\Review.cs",
@@ -571,7 +649,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 29,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Models\\Category.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Models\\Category.cs",
@@ -583,7 +661,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reservations\\Create.cshtml",
               "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Reservations\\Create.cshtml",
@@ -595,7 +673,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 27,
               "Title": "SearchViewModel.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Models\\ViewModels\\SearchViewModel.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Models\\ViewModels\\SearchViewModel.cs",
@@ -607,7 +685,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 28,
               "Title": "RoleViewModels.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Models\\ViewModels\\RoleViewModels.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Models\\ViewModels\\RoleViewModels.cs",
@@ -619,7 +697,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 31,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Controllers\\AccountController.cs",
@@ -631,19 +709,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Unavailabilities\\Index.cshtml",
-              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Unavailabilities\\Index.cshtml",
-              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Unavailabilities\\Index.cshtml",
-              "RelativeToolTip": "Group7FinalProject\\Views\\Unavailabilities\\Index.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T19:23:21.657Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 32,
               "Title": "EditProfile.cshtml",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Account\\EditProfile.cshtml",
               "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Account\\EditProfile.cshtml",
@@ -655,7 +721,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 33,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Account\\Index.cshtml",
               "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Account\\Index.cshtml",
@@ -667,7 +733,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 34,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\RoleAdmin\\Index.cshtml",
               "RelativeDocumentMoniker": "Group7FinalProject\\Views\\RoleAdmin\\Index.cshtml",
@@ -679,7 +745,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 38,
               "Title": "Unavailability.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Models\\Unavailability.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Models\\Unavailability.cs",
@@ -691,7 +757,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 35,
               "Title": "AppUser.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Models\\AppUser.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Models\\AppUser.cs",
@@ -703,7 +769,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 36,
               "Title": "RoleAdminController.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\RoleAdminController.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Controllers\\RoleAdminController.cs",
@@ -716,7 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 37,
               "Title": "DetailedSearch.cshtml",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Properties\\DetailedSearch.cshtml",
               "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Properties\\DetailedSearch.cshtml",
@@ -728,7 +794,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 41,
               "Title": "AccountViewModels.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Models\\ViewModels\\AccountViewModels.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Models\\ViewModels\\AccountViewModels.cs",
@@ -740,7 +806,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 40,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\RoleAdmin\\Edit.cshtml",
               "RelativeDocumentMoniker": "Group7FinalProject\\Views\\RoleAdmin\\Edit.cshtml",
@@ -752,7 +818,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 42,
               "Title": "EditUserProfile.cshtml",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\RoleAdmin\\EditUserProfile.cshtml",
               "RelativeDocumentMoniker": "Group7FinalProject\\Views\\RoleAdmin\\EditUserProfile.cshtml",
@@ -764,7 +830,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 39,
               "Title": "CreateAdmin.cshtml",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\RoleAdmin\\CreateAdmin.cshtml",
               "RelativeDocumentMoniker": "Group7FinalProject\\Views\\RoleAdmin\\CreateAdmin.cshtml",
@@ -776,7 +842,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 43,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "Group7FinalProject\\wwwroot\\css\\site.css",
@@ -788,7 +854,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 44,
               "Title": "AddUser.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Utilities\\AddUser.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Utilities\\AddUser.cs",
@@ -800,7 +866,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 45,
               "Title": "SelectCustomerForReservation.cshtml",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reservations\\SelectCustomerForReservation.cshtml",
               "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Reservations\\SelectCustomerForReservation.cshtml",
@@ -812,7 +878,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 46,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Properties\\Edit.cshtml",
               "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Properties\\Edit.cshtml",
@@ -824,31 +890,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Properties\\Create.cshtml",
-              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Properties\\Create.cshtml",
-              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Properties\\Create.cshtml",
-              "RelativeToolTip": "Group7FinalProject\\Views\\Properties\\Create.cshtml",
-              "ViewState": "AgIAAEcAAAAAAAAAAADwv18AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-26T19:59:16.364Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "SeedController.cs",
-              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\SeedController.cs",
-              "RelativeDocumentMoniker": "Group7FinalProject\\Controllers\\SeedController.cs",
-              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\SeedController.cs",
-              "RelativeToolTip": "Group7FinalProject\\Controllers\\SeedController.cs",
-              "ViewState": "AgIAAP8AAAAAAAAAAAAAAC0AAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T01:35:22.332Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 49,
               "Title": "SeedReviews.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Seeding\\SeedReviews.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Seeding\\SeedReviews.cs",
@@ -860,7 +902,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 47,
               "Title": "NoReviews.cshtml",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reviews\\NoReviews.cshtml",
               "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Reviews\\NoReviews.cshtml",
@@ -896,7 +938,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 48,
               "Title": "SeedReservations.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Seeding\\SeedReservations.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Seeding\\SeedReservations.cs",
@@ -908,7 +950,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 50,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reviews\\Create.cshtml",
               "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Reviews\\Create.cshtml",
@@ -920,7 +962,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 51,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reviews\\Edit.cshtml",
               "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Reviews\\Edit.cshtml",
@@ -932,7 +974,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 52,
               "Title": "ReviewsIndex.cshtml",
               "DocumentMoniker": "C:\\Users\\lukeh\\Downloads\\ReviewsIndex.cshtml",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Downloads\\ReviewsIndex.cshtml",
@@ -944,19 +986,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Group7FinalProject\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Group7FinalProject\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T17:42:52.566Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 53,
               "Title": "NoReservations.cshtml",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Reservations\\NoReservations.cshtml",
               "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Reservations\\NoReservations.cshtml",
@@ -968,7 +998,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 54,
               "Title": "GenerateNextPropertyNumber.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Utilities\\GenerateNextPropertyNumber.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Utilities\\GenerateNextPropertyNumber.cs",
@@ -980,7 +1010,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 55,
               "Title": "GenerateNextConfirmationNumber.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Utilities\\GenerateNextConfirmationNumber.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Utilities\\GenerateNextConfirmationNumber.cs",
@@ -992,19 +1022,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "ApproveProperties.cshtml",
-              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Properties\\ApproveProperties.cshtml",
-              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Properties\\ApproveProperties.cshtml",
-              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Properties\\ApproveProperties.cshtml",
-              "RelativeToolTip": "Group7FinalProject\\Views\\Properties\\ApproveProperties.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-04T20:56:49.722Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "SeedProperties.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Seeding\\SeedProperties.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Seeding\\SeedProperties.cs",
@@ -1016,7 +1034,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "Updated_SeedProperties.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\Downloads\\Updated_SeedProperties.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Downloads\\Updated_SeedProperties.cs",
@@ -1028,7 +1046,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "Updated_SeedProperties_Active.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\Downloads\\Updated_SeedProperties_Active.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Downloads\\Updated_SeedProperties_Active.cs",
@@ -1040,7 +1058,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Account\\Register.cshtml",
@@ -1052,7 +1070,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "CategoriesController.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Controllers\\CategoriesController.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Controllers\\CategoriesController.cs",
@@ -1064,7 +1082,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Carts\\Index.cshtml",
               "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Carts\\Index.cshtml",
@@ -1076,7 +1094,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Categories\\Index.cshtml",
               "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Categories\\Index.cshtml",
@@ -1088,7 +1106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "SeedCategories.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Seeding\\SeedCategories.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Seeding\\SeedCategories.cs",
@@ -1100,7 +1118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "Group7FinalProject.csproj",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Group7FinalProject.csproj",
               "RelativeDocumentMoniker": "Group7FinalProject\\Group7FinalProject.csproj",
@@ -1112,7 +1130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 66,
               "Title": "SeedUsers.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Seeding\\SeedUsers.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Seeding\\SeedUsers.cs",
@@ -1124,7 +1142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 65,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\DAL\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\DAL\\AppDbContext.cs",
@@ -1136,7 +1154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 67,
               "Title": "SeedRoles.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Seeding\\SeedRoles.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Seeding\\SeedRoles.cs",
@@ -1148,7 +1166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 68,
               "Title": "SeedUnavailabilities.cs",
               "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Seeding\\SeedUnavailabilities.cs",
               "RelativeDocumentMoniker": "Group7FinalProject\\Seeding\\SeedUnavailabilities.cs",
@@ -1157,18 +1175,6 @@
               "ViewState": "AgIAAHwAAAAAAAAAAAAAAHsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T23:09:58.83Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 68,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Seed\\Index.cshtml",
-              "RelativeDocumentMoniker": "Group7FinalProject\\Views\\Seed\\Index.cshtml",
-              "ToolTip": "C:\\Users\\lukeh\\OneDrive\\Documents\\GitHub\\Group-7\\Group7FinalProject\\Group7FinalProject\\Views\\Seed\\Index.cshtml",
-              "RelativeToolTip": "Group7FinalProject\\Views\\Seed\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T23:30:13.945Z"
             },
             {
               "$type": "Document",

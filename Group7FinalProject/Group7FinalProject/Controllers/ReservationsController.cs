@@ -519,7 +519,7 @@ namespace Group7FinalProject.Controllers
                 var totalCommission = validReservations.Sum(r => r.StayPrice * 0.1m); // 10% commission on stay price
                 var totalReservations = validReservations.Count;
                 var averageCommission = totalReservations > 0 ? totalCommission / totalReservations : 0;
-                var totalProperties = _context.Properties.Count();
+                var totalProperties = _context.Properties.Where(p => p.PropertyStatus == PropertyStatus.Approved).Count();
 
                 ViewBag.TotalCommission = totalCommission;
                 ViewBag.TotalReservations = totalReservations;

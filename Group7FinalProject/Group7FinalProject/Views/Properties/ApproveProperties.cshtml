@@ -40,6 +40,11 @@
                         <input type="hidden" name="propertyId" value="@item.PropertyID" />
                         <button type="submit" class="btn btn-success btn-sm">Approve</button>
                     </form>
+                    <form asp-action="Decline" method="post" class="d-inline">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="propertyId" value="@item.PropertyID" />
+                        <button type="submit" class="btn btn-danger btn-sm">Decline</button>
+                    </form>
                 </td>
             </tr>
         }

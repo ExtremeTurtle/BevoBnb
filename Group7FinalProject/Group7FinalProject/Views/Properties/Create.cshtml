@@ -86,14 +86,15 @@
                 </label>
             </div>
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <!-- Category Dropdown -->
             <div class="form-group">
                 <label class="control-label">Category</label>
                 @Html.DropDownList(
-                         "categoryID", // This must match the parameter name in the controller
-                         (SelectList)ViewBag.AllCategories, // Populate categories from ViewBag
-                         "Select a Category", // Placeholder option
-                         new { @class = "form-control" } // Add CSS classes if needed
-                         )
+                         "categoryID",
+                         (SelectList)ViewBag.AllCategories,
+                         "Select a Category",
+                         new { @class = "form-control" })
+                <span class="text-danger">@ViewData.ModelState["CategoryID"]?.Errors.FirstOrDefault()?.ErrorMessage</span>
             </div>
 
             <br />

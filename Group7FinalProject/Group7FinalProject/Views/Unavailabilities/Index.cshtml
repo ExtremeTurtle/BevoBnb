@@ -1,31 +1,27 @@
 ﻿@model IEnumerable<Group7FinalProject.Models.Unavailability>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Unavailabilities";
 }
 
-<h1>Index</h1>
+<h1>Unavailabilities</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.UnavailableDate)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.UnavailableDate)
-            </td>
-            
-        </tr>
-}
-    </tbody>
-</table>
+<div class="table-responsive">
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Property Number</th>
+                <th>Unavailable Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Property?.PropertyNumber</td>
+                    <td>@item.UnavailableDate.ToShortDateString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

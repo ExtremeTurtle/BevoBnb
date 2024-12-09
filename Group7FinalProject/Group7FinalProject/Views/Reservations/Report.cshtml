@@ -100,7 +100,6 @@
             <table class="table table-striped table-bordered">
                 <thead>
                     <tr>
-                        <th>Property ID</th>
                         <th>Property</th>
                         <th>Check-In</th>
                         <th>Check-Out</th>
@@ -120,7 +119,6 @@
                     @foreach (var reservation in (IEnumerable<Group7FinalProject.Models.Reservation>)ViewBag.AllReservations)
                     {
                         <tr>
-                            <td>@reservation.Property.PropertyID</td>
                             <td class="text-truncate" style="max-width: 150px;">@reservation.Property.Address</td>
                             <td>@reservation.CheckIn.ToShortDateString()</td>
                             <td>@reservation.CheckOut.ToShortDateString()</td>

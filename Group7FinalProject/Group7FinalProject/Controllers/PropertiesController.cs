@@ -13,7 +13,6 @@ using Group7FinalProject.Utilities;
 
 namespace Group7FinalProject.Controllers
 {
-    [AllowAnonymous]
     public class PropertiesController : Controller
     {
         private readonly AppDbContext _context;
@@ -26,6 +25,8 @@ namespace Group7FinalProject.Controllers
         }
 
         // GET: Properties
+        [AllowAnonymous]
+
         public async Task<IActionResult> Index()
         {
             // Set up a list of Properties to display, including reviews for ratings
@@ -58,6 +59,8 @@ namespace Group7FinalProject.Controllers
 
             return View("Index", properties);
         }
+
+        [AllowAnonymous]
 
         public async Task<IActionResult> Details(int? id)
         {
@@ -99,7 +102,7 @@ namespace Group7FinalProject.Controllers
         public IActionResult Create()
         {
             ViewBag.AllCategories = GetCategorySelectList();
-            ViewBag.AllCategories = GetCategorySelectList();
+            
             ViewBag.StateList = new SelectList(StateList.GetStates());
             return View();
         }
@@ -109,6 +112,11 @@ namespace Group7FinalProject.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Property property, int? categoryID)
         {
+            if (categoryID == null)
+            {
+                ModelState.AddModelError("categoryID", "Please select a category.");
+            }
+
             if (!ModelState.IsValid)
             {
                 ViewBag.AllCategories = GetCategorySelectList();
@@ -117,13 +125,14 @@ namespace Group7FinalProject.Controllers
                 return View(property);
             }
 
-           
+            
+
 
             Category dbCategory = _context.Categories.Find(categoryID);
 
             if (dbCategory == null)
             {
-                return View("Error", new string[] { "Category not found!" });
+                return View("Error", new string[] { "Category not found! It is required to enter a category please select one" });
             }
 
             property.User = await _userManager.FindByNameAsync(User.Identity.Name);
@@ -243,6 +252,24 @@ namespace Group7FinalProject.Controllers
             return RedirectToAction(nameof(ApproveProperties));
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Decline(int propertyId)
+        {
+            Property property = await _context.Properties.FindAsync(propertyId);
+            if (property == null)
+            {
+                return NotFound();
+            }
+
+            // Remove the property from the database
+            _context.Properties.Remove(property);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(ApproveProperties));
+        }
+
 
 
         private SelectList GetAllCategoriesSelectList()
@@ -262,6 +289,8 @@ namespace Group7FinalProject.Controllers
         }
 
         //detailed search
+        [AllowAnonymous]
+
         [HttpGet]
         public IActionResult DetailedSearch()
         {
@@ -281,6 +310,8 @@ namespace Group7FinalProject.Controllers
 
             return View(svm);
         }
+
+        [AllowAnonymous]
 
         [HttpPost]
         public IActionResult DisplaySearchResults(SearchViewModel svm)

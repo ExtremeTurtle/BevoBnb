@@ -21,9 +21,21 @@ namespace Group7FinalProject.Controllers
         }
 
         // GET: Unavailabilities
+        
+        [Authorize]
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Unavailabilities.ToListAsync());
+            IQueryable<Unavailability> query = _context.Unavailabilities.Include(u => u.Property);
+
+            // If the user is a Host, filter to show only their properties
+            if (User.IsInRole("Host"))
+            {
+                query = query.Where(u => u.Property.User.UserName == User.Identity.Name);
+            }
+
+            var unavailabilities = await query.ToListAsync();
+
+            return View(unavailabilities);
         }
 
         // GET: Unavailabilities/CreateRange
@@ -36,17 +48,19 @@ namespace Group7FinalProject.Controllers
                 return View("Error", new string[] { "Please specify a property to add to the reservation" });
             }
 
-            //find the property in the database
-            Property dbProperty = _context.Properties.Find(propertyID);
+            // Find the property in the database and include the User
+            Property dbProperty = _context.Properties
+                                           .Include(p => p.User) // Include the User to avoid null issues
+                                           .FirstOrDefault(p => p.PropertyID == propertyID);
 
-            //make sure the Property exists in the database
+            // Make sure the property exists in the database
             if (dbProperty == null)
             {
                 return View("Error", new string[] { "This Property was not in the database!" });
             }
 
             // Check that the property belongs to the logged-in host
-            if (dbProperty.User.UserName != User.Identity.Name)
+            if (dbProperty.User == null || dbProperty.User.UserName != User.Identity.Name)
             {
                 return View("Error", new string[] { "You cannot add unavailable dates to a property that isn't yours." });
             }
@@ -64,8 +78,9 @@ namespace Group7FinalProject.Controllers
             return View(model);
         }
 
-        
-            [HttpPost]
+
+
+        [HttpPost]
             [ValidateAntiForgeryToken]
             [Authorize(Roles = "Host")]
             public async Task<IActionResult> Create(int propertyID, DateTime startDate, DateTime endDate)
