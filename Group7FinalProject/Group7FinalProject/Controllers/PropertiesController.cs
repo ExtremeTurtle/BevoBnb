@@ -82,6 +82,12 @@ namespace Group7FinalProject.Controllers
                 return View("Error", new String[] { "This property was not found!" });
             }
 
+            // Calculate totals for each reservation
+            foreach (var reservation in property.Reservations)
+            {
+                reservation.CalcTotals();
+            }
+
             List<Review> reviews;
             reviews = property.Reviews
              .Where(r => r.DisputeStatus == DisputeStatus.NoDispute || r.DisputeStatus == DisputeStatus.InvalidDispute).ToList();
