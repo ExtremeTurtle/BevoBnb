@@ -339,7 +339,6 @@ namespace Group7FinalProject.Controllers
             }
 
 
-
             //TODO Filter by Guest Rating --> create an average method for reviews on property
             //if (svm.SearchGuestRating.HasValue)
             //{
@@ -402,6 +401,22 @@ namespace Group7FinalProject.Controllers
             if (svm.SearchBathrooms.HasValue)
             {
                 query = query.Where(p => p.NumOfBathrooms >= svm.SearchBathrooms);
+            }
+
+            if (svm.SearchGuestRating.HasValue)
+            {
+                if (svm.FilterGuestRating == Filter.GreaterThan)
+                {
+                    query = query.Where(p => p.Reviews
+                                              .Where(r => r.DisputeStatus == DisputeStatus.NoDispute || r.DisputeStatus == DisputeStatus.InvalidDispute)
+                                              .Average(r => r.Rating) >= (double)svm.SearchGuestRating);
+                }
+                else if (svm.FilterGuestRating == Filter.LessThan)
+                {
+                    query = query.Where(p => p.Reviews
+                                              .Where(r => r.DisputeStatus == DisputeStatus.NoDispute || r.DisputeStatus == DisputeStatus.InvalidDispute)
+                                              .Average(r => r.Rating) <= (double)svm.SearchGuestRating);
+                }
             }
 
             //// Filter by Pets Allowed
